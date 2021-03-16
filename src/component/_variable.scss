@@ -1,0 +1,106 @@
+$white                : #ffffff;
+$black                : #242424;
+
+
+$light-grey           : #e7e7e7;
+$grey                 : #d5d5d5;
+$dark-grey            : #2b2b2b;
+
+$border-color         : #3e3e3e;
+$body-color           : $white;
+$body-bg              : $black;
+
+$link-color           : $white !default;
+$link-hover-color     : $green !default;
+$link-decoration      : none !default;
+$link-hover-decoration: underline !default;
+
+$grid-columns         : 12 !default;
+$grid-gutter-width    : 30px !default;
+
+$grid-breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1360px,
+  xl: 1600px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 740px,
+  lg: 960px,
+  xl: 1680px,
+) !default;
+
+$font-size-base       : 1rem;
+$font-weight-base     : 400;
+$line-height-base     : 1.4;
+
+$font-family-heading  : "Open Sans", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base     : "Open Sans", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif    : "Playfair Display",   "Times New Roman",  serif !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
+
+$font-size: (
+  xs: 12px,
+  sm: 13px,
+  xl: 14px,
+  hd: 15px
+) !default;
+
+$font-weight-heading: 700;
+
+$font-weight-light  : 300;
+$font-weight        : 400;
+$font-weight-bolder : 500;
+$font-weight-bold   : 800;
+
+$line-height        : 1.7;
+$line-height-heading: 1.1;
+
+$dt-font-weight: $font-weight-bold !default;
+
+$spacer : 40px!default;
+$spacers: ()  !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer/4,         // 10px
+    2: $spacer/2,         // 20px
+    3: $spacer,           // 40px
+    4: ($spacer * 1.5),   // 60px
+    5: ($spacer * 2)      // 80px
+  ),
+  $spacers
+);
+
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family  : null !default;
+$headings-font-weight  : 500 !default;
+$headings-line-height  : 1.2 !default;
+$headings-color        : null !default;
+
+$paragraph-margin-bottom: 40px !default;
+
+$table-cell-padding   : 10px !default;
+$table-cell-padding-sm: 6px !default;
+$table-caption-color  : #242424 !default;
+
+$label-margin-bottom: 10px;
+
+$enable-grid-classes              : true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+
+// Utilities
+
+$displays : none,   inline,   inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$overflows: auto,   hidden !default;
+$positions: static, relative, absolute,     fixed, sticky !default;
+
+
+// Printing
+
+$print-page-size     : a3 !default;
+$print-body-min-width: map-get($grid-breakpoints, "lg") !default;

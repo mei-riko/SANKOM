@@ -1,0 +1,11 @@
+mixin portfolio-link(href, src, image, title, intro)
+    if href == "javascript:;"
+        a.portfolio__col.mt-xs-2(href=href data-fancybox="portfolio" data-src=src)
+            img.img-fluid(src=image)
+            p.portfolio__title.text-small.text-bold.text-uppercase= title
+            p.portfolio__intro.text-small!= intro
+    else 
+        a.portfolio__col.mt-xs-2(href=href)
+            img.img-fluid(src=image)
+            p.portfolio__title.text-small.text-bold.text-uppercase= title
+            p.portfolio__intro.text-small!= intro

@@ -1,0 +1,14 @@
+.select{
+    padding: 10px 20px;
+    border-color: $border-color;
+    // transition: .4s;
+
+    &:hover, &:focus{
+        border-color: $black;
+        outline: none;
+    }
+
+    &--full{
+        width: 100%;
+    }
+}
