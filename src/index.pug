@@ -7,7 +7,6 @@ html(lang="ru")
         title Index Page
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet")
         link(href='/css/style.css', rel='stylesheet')
         link(href='/css/index.css', rel='stylesheet')
 
@@ -15,12 +14,75 @@ html(lang="ru")
         script(src="/js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        
+        main.content.container
+            //- Promo and Tags
+            .content__inside
+                //- Slider Promo
+                .slider.mt-2.slider_banner
+                    +banner('Только эко-материалы', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', 'Коллекции 2021', 'catalog.html')
+                    +banner('Уникальные технологии', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', 'Коллекции 2021', 'catalog.html')
+                    +banner('Весна время спорта', 'Introducing Stretch Twill Pants! Comfy and seasonless, these pull-on staples are the perfect additions to your wardrobe.', 'Спорт и здоровье', 'category.html')
+                //- Slider Tags
+                .mt-4.text-center
+                    h2.mb-0 Комфорт и забота о деталях
+                    p.content__heading-intro Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.
+                .mt-3.tabs.tabs--has-slider.justify-content-center
+                    .tabs__item.tabs__item--active(data-content="tabBeauty") Коррекция и красота
+                    .tabs__item(data-content="tabHealth") Забота о здоровье
+                    .tabs__item(data-content="tabSport") Спорт и lifestyle
+                .tabs-content.tabs-content--active#tabBeauty
+                .tabs-content#tabHealth
+                .tabs-content#tabSport
+            //- Category
+            .content__inside.content__inside_secondary
+                    .row.align-items-center.pt-2.pb-2
+                        .col-10
+                            h4.text-uppercase Покупки по категориям
+                        .col-2.text-right 
+                            +btn('catalog.html', 'Наш каталог')(class="btn_action")
+                    .slider.slider_category 
+                        +category('Для женщин: на любой случай', 'актуальные коллекции', 'Перейти в коллекцию', 'collection.html')(style="background-image:url('/img/bg-women.jpg');")
+                        +category('Комплекты по выгодным ценам', 'вместе дешевле', 'Посмотреть комплекты', 'complects.html')(style="background-image:url('/img/bg-complect.jpg');")
+                        +category('Для мужчин: SANKOM и Mey', 'актуальные коллекции', 'Новые коллекции 2021', 'collection.html')(style="background-image:url('/img/bg-men.jpg');")
+                        +category('Скидка на наши товары', 'выгодная покупка', 'Купить сейчас', 'sales.html')(style="background-image:url('/img/bg-sales.jpg');")
+                        +category('Новое в каталоге SANKOM', 'коллекции 2021 года', 'Узнать про новинки', 'collection.html')(style="background-image:url('/img/bg-women.jpg');")
+            //- Promo and Products
+            .content__inside
+                //- Promo Pages
+                .mt-4
+                    h4.text-uppercase #NEW_SANKOM
+                    .slider.slider_promo
+                        +promo('Уникальность белья SANKOM', 'text.html')(style="background-image:url('/img/image-1.jpg');")
+                        +promo('8 отличий SANKOM от обычного коррекирующего белья', 'text.html')(style="background-image:url('/img/image-2.jpg');")
+                        +promo('Серии и направления SANKOM', 'text.html')(style="background-image:url('/img/image-3.jpg');")
+                //- Small Banner
+                .mt-4
+                    .banner.banner_promo ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM @sankomrussia
+                        a.btn.btn--small(href="#") Подписаться
+                //- Products
+                .mt-4.text-center
+                    h2.mb-0 Выбор наших покупателей
+                    p.content__heading-intro Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.
+                .products-grid.products-grid_lg
+                    +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', '', 'product.html')(style="background-image:url('/img/product-1.jpg');")
+                    +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
+                    +product('Elementum amet morbi morbi aliquam senectus orcin ultrices', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
+                    +product('Men Shaper Classic Black', '3 599 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
+                    +product('Hypoallergenic Compression Socks Grey', '889 руб.', '', '', 'по предзаказу', 'product.html')
+                .products-grid.products-grid_sm
+                    +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('/img/product-1.jpg');")
+                    +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
+                    +productSmall('Elementum amet morbi morbi aliquam senectus orcin ultrices', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
+                    +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
         include component/footer/footer.pug
         
         script(src="./js/jquery.inputmask.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
         
         script(src="./js/app.min.js")

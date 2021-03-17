@@ -1,52 +1,51 @@
 $white                : #ffffff;
-$black                : #242424;
+$black                : #3A3A3A;
 
 
-$light-grey           : #e7e7e7;
-$grey                 : #d5d5d5;
-$dark-grey            : #2b2b2b;
+$light-grey           : #FCFBFA;
+$grey                 : #666666;
+$dark-grey            : $black;
 
-$border-color         : #3e3e3e;
-$body-color           : $white;
-$body-bg              : $black;
+$border-color         : #EBE7E4;
+$body-color           : $black;
+$body-bg              : #f7f6f4;
 
-$link-color           : $white !default;
-$link-hover-color     : $green !default;
+$link-color           : $grey !default;
+$link-hover-color     : $grey !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
 
 $grid-columns         : 12 !default;
-$grid-gutter-width    : 30px !default;
+$grid-gutter-width    : 25px !default;
 
 $grid-breakpoints: (
-  xs: 576px,
-  sm: 768px,
-  md: 992px,
-  lg: 1360px,
-  xl: 1600px
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
 ) !default;
 
 $container-max-widths: (
   sm: 540px,
   md: 740px,
   lg: 960px,
-  xl: 1680px,
+  xl: 1440px,
 ) !default;
 
 $font-size-base       : 1rem;
 $font-weight-base     : 400;
 $line-height-base     : 1.4;
 
-$font-family-heading  : "Open Sans", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-base     : "Open Sans", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-serif    : "Playfair Display",   "Times New Roman",  serif !default;
+$font-family-heading  : "Golos", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base     : "Golos", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
 
 $font-size: (
-  xs: 12px,
-  sm: 13px,
-  xl: 14px,
-  hd: 15px
+  xs: 11px,
+  sm: 12px,
+  md: 13px,
+  lg: 15px
 ) !default;
 
 $font-weight-heading: 700;
@@ -61,17 +60,17 @@ $line-height-heading: 1.1;
 
 $dt-font-weight: $font-weight-bold !default;
 
-$spacer : 40px!default;
+$spacer : 50px!default;
 $spacers: ()  !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
-    1: $spacer/4,         // 10px
-    2: $spacer/2,         // 20px
-    3: $spacer,           // 40px
-    4: ($spacer * 1.5),   // 60px
-    5: ($spacer * 2)      // 80px
+    1: $spacer/5,         // 10px
+    2: $spacer/2,         // 25px
+    3: $spacer,           // 50px
+    4: ($spacer * 1.5),   // 75px
+    5: ($spacer * 2)      // 100px
   ),
   $spacers
 );

@@ -1,0 +1,21 @@
+.content{
+    &__inside{
+        background-color: $white;
+        padding: $grid-gutter-width 2*$grid-gutter-width;
+
+        &_secondary{
+            background-color: $light-grey;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+        }
+
+        &:first-child{
+            border-top-left-radius: map-get($map: $spacers, $key: 1);
+            border-top-right-radius: map-get($map: $spacers, $key: 1);
+        }
+        &:last-child{
+            border-bottom-left-radius: map-get($map: $spacers, $key: 1);
+            border-bottom-right-radius: map-get($map: $spacers, $key: 1);
+        }
+    }
+}

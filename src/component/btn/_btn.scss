@@ -3,11 +3,8 @@
     outline: none;
     box-shadow: none;
 
-    font-family: $font-family-serif;
     font-size: map-get($map: $font-size, $key: "xs");
     font-weight: $font-weight-bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 
     color: $body-color;
     background-color: inherit;
