@@ -1,0 +1,6 @@
+.slider_promo{
+    &:not(.owl-loaded){
+        grid-gap: 15px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

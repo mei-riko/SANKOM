@@ -1,0 +1,9 @@
+.btn_inverse{
+    color: $white;
+    border-color: $white;
+
+    &:hover{
+        color: $light-grey;
+        border-color: $light-grey;
+    }
+}

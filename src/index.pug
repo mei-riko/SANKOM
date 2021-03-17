@@ -36,12 +36,13 @@ html(lang="ru")
                 .tabs-content#tabSport
             //- Category
             section.content__inside.content__inside_secondary
-                    .row.align-items-center.pt-1.pb-2
-                        .col-10
-                            h4.text-uppercase Покупки по категориям
-                        .col-2.text-right 
-                            +btn('catalog.html', 'Наш каталог')(class="btn_action")
-                    .slider.slider_category.mb-1
+                .row.align-items-center.pt-1.pb-2
+                    .col-10
+                        h4.text-uppercase Покупки по категориям
+                    .col-2.text-right 
+                        +btn('catalog.html', 'Наш каталог')(class="btn_action")
+                .slider-container
+                    .slider.slider_category.owl-carousel.owl-theme.mb-1
                         .slider__item
                             +category('Для женщин: на любой случай', 'актуальные коллекции', 'Перейти в коллекцию', 'collection.html')(style="background-image:url('/img/bg-women.jpg');")
                         .slider__item
@@ -55,16 +56,21 @@ html(lang="ru")
             //- Promo and Products
             section.content__inside
                 //- Promo Pages
-                .mt-4
-                    h4.text-uppercase #NEW_SANKOM
-                    .slider.slider_promo
-                        +promo('Уникальность белья SANKOM', 'text.html')(style="background-image:url('/img/image-1.jpg');")
-                        +promo('8 отличий SANKOM от обычного коррекирующего белья', 'text.html')(style="background-image:url('/img/image-2.jpg');")
-                        +promo('Серии и направления SANKOM', 'text.html')(style="background-image:url('/img/image-3.jpg');")
+                h4.text-uppercase.mt-2 #NEW_SANKOM
+                .slider-container
+                    .slider.slider_promo.owl-carousel.owl-theme
+                        .slider__item
+                            +promo('Об экологичности материалов', 'text.html')(style="background-image:url('/img/image-1.jpg');")
+                        .slider__item
+                            +promo('Отличия от обычного корректирующего белья', 'text.html')(style="background-image:url('/img/image-2.jpg');")
+                        .slider__item
+                            +promo('Серии и направления SANKOM', 'text.html')(style="background-image:url('/img/image-3.jpg');")
                 //- Small Banner
                 .mt-4
-                    .banner.banner_promo ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM @sankomrussia
-                        a.btn.btn--small(href="#") Подписаться
+                    .banner-promo 
+                        .banner-promo__content ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM 
+                            a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
+                        a.btn.btn_inverse.btn--small(href="#") Подписаться
                 //- Products
                 .mt-4.text-center
                     h3.mb-0 Выбор наших покупателей

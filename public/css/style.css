@@ -2626,7 +2626,18 @@ table td {
 }
 
 .btn--small {
-  padding: 8px 12px;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.btn_inverse {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn_inverse:hover {
+  color: #FCFBFA;
+  border-color: #FCFBFA;
 }
 
 .btn_action {

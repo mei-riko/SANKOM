@@ -1,5 +1,113 @@
 .slider{
-    &:not(.slick-initialized){
+    &:not(.owl-loaded){
         display: grid;
+    }
+    &.owl-loaded{
+        .owl-nav{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            padding: 0 $spacer/2;
+            margin: 0;
+            transform: translateY(-50%);
+
+            display: flex;
+            justify-content: space-between;
+
+            transition: all .4s;
+            filter: opacity(0);
+
+            [class*=owl-]{
+                margin: 0;
+                width: $spacer;
+                height: $spacer;
+                border-radius: $spacer/2;
+
+                border: 1px solid $border-color;
+
+                transition: all .4s;
+
+                & > span{
+                    display: none;
+                }
+
+                &:hover, &:focus{
+                    outline: none;
+                }
+            }
+
+            .owl-prev{
+                background: $white url('../icon/arrow-left.svg') no-repeat center / 14px;
+                filter: opacity(.5);
+
+                &:hover{
+                    background: $white url('../icon/arrow-left.svg') no-repeat center / 14px;
+                    filter: opacity(1);
+                }
+
+                &.disabled{
+                    filter: opacity(0);
+                }
+            }
+            .owl-next{
+                background: $white url('../icon/arrow-right.svg') no-repeat center / 14px;
+                filter: opacity(.5);
+
+                &:hover{
+                    background: $white url('../icon/arrow-right.svg') no-repeat center / 14px;
+                    filter: opacity(1);
+                }
+
+                &.disabled{
+                    opacity: 0;
+                }
+            }
+        }
+        .owl-dots{
+            margin-top: map-get($map: $spacers, $key: 1);
+
+            .owl-dot{
+                border: 1px solid $border-color;
+                border-radius: 2px;
+                padding: 3px!important;
+                margin: 2px 6px;
+
+                span{
+                    margin: 0;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 2px;
+
+                    background: $white;
+                    transition: all .4s;
+                }
+
+                &:hover, &:focus{
+                    outline: none;
+
+                    span{
+                        background: $grey;
+                    }
+                }
+
+                &.active{
+                    span{
+                        background: $action;
+                    }
+                }
+            }
+        }
+        &:hover, &:focus{
+            .owl-nav{
+                filter: opacity(1);
+            }
+        }
+    }
+}
+
+.slider-container{
+    &--active{
+        margin-right: -$grid-gutter-width;
+        margin-left: -$grid-gutter-width;
     }
 }

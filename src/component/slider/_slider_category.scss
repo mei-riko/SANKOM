@@ -1,24 +1,6 @@
 .slider_category{
-    &:not(.slick-initialized){
+    &:not(.owl-loaded){
         grid-gap: 15px;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    &.slick-initialized{
-        .slick-slide{
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        .slick-list{
-            margin-left: map-get($map: $spacers, $key: 2);
-            margin-right: map-get($map: $spacers, $key: 2);
-            overflow: inherit;
-        }
-        .slick-prev{
-            left: 0;
-        }
-        .slick-next{
-            right: 0;
-        }
     }
 }

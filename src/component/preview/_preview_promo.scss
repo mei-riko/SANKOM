@@ -1,0 +1,11 @@
+.preview_promo{
+    &__image{
+        margin-bottom: map-get($map: $spacers, $key: 1);
+        &:before{
+            padding-bottom: 130%;
+        }
+    }
+    &__title{
+        font-weight: $font-weight-bolder;
+    }
+}

@@ -1,0 +1,32 @@
+.banner-promo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    // width: 800px;
+    width: max-content;
+    max-width: 100%;
+    padding: $spacer/4 $spacer/2;
+    margin: 0 auto;
+
+    color: $white;
+    background-color: $action;
+
+    font-size: map-get($map: $font-size, $key: sm);
+    font-weight: $font-weight-bolder;
+    letter-spacing: .5px;
+
+    &__content{
+        padding-left: $spacer;
+        padding-right: $spacer/2;
+    }
+
+    &__link{
+        text-transform: uppercase;
+        color: $white;
+
+        &:hover, &:focus{
+            color: $light-grey;
+        }
+    }
+}

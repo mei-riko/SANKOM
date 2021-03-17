@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, stagePadding) => {
+let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, margin, stagePadding) => {
     let $sliderItem = $(sliderClass);
 
     if( $sliderItem.length === 0 ){ return null; }
@@ -9,21 +9,29 @@ let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, stagePaddin
     // }
 
     if ( $sliderItem.find('.slider__item').length > countShow ){
+        $sliderItem.closest('.slider-container').addClass('slider-container--active');
+        $sliderItem.closest('.slider-container').removeClass('slider-container--disable');
+
         $sliderItem.owlCarousel({
             items: countShow,
             loop: loop,
-            margin: 10,
+            margin: margin,
             nav: arrows,
             dots: dots,
             stagePadding: stagePadding,
         })
+    } else{
+        $sliderItem.closest('.slider-container').removeClass('slider-container--active');
+        $sliderItem.closest('.slider-container').addClass('slider-container--disable');
     }
 }
 
 
 $(document).ready(() => {
-    sliderInitialized(1, '.slider.slider_banner', true, true, false, 0);
-    sliderInitialized(4, '.slider.slider_category', true, false, true, 50);
+    sliderInitialized(1, '.slider.slider_banner', true, true, false, 15, 0);
+    sliderInitialized(4, '.slider.slider_category', true, false, true, 15, 50);
+    sliderInitialized(3, '.slider.slider_promo', true, false, true, 15, 50);
+    
 });
 
 
