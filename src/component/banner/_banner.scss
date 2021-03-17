@@ -1,0 +1,27 @@
+.banner{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: $spacer;
+    border-radius: map-get($map: $spacers, $key: 1);
+    background: no-repeat center / cover;
+
+    height: 420px;
+    overflow: hidden;
+
+    &__title{
+        font-size: 38px;
+        font-weight: $font-weight-heading;
+        line-height: $line-height-heading;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+    }
+    &__intro{
+        width: 340px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    &_content-center{
+        text-align: center;
+        justify-content: center;
+    }
+}

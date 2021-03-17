@@ -1,1 +1,5 @@
-.slider{}
+.slider{
+    &:not(.slick-initialized){
+        display: grid;
+    }
+}

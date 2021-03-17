@@ -1,0 +1,11 @@
+.btn_action{
+    border-color: $grey;
+    background-color: $dark-grey;
+    color: $white;
+    text-align: center;
+
+    &:hover {
+        background-color: lighten($color: $dark-grey, $amount: 4);
+        color: $white;
+    }
+}

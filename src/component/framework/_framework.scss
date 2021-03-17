@@ -31,10 +31,10 @@ h1, h2, h3, h4, h5, h6,
     margin-top: map-get($spacers, 3);
 }
 .h1,h1{font-size: 38px;}
-.h2,h2{font-size: 28px;}
-.h3,h3{font-size: 24px;}
+.h2,h2{font-size: 32px;}
+.h3,h3{font-size: 28px;}
 .h4,h4{font-size: 21px;}
-.h5,h5{font-size: 16px;}
+.h5,h5{font-size: 18px;}
 .h6,h6{font-size: 1rem;}
 
 p {
@@ -108,14 +108,15 @@ table{
 
 .text-white{color: $white;}
 .text-black{color: $black;}
+.text-grey{color: $grey;}
 
 .text-uppercase{text-transform: uppercase;}
 .text-bolder{font-weight: 500;}
 .text-bold,strong,b{font-weight: 700;}
 .text-underline{text-decoration: underline;}
 
-.text-small,small,.small{font-size: 0.9rem;}
-.text-lead,.lead{font-size: 1.2rem;}
+.text-small,small,.small{font-size: map-get($map: $font-size, $key: 'xs');}
+.text-lead,.lead{font-size: map-get($map: $font-size, $key: 'lg');}
 
 .text{
     &-right{text-align: right;}

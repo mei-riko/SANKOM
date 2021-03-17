@@ -3,12 +3,16 @@
     outline: none;
     box-shadow: none;
 
-    font-size: map-get($map: $font-size, $key: "xs");
-    font-weight: $font-weight-bold;
+    font-size: map-get($map: $font-size, $key: "sm");
+    font-weight: $font-weight-bolder;
+    letter-spacing: .5px;
 
     color: $body-color;
     background-color: inherit;
-    padding: 14px 24px;
+    padding: 10px 20px;
+
+    border-radius: 4px;
+    border: 1px solid $grey;
 
     transition: all .4s;
 

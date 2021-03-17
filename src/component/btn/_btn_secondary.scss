@@ -1,10 +1,9 @@
 .btn_secondary{
-    // color: $white;
-    // background: $dark-grey;
-    // text-align: center;
+    background-color: #F5F2ED;
+    border-color: $light-grey;
+    text-align: center;
 
-    // &:hover, &:focus{
-    //     color: $white;
-    //     background: darken($color: $black, $amount: 4);
-    // }
+    &:hover {
+        background: darken($color: #F5F2ED, $amount: 5);
+    }
 }

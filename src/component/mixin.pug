@@ -54,7 +54,8 @@ mixin banner(title, intro, link, href)
             .banner__content
                 block
         if link!=''
-            a.btn.btn_default(href=href)= link
+            .mt-3
+                a.btn.btn_secondary(href=href)= link
 //- Products
 mixin product(title, newPrice, oldPrice, status, label, href)
     .product

@@ -1,0 +1,10 @@
+.preview_category{
+    text-align: center;
+
+    &__image{
+        margin-bottom: map-get($map: $spacers, $key: 2);
+        &:before{
+            padding-bottom: 100%;
+        }
+    }
+}

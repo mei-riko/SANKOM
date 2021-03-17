@@ -1840,7 +1840,7 @@ template {
 }
 
 html, body {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
   -webkit-box-sizing: border-box;
@@ -1863,7 +1863,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Golos", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 25px;
 }
 
@@ -1882,11 +1882,11 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 }
 
 .h2, h2 {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .h3, h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .h4, h4 {
@@ -1894,7 +1894,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 }
 
 .h5, h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .h6, h6 {
@@ -2014,6 +2014,10 @@ table td {
   color: #3A3A3A;
 }
 
+.text-grey {
+  color: #666666;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -2031,11 +2035,11 @@ table td {
 }
 
 .text-small, small, .small {
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 .text-lead, .lead {
-  font-size: 1.2rem;
+  font-size: 15px;
 }
 
 .text-right {
@@ -2599,11 +2603,14 @@ table td {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .5px;
   color: #3A3A3A;
   background-color: inherit;
-  padding: 14px 24px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #666666;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
@@ -2620,6 +2627,28 @@ table td {
 
 .btn--small {
   padding: 8px 12px;
+}
+
+.btn_action {
+  border-color: #c9032c;
+  background-color: #DD0330;
+  color: #ffffff;
+  text-align: center;
+}
+
+.btn_action:hover {
+  background-color: #c9032c;
+  color: #ffffff;
+}
+
+.btn_secondary {
+  background-color: #F5F2ED;
+  border-color: #FCFBFA;
+  text-align: center;
+}
+
+.btn_secondary:hover {
+  background: #ece6dd;
 }
 
 .form {
@@ -2801,7 +2830,8 @@ table td {
 
 .content__inside {
   background-color: #ffffff;
-  padding: 25px 50px;
+  padding: 25px;
+  overflow: hidden;
 }
 
 .content__inside_secondary {
@@ -2818,6 +2848,10 @@ table td {
 .content__inside:last-child {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.content__heading-intro {
+  margin-top: 10px;
 }
 
 .modal {

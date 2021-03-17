@@ -1,13 +1,29 @@
 import $ from 'jquery';
 
-let sliderCount = (count, sliderId) => {
-    let countItem = count;
-    let sliderItem = $( '#' + sliderId);
+let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, stagePadding) => {
+    let $sliderItem = $(sliderClass);
+
+    if( $sliderItem.length === 0 ){ return null; }
+    // if( $sliderItem.hasClass('slick-initialized') ){
+        
+    // }
+
+    if ( $sliderItem.find('.slider__item').length > countShow ){
+        $sliderItem.owlCarousel({
+            items: countShow,
+            loop: loop,
+            margin: 10,
+            nav: arrows,
+            dots: dots,
+            stagePadding: stagePadding,
+        })
+    }
 }
 
 
 $(document).ready(() => {
-        
+    sliderInitialized(1, '.slider.slider_banner', true, true, false, 0);
+    sliderInitialized(4, '.slider.slider_category', true, false, true, 50);
 });
 
 

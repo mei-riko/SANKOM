@@ -1,7 +1,8 @@
 .content{
     &__inside{
         background-color: $white;
-        padding: $grid-gutter-width 2*$grid-gutter-width;
+        padding: $grid-gutter-width;
+        overflow: hidden;
 
         &_secondary{
             background-color: $light-grey;
@@ -17,5 +18,8 @@
             border-bottom-left-radius: map-get($map: $spacers, $key: 1);
             border-bottom-right-radius: map-get($map: $spacers, $key: 1);
         }
+    }
+    &__heading-intro{
+        margin-top: map-get($map: $spacers, $key: 1);
     }
 }

@@ -12,24 +12,26 @@
   <body>
     <script src="/js/jquery.min.js"></script>
     <header class="header"></header>
-    <main class="content container">
-      <div class="content__inside">
-        <div class="slider mt-2 slider_banner">
-              <div class="banner">
-                <p class="banner__title">Только эко-материалы</p>
-                <p class="banner__intro">Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.</p><a class="btn btn_default" href="catalog.html">Коллекции 2021</a>
-              </div>
-              <div class="banner">
-                <p class="banner__title">Уникальные технологии</p>
-                <p class="banner__intro">Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.</p><a class="btn btn_default" href="catalog.html">Коллекции 2021</a>
-              </div>
-              <div class="banner">
-                <p class="banner__title">Весна время спорта</p>
-                <p class="banner__intro">Introducing Stretch Twill Pants! Comfy and seasonless, these pull-on staples are the perfect additions to your wardrobe.</p><a class="btn btn_default" href="category.html">Спорт и здоровье</a>
-              </div>
+    <main class="content container mt-3 mb-3">
+      <section class="content__inside">
+        <div class="slider slider_banner owl-carousel owl-theme">
+          <div class="slider__item">
+                <div class="banner banner_content-center" style="background-image:url('/img/banner-1.jpg');">
+                  <p class="banner__title">Только эко-материалы</p>
+                  <p class="banner__intro">Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.</p>
+                  <div class="mt-3"><a class="btn btn_secondary" href="catalog.html">Коллекции 2021</a></div>
+                </div>
+          </div>
+          <div class="slider__item">
+                <div class="banner banner_content-center" style="background-image:url('/img/banner-2.jpg');">
+                  <p class="banner__title">Весна время спорта</p>
+                  <p class="banner__intro">Introducing Stretch Twill Pants! Comfy and seasonless, these pull-on staples are the perfect additions to your wardrobe.</p>
+                  <div class="mt-3"><a class="btn btn_secondary" href="category.html">Спорт и здоровье</a></div>
+                </div>
+          </div>
         </div>
         <div class="mt-4 text-center">
-          <h2 class="mb-0">Комфорт и забота о деталях</h2>
+          <h3 class="mb-0">Комфорт и забота о деталях</h3>
           <p class="content__heading-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.</p>
         </div>
         <div class="mt-3 tabs tabs--has-slider justify-content-center">
@@ -40,39 +42,49 @@
         <div class="tabs-content tabs-content--active" id="tabBeauty"></div>
         <div class="tabs-content" id="tabHealth"></div>
         <div class="tabs-content" id="tabSport"></div>
-      </div>
-      <div class="content__inside content__inside_secondary">
-        <div class="row align-items-center pt-2 pb-2">
+      </section>
+      <section class="content__inside content__inside_secondary">
+        <div class="row align-items-center pt-1 pb-2">
           <div class="col-10">
             <h4 class="text-uppercase">Покупки по категориям</h4>
           </div>
           <div class="col-2 text-right"> <a class="btn btn_action" href="catalog.html">Наш каталог</a>
           </div>
         </div>
-        <div class="slider slider_category"> 
-              <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-women.jpg');" href="collection.html" title="Для женщин: на любой случай"></a>
-                <p class="preview__title preview_category__title">Для женщин: на любой случай</p>
-                <p class="preview__intro">актуальные коллекции</p><a class="preview__link" href="collection.html">Перейти в коллекцию</a>
-              </div>
-              <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-complect.jpg');" href="complects.html" title="Комплекты по выгодным ценам"></a>
-                <p class="preview__title preview_category__title">Комплекты по выгодным ценам</p>
-                <p class="preview__intro">вместе дешевле</p><a class="preview__link" href="complects.html">Посмотреть комплекты</a>
-              </div>
-              <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-men.jpg');" href="collection.html" title="Для мужчин: SANKOM и Mey"></a>
-                <p class="preview__title preview_category__title">Для мужчин: SANKOM и Mey</p>
-                <p class="preview__intro">актуальные коллекции</p><a class="preview__link" href="collection.html">Новые коллекции 2021</a>
-              </div>
-              <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-sales.jpg');" href="sales.html" title="Скидка на наши товары"></a>
-                <p class="preview__title preview_category__title">Скидка на наши товары</p>
-                <p class="preview__intro">выгодная покупка</p><a class="preview__link" href="sales.html">Купить сейчас</a>
-              </div>
-              <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-women.jpg');" href="collection.html" title="Новое в каталоге SANKOM"></a>
-                <p class="preview__title preview_category__title">Новое в каталоге SANKOM</p>
-                <p class="preview__intro">коллекции 2021 года</p><a class="preview__link" href="collection.html">Узнать про новинки</a>
-              </div>
+        <div class="slider slider_category mb-1">
+          <div class="slider__item">
+                <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-women.jpg');" href="collection.html" title="Для женщин: на любой случай"></a>
+                  <p class="preview__title preview_category__title">Для женщин: на любой случай</p>
+                  <p class="preview__intro">актуальные коллекции</p><a class="preview__link" href="collection.html">Перейти в коллекцию</a>
+                </div>
+          </div>
+          <div class="slider__item">
+                <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-complect.jpg');" href="complects.html" title="Комплекты по выгодным ценам"></a>
+                  <p class="preview__title preview_category__title">Комплекты по выгодным ценам</p>
+                  <p class="preview__intro">вместе дешевле</p><a class="preview__link" href="complects.html">Посмотреть комплекты</a>
+                </div>
+          </div>
+          <div class="slider__item">
+                <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-men.jpg');" href="collection.html" title="Для мужчин: SANKOM и Mey"></a>
+                  <p class="preview__title preview_category__title">Для мужчин: SANKOM и Mey</p>
+                  <p class="preview__intro">актуальные коллекции</p><a class="preview__link" href="collection.html">Новые коллекции 2021</a>
+                </div>
+          </div>
+          <div class="slider__item">
+                <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-sales.jpg');" href="sales.html" title="Скидка на наши товары"></a>
+                  <p class="preview__title preview_category__title">Скидка на наши товары</p>
+                  <p class="preview__intro">выгодная покупка</p><a class="preview__link" href="sales.html">Купить сейчас</a>
+                </div>
+          </div>
+          <div class="slider__item">
+                <div class="preview preview_category"><a class="preview__image preview_category__image" style="background-image:url('/img/bg-demo.jpg');" href="collection.html" title="Новое в каталоге SANKOM"></a>
+                  <p class="preview__title preview_category__title">Новое в каталоге SANKOM</p>
+                  <p class="preview__intro">коллекции 2021 года</p><a class="preview__link" href="collection.html">Узнать про новинки</a>
+                </div>
+          </div>
         </div>
-      </div>
-      <div class="content__inside">
+      </section>
+      <section class="content__inside">
         <div class="mt-4">
           <h4 class="text-uppercase">#NEW_SANKOM</h4>
           <div class="slider slider_promo"><a class="preview preview_promo" href="text.html" title="Уникальность белья SANKOM">
@@ -88,7 +100,7 @@
           <div class="banner banner_promo">ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM @sankomrussia<a class="btn btn--small" href="#">Подписаться</a></div>
         </div>
         <div class="mt-4 text-center">
-          <h2 class="mb-0">Выбор наших покупателей</h2>
+          <h3 class="mb-0">Выбор наших покупателей</h3>
           <p class="content__heading-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.</p>
         </div>
         <div class="products-grid products-grid_lg">
@@ -141,14 +153,24 @@
                 </div>
               </div>
         </div>
-      </div>
+      </section>
+      <aside class="content__inside content__inside_secondary"></aside>
+      <aside class="content__inside"> 
+        <div class="row align-items-center justify-content-center pt-1 pb-1">
+          <div class="col-2 text-center"><img class="img-fluid" src="/img/delivery.svg" style="margin: 0 auto;"/></div>
+          <div class="col-5">
+            <p class="h4 text-uppercase text-bolder mb-1">Бесплатная доставка</p>
+            <p class="text-grey lead">При заказе от 15 000 рублей quis lacus commodo. Ullamcorper blandit orci euismod massa imperdiet. Faucibus elementum amet.</p>
+          </div>
+        </div>
+      </aside>
     </main>
     <script src="./js/jquery.inputmask.min.js"></script>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>
-    <link href="./css/slick.css" rel="stylesheet"/>
-    <link href="./css/slick-theme.css" rel="stylesheet"/>
-    <script src="./js/slick.min.js"></script>
+    <link href="./css/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./css/owl.theme.default.min.css" rel="stylesheet"/>
+    <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>
