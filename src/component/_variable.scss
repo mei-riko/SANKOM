@@ -16,7 +16,7 @@ $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
 
 $grid-columns         : 12 !default;
-$grid-gutter-width    : 25px !default;
+$grid-gutter-width    : 40px !default;
 
 $grid-breakpoints: (
   xs: 375px,
@@ -36,6 +36,7 @@ $container-max-widths: (
 $font-size-base       : 1rem;
 $font-weight-base     : 400;
 $line-height-base     : 1.4;
+$letter-spacing       : 0.04em;
 
 $font-family-heading  : "Golos", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-base     : "Golos", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -43,7 +44,7 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation M
 
 $font-size: (
   // small
-  xs: 12px,
+  xs: 11px,
   // btn
   sm: 13px,
   // main

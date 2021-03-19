@@ -1,0 +1,18 @@
+.preview_slider-tags{
+    text-align: center;
+
+    &__image{
+        border: 1px solid $border-color;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+        &:before{
+            padding-bottom: 100%;
+        }
+    }
+    &__title{
+        padding: 0;
+        font-size: map-get($map: $font-size, $key: xs);
+        font-weight: $font-weight-bolder;
+        letter-spacing: $letter-spacing;
+        line-height: $line-height-heading;
+    }
+}

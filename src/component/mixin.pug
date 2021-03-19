@@ -17,18 +17,23 @@ mixin category(title, intro, link, href)
         p.preview__intro!= intro
         a.preview__link(href=href)= link
 mixin subcategory(title, intro, href)
-    .preview.preview_subcategory
-        a.preview__image.preview_subcategory__image(style!=attributes.style href=href title=title)
-        a.preview__title.preview_subcategory__title(href=href title=title)!= title
-        p.preview__intro!= intro
+    a.preview.preview_subcategory(href=href title=title)
+        .preview__image.preview_subcategory__image(style!=attributes.style)
+        p.preview__title.preview_subcategory__title!= title
+        if intro!=''
+            p.preview__intro!= intro
 mixin promo(title, href)
     a.preview.preview_promo(href=href title=title)
         .preview__image.preview_promo__image(style!=attributes.style)
         p.preview__title.preview_promo__title!= title
 mixin categoryTags(title, href)
-    a.preview.preview_categoryTags(href=href title=title)
-        .preview__image.preview_categoryTags__image(style!=attributes.style)
-        p.preview__title.preview_categoryTags__title!= title
+    a.preview.preview_category-tags(href=href title=title)
+        .preview__image.preview_category-tags__image(style!=attributes.style)
+        p.preview__title.preview_category-tags__title!= title
+mixin sliderTags(title, href)
+    a.preview.preview_slider-tags(href=href title=title)
+        .preview__image.preview_slider-tags__image(style!=attributes.style)
+        p.preview__title.preview_slider-tags__title!= title
 mixin blog(tag, title, intro, href)
     .preview.preview_blog
         a.preview__image.preview_blog__image(style!=attributes.style href=href)

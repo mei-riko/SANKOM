@@ -1,0 +1,13 @@
+.product-grid{
+    display: grid;
+    grid-gap: $grid-gutter-width/2;
+
+    // Large Product Preview
+    &_lg{
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    // Small Product Preview
+    &_sm{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

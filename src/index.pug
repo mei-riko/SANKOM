@@ -23,24 +23,71 @@ html(lang="ru")
                         +banner('Только эко-материалы', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', 'Коллекции 2021', 'catalog.html')(class="banner_content-center" style="background-image:url('/img/banner-1.jpg');")
                     .slider__item
                         +banner('Весна время спорта', 'Introducing Stretch Twill Pants! Comfy and seasonless, these pull-on staples are the perfect additions to your wardrobe.', 'Спорт и здоровье', 'category.html')(class="banner_content-center" style="background-image:url('/img/banner-2.jpg');")
+                //- Category In Catalog
+                .row.align-items-center.mt-3.mb-2
+                    .col-10
+                        h2.h4.mb-0 SHOP BY CATEGORY
+                    .col-2.text-right 
+                        +btn('catalog.html', 'К покупкам')(class="btn_action")
+                .slider.slider_subcategory.owl-carousel.owl-theme
+                    .slider__item
+                        +subcategory('Бюстгальтеры', '', 'category.html')(style="background-image:url('/img/advantage-0.jpg');")
+                    .slider__item
+                        +subcategory('Трусы', '', 'category.html')(style="background-image:url('/img/advantage-1.jpg');")
+                    .slider__item
+                        +subcategory('Шорты', '', 'category.html')(style="background-image:url('/img/advantage-2.jpg');")
+                    .slider__item
+                        +subcategory('Леггинсы', '', 'category.html')(style="background-image:url('/img/advantage-3.jpg');")
+                    .slider__item
+                        +subcategory('Майки', '', 'category.html')(style="background-image:url('/img/advantage-4.jpg');")
+                    .slider__item
+                        +subcategory('Носки', '', 'category.html')(style="background-image:url('/img/advantage-1.jpg');")
                 //- Slider Tags
-                .mt-4.text-center
-                    h3.mb-0 Комфорт и забота о деталях
-                    p.content__heading-intro Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.
-                .mt-3.tabs.tabs--has-slider.justify-content-center
+                .row.align-items-center.mt-4
+                    .col-10
+                        h3.h4.mb-0 HEALTH, SPORT & BEAUTY
+                    .col-2.text-right 
+                        +btn('catalog.html', 'Каталог товаров')(class="btn_secondary")
+                .mt-2.mb-2.tabs.tabs--has-slider.d-flex
                     .tabs__item.tabs__item--active(data-content="tabBeauty") Коррекция и красота
                     .tabs__item(data-content="tabHealth") Забота о здоровье
                     .tabs__item(data-content="tabSport") Спорт и lifestyle
                 .tabs-content.tabs-content--active#tabBeauty
+                    .slider-container
+                        .slider.slider_tags.owl-carousel.owl-theme
+                            .slider__item
+                                +sliderTags('Моделирующий эффект','category-tags.html')(style="background-image:url('/img/product-1.jpg');")
+                            .slider__item
+                                +sliderTags('Возрастные изменения','category-tags.html')(style="background-image:url('/img/product-2.jpg');")
+                            .slider__item
+                                +sliderTags('Под платье','category-tags.html')(style="background-image:url('/img/product-3.jpg');")
+                            .slider__item
+                                +sliderTags('Антицеллюлитный эффект','category-tags.html')(style="background-image:url('/img/product-4.jpg');")
+                            .slider__item
+                                +sliderTags('Сильная степень утяжки','category-tags.html')(style="background-image:url('/img/product-5.jpg');")
+                            .slider__item
+                                +sliderTags('Обычная степень утяжки','category-tags.html')(style="background-image:url('/img/product-1.jpg');")
+                            .slider__item
+                                +sliderTags('Убрать бока','category-tags.html')(style="background-image:url('/img/product-2.jpg');")
+                            .slider__item
+                                +sliderTags('Убрать живот','category-tags.html')(style="background-image:url('/img/product-3.jpg');")
+                            .slider__item
+                                +sliderTags('Поддержка спины','category-tags.html')(style="background-image:url('/img/product-4.jpg');")
+                            .slider__item
+                                +sliderTags('На каждый день','category-tags.html')(style="background-image:url('/img/product-5.jpg');")
+                            .slider__item
+                                +sliderTags('Для спорта','category-tags.html')(style="background-image:url('/img/product-1.jpg');")
+                            .slider__item
+                                +sliderTags('Для бега','category-tags.html')(style="background-image:url('/img/product-2.jpg');")
                 .tabs-content#tabHealth
                 .tabs-content#tabSport
             //- Category
             section.content__inside.content__inside_secondary
-                .row.align-items-center.pt-1.pb-2
+                .row.align-items-center.mb-2
                     .col-10
-                        h4.text-uppercase Покупки по категориям
+                        h4.text-uppercase Fan-Favorites style
                     .col-2.text-right 
-                        +btn('catalog.html', 'Наш каталог')(class="btn_action")
+                        +btn('catalog.html', 'Каталог товаров')(class="btn_secondary")
                 .slider-container
                     .slider.slider_category.owl-carousel.owl-theme.mb-1
                         .slider__item
@@ -56,7 +103,11 @@ html(lang="ru")
             //- Promo and Products
             section.content__inside
                 //- Promo Pages
-                h4.text-uppercase.mt-2 #NEW_SANKOM
+                .row.align-items-center.mt-2.mb-2
+                    .col-10
+                        h4.text-uppercase #BLOG_SANKOM
+                    .col-2.text-right 
+                        +btn('blog.html', 'Перейти в блог')(class="btn_secondary")
                 .slider-container
                     .slider.slider_promo.owl-carousel.owl-theme
                         .slider__item
@@ -65,28 +116,32 @@ html(lang="ru")
                             +promo('Отличия от обычного корректирующего белья', 'text.html')(style="background-image:url('/img/image-2.jpg');")
                         .slider__item
                             +promo('Серии и направления SANKOM', 'text.html')(style="background-image:url('/img/image-3.jpg');")
-                //- Small Banner
-                .mt-4
-                    .banner-promo 
-                        .banner-promo__content ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM 
-                            a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
-                        a.btn.btn_inverse.btn--small(href="#") Подписаться
+                        .slider__item
+                            +promo('Особенности алоэ вера', 'text.html')(style="background-image:url('/img/image-2.jpg');")                
                 //- Products
-                .mt-4.text-center
-                    h3.mb-0 Выбор наших покупателей
-                    p.content__heading-intro Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.
-                .products-grid.products-grid_lg
+                .row.align-items-center.mt-4.mb-2
+                    .col-10
+                        h4.text-uppercase Выбор наших покупателей
+                    .col-2.text-right 
+                        +btn('category.html', 'Новинки SANKOM')(class="btn_secondary")
+                .product-grid.product-grid_lg
                     +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', '', 'product.html')(style="background-image:url('/img/product-1.jpg');")
                     +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
                     +product('Elementum amet morbi morbi aliquam senectus orcin ultrices', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
                     +product('Men Shaper Classic Black', '3 599 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
-                    +product('Hypoallergenic Compression Socks Grey', '889 руб.', '', '', 'по предзаказу', 'product.html')
-                .products-grid.products-grid_sm
+                    +product('Hypoallergenic Compression Socks Grey', '889 руб.', '', '', 'по предзаказу', 'product.html')(style="background-image:url('/img/product-5.jpg');")
+                .product-grid.product-grid_sm
                     +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('/img/product-1.jpg');")
                     +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
                     +productSmall('Elementum amet morbi morbi aliquam senectus orcin ultrices', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
                     +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
             aside.content__inside.content__inside_secondary
+            //- Small Banner
+            .mt-4
+                .banner-promo 
+                    .banner-promo__content ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM 
+                        a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
+                    a.btn.btn_inverse.btn--small(href="#") Подписаться
             aside.content__inside 
                 .row.align-items-center.justify-content-center.pt-1.pb-1
                     .col-2.text-center

@@ -4,9 +4,16 @@
 @import "banner/banner-promo";
 
 @import "slider/slider";
+@import "slider/slider_subcategory";
+@import "slider/slider_tags";
 @import "slider/slider_category";
 @import "slider/slider_promo";
 
 @import "preview/preview";
+@import "preview/preview_subcategory";
+@import "preview/preview_slider-tags";
 @import "preview/preview_category";
 @import "preview/preview_promo";
+
+@import "product/product-grid";
+@import "product/product";

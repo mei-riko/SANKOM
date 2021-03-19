@@ -3,21 +3,24 @@
         display: grid;
     }
     &.owl-loaded{
+        position: relative;
+        // margin-bottom: -$spacer;
+
         .owl-nav{
             position: absolute;
             top: 50%;
             width: 100%;
-            padding: 0 $spacer/2;
+            height: 1px;
             margin: 0;
-            transform: translateY(-50%);
-
-            display: flex;
-            justify-content: space-between;
 
             transition: all .4s;
             filter: opacity(0);
 
             [class*=owl-]{
+                position: absolute;
+                top: 0;
+                transform: translateY(-50%);
+
                 margin: 0;
                 width: $spacer;
                 height: $spacer;
@@ -37,6 +40,8 @@
             }
 
             .owl-prev{
+                left: $spacer/2;
+
                 background: $white url('../icon/arrow-left.svg') no-repeat center / 14px;
                 filter: opacity(.5);
 
@@ -50,6 +55,8 @@
                 }
             }
             .owl-next{
+                right: $spacer/2;
+
                 background: $white url('../icon/arrow-right.svg') no-repeat center / 14px;
                 filter: opacity(.5);
 
@@ -98,8 +105,12 @@
             }
         }
         &:hover, &:focus{
+            outline: none;
             .owl-nav{
                 filter: opacity(1);
+                [class*=owl-]{
+                    position: absolute;
+                }
             }
         }
     }

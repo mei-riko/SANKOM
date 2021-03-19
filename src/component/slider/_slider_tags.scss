@@ -1,0 +1,6 @@
+.slider_tags{
+    &:not(.owl-loaded){
+        grid-gap: 15px;
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+    }
+}

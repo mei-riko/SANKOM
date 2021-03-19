@@ -1,0 +1,17 @@
+.product{
+    &__image{
+        position: relative;
+        display: block;
+        width: 100%;
+        border-radius: map-get($map: $spacers, $key: 1);
+        background: no-repeat center / cover;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+
+        &:before{
+            content: '';
+            display: block;
+            width: 100%;
+            padding-bottom: 130%;
+        }
+    }
+}

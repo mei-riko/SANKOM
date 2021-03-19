@@ -1,0 +1,6 @@
+.slider_subcategory{
+    &:not(.owl-loaded){
+        grid-gap: $grid-gutter-width/2;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}

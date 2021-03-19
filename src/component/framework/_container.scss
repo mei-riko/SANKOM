@@ -1,6 +1,6 @@
 .container {
-  width:  calc(100% - 50px);
-  max-width: map-get($container-max-widths, 'xl');
+  width: 100%;
+  max-width: 1500px;
   padding-left: $grid-gutter-width;
   padding-right: $grid-gutter-width;
   margin-right: auto;

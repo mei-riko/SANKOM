@@ -1,0 +1,14 @@
+.preview_subcategory{
+    text-align: center;
+
+    &__image{
+        border: 1px solid $border-color;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+        &:before{
+            padding-bottom: 100%;
+        }
+    }
+    &__title{
+        letter-spacing: $letter-spacing;
+    }
+}

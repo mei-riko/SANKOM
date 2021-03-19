@@ -16,8 +16,9 @@
         }
     }
     &__title{
+        font-size: map-get($map: $font-size, $key: sm);
         font-weight: $font-weight-bold;
-        letter-spacing: .5px;
+        letter-spacing: $letter-spacing;
         padding-left: map-get($map: $spacers, $key: 1);
         margin-bottom: map-get($map: $spacers, $key: 0);
         color: $black;
@@ -32,5 +33,17 @@
         font-weight: $font-weight-bold;
         color: $action;
         text-decoration: underline;
+    }
+}
+
+a.preview{
+    .preview__title {
+        transition: .4s;
+    }
+    &:hover{
+        text-decoration: none;
+        .preview__title {
+            color: $action;
+        }
     }
 }
