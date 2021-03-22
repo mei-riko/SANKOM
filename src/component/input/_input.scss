@@ -1,27 +1,85 @@
 .input{
-    background-color: inherit;
-    color: $white;
-    border: 1px solid $border-color;
-    padding: $spacer/3 $spacer/2;
-    margin-bottom: $spacer/3;
-    transition: .4s;
+    position: relative;
 
-    &::placeholder{
+    &__field{
+        width: 300px;
+        max-width: 100%;
+        background-color: inherit;
+        border-radius: $border-radius;
+        border: 1px solid $border-color;
+        color: $black;
+
+        line-height: 20px;
+        padding: 10px 15px;
         transition: .4s;
-        color: $grey;
+
+        &::placeholder{
+            color: $grey;
+            opacity: 1;
+        }
+
+        &:hover{
+            border-color: $border-color;
+            outline: none;
+        }
+        &:focus{
+            border-color: $action;
+            outline: none;
+
+            &::placeholder{
+                opacity: 0;
+                transition: .4s;
+            }
+
+            & ~ .input__label_inside{
+                top: 0;
+
+                font-size: map-get($map: $font-size, $key: xs);
+                font-weight: $font-weight-bold;
+                color: $action;
+
+                opacity: 1;
+            }
+        }
+        &:valid{
+            & ~ .input__label_inside{
+                top: 0;
+
+                font-size: map-get($map: $font-size, $key: xs);
+                font-weight: $font-weight-bold;
+                color: $action;
+
+                opacity: 1;
+            }
+        }
     }
-    &:hover, &:focus{
-        border-color: $border-color;
-        outline: none;
+    &__label{
+
+        &_inside{
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+
+            margin: 0;
+            padding: 0;
+            
+            font-size: map-get($map: $font-size, $key: md);
+            line-height: 1;
+            color: $grey;
+
+            // opacity: 0;
+            transition: all ease .2s;
+        }
+
     }
-    &:focus::placeholder{
-        opacity: 0;
-    }
+
+    
     // Состояние
     &--full{
         width: 100%;
     }
     &--has-validation{
         margin-bottom: $spacer/6;
-    } 
+    }
 }

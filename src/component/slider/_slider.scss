@@ -42,11 +42,13 @@
             .owl-prev{
                 left: $spacer/2;
 
-                background: $white url('../icon/arrow-left.svg') no-repeat center / 14px;
+                background: $white url('../icon/arrow-left.svg') no-repeat center / 8px;
+                background-position-x: calc(50% - 2px);
                 filter: opacity(.5);
 
                 &:hover{
-                    background: $white url('../icon/arrow-left.svg') no-repeat center / 14px;
+                    background: $white url('../icon/arrow-left.svg') no-repeat center / 8px;
+                    background-position-x: calc(50% - 2px);
                     filter: opacity(1);
                 }
 
@@ -57,11 +59,11 @@
             .owl-next{
                 right: $spacer/2;
 
-                background: $white url('../icon/arrow-right.svg') no-repeat center / 14px;
+                background: $white url('../icon/arrow-right.svg') no-repeat center / 8px;
                 filter: opacity(.5);
 
                 &:hover{
-                    background: $white url('../icon/arrow-right.svg') no-repeat center / 14px;
+                    background: $white url('../icon/arrow-right.svg') no-repeat center / 8px;
                     filter: opacity(1);
                 }
 

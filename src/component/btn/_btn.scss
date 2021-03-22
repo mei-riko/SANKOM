@@ -6,6 +6,8 @@
     font-size: map-get($map: $font-size, $key: "sm");
     font-weight: $font-weight-bolder;
     letter-spacing: $letter-spacing;
+    line-height: 20px;
+    text-align: center;
 
     color: $body-color;
     background-color: inherit;
@@ -13,10 +15,13 @@
 
     border-radius: 4px;
     border: 1px solid $grey;
+    min-width: 160px;
+    max-width: 100%;
 
     transition: all .4s;
 
     &:hover, &:focus{
+        color: $body-color;
         text-decoration: none;
         outline: none;
     }
@@ -26,6 +31,19 @@
     }
     &--small{
         padding: 4px 12px;
+        min-width: 120px;
         border-radius: 2px;
+    }
+}
+
+.btn-group{
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-gap: $grid-gutter-width/4;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+
+    .btn{
+        min-width: auto;
     }
 }

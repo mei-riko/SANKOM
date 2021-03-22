@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6,
     font-family: $font-family-heading;
     font-weight: $font-weight-heading;
     line-height: $line-height-heading;
-    margin-bottom: map-get($spacers, 2);
+    margin-bottom: $grid-gutter-width/2;
 
     &:last-child{
         margin-bottom: 0;
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6,
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
-    margin-top: map-get($spacers, 3);
+    margin-top: $grid-gutter-width;
 }
 .h1,h1{font-size: 38px;}
 .h2,h2{font-size: 32px;}
@@ -40,14 +40,16 @@ h1, h2, h3, h4, h5, h6,
 p {
     font-size: 1rem;
     margin-top: 0;
-    margin-bottom: map-get($spacers, 2);
+    margin-bottom: $grid-gutter-width/2;
+
     &:last-child{
         margin-bottom: 0;
     }
 }
 ol, ul{
     padding: 0;
-    margin-bottom: map-get($spacers, 2);
+    margin-bottom: $grid-gutter-width/2;
+
     &:last-child{
         margin-bottom: 0;
     }
@@ -115,6 +117,8 @@ table{
 .text-bold,strong,b{font-weight: 700;}
 .text-underline{text-decoration: underline;}
 
+.text-covered{font-family: 'Covered By Your Grace', cursive; color: $action;}
+
 .text-small,small,.small{font-size: map-get($map: $font-size, $key: 'xs');}
 .text-lead,.lead{font-size: map-get($map: $font-size, $key: 'lg');}
 
@@ -133,8 +137,10 @@ table{
     border: 1px solid $border-color;
 }
 .border-block{
-    padding: map-get($map: $spacers, $key: 3);
+    padding: $grid-gutter-width;
     border: 1px solid $border-color;
+    border-radius: $border-radius;
+    background-color: $white;
 }
 
 

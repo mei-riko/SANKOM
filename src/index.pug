@@ -7,6 +7,7 @@ html(lang="ru")
         title Index Page
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         link(href='/css/style.css', rel='stylesheet')
         link(href='/css/index.css', rel='stylesheet')
 
@@ -26,7 +27,7 @@ html(lang="ru")
                 //- Category In Catalog
                 .row.align-items-center.mt-3.mb-2
                     .col-10
-                        h2.h4.mb-0 SHOP BY CATEGORY
+                        h2.content__block-title.mb-0 SHOP BY CATEGORY
                     .col-2.text-right 
                         +btn('catalog.html', 'К покупкам')(class="btn_action")
                 .slider.slider_subcategory.owl-carousel.owl-theme
@@ -45,9 +46,9 @@ html(lang="ru")
                 //- Slider Tags
                 .row.align-items-center.mt-4
                     .col-10
-                        h3.h4.mb-0 HEALTH, SPORT & BEAUTY
-                    .col-2.text-right 
-                        +btn('catalog.html', 'Каталог товаров')(class="btn_secondary")
+                        h3.content__block-title.mb-0 HEALTH, SPORT & BEAUTY
+                    //- .col-2.text-right 
+                    //-     +btn('catalog.html', 'Каталог товаров')(class="btn_secondary")
                 .mt-2.mb-2.tabs.tabs--has-slider.d-flex
                     .tabs__item.tabs__item--active(data-content="tabBeauty") Коррекция и красота
                     .tabs__item(data-content="tabHealth") Забота о здоровье
@@ -85,7 +86,7 @@ html(lang="ru")
             section.content__inside.content__inside_secondary
                 .row.align-items-center.mb-2
                     .col-10
-                        h4.text-uppercase Fan-Favorites style
+                        h4.content__block-title.text-uppercase Fan-Favorites style
                     .col-2.text-right 
                         +btn('catalog.html', 'Каталог товаров')(class="btn_secondary")
                 .slider-container
@@ -100,12 +101,12 @@ html(lang="ru")
                             +category('Скидка на наши товары', 'выгодная покупка', 'Купить сейчас', 'sales.html')(style="background-image:url('/img/bg-sales.jpg');")
                         .slider__item
                             +category('Новое в каталоге SANKOM', 'коллекции 2021 года', 'Узнать про новинки', 'collection.html')(style="background-image:url('/img/bg-demo.jpg');")
-            //- Promo and Products
+            //- Promo, Products & Banner
             section.content__inside
                 //- Promo Pages
                 .row.align-items-center.mt-2.mb-2
                     .col-10
-                        h4.text-uppercase #BLOG_SANKOM
+                        h4.content__block-title.text-uppercase #BLOG_SANKOM
                     .col-2.text-right 
                         +btn('blog.html', 'Перейти в блог')(class="btn_secondary")
                 .slider-container
@@ -121,27 +122,66 @@ html(lang="ru")
                 //- Products
                 .row.align-items-center.mt-4.mb-2
                     .col-10
-                        h4.text-uppercase Выбор наших покупателей
+                        h4.content__block-title.text-uppercase Выбор наших покупателей
                     .col-2.text-right 
-                        +btn('category.html', 'Новинки SANKOM')(class="btn_secondary")
+                        +btn('category.html', 'Новинки SANKOM')(class="btn_action")
                 .product-grid.product-grid_lg
                     +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', '', 'product.html')(style="background-image:url('/img/product-1.jpg');")
                     +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
-                    +product('Elementum amet morbi morbi aliquam senectus orcin ultrices', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
+                    +product('Hypoallergenic Compression Socks Grey', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
                     +product('Men Shaper Classic Black', '3 599 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
-                    +product('Hypoallergenic Compression Socks Grey', '889 руб.', '', '', 'по предзаказу', 'product.html')(style="background-image:url('/img/product-5.jpg');")
-                .product-grid.product-grid_sm
+                    +product('Shaper Classic Peach', '889 руб.', '', '', 'по предзаказу', 'product.html')(style="background-image:url('/img/product-5.jpg');")
+                .product-grid.product-grid_sm.mt-2
                     +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('/img/product-1.jpg');")
                     +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
-                    +productSmall('Elementum amet morbi morbi aliquam senectus orcin ultrices', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
+                    +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
                     +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
+                //- Small Banner
+                .mt-2
+                    .banner-promo 
+                        .banner-promo__content ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM 
+                            a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
+                        a.btn.btn_inverse.btn--small(href="#") Подписаться
             aside.content__inside.content__inside_secondary
-            //- Small Banner
-            .mt-4
-                .banner-promo 
-                    .banner-promo__content ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM 
-                        a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
-                    a.btn.btn_inverse.btn--small(href="#") Подписаться
+                .row 
+                    .col-6
+                        .content-with-image
+                            .content-with-image__image
+                                img.img-fluid(src="./img/FAQ.jpg" title="" alt="")
+                            .content-with-image__content
+                                p.h1 FAQ: только<br/>полезное
+                                p Founded in the heart of Switzerland, SANKOM strives to develop functional products that improve your health and beauty without compromising comfort.
+                                .btn-group  
+                                    +btn('blog.html', 'Видео')(class="btn_secondary")
+                                    +btn('blog.html', 'Отзывы')(class="btn_secondary")
+                        .row
+                            .col-6.col-sm-12.mt-2
+                                +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(style="background-image:url('/img/image-1.jpg');")
+                            .col-6.col-sm-12.mt-2
+                                +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(style="background-image:url('/img/image-2.jpg');")
+                    .col-6
+                        .border-block.mb-2
+                            p.h4.mb-1 Персональные скидки и новости
+                            p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
+                            form.form(action="")
+                                .form__col
+                                    +radio('radio1', 'Получать все новости SANKOM','news')
+                                .form__col
+                                    +radio('radio2', 'Акции и скидки','news')
+                                .form__col
+                                    +radio('radio3', 'Персональные предложения','news')
+                                .form__line.mt-2
+                                    +input('', 'E-mail')(label="input__label_inside bg-white" class="input_label-inside")
+                                    +btn('', 'Подписаться')(class="btn_action btn_icon-check")
+                        a.faq.faq_link.bg-white(href="text.html")
+                            .faq__title.faq__title--has-icon О бренде SANKOM, материалах и технологиях производства
+                                img.faq__icon(src='/icon/faq.svg')
+                        a.faq.faq_link.bg-white(href="text.html")
+                            .faq__title.faq__title--has-icon Подробнее о программе лояльности
+                                img.faq__icon(src='/icon/faq.svg')
+                        a.faq.faq_link.bg-white(href="text.html")
+                            .faq__title.faq__title--has-icon Узнать о способах доставки, оплаты и возврата
+                                img.faq__icon(src='/icon/faq.svg')
             aside.content__inside 
                 .row.align-items-center.justify-content-center.pt-1.pb-1
                     .col-2.text-center

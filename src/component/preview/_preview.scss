@@ -6,7 +6,7 @@
         position: relative;
         display: block;
         width: 100%;
-        border-radius: map-get($map: $spacers, $key: 1);
+        border-radius: $border-radius;
         background: no-repeat center / cover;
 
         &:before{
@@ -18,13 +18,22 @@
     &__title{
         font-size: map-get($map: $font-size, $key: sm);
         font-weight: $font-weight-bold;
-        letter-spacing: $letter-spacing;
+        // letter-spacing: $letter-spacing;
         padding-left: map-get($map: $spacers, $key: 1);
         margin-bottom: map-get($map: $spacers, $key: 0);
         color: $black;
     }
+    &__tag{
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: $line-height-heading;
+        text-transform: uppercase;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+        color: $grey;
+    }
     &__intro{
         font-size: map-get($map: $font-size, $key: sm);
+        line-height: 1.4;
+
         margin-bottom: map-get($map: $spacers, $key: 1);
         color: $grey;
     }

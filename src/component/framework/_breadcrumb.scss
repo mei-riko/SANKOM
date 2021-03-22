@@ -1,0 +1,25 @@
+.breadcrumb{
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: map-get($map: $font-size, $key: xs);
+
+    &__item{
+        &:after{
+            content: '/';
+            margin: 0 4px;
+        }
+
+        &--active{
+            &:after{
+                display: none;
+            }
+        }
+    }
+    &__link{
+        color: $grey;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,44 @@
+.faq{
+    display: block;
+
+    padding: $grid-gutter-width/3 $grid-gutter-width/2;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+
+    margin-bottom: map-get($map: $spacers, $key: 1);
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    &__title{
+        position: relative;
+
+        &--has-icon{
+            padding-left: 30px;
+        }
+
+        &:after{
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            background: url('../icon/arrow-right.svg') no-repeat center / contain;
+        }
+    }
+    &__icon{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 16px;
+        height: auto;
+    }
+}

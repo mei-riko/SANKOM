@@ -1,0 +1,32 @@
+.product_small{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap; 
+
+    &__image{
+        flex: 0 0 120px;
+        max-width: 120px;
+        margin-right: map-get($map: $spacers, $key: 1);
+
+        &:before{
+            content: '';
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+    &__content{
+        position: relative;
+        padding-top: $grid-gutter-width;
+    }
+    &__status{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        text-transform: capitalize;
+
+        font-size: 20px;
+        line-height: 1.1;
+    }
+}

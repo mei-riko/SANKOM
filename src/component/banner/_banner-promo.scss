@@ -1,4 +1,6 @@
 .banner-promo{
+    position: relative;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -6,21 +8,21 @@
     // width: 800px;
     width: max-content;
     max-width: 100%;
-    padding: $spacer/4 $spacer/2;
+    padding: 10px 40px;
+    padding-right: 60px;
     margin: 0 auto;
 
     color: $white;
-    background-color: $action;
+    background: url('../icon/brush-bg.svg') no-repeat center / contain;
 
     font-size: map-get($map: $font-size, $key: sm);
     font-weight: $font-weight-bolder;
-    letter-spacing: .5px;
+    letter-spacing: $letter-spacing;
 
     &__content{
-        padding-left: $spacer;
+        padding-left: $spacer/2;
         padding-right: $spacer/2;
     }
-
     &__link{
         text-transform: uppercase;
         color: $white;

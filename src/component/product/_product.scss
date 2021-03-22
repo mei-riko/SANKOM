@@ -1,11 +1,15 @@
 .product{
+    position: relative;
+    padding-bottom: map-get($map: $spacers, $key: 2);
+
     &__image{
         position: relative;
         display: block;
         width: 100%;
-        border-radius: map-get($map: $spacers, $key: 1);
-        background: no-repeat center / cover;
-        margin-bottom: map-get($map: $spacers, $key: 1);
+        border-radius: $border-radius;
+        background: #ebe7e4 no-repeat center / contain;
+        // background: no-repeat center / cover;
+        margin-bottom: $grid-gutter-width/2;
 
         &:before{
             content: '';
@@ -13,5 +17,53 @@
             width: 100%;
             padding-bottom: 130%;
         }
+    }
+    &__status{
+        position: absolute;
+        top: map-get($map: $spacers, $key: 1);
+        right: map-get($map: $spacers, $key: 1);
+
+        text-transform: capitalize;
+
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    &__title{
+        display: flex;
+        align-items: flex-end;
+
+        font-weight: $font-weight-bolder;
+        letter-spacing: $letter-spacing;
+        margin-bottom: $grid-gutter-width/8;
+        line-height: 18px;
+        height: 24px;
+    }
+
+    &__price-old{
+        display: inline-block;
+        text-decoration: line-through;
+
+        & + .product__price-new{
+            color: $action;
+            margin-left: 4px;
+        }
+    }
+    &__price-new{
+        display: inline-block;
+        font-weight: $font-weight-bold;
+    }
+
+    &__label{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    
+        font-size: map-get($map: $font-size, $key: xs);
+        font-weight: $font-weight-bold;
+        letter-spacing: 1px;
+        color: $action;
+
+        // transform: translateY(50%);
     }
 }

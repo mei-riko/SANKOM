@@ -2,7 +2,7 @@ import $ from 'jquery'
 import '../component/slider/slider';
 
 $(document).ready(() =>{
-  $(".scroll").click(function() {
+  $(".scroll").on('click', function() {
     $("html, body").animate({
        scrollTop: $($(this).attr("href")).offset().top + "px"
     }, {
@@ -17,7 +17,7 @@ $(document).ready(() =>{
     touch: false
   });
   // Link Disable
-  $('a[data-trigger="click"]').click(function(e){
+  $('a[data-trigger="click"]').on('click', function(e){
     e.preventDefault();
   })
 });

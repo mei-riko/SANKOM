@@ -1,0 +1,15 @@
+.content-with-image{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &__image{
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    &__content{
+        flex: 0 0 65%;
+        max-width: 65%;
+        transform: translateX(-10%);
+    }
+}

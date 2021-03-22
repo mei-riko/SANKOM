@@ -7,11 +7,13 @@ $grey                 : #666666;
 $dark-grey            : $black;
 
 $border-color         : #EBE7E4;
+$border-radius        :   6px;
+
 $body-color           : $black;
 $body-bg              : #f7f6f4;
 
-$link-color           : $grey !default;
-$link-hover-color     : $grey !default;
+$link-color           : $black !default;
+$link-hover-color     : $action !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
 
@@ -55,12 +57,11 @@ $font-size: (
 
 $font-weight-heading: 700;
 
-$font-weight-light  : 300;
 $font-weight        : 400;
 $font-weight-bolder : 500;
-$font-weight-bold   : 800;
+$font-weight-bold   : 700;
 
-$line-height        : 1.7;
+$line-height        : 1.8;
 $line-height-heading: 1.2;
 
 $dt-font-weight: $font-weight-bold !default;
