@@ -1,6 +1,6 @@
 .pagination{
     display: grid;
-    grid-gap: $spacer/4;
+    grid-gap: $grid-gutter-width/4;
     grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
 
     &__link{

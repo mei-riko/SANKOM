@@ -1,0 +1,76 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        title Catalog
+
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/catalog.css', rel='stylesheet')
+
+    body
+        script(src="/js/jquery.min.js")
+        include component/mixin.pug
+        include component/header/header.pug
+        main.content.container.mt-3.mb-3
+            section.content__inside
+            //- Information
+            aside.content__inside.pt-0
+                .row 
+                    .col-6
+                        .form-block
+                            p.h4.mb-1 Персональные скидки и новости
+                            p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
+                            form.form(action="")
+                                .form__col
+                                    +radio('radio1', 'Получать все новости SANKOM','news')
+                                .form__col
+                                    +radio('radio2', 'Акции и скидки','news')
+                                .form__col
+                                    +radio('radio3', 'Персональные предложения','news')
+                                .form__line.mt-2
+                                    +input('', 'E-mail')(label="input__label_inside bg-white" class="input_label-inside")
+                                    +btn('', 'Подписаться')(class="btn_action btn_icon-check")
+                    .col-6
+                        p Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
+                            | pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
+                            | condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+                        p.d-none(data-content="moreInfo")
+                            | Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
+                            | pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
+                            | condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+                            | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
+                        p
+                            a.text-small.text-bolder.text-underline.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
+                        a.faq.faq_link.bg-white(href="text.html")
+                            .faq__title.faq__title--has-icon О бренде SANKOM, материалах и технологиях производства
+                                img.faq__icon(src='/icon/faq.svg')
+                        a.faq.faq_link.bg-white(href="text.html")
+                            .faq__title.faq__title--has-icon Подробнее о программе лояльности
+                                img.faq__icon(src='/icon/faq.svg')
+                        a.faq.faq_link.bg-white(href="text.html")
+                            .faq__title.faq__title--has-icon Узнать о способах доставки, оплаты и возврата
+                                img.faq__icon(src='/icon/faq.svg')
+            //- Delivery
+            aside.content__inside.content__inside_secondary
+                .row.align-items-center.justify-content-center.pt-1.pb-1
+                    .col-2.text-center
+                        img.img-fluid(src="/img/delivery.svg" style="margin: 0 auto;")
+                    .col-5
+                        p.h4.text-uppercase.text-bolder.mb-1 Бесплатная доставка
+                        p.text-grey.lead При заказе от 15 000 рублей quis lacus commodo. Ullamcorper blandit orci euismod massa imperdiet. Faucibus elementum amet.
+        include component/footer/footer.pug
+        
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/owl.carousel.min.css', rel='stylesheet')
+        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
+        script(src="./js/owl.carousel.min.js")
+
+        script(src="./js/app.min.js")

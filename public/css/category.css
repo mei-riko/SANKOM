@@ -9,9 +9,9 @@
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 50px;
-  border-radius: 6px;
+  border-radius: 10px;
   background: no-repeat center / cover;
-  height: 420px;
+  min-height: 420px;
   overflow: hidden;
 }
 
@@ -47,6 +47,65 @@
   max-width: 100%;
 }
 
+.banner_category {
+  min-height: 360px;
+}
+
+.banner_category__title {
+  font-size: 32px;
+}
+
+.banner-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 50px 75px;
+  background-color: #FCFBFA;
+  border-radius: 10px;
+}
+
+.banner-intro__content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  max-width: 45%;
+  padding-right: 50px;
+}
+
+.banner-intro__image-block {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 55%;
+  flex: 0 0 55%;
+  max-width: 55%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.banner-intro__label {
+  font-size: 38px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.banner-intro__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.banner-intro__image {
+  border-radius: 6px;
+  border: 1px solid #DD0330;
+}
+
 .preview {
   display: block;
   width: 100%;
@@ -69,7 +128,7 @@
 .preview__title {
   font-size: 13px;
   font-weight: 700;
-  padding-left: 10px;
+  padding-left: 15px;
   margin-bottom: 0;
   color: #3A3A3A;
 }
@@ -78,14 +137,14 @@
   font-size: 11px;
   line-height: 1.2;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #666666;
 }
 
 .preview__intro {
   font-size: 13px;
   line-height: 1.4;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #666666;
 }
 
@@ -112,7 +171,7 @@ a.preview:hover .preview__title {
 
 .preview_category-tags__image {
   border: 1px solid #EBE7E4;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .preview_category-tags__image:before {
@@ -225,7 +284,7 @@ a.preview:hover .preview__title {
 }
 
 .slider.owl-loaded .owl-dots {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .slider.owl-loaded .owl-dots .owl-dot {
@@ -279,4 +338,166 @@ a.preview:hover .preview__title {
 .slider_category:not(.owl-loaded) {
   grid-gap: 15px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+
+.tags__link {
+  font-size: 11px;
+  line-height: 13px;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border: 1px solid #EBE7E4;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.tags__link:hover, .tags__link:focus {
+  text-decoration: none;
+  border-color: #DD0330;
+}
+
+.tags__link_category {
+  background-color: #f7f6f4;
+}
+
+.product {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.product__image-block {
+  display: block;
+  position: relative;
+}
+
+.product__image-block:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 150%;
+}
+
+.product__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: #ebe7e4 no-repeat center / contain;
+  z-index: 2;
+}
+
+.product__image_hover {
+  z-index: 1;
+}
+
+.product__image:hover, .product__image:focus {
+  -webkit-filter: opacity(0);
+  filter: opacity(0);
+}
+
+.product__status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-transform: capitalize;
+  font-size: 28px;
+  line-height: 1.1;
+  z-index: 3;
+}
+
+.product__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+  line-height: 18px;
+  height: 24px;
+}
+
+.product__price-old {
+  display: inline-block;
+  text-decoration: line-through;
+}
+
+.product__price-old + .product__price-new {
+  color: #DD0330;
+  margin-left: 4px;
+}
+
+.product__price-new {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.product__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #DD0330;
+}
+
+.faq {
+  display: block;
+  padding: 13.33333px 20px;
+  border: 1px solid #EBE7E4;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.faq:last-child {
+  margin-bottom: 0;
+}
+
+.faq__title {
+  position: relative;
+}
+
+.faq__title--has-icon {
+  padding-left: 30px;
+}
+
+.faq__title:after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url("../icon/arrow-right.svg") no-repeat center/contain;
+}
+
+.faq__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 16px;
+  height: auto;
 }

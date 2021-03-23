@@ -1,0 +1,88 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Catalog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&amp;display=swap" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/catalog.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="/js/jquery.min.js"></script>
+    <header class="header"></header>
+    <main class="content container mt-3 mb-3">
+      <section class="content__inside"></section>
+      <aside class="content__inside pt-0">
+        <div class="row"> 
+          <div class="col-6">
+            <div class="form-block">
+              <p class="h4 mb-1">Персональные скидки и новости</p>
+              <p class="text-grey mb-2">Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque</p>
+              <form class="form" action="">
+                <div class="form__col">
+                      <div class="radio">
+                        <input class="radio__input" type="radio" id="radio1" name="news"/>
+                        <label class="radio__label" for="radio1">Получать все новости SANKOM</label>
+                      </div>
+                </div>
+                <div class="form__col">
+                      <div class="radio">
+                        <input class="radio__input" type="radio" id="radio2" name="news"/>
+                        <label class="radio__label" for="radio2">Акции и скидки</label>
+                      </div>
+                </div>
+                <div class="form__col">
+                      <div class="radio">
+                        <input class="radio__input" type="radio" id="radio3" name="news"/>
+                        <label class="radio__label" for="radio3">Персональные предложения</label>
+                      </div>
+                </div>
+                <div class="form__line mt-2">
+                      <div class="input input_label-inside">
+                        <input class="input__field" placeholder=""/>
+                        <label class="input__label input__label_inside bg-white">E-mail</label>
+                      </div><a class="btn btn_action btn_icon-check" href="">Подписаться</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-6">
+            <p>
+              Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
+              condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+            </p>
+            <p class="d-none" data-content="moreInfo">
+              Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
+              pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
+              condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+              Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
+            </p>
+            <p><a class="text-small text-bolder text-underline open-content" href="javascript;" data-id="moreInfo" data-trigger="click">Читать дальше ></a></p><a class="faq faq_link bg-white" href="text.html">
+              <div class="faq__title faq__title--has-icon">О бренде SANKOM, материалах и технологиях производства<img class="faq__icon" src="/icon/faq.svg"/></div></a><a class="faq faq_link bg-white" href="text.html">
+              <div class="faq__title faq__title--has-icon">Подробнее о программе лояльности<img class="faq__icon" src="/icon/faq.svg"/></div></a><a class="faq faq_link bg-white" href="text.html">
+              <div class="faq__title faq__title--has-icon">Узнать о способах доставки, оплаты и возврата<img class="faq__icon" src="/icon/faq.svg"/></div></a>
+          </div>
+        </div>
+      </aside>
+      <aside class="content__inside content__inside_secondary">
+        <div class="row align-items-center justify-content-center pt-1 pb-1">
+          <div class="col-2 text-center"><img class="img-fluid" src="/img/delivery.svg" style="margin: 0 auto;"/></div>
+          <div class="col-5">
+            <p class="h4 text-uppercase text-bolder mb-1">Бесплатная доставка</p>
+            <p class="text-grey lead">При заказе от 15 000 рублей quis lacus commodo. Ullamcorper blandit orci euismod massa imperdiet. Faucibus elementum amet.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <link href="./css/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./css/owl.theme.default.min.css" rel="stylesheet"/>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

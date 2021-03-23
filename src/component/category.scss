@@ -1,6 +1,9 @@
 @import "variable";
 
 @import "banner/banner";
+@import "banner/banner_category";
+
+@import "banner/banner-intro";
 
 @import "preview/preview";
 @import "preview/preview_category-tags";
@@ -8,3 +11,9 @@
 
 @import "slider/slider";
 @import "slider/slider_category";
+
+@import "tags/tags";
+
+@import "product/product";
+
+@import "faq/faq";

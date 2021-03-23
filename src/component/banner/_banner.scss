@@ -3,10 +3,10 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: $spacer;
-    border-radius: $border-radius;
+    border-radius: $grid-gutter-width/4;
     background: no-repeat center / cover;
 
-    height: 420px;
+    min-height: 420px;
     overflow: hidden;
 
     &__title{

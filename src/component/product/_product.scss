@@ -2,22 +2,45 @@
     position: relative;
     padding-bottom: map-get($map: $spacers, $key: 2);
 
-    &__image{
-        position: relative;
+    // Image Container
+    &__image-block{
         display: block;
-        width: 100%;
-        border-radius: $border-radius;
-        background: #ebe7e4 no-repeat center / contain;
-        // background: no-repeat center / cover;
-        margin-bottom: $grid-gutter-width/2;
+        position: relative;
 
         &:before{
             content: '';
             display: block;
             width: 100%;
-            padding-bottom: 130%;
+            padding-bottom: 150%;
         }
     }
+    // Image
+    &__image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        display: block;
+        width: 100%;
+        margin-bottom: $grid-gutter-width/2;
+
+        border-radius: $border-radius;
+        background: #ebe7e4 no-repeat center / contain;
+
+        z-index: 2;
+
+        &_hover{
+            z-index: 1;
+        }
+
+        &:hover, &:focus{
+            filter: opacity(0);
+        }
+    }
+
+    // Label Product
     &__status{
         position: absolute;
         top: map-get($map: $spacers, $key: 1);
@@ -27,6 +50,8 @@
 
         font-size: 28px;
         line-height: 1.1;
+
+        z-index: 3;
     }
 
     &__title{

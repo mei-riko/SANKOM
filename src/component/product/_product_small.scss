@@ -4,9 +4,14 @@
     flex-wrap: nowrap; 
 
     &__image{
+        display: block;
+
         flex: 0 0 120px;
         max-width: 120px;
         margin-right: map-get($map: $spacers, $key: 1);
+
+        border-radius: $border-radius;
+        background: #ebe7e4 no-repeat center / contain;
 
         &:before{
             content: '';

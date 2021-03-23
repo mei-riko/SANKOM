@@ -1,0 +1,41 @@
+.banner-intro{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
+    background-color: $light-grey;
+    border-radius: $grid-gutter-width/4;
+
+    &__content{
+        flex: 0 0 45%;
+        max-width: 45%;
+        padding-right: map-get($map: $spacers, $key: 3);
+    }
+    &__image-block{
+        flex: 0 0 55%;
+        max-width: 55%;
+
+        display: grid;
+        grid-gap: $grid-gutter-width/4;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    &__label{
+        font-size: 38px;
+        line-height: 32px;
+        margin-bottom: $grid-gutter-width/4;
+    }
+    &__title{
+        font-size: 21px;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+        margin-bottom: $grid-gutter-width/2;
+
+        text-transform: uppercase;
+    }
+    &__image{
+        border-radius: $border-radius;
+        border: 1px solid $action;
+    }
+}

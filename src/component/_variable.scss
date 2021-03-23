@@ -17,9 +17,6 @@ $link-hover-color     : $action !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
 
-$grid-columns         : 12 !default;
-$grid-gutter-width    : 40px !default;
-
 $grid-breakpoints: (
   xs: 375px,
   sm: 576px,
@@ -66,13 +63,17 @@ $line-height-heading: 1.2;
 
 $dt-font-weight: $font-weight-bold !default;
 
+$grid-columns         : 12 !default;
+$grid-gutter-width    : 40px !default;
+$spacer-gutter        : 15px !default;
+
 $spacer : 50px!default;
 $spacers: ()  !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
-    1: $spacer/5,         // 10px
+    1: $spacer-gutter,    // 15px
     2: $spacer/2,         // 25px
     3: $spacer,           // 50px
     4: ($spacer * 1.5),   // 75px

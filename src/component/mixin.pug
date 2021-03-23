@@ -3,7 +3,7 @@ mixin btn(href, title)
     a.btn(class!=attributes.class href=href)= title
 mixin input(placeholder, label)
     .input(class!=attributes.class)
-        input.input__field(placeholder=placeholder type!=attributes.type required)
+        input.input__field(placeholder=placeholder type!=attributes.type)
         label.input__label(class!=attributes.label)= label
 mixin textarea(placeholder, label)
     .input.input_textarea(class!=attributes.class)
@@ -69,10 +69,19 @@ mixin banner(title, intro, link, href)
         if link!=''
             .mt-3
                 a.btn.btn_secondary(href=href)= link
+mixin bannerCategory(title, intro)
+    .banner.banner_category(style!=attributes.style class!=attributes.class)
+        p.banner__title.banner_category__title= title
+        p.banner__intro.banner_category__intro= intro
+        if block
+            .banner__content
+                block
 //- Products
 mixin product(title, newPrice, oldPrice, status, label, href)
     .product
-        a.product__image(style!=attributes.style href=href title=title)
+        a.product__image-block(href=href title=title)
+            .product__image(style!=attributes.style)
+            .product__image.product__image_hover(style!=attributes.styleHover)
             if status!=''
                 .product__status.text-covered= status
         a.product__title(href=href title=title)= title
@@ -84,7 +93,7 @@ mixin product(title, newPrice, oldPrice, status, label, href)
         .product__label!= label
 mixin productSmall(title, newPrice, oldPrice, status, href)
     .product.product_small
-        a.product__image.product_small__image(style!=attributes.style href=href title=title)
+        a.product_small__image(style!=attributes.style href=href title=title)
         .product_small__content
             if status!=''
                 .product_small__status.text-covered= status

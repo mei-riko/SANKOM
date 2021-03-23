@@ -1,7 +1,7 @@
 .content{
     &__inside{
         background-color: $white;
-        padding: 40px;
+        padding: $grid-gutter-width;
         overflow: hidden;
 
         &_secondary{
@@ -11,12 +11,16 @@
         }
 
         &:first-child{
-            border-top-left-radius: map-get($map: $spacers, $key: 1);
-            border-top-right-radius: map-get($map: $spacers, $key: 1);
+            border-top-left-radius: $grid-gutter-width/4;
+            border-top-right-radius: $grid-gutter-width/4;
         }
         &:last-child{
-            border-bottom-left-radius: map-get($map: $spacers, $key: 1);
-            border-bottom-right-radius: map-get($map: $spacers, $key: 1);
+            border-bottom-left-radius: $grid-gutter-width/4;
+            border-bottom-right-radius: $grid-gutter-width/4;
+        }
+
+        & + .content__inside:not(.content__inside_secondary){
+            padding-top: 0;
         }
     }
     &__block-title{

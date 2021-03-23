@@ -1,0 +1,26 @@
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    &__link{
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: map-get($map: $font-size, $key: sm);
+        white-space: nowrap;
+
+        padding: 4px 10px;
+        border: 1px solid $border-color;
+        border-radius: $spacer-gutter;
+
+        margin: 5px;
+
+        &:hover, &:focus{
+            text-decoration: none;
+            border-color: $action;
+        }
+
+        &_category{
+            background-color: $body-bg;
+        }
+    }
+}

@@ -328,8 +328,8 @@ template {
 .container {
   width: 100%;
   max-width: 1500px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1864,7 +1864,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Golos", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child,
@@ -1890,7 +1890,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 }
 
 .h4, .content__block-title, h4 {
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .h5, h5 {
@@ -1901,10 +1901,16 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   font-size: 1rem;
 }
 
+.heading-category {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 p {
   font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 p:last-child {
@@ -2069,13 +2075,6 @@ table td {
   border: 1px solid #EBE7E4;
 }
 
-.border-block {
-  padding: 40px;
-  border: 1px solid #EBE7E4;
-  border-radius: 6px;
-  background-color: #ffffff;
-}
-
 @media all and (max-width: 1440px) {
   .d-xl-flex {
     display: -webkit-box;
@@ -2199,7 +2198,7 @@ table td {
 }
 
 .mt-1 {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .mt-2 {
@@ -2223,7 +2222,7 @@ table td {
 }
 
 .mb-1 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .mb-2 {
@@ -2247,7 +2246,7 @@ table td {
 }
 
 .pt-1 {
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .pt-2 {
@@ -2271,7 +2270,7 @@ table td {
 }
 
 .pb-1 {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .pb-2 {
@@ -2295,7 +2294,7 @@ table td {
     margin-top: 0;
   }
   .mt-xl-1 {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .mt-xl-2 {
     margin-top: 25px;
@@ -2310,7 +2309,7 @@ table td {
     margin-bottom: 0;
   }
   .mb-xl-1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .mb-xl-2 {
     margin-bottom: 25px;
@@ -2325,7 +2324,7 @@ table td {
     padding-top: 0;
   }
   .pt-xl-1 {
-    padding-top: 10px;
+    padding-top: 15px;
   }
   .pt-xl-2 {
     padding-top: 25px;
@@ -2340,7 +2339,7 @@ table td {
     padding-bottom: 0;
   }
   .pb-xl-1 {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
   .pb-xl-2 {
     padding-bottom: 25px;
@@ -2358,7 +2357,7 @@ table td {
     margin-top: 0;
   }
   .mt-lg-1 {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .mt-lg-2 {
     margin-top: 25px;
@@ -2373,7 +2372,7 @@ table td {
     margin-bottom: 0;
   }
   .mb-lg-1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .mb-lg-2 {
     margin-bottom: 25px;
@@ -2388,7 +2387,7 @@ table td {
     padding-top: 0;
   }
   .pt-lg-1 {
-    padding-top: 10px;
+    padding-top: 15px;
   }
   .pt-lg-2 {
     padding-top: 25px;
@@ -2403,7 +2402,7 @@ table td {
     padding-bottom: 0;
   }
   .pb-lg-1 {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
   .pb-lg-2 {
     padding-bottom: 25px;
@@ -2421,7 +2420,7 @@ table td {
     margin-top: 0;
   }
   .mt-md-1 {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .mt-md-2 {
     margin-top: 25px;
@@ -2436,7 +2435,7 @@ table td {
     margin-bottom: 0;
   }
   .mb-md-1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .mb-md-2 {
     margin-bottom: 25px;
@@ -2451,7 +2450,7 @@ table td {
     padding-top: 0;
   }
   .pt-md-1 {
-    padding-top: 10px;
+    padding-top: 15px;
   }
   .pt-md-2 {
     padding-top: 25px;
@@ -2466,7 +2465,7 @@ table td {
     padding-bottom: 0;
   }
   .pb-md-1 {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
   .pb-md-2 {
     padding-bottom: 25px;
@@ -2484,7 +2483,7 @@ table td {
     margin-top: 0;
   }
   .mt-sm-1 {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .mt-sm-2 {
     margin-top: 25px;
@@ -2499,7 +2498,7 @@ table td {
     margin-bottom: 0;
   }
   .mb-sm-1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .mb-sm-2 {
     margin-bottom: 25px;
@@ -2514,7 +2513,7 @@ table td {
     padding-top: 0;
   }
   .pt-sm-1 {
-    padding-top: 10px;
+    padding-top: 15px;
   }
   .pt-sm-2 {
     padding-top: 25px;
@@ -2529,7 +2528,7 @@ table td {
     padding-bottom: 0;
   }
   .pb-sm-1 {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
   .pb-sm-2 {
     padding-bottom: 25px;
@@ -2547,7 +2546,7 @@ table td {
     margin-top: 0;
   }
   .mt-xs-1 {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .mt-xs-2 {
     margin-top: 25px;
@@ -2562,7 +2561,7 @@ table td {
     margin-bottom: 0;
   }
   .mb-xs-1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .mb-xs-2 {
     margin-bottom: 25px;
@@ -2577,7 +2576,7 @@ table td {
     padding-top: 0;
   }
   .pt-xs-1 {
-    padding-top: 10px;
+    padding-top: 15px;
   }
   .pt-xs-2 {
     padding-top: 25px;
@@ -2592,7 +2591,7 @@ table td {
     padding-bottom: 0;
   }
   .pb-xs-1 {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
   .pb-xs-2 {
     padding-bottom: 25px;
@@ -2642,7 +2641,7 @@ table td {
   color: #3A3A3A;
   background-color: inherit;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid #666666;
   min-width: 160px;
   max-width: 100%;
@@ -2694,7 +2693,7 @@ table td {
   text-align: center;
 }
 
-.btn_action:hover {
+.btn_action:hover, .btn_action:focus {
   background-color: #c9032c;
   color: #ffffff;
 }
@@ -2750,12 +2749,19 @@ table td {
 
 .form__validation {
   font-size: 12px;
-  margin-bottom: 12.5px;
+  margin-bottom: 10px;
 }
 
 .form__agree {
   font-size: 12px;
   color: #666666;
+}
+
+.form-block {
+  padding: 40px 50px;
+  border: 1px solid #EBE7E4;
+  border-radius: 6px;
+  background-color: #ffffff;
 }
 
 .input {
@@ -2842,15 +2848,7 @@ table td {
   transition: .4s;
 }
 
-.input__field:focus ~ .input__label_inside {
-  top: 0;
-  font-size: 11px;
-  font-weight: 700;
-  color: #DD0330;
-  opacity: 1;
-}
-
-.input__field:valid ~ .input__label_inside {
+.input__field--focus ~ .input__label_inside {
   top: 0;
   font-size: 11px;
   font-weight: 700;
@@ -3016,8 +3014,12 @@ table td {
   border-bottom-right-radius: 10px;
 }
 
+.content__inside + .content__inside:not(.content__inside_secondary) {
+  padding-top: 0;
+}
+
 .content__heading-intro {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .modal {
@@ -3038,7 +3040,7 @@ table td {
 
 .pagination {
   display: grid;
-  grid-gap: 12.5px;
+  grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
 }
 
