@@ -4,8 +4,8 @@
     &__field{
         width: 300px;
         max-width: 100%;
-        background-color: inherit;
-        border-radius: $border-radius;
+        background-color: $white;
+        border-radius: $border-radius/2;
         border: 1px solid $border-color;
         color: $black;
 
@@ -39,6 +39,7 @@
                 font-size: map-get($map: $font-size, $key: xs);
                 font-weight: $font-weight-bold;
                 color: $action;
+                background-color: $white;
 
                 opacity: 1;
             }

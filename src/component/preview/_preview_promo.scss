@@ -2,7 +2,7 @@
     &__image{
         margin-bottom: map-get($map: $spacers, $key: 1);
         &:before{
-            padding-bottom: 130%;
+            padding-bottom: 120%;
         }
     }
     &__title{

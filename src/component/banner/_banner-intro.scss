@@ -5,7 +5,7 @@
 
     padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
     background-color: $light-grey;
-    border-radius: $grid-gutter-width/4;
+    border-radius: $border-radius;
 
     &__content{
         flex: 0 0 45%;
@@ -18,7 +18,7 @@
 
         display: grid;
         grid-gap: $grid-gutter-width/4;
-        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     &__label{
@@ -37,5 +37,42 @@
     &__image{
         border-radius: $border-radius;
         border: 1px solid $action;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .banner-intro{
+        padding: $grid-gutter-width;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .banner-intro{
+        &__content{
+            flex: 0 0 65%;
+            max-width: 65%;
+            padding-right: map-get($map: $spacers, $key: 2);
+        }
+        &__image-block{
+            flex: 0 0 35%;
+            max-width: 35%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .banner-intro{
+        &__content{
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-right: 0;
+            padding-bottom: map-get($map: $spacers, $key: 2);
+        }
+        &__image-block{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .banner-intro{
+        padding: map-get($map: $spacers, $key: 2);
     }
 }

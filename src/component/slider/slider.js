@@ -29,10 +29,12 @@ let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, margin, sta
 
 $(document).ready(() => {
     sliderInitialized(1, '.slider.slider_banner', true, true, true, 15, 0);
-    sliderInitialized(6, '.slider.slider_subcategory', true, false, false, 20, 40);
-    sliderInitialized(9, '.slider.slider_tags', false, false, false, 15, 40);
-    sliderInitialized(4, '.slider.slider_category', true, false, false, 15, 40);
-    sliderInitialized(3, '.slider.slider_promo', true, false, false, 15, 40);
+    sliderInitialized(6, '.slider.slider_subcategory-index', true, false, false, 25, 50);
+    sliderInitialized(9, '.slider.slider_tags', false, false, false, 15, 50);
+    sliderInitialized(4, '.slider.slider_category', true, false, false, 15, 50);
+    sliderInitialized(3, '.slider.slider_promo', true, false, false, 15, 50);
+
+    sliderInitialized(5, '.slider.slider_subcategory-catalog', true, false, false, 15, 50);
     
 });
 

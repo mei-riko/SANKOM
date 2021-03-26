@@ -7,10 +7,14 @@ $grey                 : #666666;
 $dark-grey            : $black;
 
 $border-color         : #EBE7E4;
-$border-radius        :   6px;
+$border-radius        : 6px;
 
 $body-color           : $black;
-$body-bg              : #f7f6f4;
+$body-bg              : #EBE7E4;
+// $body-bg              : #FAF9F8;
+$light-bg             : #f7f5f4;
+// $light-bg              : #F5F2ED;
+
 
 $link-color           : $black !default;
 $link-hover-color     : $action !default;
@@ -64,7 +68,8 @@ $line-height-heading: 1.2;
 $dt-font-weight: $font-weight-bold !default;
 
 $grid-columns         : 12 !default;
-$grid-gutter-width    : 40px !default;
+
+$grid-gutter-width    : 50px !default;
 $spacer-gutter        : 15px !default;
 
 $spacer : 50px!default;
@@ -88,7 +93,7 @@ $headings-font-weight  : 500 !default;
 $headings-line-height  : 1.2 !default;
 $headings-color        : null !default;
 
-$paragraph-margin-bottom: 40px !default;
+$paragraph-margin-bottom: 15px !default;
 
 $table-cell-padding   : 10px !default;
 $table-cell-padding-sm: 6px !default;

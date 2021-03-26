@@ -3,10 +3,20 @@
 
     &__image{
         border: 1px solid $border-color;
-        margin-bottom: map-get($map: $spacers, $key: 1);
+        margin-bottom: 10px;
+        transition: .3s;
         &:before{
             padding-bottom: 100%;
         }
     }
-    &__title{}
+    &__title{
+        padding: 0 $spacer-gutter;
+    }
+
+
+    &:hover{
+        .preview_subcategory__image{
+            border-color: $action;
+        }
+    }
 }

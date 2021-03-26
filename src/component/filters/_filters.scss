@@ -1,0 +1,52 @@
+.filters{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__tags{
+        position: relative;
+        flex: 1;
+        overflow-x: hidden;
+    }
+    &__icon{
+        margin-right: 8px;
+        transition: .3s;
+    }
+    
+    &__category{
+        font-size: map-get($map: $font-size, $key: sm);
+        padding-right: $spacer;
+        transition: .3s;
+
+        &:hover{
+            color: $grey;
+
+            .filters__icon{
+                fill: $grey;
+            }
+        }
+    }
+    &__item{
+        font-size: map-get($map: $font-size, $key: sm);
+        padding-right: $spacer;
+        transition: .3s;
+
+        &:hover{
+            color: $grey;
+
+            .filters__icon{
+                fill: $grey;
+            }
+        }
+    }
+
+    &__info{
+        font-size: map-get($map: $font-size, $key: sm);
+        line-height: $line-height-heading;
+        color: $grey;
+        
+        &-item{
+            margin-left: map-get($map: $spacers, $key: 2);
+        }
+    }
+}

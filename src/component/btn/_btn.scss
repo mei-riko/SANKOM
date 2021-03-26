@@ -13,10 +13,12 @@
     background-color: inherit;
     padding: 10px 20px;
 
-    border-radius: $border-radius;
+    border-radius: $border-radius/2;
     border: 1px solid $grey;
     min-width: 160px;
     max-width: 100%;
+
+    white-space: nowrap;
 
     transition: all .4s;
 

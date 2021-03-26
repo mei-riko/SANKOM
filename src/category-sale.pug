@@ -4,40 +4,31 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
 
-        title Catalog
+        title Category
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         link(href='/css/style.css', rel='stylesheet')
-        link(href='/css/catalog.css', rel='stylesheet')
+        link(href='/css/category.css', rel='stylesheet')
 
     body
         script(src="/js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
         main.mt-3.mb-3
-            section.content.content_category-slider.container
+            section.content.container
                 .content__inside
-                    .slider-container
-                        .slider.slider_subcategory.slider_subcategory-catalog.owl-carousel.owl-theme
-                            .slider__item
-                                +subcategory('Бюстгальтеры', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-1.jpg');")
-                            .slider__item
-                                +subcategory('Трусы', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-2.jpg');")
-                            .slider__item
-                                +subcategory('Шорты', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-3.jpg');")
-                            .slider__item
-                                +subcategory('Леггинсы', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-4.jpg');")
-                            .slider__item
-                                +subcategory('Майки', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/bg-women.jpg');")
-                            .slider__item
-                                +subcategory('Носки', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/bg-sales.jpg');")
-                            .slider__item
-                                +subcategory('Мужское', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/bg-men.jpg');")
-            section.content.content_category-filter.container
-                .content__inside
-                    include component/filters/filters.pug
-                    p.content__category-title.text-center.mt-4.mb-2 Каталог товаров
+                    //- Banner Main 
+                    +banner('Скидки на товары до 50%', '','','')(class="banner_sales")
+                        .row
+                            .col-6
+                                +btn('#', 'Для женщин')(class="btn_inverse")
+                            .col-6
+                                +btn('#', 'Для мужчин')(class="btn_inverse")
+                    //- Filter's block
+                    .mt-1
+                        include component/filters/filters.pug
+                    p.content__category-title.text-center.mt-4.mb-2 Распродажа
                     .row
                         .col-3.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(style="background-image:url('/img/product-9.jpg');" styleHover="background-image:url('/img/product-6.jpg');")
@@ -89,9 +80,5 @@ html(lang="ru")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
-
-        link(href='./css/owl.carousel.min.css', rel='stylesheet')
-        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
-        script(src="./js/owl.carousel.min.js")
 
         script(src="./js/app.min.js")

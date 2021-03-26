@@ -62,7 +62,8 @@ mixin faq(title, icon)
 mixin banner(title, intro, link, href)
     .banner(style!=attributes.style class!=attributes.class)
         p.banner__title= title
-        p.banner__intro= intro
+        if intro!=''
+            p.banner__intro= intro
         if block
             .banner__content
                 block

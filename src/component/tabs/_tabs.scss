@@ -1,0 +1,39 @@
+.tabs{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+
+    &__item{
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: map-get($map: $font-size, $key: sm);
+        white-space: nowrap;
+
+        padding: 4px 10px;
+        border: 1px solid $border-color;
+        border-radius: $spacer-gutter;
+
+        margin-right: $spacer-gutter;
+        cursor: pointer;
+        transition: .3s;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &:hover, &:focus{
+            text-decoration: none;
+            background-color: $light-bg;
+        }
+
+        &--active{
+            background-color: $action;
+            color: $white;
+            border-color: $border-color;
+
+            &:hover, &:focus{
+                border-color: $border-color;
+                cursor: default;
+            }
+        }
+    }
+}

@@ -24,7 +24,7 @@ body {
   line-height: 1.4;
   color: #3A3A3A;
   text-align: left;
-  background: #f7f6f4;
+  background: #EBE7E4;
 }
 
 [tabindex="-1"]:focus {
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 abbr[title],
@@ -193,6 +193,10 @@ label {
 
 button {
   border-radius: 0;
+  outline: none;
+  border: none;
+  background: inherit;
+  padding: 0;
 }
 
 button:focus {
@@ -327,9 +331,9 @@ template {
 
 .container {
   width: 100%;
-  max-width: 1500px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1440px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -340,8 +344,8 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: -12.5px;
+  margin-left: -12.5px;
 }
 
 .no-gutters {
@@ -357,8 +361,8 @@ template {
 .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 12.5px;
+  padding-left: 12.5px;
 }
 
 .col {
@@ -1860,7 +1864,7 @@ html.hidden, body.hidden {
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .content__block-title, .h5, .h6 {
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Golos", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
@@ -1868,13 +1872,13 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child,
-.h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .content__block-title:last-child, .h5:last-child, .h6:last-child {
+.h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child, .h6:last-child {
   margin-bottom: 0;
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
-* + .h1, * + .h2, * + .h3, * + .h4, * + .content__block-title, * + .h5, * + .h6 {
-  margin-top: 40px;
+* + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
+  margin-top: 50px;
 }
 
 .h1, h1 {
@@ -1889,7 +1893,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   font-size: 28px;
 }
 
-.h4, .content__block-title, h4 {
+.h4, h4 {
   font-size: 21px;
 }
 
@@ -1919,7 +1923,7 @@ p:last-child {
 
 ol, ul {
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 ol:last-child, ul:last-child {
@@ -2641,10 +2645,11 @@ table td {
   color: #3A3A3A;
   background-color: inherit;
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 3px;
   border: 1px solid #666666;
   min-width: 160px;
   max-width: 100%;
+  white-space: nowrap;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
@@ -2668,7 +2673,7 @@ table td {
 
 .btn-group {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 12.5px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
@@ -2677,35 +2682,37 @@ table td {
 }
 
 .btn_inverse {
-  color: #ffffff;
+  color: #3A3A3A;
   border-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .btn_inverse:hover {
-  color: #FCFBFA;
+  color: #3A3A3A;
   border-color: #FCFBFA;
+  background-color: #FCFBFA;
 }
 
 .btn_action {
-  border-color: #c9032c;
+  border-color: #bf0329;
   background-color: #DD0330;
   color: #ffffff;
   text-align: center;
 }
 
 .btn_action:hover, .btn_action:focus {
-  background-color: #c9032c;
+  background-color: #bf0329;
   color: #ffffff;
 }
 
 .btn_secondary {
-  background-color: #F5F2ED;
+  background-color: #f7f5f4;
   border-color: #FCFBFA;
   text-align: center;
 }
 
 .btn_secondary:hover {
-  background: #ece6dd;
+  background: #ece8e5;
 }
 
 .form {
@@ -2740,7 +2747,7 @@ table td {
 }
 
 .form__line > * {
-  margin-right: 10px;
+  margin-right: 12.5px;
 }
 
 .form__line > *:last-child {
@@ -2749,7 +2756,7 @@ table td {
 
 .form__validation {
   font-size: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12.5px;
 }
 
 .form__agree {
@@ -2758,7 +2765,7 @@ table td {
 }
 
 .form-block {
-  padding: 40px 50px;
+  padding: 50px 50px;
   border: 1px solid #EBE7E4;
   border-radius: 6px;
   background-color: #ffffff;
@@ -2771,8 +2778,8 @@ table td {
 .input__field {
   width: 300px;
   max-width: 100%;
-  background-color: inherit;
-  border-radius: 6px;
+  background-color: #ffffff;
+  border-radius: 3px;
   border: 1px solid #EBE7E4;
   color: #3A3A3A;
   line-height: 20px;
@@ -2853,6 +2860,7 @@ table td {
   font-size: 11px;
   font-weight: 700;
   color: #DD0330;
+  background-color: #ffffff;
   opacity: 1;
 }
 
@@ -2994,32 +3002,77 @@ table td {
   width: 100%;
 }
 
-.content__inside {
+.content {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #ffffff;
-  padding: 40px;
   overflow: hidden;
 }
 
-.content__inside_secondary {
-  background-color: #FCFBFA;
+.content__inside {
+  padding: 0 25px;
 }
 
-.content__inside:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.content__block-title {
+  font-family: "Golos", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 24px;
 }
 
-.content__inside:last-child {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+.content__block-link {
+  font-size: 11px;
+  line-height: 13px;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border: 1px solid #EBE7E4;
+  border-radius: 15px;
+  color: #3A3A3A;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
-.content__inside + .content__inside:not(.content__inside_secondary) {
-  padding-top: 0;
+.content__block-link:hover, .content__block-link:focus {
+  color: #3A3A3A;
+  text-decoration: none;
+  background-color: #f7f5f4;
 }
 
 .content__heading-intro {
   margin-top: 15px;
+}
+
+.content__category-title {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.content:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.content:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.content_secondary {
+  background-color: #f7f5f4;
+}
+
+.content_category-slider {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #f7f5f4;
+}
+
+.content_category-filter {
+  padding-top: 25px;
 }
 
 .modal {
@@ -3040,7 +3093,7 @@ table td {
 
 .pagination {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 12.5px;
   grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
 }
 

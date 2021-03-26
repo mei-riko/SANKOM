@@ -20,7 +20,10 @@
         }
 
         &_category{
-            background-color: $body-bg;
+            background-color: $light-bg;
+            &:hover, &:focus{
+                background-color: $white;
+            }
         }
     }
 }

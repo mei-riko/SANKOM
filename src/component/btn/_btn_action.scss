@@ -1,11 +1,11 @@
 .btn_action{
-    border-color: darken($color: $action, $amount: 4);
+    border-color: darken($color: $action, $amount: 6);
     background-color: $action;
     color: $white;
     text-align: center;
 
     &:hover, &:focus {
-        background-color: darken($color: $action, $amount: 4);
+        background-color: darken($color: $action, $amount: 6);
         color: $white;
     }
 }
