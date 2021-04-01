@@ -1,0 +1,114 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&amp;display=swap" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/pages.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="/js/jquery.min.js"></script>
+    <header class="header"></header>
+    <main class="mt-3 mb-3">
+      <section class="content container">
+        <div class="content__inside">
+          <ul class="breadcrumb">
+            <li class="breadcrumb__item"> <a class="breadcrumb__link" href="index.html">Главная</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">Блог</li>
+          </ul>
+          <div class="row mt-2">
+            <div class="col-2">
+              <div class="nav mb-2">
+                <div class="nav__parent">Категории</div>
+                <div class="nav__children"><a class="nav__link" href="#">Обзоры</a><a class="nav__link" href="#">Видео</a><a class="nav__link" href="#">Статьи</a><a class="nav__link" href="#">Фотографии</a></div>
+              </div>
+              <div class="filter-row mb-1">
+                <div class="filter-row__title">Параметр фильтрации</div>
+                <div class="filter-row__content"> 
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="param1" type="checkbox" name="type" checked="checked"/>
+                    <label class="checkbox__label" for="param1">Параметр 1</label>
+                  </div>
+                  <div class="checkbox mt-1">
+                    <input class="checkbox__input" id="param2" type="checkbox" name="type"/>
+                    <label class="checkbox__label" for="param2">Параметр 2</label>
+                  </div>
+                  <div class="checkbox checkbox--disabled mt-1">
+                    <input class="checkbox__input" id="param3" type="checkbox" name="type" disabled="disabled"/>
+                    <label class="checkbox__label" for="param3">Параметр 3</label>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-row filter-row--active mb-1">
+                <div class="filter-row__title filter-row__title--active">Параметр фильтрации</div>
+                <div class="filter-row__content" style="display: block;">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="param1" type="checkbox" name="type" checked="checked"/>
+                    <label class="checkbox__label" for="param1">Параметр 1</label>
+                  </div>
+                  <div class="checkbox mt-1">
+                    <input class="checkbox__input" id="param2" type="checkbox" name="type"/>
+                    <label class="checkbox__label" for="param2">Параметр 2</label>
+                  </div>
+                  <div class="checkbox checkbox--disabled mt-1">
+                    <input class="checkbox__input" id="param3" type="checkbox" name="type" disabled="disabled"/>
+                    <label class="checkbox__label" for="param3">Параметр 3</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-10">
+              <h1 class="h3">Блог: обзоры, статьи и отзывы о товарах</h1>
+              <div class="tags-row">
+                <div class="tags-row__title">Популярные тематики</div>
+                <div class="tags-row__items"> <a class="tags-row__link" href="catalog.html">Коррекция и красота</a><a class="tags-row__link" href="catalog.html">Для повседневного использования</a><a class="tags-row__link" href="catalog.html">Убрать бока</a><a class="tags-row__link" href="catalog.html">Убрать живот</a><a class="tags-row__link" href="catalog.html">Тонкая талия</a><a class="tags-row__link" href="catalog.html">Пуш-ап эффект</a><a class="tags-row__link" href="catalog.html">Моделирующий эффект</a><a class="tags-row__link" href="catalog.html">Под верхнюю одежду</a><a class="tags-row__link" href="catalog.html">Под вечерний наряд</a><a class="tags-row__link" href="catalog.html">Для лета</a><a class="tags-row__link" href="catalog.html">Спорт и lifestyle</a><a class="tags-row__link" href="catalog.html">Помощь для начинающих в спорте</a><a class="tags-row__link" href="catalog.html">При сгонке веса</a><a class="tags-row__link" href="catalog.html">Силовые тренировки</a><a class="tags-row__link" href="catalog.html">Забота о здоровье</a><a class="tags-row__link" href="catalog.html">При болях в спине и пояснице</a><a class="tags-row__link" href="catalog.html">Поддержка спины</a><a class="tags-row__link" href="catalog.html">Исправление осанки</a><a class="tags-row__link" href="catalog.html">Шейный остеохондроз</a><a class="tags-row__link" href="catalog.html">Восстановление после родов</a><a class="tags-row__link" href="catalog.html">Сидячий образ жизни</a><a class="tags-row__show" data-trigger="click" href="javascript:;">Показать все теги</a></div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-4 mb-2">
+                      <div class="preview preview_blog-col"><a class="preview__image preview_blog-col__image b-lazy" data-src="/img/image-1.jpg" href="text.html"></a><a class="preview__title preview_blog-col__title" href="text.html" title="Позы йоги для снятия напряжения позвоночника">Позы йоги для снятия напряжения позвоночника</a>
+                        <p class="preview__intro">Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus</p>
+                        <div class="tags preview_blog-col__tags"><span class="tags__link tags__link_disabled">Шорты Long Shaper АЛОЭ</span><span class="tags__link tags__link_disabled">Леггинсы LIGHT BLUE JEANS</span>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-4 mb-2">
+                      <div class="preview preview_blog-col"><a class="preview__image preview_blog-col__image b-lazy" data-src="/img/image-2.jpg" href="text.html"></a><a class="preview__title preview_blog-col__title" href="text.html" title="Потрясающий эффект коррекции майки SANKOM">Потрясающий эффект коррекции майки SANKOM</a>
+                        <div class="tags preview_blog-col__tags"><span class="tags__link tags__link_disabled">Шорты Long Shaper АЛОЭ</span><span class="tags__link tags__link_disabled">Леггинсы LIGHT BLUE JEANS</span>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-4 mb-2">
+                      <div class="preview preview_blog-col"><a class="preview__image preview_blog-col__image b-lazy" data-src="/img/image-3.jpg" href="text.html"></a><a class="preview__title preview_blog-col__title" href="text.html" title="Фотоссесия моделей Plus Size">Фотоссесия моделей Plus Size</a>
+                        <p class="preview__intro">Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus</p>
+                        <div class="tags preview_blog-col__tags"><span class="tags__link tags__link_disabled">Шорты Long Shaper АЛОЭ</span><span class="tags__link tags__link_disabled">Шорты Long Shaper COOLING</span><span class="tags__link tags__link_disabled">Майка VEST BODY SHAPER</span><span class="tags__link tags__link_disabled">Шорты Long Shaper БАМБУК</span><span class="tags__link tags__link_disabled">Трусы Briefs Shaper COOLING</span>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-4 mb-2">
+                      <div class="preview preview_blog-col"><a class="preview__image preview_blog-col__image b-lazy" data-src="/img/image-4.jpg" href="text.html"></a><a class="preview__title preview_blog-col__title" href="text.html" title="Позы йоги для снятия напряжения позвоночника">Позы йоги для снятия напряжения позвоночника</a>
+                        <p class="preview__intro">Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus</p>
+                        <div class="tags preview_blog-col__tags"><span class="tags__link tags__link_disabled">Шорты Long Shaper АЛОЭ</span><span class="tags__link tags__link_disabled">Леггинсы LIGHT BLUE JEANS</span>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="pagination mt-2"><a class="pagination__link pagination__link_prev" href="#">&nbsp;</a><a class="pagination__link" href="#">1</a><a class="pagination__link" href="#">2</a><a class="pagination__link pagination__link--active" href="#">3</a><a class="pagination__link" href="#">4</a><a class="pagination__link pagination__link_next" href="#">&nbsp;</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <link href="./css/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./css/owl.theme.default.min.css" rel="stylesheet"/>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/blazy.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

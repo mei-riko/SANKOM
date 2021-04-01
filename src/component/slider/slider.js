@@ -4,9 +4,6 @@ let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, margin, sta
     let $sliderItem = $(sliderClass);
 
     if( $sliderItem.length === 0 ){ return null; }
-    // if( $sliderItem.hasClass('slick-initialized') ){
-        
-    // }
 
     if ( $sliderItem.find('.slider__item').length > countShow ){
         $sliderItem.closest('.slider-container').addClass('slider-container--active');
@@ -35,7 +32,7 @@ $(document).ready(() => {
     sliderInitialized(3, '.slider.slider_promo', true, false, false, 15, 50);
 
     sliderInitialized(5, '.slider.slider_subcategory-catalog', true, false, false, 15, 50);
-    
+
 });
 
 

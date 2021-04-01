@@ -21,36 +21,36 @@ html(lang="ru")
                     .slider-container
                         .slider.slider_subcategory.slider_subcategory-catalog.owl-carousel.owl-theme
                             .slider__item
-                                +subcategory('Бюстгальтеры', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-1.jpg');")
+                                +subcategory('Бюстгальтеры', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-1.jpg")
                             .slider__item
-                                +subcategory('Трусы', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-2.jpg');")
+                                +subcategory('Трусы', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-2.jpg")
                             .slider__item
-                                +subcategory('Шорты', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-3.jpg');")
+                                +subcategory('Шорты', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-3.jpg")
                             .slider__item
-                                +subcategory('Леггинсы', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/image-4.jpg');")
+                                +subcategory('Леггинсы', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-4.jpg")
                             .slider__item
-                                +subcategory('Майки', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/bg-women.jpg');")
+                                +subcategory('Майки', 'gravida odio tellus', 'category.html')(dataSrc="/img/bg-women.jpg")
                             .slider__item
-                                +subcategory('Носки', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/bg-sales.jpg');")
+                                +subcategory('Носки', 'gravida odio tellus', 'category.html')(dataSrc="/img/bg-sales.jpg")
                             .slider__item
-                                +subcategory('Мужское', 'gravida odio tellus', 'category.html')(style="background-image:url('/img/bg-men.jpg');")
+                                +subcategory('Мужское', 'gravida odio tellus', 'category.html')(dataSrc="/img/bg-men.jpg")
             section.content.content_category-filter.container
                 .content__inside
                     include component/filters/filters.pug
                     p.content__category-title.text-center.mt-4.mb-2 Каталог товаров
                     .row
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(style="background-image:url('/img/product-9.jpg');" styleHover="background-image:url('/img/product-6.jpg');")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="/img/product-9.jpg" dataSrcHover="/img/product-6.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(style="background-image:url('/img/product-7.jpg');" styleHover="background-image:url('/img/product-8.jpg');")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="/img/product-7.jpg" dataSrcHover="/img/product-8.jpg")
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(style="background-image:url('/img/product-1.jpg');" styleHover="background-image:url('/img/product-6.jpg');")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="/img/product-1.jpg" dataSrcHover="/img/product-6.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');" styleHover="background-image:url('/img/product-7.jpg');")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="/img/product-2.jpg" dataSrcHover="/img/product-7.jpg")
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(style="background-image:url('/img/product-9.jpg');" styleHover="background-image:url('/img/product-6.jpg');")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="/img/product-9.jpg" dataSrcHover="/img/product-6.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(style="background-image:url('/img/product-7.jpg');" styleHover="background-image:url('/img/product-8.jpg');")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="/img/product-7.jpg" dataSrcHover="/img/product-8.jpg")
             //- Information
             aside.content.content_secondary.container
                 .content__inside
@@ -93,5 +93,7 @@ html(lang="ru")
         link(href='./css/owl.carousel.min.css', rel='stylesheet')
         link(href='./css/owl.theme.default.min.css', rel='stylesheet')
         script(src="./js/owl.carousel.min.js")
+
+        script(src="./js/blazy.min.js")
 
         script(src="./js/app.min.js")

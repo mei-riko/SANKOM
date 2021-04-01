@@ -1,7 +1,7 @@
 .tags{
     display: flex;
     flex-wrap: wrap;
-    margin: -5px;
+    margin: -4px;
 
     &__link{
         font-size: map-get($map: $font-size, $key: xs);
@@ -12,7 +12,7 @@
         border: 1px solid $border-color;
         border-radius: $spacer-gutter;
 
-        margin: 5px;
+        margin: 4px;
 
         &:hover, &:focus{
             text-decoration: none;
@@ -23,6 +23,12 @@
             background-color: $light-bg;
             &:hover, &:focus{
                 background-color: $white;
+            }
+        }
+        &_disabled{
+            background-color: $light-bg;
+            &:hover, &:focus{
+                border-color: $border-color;
             }
         }
     }

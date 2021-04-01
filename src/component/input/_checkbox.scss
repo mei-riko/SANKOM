@@ -6,10 +6,11 @@
     &__input{
         display: none;
 
+        // active
         &:checked + .checkbox__label:after {
             content: '';
             display: block;
-            background: url("../icon/checkmark.svg") no-repeat center / 8px;
+            background: url("../icon/checkbox.svg") no-repeat center / 8px;
 
             width: 14px;
             height: 14px;
@@ -17,21 +18,29 @@
             position: absolute;
             left: 0;
             top: calc( 50% - 7px);
+        }
+        // disable
+        &:disabled + .checkbox__label {
+            cursor: not-allowed;
+            color: $grey;
         }
     }
     &__label{
         position: relative;
         margin: 0;
         padding-left: 24px;
-        // line-height: 12px;
+        line-height: 1.4;
 
+        transition: .3s;
         cursor: pointer;
 
         &:before{
             content:'';
             display: block;
 
-            border: 1px solid $grey;
+            border-radius: 2px;
+            border: 1px solid $border-color;
+            background: $light-bg;
 
             width: 14px;
             height: 14px;
@@ -40,5 +49,13 @@
             left: 0;
             top: calc( 50% - 7px);
         }
+
+        &:hover{
+            color: $action;
+        }
+    }
+
+    &--disabled{
+        filter: opacity(.75);
     }
 }

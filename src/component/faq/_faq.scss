@@ -13,10 +13,8 @@
 
     &__title{
         position: relative;
-
-        &--has-icon{
-            padding-left: 30px;
-        }
+        display: block;
+        color: $black;
 
         &:after{
             content: '';
@@ -31,6 +29,16 @@
 
             background: url('../icon/arrow-right.svg') no-repeat center / contain;
         }
+
+        &:focus{
+            color: $black;
+        }
+
+        &_has-icon{
+            padding-left: 30px;
+        }
+
+        
     }
     &__icon{
         position: absolute;
@@ -40,5 +48,9 @@
 
         width: 16px;
         height: auto;
+    }
+    &__content{
+        display: none;
+        padding: $spacer-gutter 0 0;
     }
 }

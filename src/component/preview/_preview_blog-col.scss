@@ -1,0 +1,19 @@
+.preview_blog-col{
+
+    &__image{
+        margin-bottom: map-get($map: $spacers, $key: 2);
+        &:before{
+            padding-bottom: 75%;
+        }
+    }
+    &__title{
+        font-size: 18px;
+        line-height: $line-height-heading;
+
+        margin-bottom: map-get($map: $spacers, $key: 1);
+        padding: 0;
+    }
+    &__intro{
+        margin-bottom: map-get($map: $spacers, $key: 2);
+    }
+}

@@ -1,0 +1,16 @@
+.nav{
+    font-size: map-get($map: $font-size, $key: sm);
+
+    &__parent{
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+    }
+    &__children{
+        margin-top: 10px;
+        margin-left: map-get($map: $spacers, $key: 1);
+    }
+    &__link{
+        display: block;
+        margin-bottom: 5px;
+    }
+}

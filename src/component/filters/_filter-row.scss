@@ -1,0 +1,46 @@
+.filter-row{
+    font-size: map-get($map: $font-size, $key: sm);
+
+    &__title{
+        position: relative;
+        padding-right: $spacer-gutter;
+
+        font-weight: $font-weight-bolder;
+
+        transition: .3s;
+        cursor: pointer;
+
+        &:after{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+
+            position: absolute;
+            top: calc(50% - 5px);
+            right: 0;
+
+            background: url('../icon/plus.svg') no-repeat center / contain;
+            filter: grayscale(1);
+            transition: .3s;
+        }
+
+        &:hover, &:focus{
+            color: $action;
+
+            &:after{
+                filter: grayscale(0);
+            }
+        }
+
+        &--active{
+            &:after{
+                background: url('../icon/minus.svg') no-repeat center / contain;
+            }
+        }
+    }
+    &__content{
+        display: none;
+        padding: $spacer-gutter 0;
+    }
+}

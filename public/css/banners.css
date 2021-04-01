@@ -349,7 +349,7 @@ body {
   flex-direction: column;
   padding: 50px;
   border-radius: 6px;
-  background: no-repeat center / cover;
+  position: relative;
   min-height: 420px;
   overflow: hidden;
 }
@@ -371,6 +371,19 @@ body {
 .banner__content {
   position: relative;
   z-index: 2;
+}
+
+.banner__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: no-repeat center / cover;
+}
+
+.banner__image_mobile {
+  display: none;
 }
 
 .banner_content-center {
@@ -416,17 +429,6 @@ body {
     padding: 50px 25px;
     min-height: 1px;
     background-position-x: right;
-  }
-  .banner:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #FCFBFA;
-    opacity: .65;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
   .banner__title {
     font-size: 28px;

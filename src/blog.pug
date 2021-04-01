@@ -1,0 +1,127 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        title Blog
+
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/pages.css', rel='stylesheet')
+
+    body
+        script(src="/js/jquery.min.js")
+        include component/mixin.pug
+        include component/header/header.pug
+        main.mt-3.mb-3
+            //- Blog
+            section.content.container
+                .content__inside
+                    ul.breadcrumb
+                        li.breadcrumb__item 
+                            a.breadcrumb__link(href="index.html") Главная
+                        li.breadcrumb__item.breadcrumb__item--active Блог
+                    .row.mt-2
+                        .col-2
+                            //- Category Links
+                            .nav.mb-2
+                                .nav__parent Категории
+                                .nav__children
+                                    a.nav__link(href="#") Обзоры
+                                    a.nav__link(href="#") Видео
+                                    a.nav__link(href="#") Статьи
+                                    a.nav__link(href="#") Фотографии
+                            .filter-row.mb-1
+                                .filter-row__title Параметр фильтрации
+                                .filter-row__content 
+                                    .checkbox
+                                        input.checkbox__input#param1(type="checkbox" name="type" checked="checked")
+                                        label.checkbox__label(for="param1") Параметр 1
+                                    .checkbox.mt-1
+                                        input.checkbox__input#param2(type="checkbox" name="type")
+                                        label.checkbox__label(for="param2") Параметр 2
+                                    .checkbox.checkbox--disabled.mt-1
+                                        input.checkbox__input#param3(type="checkbox" name="type" disabled="disabled")
+                                        label.checkbox__label(for="param3") Параметр 3
+                            .filter-row.filter-row--active.mb-1
+                                .filter-row__title.filter-row__title--active Параметр фильтрации
+                                .filter-row__content(style="display: block;")
+                                    .checkbox
+                                        input.checkbox__input#param1(type="checkbox" name="type" checked="checked")
+                                        label.checkbox__label(for="param1") Параметр 1
+                                    .checkbox.mt-1
+                                        input.checkbox__input#param2(type="checkbox" name="type")
+                                        label.checkbox__label(for="param2") Параметр 2
+                                    .checkbox.checkbox--disabled.mt-1
+                                        input.checkbox__input#param3(type="checkbox" name="type" disabled="disabled")
+                                        label.checkbox__label(for="param3") Параметр 3
+                        .col-10
+                            h1.h3 Блог: обзоры, статьи и отзывы о товарах
+                            .tags-row
+                                .tags-row__title Популярные тематики
+                                .tags-row__items 
+                                    a.tags-row__link(href="catalog.html") Коррекция и красота
+                                    a.tags-row__link(href="catalog.html") Для повседневного использования
+                                    a.tags-row__link(href="catalog.html") Убрать бока
+                                    a.tags-row__link(href="catalog.html") Убрать живот
+                                    a.tags-row__link(href="catalog.html") Тонкая талия
+                                    a.tags-row__link(href="catalog.html") Пуш-ап эффект
+                                    a.tags-row__link(href="catalog.html") Моделирующий эффект
+                                    a.tags-row__link(href="catalog.html") Под верхнюю одежду
+                                    a.tags-row__link(href="catalog.html") Под вечерний наряд
+                                    a.tags-row__link(href="catalog.html") Для лета
+                                    a.tags-row__link(href="catalog.html") Спорт и lifestyle
+                                    a.tags-row__link(href="catalog.html") Помощь для начинающих в спорте
+                                    a.tags-row__link(href="catalog.html") При сгонке веса
+                                    a.tags-row__link(href="catalog.html") Силовые тренировки
+                                    a.tags-row__link(href="catalog.html") Забота о здоровье
+                                    a.tags-row__link(href="catalog.html") При болях в спине и пояснице
+                                    a.tags-row__link(href="catalog.html") Поддержка спины
+                                    a.tags-row__link(href="catalog.html") Исправление осанки
+                                    a.tags-row__link(href="catalog.html") Шейный остеохондроз
+                                    a.tags-row__link(href="catalog.html") Восстановление после родов
+                                    a.tags-row__link(href="catalog.html") Сидячий образ жизни
+                                    a.tags-row__show(data-trigger="click" href="javascript:;") Показать все теги
+                            .row.mt-3
+                                .col-4.mb-2
+                                    +blogCol("Позы йоги для снятия напряжения позвоночника", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="/img/image-1.jpg")
+                                        span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
+                                        span.tags__link.tags__link_disabled Леггинсы LIGHT BLUE JEANS
+                                .col-4.mb-2
+                                    +blogCol("Потрясающий эффект коррекции майки SANKOM", "", "text.html")(dataSrc="/img/image-2.jpg")
+                                        span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
+                                        span.tags__link.tags__link_disabled Леггинсы LIGHT BLUE JEANS
+                                .col-4.mb-2
+                                    +blogCol("Фотоссесия моделей Plus Size", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="/img/image-3.jpg")
+                                        span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
+                                        span.tags__link.tags__link_disabled Шорты Long Shaper COOLING
+                                        span.tags__link.tags__link_disabled Майка VEST BODY SHAPER
+                                        span.tags__link.tags__link_disabled Шорты Long Shaper БАМБУК
+                                        span.tags__link.tags__link_disabled Трусы Briefs Shaper COOLING
+                                .col-4.mb-2
+                                    +blogCol("Позы йоги для снятия напряжения позвоночника", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="/img/image-4.jpg")
+                                        span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
+                                        span.tags__link.tags__link_disabled Леггинсы LIGHT BLUE JEANS
+                            .pagination.mt-2
+                                a.pagination__link.pagination__link_prev(href="#") &nbsp;
+                                a.pagination__link(href="#") 1
+                                a.pagination__link(href="#") 2
+                                a.pagination__link.pagination__link--active(href="#") 3
+                                a.pagination__link(href="#") 4
+                                a.pagination__link.pagination__link_next(href="#") &nbsp;
+        include component/footer/footer.pug
+        
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/owl.carousel.min.css', rel='stylesheet')
+        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
+        script(src="./js/owl.carousel.min.js")
+
+        script(src="./js/blazy.min.js")
+        
+        script(src="./js/app.min.js")

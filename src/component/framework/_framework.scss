@@ -78,6 +78,12 @@ a{
         color: $link-color;
     }
 }
+.link-size{
+    font-size: map-get($map: $font-size, $key: xs);
+    &__icon{
+        margin-right: 4px;
+    }
+}
 
 table{
     td{
@@ -117,6 +123,7 @@ table{
 .text-white{color: $white;}
 .text-black{color: $black;}
 .text-grey{color: $grey;}
+.text-action{color: $action;}
 
 .text-uppercase{text-transform: uppercase;}
 .text-bolder{font-weight: 500;}
@@ -127,6 +134,8 @@ table{
 
 .text-small,small,.small{font-size: map-get($map: $font-size, $key: 'xs');}
 .text-lead,.lead{font-size: map-get($map: $font-size, $key: 'lg');}
+
+.text-spacing{letter-spacing: $letter-spacing;}
 
 .text{
     &-right{text-align: right;}

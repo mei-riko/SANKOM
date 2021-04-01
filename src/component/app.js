@@ -1,5 +1,7 @@
 import $ from 'jquery'
+
 import '../component/slider/slider';
+import '../component/filters/filter';
 
 $(document).ready(() =>{
   $(".scroll").on('click', function() {
@@ -22,7 +24,8 @@ $(document).ready(() =>{
   })
   // Input
   const addFocusListener = (elem) => {
-    console.log ( elem );
+    // console.log ( elem );
+
     elem.addEventListener('focus', function() {
       elem.classList.add('input__field--focus');
     });
@@ -39,8 +42,10 @@ $(document).ready(() =>{
   }
 
   // Open More Content
-  const openContent = ( block ) => {
+  $('.open-content').on('click', function(){
+    let block = $(this);
     let blockId = block.data( 'id' );
+
     if ( !block.hasClass('active') ){
       block.addClass('active');
       block.text('Скрыть подробности')
@@ -48,11 +53,52 @@ $(document).ready(() =>{
       block.removeClass('active');
       block.text('Читать дальше >')
     }
-
+    
     $('[data-content=' + blockId + ']').slideToggle();
-  }
-  $('.open-content').on('click', function(){
-    openContent( $(this) );
   });
-  
+
+  // Show More Tags
+  $('.tags-row .tags-row__show').on('click', function(){
+    let tagsShow = $(this);
+
+    if ( !tagsShow.hasClass('active') ){
+      tagsShow.addClass('active');
+      tagsShow.text('Скрыть');
+      tagsShow.parent().addClass('active');
+    }else{
+      tagsShow.removeClass('active');
+      tagsShow.text('Показать все теги')
+      tagsShow.parent().removeClass('active');
+    }
+    
+  });
+  // Faq Toggle
+  $('.faq.faq_toggle .faq__title').on('click', function(e){
+    e.preventDefault;
+    let faq = $(this);
+    faq.parent().find(".faq__content").slideToggle();
+    faq.parent().toggleClass('faq_toggle--active');    
+  });
+
+  // B-lazy
+  if( $('.b-lazy').length > 0 ){
+    var bLazy = new Blazy({
+      offset: 100, 
+      breakpoints: [{
+        width: 576 // Max-width
+        , src: 'data-src-small'
+      }]
+      , success: function(element){
+        setTimeout(function(){
+          // We want to remove the loader gif now.
+          // First we find the parent container
+          // then we remove the "loading" class which holds the loader image
+          var parent = element.parentNode;
+          parent.className = parent.className.replace(/\bloading\b/,'');
+        }, 200);
+      }
+    });
+
+    $('.owl-carousel').on('changed.owl.carousel', bLazy.revalidate);
+  }
 });

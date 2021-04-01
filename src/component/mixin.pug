@@ -20,47 +20,59 @@ mixin checkbox(id, title)
 //- Preview Items
 mixin category(title, intro, link, href)
     .preview.preview_category
-        a.preview__image.preview_category__image(style!=attributes.style href=href title=title)
+        a.preview__image.preview_category__image.b-lazy(data-src!=attributes.dataSrc href=href title=title)
         p.preview__title.preview_category__title!= title
         p.preview__intro!= intro
         a.preview__link(href=href)= link
 mixin subcategory(title, intro, href)
     a.preview.preview_subcategory(href=href title=title)
-        .preview__image.preview_subcategory__image(style!=attributes.style)
+        .preview__image.preview_subcategory__image.b-lazy(data-src!=attributes.dataSrc)
         p.preview__title.preview_subcategory__title!= title
         if intro!=''
             p.preview__intro!= intro
 mixin promo(title, href)
     a.preview.preview_promo(href=href title=title)
-        .preview__image.preview_promo__image(style!=attributes.style)
+        .preview__image.preview_promo__image.b-lazy(data-src!=attributes.dataSrc)
         p.preview__title.preview_promo__title!= title
 mixin categoryTags(title, href)
     a.preview.preview_category-tags(href=href title=title)
-        .preview__image.preview_category-tags__image(style!=attributes.style)
+        .preview__image.preview_category-tags__image.b-lazy(data-src!=attributes.dataSrc)
         p.preview__title.preview_category-tags__title!= title
 mixin sliderTags(title, href)
     a.preview.preview_slider-tags(href=href title=title)
-        .preview__image.preview_slider-tags__image(style!=attributes.style)
+        .preview__image.preview_slider-tags__image.b-lazy(data-src!=attributes.dataSrc)
         p.preview__title.preview_slider-tags__title!= title
 mixin blog(tag, title, intro, href)
     .preview.preview_blog
-        a.preview__image.preview_blog__image(style!=attributes.style href=href)
+        a.preview__image.preview_blog__image.b-lazy(data-src!=attributes.dataSrc href=href)
         .preview_blog__content
             p.preview__tag= tag
             a.preview__title.preview_blog__title(href=href title=title)!= title
             p.preview__intro!= intro
+mixin blogCol(title, intro, href)
+    .preview.preview_blog-col
+        a.preview__image.preview_blog-col__image.b-lazy(data-src!=attributes.dataSrc href=href)
+        a.preview__title.preview_blog-col__title(href=href title=title)!= title
+        if intro != ''
+            p.preview__intro!= intro
+        if block
+            .tags.preview_blog-col__tags
+                block
 //- Items
 mixin faq(title, icon)
     .faq(class!=attributes.class)
-        .faq__title.faq__title--has-icon!= title
-            img.faq__icon(src=icon)
-        .faq__content
-            if block
+        if icon!=''
+            a.faq__title.faq__title_has-icon(href="#")!= title
+                img.faq__icon(src=icon)
+        else
+            a.faq__title(href="#")!= title
+        if block
+            .faq__content
                 block
-            else
-                p No content provided
 mixin banner(title, intro, link, href)
-    .banner(style!=attributes.style class!=attributes.class)
+    .banner(class!=attributes.class)
+        .banner__image.banner__image_desktop.b-lazy(data-src!=attributes.dataSrc)
+        .banner__image.banner__image_mobile.b-lazy(data-src!=attributes.dataSrcSmall)
         p.banner__title= title
         if intro!=''
             p.banner__intro= intro
@@ -68,10 +80,12 @@ mixin banner(title, intro, link, href)
             .banner__content
                 block
         if link!=''
-            .mt-3
+            .mt-3.banner__content
                 a.btn.btn_secondary(href=href)= link
 mixin bannerCategory(title, intro)
-    .banner.banner_category(style!=attributes.style class!=attributes.class)
+    .banner.banner_category(class!=attributes.class)
+        .banner__image.banner__image_desktop.b-lazy(data-src!=attributes.dataSrc)
+        .banner__image.banner__image_mobile.b-lazy(data-src!=attributes.dataSrcSmall)
         p.banner__title.banner_category__title= title
         p.banner__intro.banner_category__intro= intro
         if block
@@ -80,9 +94,9 @@ mixin bannerCategory(title, intro)
 //- Products
 mixin product(title, newPrice, oldPrice, status, label, href)
     .product
-        a.product__image-block(href=href title=title)
-            .product__image(style!=attributes.style)
-            .product__image.product__image_hover(style!=attributes.styleHover)
+        a.product__image-block.loading(href=href title=title)
+            .product__image.b-lazy(data-src!=attributes.dataSrc)
+            .product__image.product__image_hover.b-lazy(data-src!=attributes.dataSrcHover)
             if status!=''
                 .product__status.text-covered= status
         a.product__title(href=href title=title)= title
