@@ -45,7 +45,7 @@
         justify-content: center;
 
         .banner__intro{
-            width: 340px;
+            width: 420px;
             max-width: 100%;
             margin: 0 auto;
         }
@@ -60,6 +60,11 @@
         }
     }
 }
+
+.banner_small{
+    padding: $spacer-gutter $grid-gutter-width/2;
+}
+
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .banner{
         padding: $spacer $grid-gutter-width;

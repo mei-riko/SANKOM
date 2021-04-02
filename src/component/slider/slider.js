@@ -33,19 +33,5 @@ $(document).ready(() => {
 
     sliderInitialized(5, '.slider.slider_subcategory-catalog', true, false, false, 15, 50);
 
+    sliderInitialized(4, '.slider.slider_recommendation', false, true, false, 25, 0);
 });
-
-
-
-// // Слайдер
-// if ($('.slider').length > 0) {
-//     // Slider On Index Page
-//     let $slickContent = $('.content-row__slider .slider.slider_content');
-//     $slickContent.slick({
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         arrows: false,
-//         dots: true,
-//         autoplay: false
-//     });
-// }

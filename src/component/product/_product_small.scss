@@ -35,4 +35,11 @@
         font-size: 20px;
         line-height: 1.1;
     }
+    &__title{
+        display: flex;
+        font-weight: $font-weight-bolder;
+        letter-spacing: $letter-spacing;
+        margin-bottom: $grid-gutter-width/8;
+        line-height: 18px;
+    }
 }

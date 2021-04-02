@@ -11,6 +11,8 @@
     &__icon{
         margin-right: 8px;
         transition: .3s;
+        
+        &:hover, &:focus{ outline: none; }
     }
     
     &__category{
@@ -25,6 +27,8 @@
                 fill: $grey;
             }
         }
+
+        &:hover, &:focus{ outline: none; }
     }
     &__item{
         font-size: map-get($map: $font-size, $key: sm);

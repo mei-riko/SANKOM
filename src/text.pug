@@ -8,8 +8,13 @@ html(lang="ru")
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
-        link(href='/css/style.css', rel='stylesheet')
-        link(href='/css/text.css', rel='stylesheet')
+
+        link(href='/css/framework.css', rel='stylesheet')
+
+        link(href='/css/tags.css', rel='stylesheet')
+        link(href='/css/person.css', rel='stylesheet')
+        link(href='/css/sliders.css', rel='stylesheet')
+        link(href='/css/products.css', rel='stylesheet')
 
     body
         script(src="/js/jquery.min.js")
@@ -41,18 +46,7 @@ html(lang="ru")
                             ol
                                 li Molestie lorem scelerisque morbi 
                                 li Bibendum morbi in purus sed dapibus
-                            .recommendation.mt-3
-                                p.h4.mb-2 Леггинсы Sankom — идеальный выбор для занятий йогой
-                                .slider.slider_recommendation.owl-carousel.owl-theme
-                                    .slider__item
-                                        +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('/img/product-1.jpg');")
-                                    .slider__item
-                                        +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
-                                    .slider__item
-                                        +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
-                                    .slider__item
-                                        +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
-                    
+                            
                         .col-3
                             .person.mb-2
                                 .person__logo 
@@ -76,11 +70,29 @@ html(lang="ru")
                             a.text-bold.text-action(href="tel:8-800 800 8800") 8-800 800 8800
                             p.mb-2 С понедельника по пятницу с 9:00 до 21:00 (по московскому времени).
                             +btn('', 'Задать вопрос')(class="btn_secondary")
+                    .recommendation.mt-3
+                        p.h4.mb-2 Леггинсы Sankom — идеальный выбор для занятий йогой
+                        .slider.slider_recommendation.owl-carousel.owl-theme.product-grid.product-grid_sm
+                            .slider__item
+                                +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('/img/product-1.jpg');")
+                            .slider__item
+                                +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
+                            .slider__item
+                                +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
+                            .slider__item
+                                +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
+                    
         include component/footer/footer.pug
         
         script(src="./js/jquery.inputmask.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/owl.carousel.min.css', rel='stylesheet')
+        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
+        script(src="./js/owl.carousel.min.js")
         
+        script(src="./js/blazy.min.js")
+
         script(src="./js/app.min.js")

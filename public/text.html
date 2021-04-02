@@ -7,8 +7,11 @@
     <title>Text Page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&amp;display=swap" rel="stylesheet"/>
-    <link href="/css/style.css" rel="stylesheet"/>
-    <link href="/css/text.css" rel="stylesheet"/>
+    <link href="/css/framework.css" rel="stylesheet"/>
+    <link href="/css/tags.css" rel="stylesheet"/>
+    <link href="/css/person.css" rel="stylesheet"/>
+    <link href="/css/sliders.css" rel="stylesheet"/>
+    <link href="/css/products.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="/js/jquery.min.js"></script>
@@ -37,42 +40,6 @@
                 <li>Molestie lorem scelerisque morbi </li>
                 <li>Bibendum morbi in purus sed dapibus</li>
               </ol>
-              <div class="recommendation mt-3">
-                <p class="h4 mb-2">Леггинсы Sankom — идеальный выбор для занятий йогой</p>
-                <div class="slider slider_recommendation owl-carousel owl-theme">
-                  <div class="slider__item">
-                        <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-1.jpg');" href="product.html" title="Shaper Classic Peach"></a>
-                          <div class="product_small__status text-covered">sale</div>
-                          <div class="product_small__content"><a class="product__title" href="product.html" title="Shaper Classic Peach">Shaper Classic Peach</a>
-                            <div class="product__price-old">8 999 руб.</div>
-                            <div class="product__price-new">6 999 руб.</div>
-                          </div>
-                        </div>
-                  </div>
-                  <div class="slider__item">
-                        <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-2.jpg');" href="product.html" title="Shaper Bamboo"></a>
-                          <div class="product_small__content"><a class="product__title" href="product.html" title="Shaper Bamboo">Shaper Bamboo</a>
-                            <div class="product__price-new">2 459 руб.</div>
-                          </div>
-                        </div>
-                  </div>
-                  <div class="slider__item">
-                        <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-3.jpg');" href="" title="Elementum amet morbi morbi aliquam"></a>
-                          <div class="product_small__status text-covered">new</div>
-                          <div class="product_small__content"><a class="product__title" href="" title="Elementum amet morbi morbi aliquam">Elementum amet morbi morbi aliquam</a>
-                            <div class="product__price-new">1 119 руб.</div>
-                          </div>
-                        </div>
-                  </div>
-                  <div class="slider__item">
-                        <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-4.jpg');" href="product.html" title="Men Shaper Classic Black"></a>
-                          <div class="product_small__content"><a class="product__title" href="product.html" title="Men Shaper Classic Black">Men Shaper Classic Black</a>
-                            <div class="product__price-new">3 599 руб.</div>
-                          </div>
-                        </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="col-3">
               <div class="person mb-2">
@@ -90,12 +57,52 @@
               <p class="mb-2">С понедельника по пятницу с 9:00 до 21:00 (по московскому времени).</p><a class="btn btn_secondary" href="">Задать вопрос</a>
             </div>
           </div>
+          <div class="recommendation mt-3">
+            <p class="h4 mb-2">Леггинсы Sankom — идеальный выбор для занятий йогой</p>
+            <div class="slider slider_recommendation owl-carousel owl-theme product-grid product-grid_sm">
+              <div class="slider__item">
+                    <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-1.jpg');" href="product.html" title="Shaper Classic Peach"></a>
+                      <div class="product_small__status text-covered">sale</div>
+                      <div class="product_small__content"><a class="product_small__title" href="product.html" title="Shaper Classic Peach">Shaper Classic Peach</a>
+                        <div class="product__price-old">8 999 руб.</div>
+                        <div class="product__price-new">6 999 руб.</div>
+                      </div>
+                    </div>
+              </div>
+              <div class="slider__item">
+                    <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-2.jpg');" href="product.html" title="Shaper Bamboo"></a>
+                      <div class="product_small__content"><a class="product_small__title" href="product.html" title="Shaper Bamboo">Shaper Bamboo</a>
+                        <div class="product__price-new">2 459 руб.</div>
+                      </div>
+                    </div>
+              </div>
+              <div class="slider__item">
+                    <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-3.jpg');" href="" title="Elementum amet morbi morbi aliquam"></a>
+                      <div class="product_small__status text-covered">new</div>
+                      <div class="product_small__content"><a class="product_small__title" href="" title="Elementum amet morbi morbi aliquam">Elementum amet morbi morbi aliquam</a>
+                        <div class="product__price-new">1 119 руб.</div>
+                      </div>
+                    </div>
+              </div>
+              <div class="slider__item">
+                    <div class="product product_small"><a class="product_small__image" style="background-image:url('/img/product-4.jpg');" href="product.html" title="Men Shaper Classic Black"></a>
+                      <div class="product_small__content"><a class="product_small__title" href="product.html" title="Men Shaper Classic Black">Men Shaper Classic Black</a>
+                        <div class="product__price-new">3 599 руб.</div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <script src="./js/jquery.inputmask.min.js"></script>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>
+    <link href="./css/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./css/owl.theme.default.min.css" rel="stylesheet"/>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/blazy.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

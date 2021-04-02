@@ -1,0 +1,141 @@
+.nav {
+  font-size: 13px;
+}
+
+.nav__parent {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.nav__children {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.nav__link {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-row {
+  font-size: 13px;
+}
+
+.filter-row__title {
+  position: relative;
+  padding-right: 15px;
+  font-weight: 500;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.filter-row__title:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 0;
+  background: url("../icon/plus.svg") no-repeat center/contain;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.filter-row__title:hover, .filter-row__title:focus {
+  color: #DD0330;
+}
+
+.filter-row__title:hover:after, .filter-row__title:focus:after {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.filter-row__title--active:after {
+  background: url("../icon/minus.svg") no-repeat center/contain;
+}
+
+.filter-row__content {
+  display: none;
+  padding: 15px 0;
+}
+
+.filters {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.filters__tags {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.filters__icon {
+  margin-right: 8px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.filters__icon:hover, .filters__icon:focus {
+  outline: none;
+}
+
+.filters__category {
+  font-size: 13px;
+  padding-right: 50px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.filters__category:hover {
+  color: #666666;
+}
+
+.filters__category:hover .filters__icon {
+  fill: #666666;
+}
+
+.filters__category:hover, .filters__category:focus {
+  outline: none;
+}
+
+.filters__item {
+  font-size: 13px;
+  padding-right: 50px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.filters__item:hover {
+  color: #666666;
+}
+
+.filters__item:hover .filters__icon {
+  fill: #666666;
+}
+
+.filters__info {
+  font-size: 13px;
+  line-height: 1.2;
+  color: #666666;
+}
+
+.filters__info-item {
+  margin-left: 25px;
+}

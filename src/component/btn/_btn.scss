@@ -23,7 +23,8 @@
     transition: all .4s;
 
     &:hover, &:focus{
-        color: $body-color;
+        color: $action;
+        border-color: $action;
         text-decoration: none;
         outline: none;
     }

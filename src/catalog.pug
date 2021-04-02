@@ -8,8 +8,14 @@ html(lang="ru")
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
-        link(href='/css/style.css', rel='stylesheet')
-        link(href='/css/catalog.css', rel='stylesheet')
+
+        link(href='/css/framework.css', rel='stylesheet')
+
+        link(href='/css/sliders.css', rel='stylesheet')
+        link(href='/css/previews.css', rel='stylesheet')
+        link(href='/css/filters.css', rel='stylesheet')
+        link(href='/css/products.css', rel='stylesheet')
+        link(href='/css/faq.css', rel='stylesheet')
 
     body
         script(src="/js/jquery.min.js")
@@ -71,16 +77,16 @@ html(lang="ru")
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
                         .col-6
                             a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title--has-icon О бренде SANKOM, материалах и технологиях производства
+                                .faq__title.faq__title_has-icon О бренде SANKOM, материалах и технологиях производства
                                     img.faq__icon(src='/icon/faq.svg')
                             a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title--has-icon Подробнее о программе лояльности
+                                .faq__title.faq__title_has-icon Подробнее о программе лояльности
                                     img.faq__icon(src='/icon/faq.svg')
                             a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title--has-icon О бренде SANKOM, материалах и технологиях производства
+                                .faq__title.faq__title_has-icon О бренде SANKOM, материалах и технологиях производства
                                     img.faq__icon(src='/icon/faq.svg')
                             a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title--has-icon Подробнее о программе лояльности
+                                .faq__title.faq__title_has-icon Подробнее о программе лояльности
                                     img.faq__icon(src='/icon/faq.svg')
             include component/banner/delivery.pug
         include component/footer/footer.pug

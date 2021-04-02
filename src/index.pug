@@ -8,8 +8,15 @@ html(lang="ru")
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
-        link(href='/css/style.css', rel='stylesheet')
-        link(href='/css/index.css', rel='stylesheet')
+        
+        link(href='/css/framework.css', rel='stylesheet')
+
+        link(href='/css/banners.css', rel='stylesheet')
+        link(href='/css/sliders.css', rel='stylesheet')
+        link(href='/css/previews.css', rel='stylesheet')
+        link(href='/css/products.css', rel='stylesheet')
+        link(href='/css/tabs.css', rel='stylesheet')
+        link(href='/css/faq.css', rel='stylesheet')
 
     body
         script(src="/js/jquery.min.js")
@@ -163,9 +170,9 @@ html(lang="ru")
                                     .form__line.mt-2
                                         +input('', 'E-mail')(label="input__label_inside" class="input_label-inside")
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                            +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg')
-                            +faq('Подробнее о программе лояльности', '/icon/faq.svg')
-                            +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg')
+                            +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg')(class="bg-white")
+                            +faq('Подробнее о программе лояльности', '/icon/faq.svg')(class="bg-white")
+                            +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         
