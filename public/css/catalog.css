@@ -255,6 +255,7 @@ a.preview:hover .preview__title {
 .product__image-block {
   display: block;
   position: relative;
+  margin-bottom: 25px;
 }
 
 .product__image-block:before {
@@ -276,7 +277,6 @@ a.preview:hover .preview__title {
   right: 0;
   display: block;
   width: 100%;
-  margin-bottom: 25px;
   border-radius: 6px;
   background: no-repeat center / cover;
   z-index: 2;

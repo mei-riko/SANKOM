@@ -168,6 +168,15 @@
   text-decoration: none;
 }
 
+.tags-row_inside-page {
+  padding: 0;
+  background: inherit;
+}
+
+.tags-row_inside-page .tags-row__link:nth-child(n+14) {
+  display: inline-block;
+}
+
 .faq {
   display: block;
   padding: 16.66667px 25px;

@@ -1,0 +1,30 @@
+.person{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo{
+        flex: 0 0 48px;
+        max-width: 48px;
+    }
+    &__content{
+        flex: 0 0 calc(100% - 63px);
+        max-width: calc(100% - 63px);
+    }
+    &__label{
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: $line-height-heading;
+
+        color: $grey;
+        margin-bottom: 5px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__name{
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: $line-height-heading;
+        font-weight: $font-weight-bold;
+    }
+}

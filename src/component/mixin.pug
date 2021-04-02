@@ -109,9 +109,9 @@ mixin product(title, newPrice, oldPrice, status, label, href)
 mixin productSmall(title, newPrice, oldPrice, status, href)
     .product.product_small
         a.product_small__image(style!=attributes.style href=href title=title)
+        if status!=''
+            .product_small__status.text-covered= status
         .product_small__content
-            if status!=''
-                .product_small__status.text-covered= status
             a.product__title(href=href title=title)= title
             if oldPrice!=''
                 .product__price-old= oldPrice

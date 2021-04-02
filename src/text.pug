@@ -7,7 +7,7 @@ html(lang="ru")
         title Text Page
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         link(href='/css/style.css', rel='stylesheet')
         link(href='/css/text.css', rel='stylesheet')
 
@@ -15,7 +15,67 @@ html(lang="ru")
         script(src="/js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        
+        main.mt-3.mb-3
+            //- FAQ
+            section.content.container
+                .content__inside
+                    ul.breadcrumb
+                        li.breadcrumb__item 
+                            a.breadcrumb__link(href="index.html") Главная
+                        li.breadcrumb__item 
+                            a.breadcrumb__link(href="blog.html") Блог
+                        li.breadcrumb__item.breadcrumb__item--active Позы йоги для снятия напряжения позвоночника
+                    .row.justify-content-between.mt-2
+                        .col-8.content__text
+                            p.text-spacing.text-small.text-uppercase.text-bolder Статья
+                            h1.h3.mt-1.mb-2 Позы йоги для снятия напряжения позвоночника
+                            img.img-fluid(src="../img/banner-1.jpg" title="" alt="")
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor sed massa eros massa. Massa ultricies elit bibendum quisque. Id suspendisse donec nunc quam ut morbi. Diam sit lorem risus nunc auctor sit nisl elit augue. Eget enim mauris sit fames id. Proin vitae proin sodales vitae, suspendisse arcu quam. A pharetra sit dictumst ipsum arcu eu vitae.
+                            
+                            p Adipiscing amet, odio aenean posuere tincidunt habitant. Ullamcorper et tincidunt hac neque, dolor posuere. Consequat in purus varius cursus amet aliquam bibendum aliquam. Placerat et accumsan, bibendum aliquet mattis. In sit lobortis porta eleifend libero pretium. Mauris ullamcorper nec egestas sit tortor.
+                            ul
+                                li Vel phasellus lobortis 
+                                li Vitae luctus feugiat in vel 
+                                li Velit scelerisque
+                            p Ac ac nec sit in habitant. Diam dignissim arcu et, et integer arcu scelerisque nisi. Ultrices quis sit et, mauris. Aliquet ut et semper mi nec eros. Justo, quisque massa aliquet massa. Nisl purus, elementum, diam volutpat ultricies fermentum. Nibh mi ipsum arcu lectus sit convallis ridiculus. Enim euismod scelerisque enim volutpat viverra. Dictum a ut sagittis, iaculis. Nullam massa id ante aliquet nam id fermentum. Vulputate purus auctor sociis eget maecenas elit ornare ultricies dui. Ultrices risus aliquam pretium in at ut massa ultrices. 
+                            ol
+                                li Molestie lorem scelerisque morbi 
+                                li Bibendum morbi in purus sed dapibus
+                            .recommendation.mt-3
+                                p.h4.mb-2 Леггинсы Sankom — идеальный выбор для занятий йогой
+                                .slider.slider_recommendation.owl-carousel.owl-theme
+                                    .slider__item
+                                        +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('/img/product-1.jpg');")
+                                    .slider__item
+                                        +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
+                                    .slider__item
+                                        +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
+                                    .slider__item
+                                        +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
+                    
+                        .col-3
+                            .person.mb-2
+                                .person__logo 
+                                    img.img-fluid(src="../icon/demo-logo.svg" alt="" title="")
+                                .person__content
+                                    .person__label Автор публикации
+                                    .person__name SANKOM
+                            .tags-row.tags-row_inside-page
+                                .tags-row__items 
+                                    a.tags-row__link(href="catalog.html") Коррекция и красота
+                                    a.tags-row__link(href="catalog.html") Для повседневного использования
+                                    a.tags-row__link(href="catalog.html") Убрать бока
+                                    a.tags-row__link(href="catalog.html") Убрать живот
+                                    a.tags-row__link(href="catalog.html") Тонкая талия
+                                    a.tags-row__link(href="catalog.html") Пуш-ап эффект
+                                    a.tags-row__link(href="catalog.html") Моделирующий эффект
+                                    a.tags-row__link(href="catalog.html") Под верхнюю одежду
+                                    a.tags-row__link(href="catalog.html") Под вечерний наряд
+                            .hr.mt-2.mb-3
+                            p.text-spacing.text-small.text-grey.text-uppercase.text-bolder СВЯЖИТЕСЬ С НАМИ
+                            a.text-bold.text-action(href="tel:8-800 800 8800") 8-800 800 8800
+                            p.mb-2 С понедельника по пятницу с 9:00 до 21:00 (по московскому времени).
+                            +btn('', 'Задать вопрос')(class="btn_secondary")
         include component/footer/footer.pug
         
         script(src="./js/jquery.inputmask.min.js")

@@ -1879,7 +1879,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .h1, h1 {
@@ -2094,6 +2094,12 @@ table td {
 
 .img-border {
   border: 1px solid #EBE7E4;
+}
+
+hr, .hr {
+  width: 100%;
+  height: 1px;
+  background-color: #EBE7E4;
 }
 
 @media all and (max-width: 1440px) {
@@ -3024,6 +3030,18 @@ table td {
 
 .content__inside {
   padding: 0 25px;
+}
+
+.content__text img {
+  margin-bottom: 15px;
+}
+
+.content__text img:last-child {
+  margin-bottom: 0;
+}
+
+.content__text ul, .content__text ol {
+  padding-left: 1rem;
 }
 
 .content__block-title {

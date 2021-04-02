@@ -494,6 +494,7 @@ a.preview:hover .preview__title {
 .product__image-block {
   display: block;
   position: relative;
+  margin-bottom: 25px;
 }
 
 .product__image-block:before {
@@ -515,7 +516,6 @@ a.preview:hover .preview__title {
   right: 0;
   display: block;
   width: 100%;
-  margin-bottom: 25px;
   border-radius: 6px;
   background: no-repeat center / cover;
   z-index: 2;
@@ -583,9 +583,9 @@ a.preview:hover .preview__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
@@ -610,13 +610,14 @@ a.preview:hover .preview__title {
 
 .product_small__content {
   position: relative;
-  padding-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .product_small__status {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 135px;
   text-transform: capitalize;
   font-size: 20px;
   line-height: 1.1;

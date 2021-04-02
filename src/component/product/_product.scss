@@ -6,6 +6,7 @@
     &__image-block{
         display: block;
         position: relative;
+        margin-bottom: $grid-gutter-width/2;
 
         &:before{
             content: '';
@@ -28,7 +29,6 @@
 
         display: block;
         width: 100%;
-        margin-bottom: $grid-gutter-width/2;
 
         border-radius: $border-radius;
         background: no-repeat center / cover;

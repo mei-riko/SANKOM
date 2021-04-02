@@ -8,6 +8,18 @@
     &__inside{
         padding: 0 $grid-gutter-width/2;
     }
+    &__text{
+        img{
+            margin-bottom: $spacer-gutter;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        ul, ol{
+            padding-left: 1rem;
+        }
+    }
 
     &__block-title{
         font-family: $font-family-heading;
