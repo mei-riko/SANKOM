@@ -1,0 +1,76 @@
+.product_cart{
+    display: grid;
+    grid-gap: map-get($map: $spacers, $key: 1);
+    grid-template-areas: 
+    "image content price"
+    "image input delete";
+
+    grid-template-columns: 110px 1fr 80px;
+
+    padding-right: map-get($map: $spacers, $key: 1);
+    padding-bottom: map-get($map: $spacers, $key: 1);
+    max-width: 100%;
+    overflow-x: hidden;
+
+    &__image{
+        grid-area: image;
+
+        display: block;
+        width: 110px;
+        height: 150px;
+
+        border-radius: $border-radius;
+        background: #ebe7e4 no-repeat center / contain;
+    }
+    
+    &__content{
+        grid-area: content;
+    }
+    &__price{
+        grid-area: price;
+        text-align: right;
+        font-size: map-get($map: $font-size, $key: "sm");
+
+        &-old{
+            font-size: map-get($map: $font-size, $key: "sm");
+            line-height: $line-height-base;
+
+            & + .product_cart__price-new{
+                margin: 0;
+            }
+        }
+        &-new{
+            font-size: map-get($map: $font-size, $key: "sm");
+            line-height: $line-height-base;
+        }
+    }
+
+    &__input{
+        grid-area: input;
+    }
+    &__delete{
+        grid-area: delete;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__title{
+        font-size: map-get($map: $font-size, $key: "sm");
+        font-weight: $font-weight-bolder;
+        line-height: $line-height-base;
+        margin-bottom: 10px;
+    }
+    &__options{
+        font-size: map-get($map: $font-size, $key: "xs");
+        line-height: $line-height-base;
+        color: $grey;
+        list-style: none;
+    }
+
+    &--not-change{
+        grid-template-areas: 
+        "image content price";
+    }
+}

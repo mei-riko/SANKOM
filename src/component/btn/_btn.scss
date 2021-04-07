@@ -22,11 +22,27 @@
 
     transition: all .4s;
 
-    &:hover, &:focus{
+    &__icon{
+        fill: $body-color;
+        transition: all .4s;
+
+        &_left{
+            margin-right: 10px;
+        }
+        &_right{
+            margin-left: 10px;
+        }
+    }
+
+    &:hover {
         color: $action;
         border-color: $action;
         text-decoration: none;
         outline: none;
+
+        .btn__icon{
+            fill: $action;
+        }
     }
 
     &--full{
@@ -37,11 +53,15 @@
         min-width: 120px;
         border-radius: 2px;
     }
+    &--has-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .btn-group{
-    // display: flex;
-    // flex-wrap: wrap;
+
     display: grid;
     grid-gap: $grid-gutter-width/4;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));

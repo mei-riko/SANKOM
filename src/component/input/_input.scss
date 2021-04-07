@@ -31,7 +31,10 @@
                 transition: .4s;
             }
         }
-        // js state
+        &_number{
+            width: 90px;
+        }
+        // JS state
         &--focus {
             & ~ .input__label_inside{
                 top: 0;
@@ -44,34 +47,37 @@
                 opacity: 1;
             }
         }
+        // CSS state
+        &--full{
+            width: 100%;
+        }
     }
     &__label{
+        line-height: 1;
+        margin: 0;
+        padding: 0;
 
+        &_top{
+            font-size: map-get($map: $font-size, $key: xs);
+            font-weight: $font-weight-bold;
+            padding: 6px 0;
+            margin-bottom: 5px;
+        }
         &_inside{
             position: absolute;
             top: 50%;
             left: 15px;
             transform: translateY(-50%);
 
-            margin: 0;
-            padding: 0;
-            
             font-size: map-get($map: $font-size, $key: md);
-            line-height: 1;
             color: $grey;
-
-            // opacity: 0;
             transition: all ease .2s;
         }
 
     }
+}
 
-    
-    // Состояние
-    &--full{
-        width: 100%;
-    }
-    &--has-validation{
-        margin-bottom: $spacer/6;
-    }
+.input_column{
+    display: flex;
+    flex-direction: column-reverse;
 }

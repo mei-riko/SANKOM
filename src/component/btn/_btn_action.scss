@@ -7,5 +7,9 @@
     &:hover, &:focus {
         background-color: darken($color: $action, $amount: 6);
         color: $white;
+
+        .btn__icon{
+            fill: $white;
+        }
     }
 }

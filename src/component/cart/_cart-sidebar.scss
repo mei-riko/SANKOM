@@ -1,0 +1,38 @@
+.cart-sidebar{
+    background: $lightest-bg;
+    border-radius: $border-radius;
+    padding: map-get($map: $spacers, $key: 2);
+
+    &__title{
+        text-transform: uppercase;
+        font-size: map-get($map: $font-size, $key: "lg");
+        font-weight: $font-weight-bolder;
+        line-height: $line-height-heading;
+    }
+
+    &__content{
+        height: 250px;
+        margin: map-get($map: $spacers, $key: 2) 0;
+
+        overflow-y: auto;
+    }
+
+    &__prop{
+        display: flex;
+        justify-content: space-between;
+
+        &-title{
+            padding-right: 10px;
+        }
+
+        &--first{
+            border-top: 1px solid $border-color;
+            padding-top: map-get($map: $spacers, $key: 2);
+        }
+    }
+}
+
+.cart-sidebar_cashback{
+    background: $white;
+    border: 1px solid $border-color;
+}

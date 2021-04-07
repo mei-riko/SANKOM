@@ -1,9 +1,9 @@
 .btn_secondary{
     background-color: $light-bg;
-    border-color: $light-grey;
+    border-color: $body-bg;
     text-align: center;
 
     &:hover {
-        background: darken($color: $light-bg, $amount: 5);
+        background: $white;
     }
 }

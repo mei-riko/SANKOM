@@ -3,20 +3,20 @@ mixin btn(href, title)
     a.btn(class!=attributes.class href=href)= title
 mixin input(placeholder, label)
     .input(class!=attributes.class)
-        input.input__field(placeholder=placeholder type!=attributes.type)
+        input.input__field(placeholder=placeholder type!=attributes.type class!=attributes.field)
         label.input__label(class!=attributes.label)= label
 mixin textarea(placeholder, label)
     .input.input_textarea(class!=attributes.class)
-        label.input__label= label
-        textarea.input__field.input__field_textarea(placeholder=placeholder)
+        textarea.input__field.input__field_textarea(placeholder=placeholder class!=attributes.field)
+        label.input__label(class!=attributes.label)= label
 mixin radio(id, title, name, checked)
-    .radio
-        input.radio__input(type="radio" id=id name=name checked=checked)
-        label.radio__label(for=id)= title
-mixin checkbox(id, title)
-    .checkbox
-        input.checkbox__input(type="checkbox" id=id)
-        label.checkbox__label(for=id)= title
+    .radio(class!=attributes.class)
+        input.radio__input(type="radio" id=id name=name checked=checked class!=attributes.field)
+        label.radio__label(for=id class!=attributes.label)!= title
+mixin checkbox(id, title, checked)
+    .checkbox(class!=attributes.class)
+        input.checkbox__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        label.checkbox__label(for=id)!= title
 //- Preview Items
 mixin category(title, intro, link, href)
     .preview.preview_category
@@ -118,24 +118,47 @@ mixin productSmall(title, newPrice, oldPrice, status, href)
                 .product__price-new= newPrice
             else
                 .product__price-new= newPrice
-mixin productCard(title, newPrice, oldPrice, size, color, article, href)
-    .product.product_card
-        a.product__image.product_card__image(style!=attributes.style href=href title=title)
-        .product_card__body
-            .product_card__content
-                a.product__title(href=href title=title)= title
-                ul.product__options
-                    li.product__options-item= color
-                    li.product__options-item= size
-                    li.product__options-item= article
-            .product_card__price
-                if oldPrice!=''
-                    .product__price-old= oldPrice
-                    .product__price-new= newPrice
-                else
-                    .product__price-new.product__price_single= newPrice
-            .product_card__input
-                input.input__field.input__field_number(placeholder=placeholder type="number" value="1")
-            .product_card__delete
-                svg.product__icon(width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+mixin productCart(title, newPrice, oldPrice, size, color, article, href)
+    .product.product_cart
+        a.product_cart__image(style!=attributes.style href=href title=title)
+        .product_cart__content
+            a.product_cart__title(href=href title=title)= title
+            ul.product_cart__options
+                li.product_cart__options-item Цвет: 
+                    span= color
+                li.product_cart__options-item Размер: 
+                    span= size
+                li.product_cart__options-item Артикул: 
+                    span= article
+        .product_cart__price
+            if oldPrice!=''
+                .product__price-old.product_cart__price-old= oldPrice
+                .product__price-new.product_cart__price-new= newPrice
+            else
+                .product__price-new.product__price_single= newPrice
+        .product_cart__input
+            input.input__field.input__field_number(placeholder=placeholder type="number" value="1")
+        .product_cart__delete
+            button.product_cart__reset(type=reset)
+                svg.product__icon(width="13" height="14" viewBox="0 0 13 14" xmlns="http://www.w3.org/2000/svg")
                     path(d="M12.0389 1.07227C12.1288 1.0666 12.2215 1.06093 12.3113 1.05242C12.7026 1.01838 13.0272 0.887898 12.9982 0.632609C12.9721 0.397176 12.6939 0.224146 12.294 0.198618C11.5752 0.150396 10.8478 0.0965019 10.1261 0.102175C8.96399 0.113521 7.80183 0.170252 6.63968 0.207127C4.55592 -0.119075 2.42579 0.0653 0.318838 5.94568e-05C0.226097 -0.00277709 0.0782922 0.0965019 0.031922 0.164579C-0.0608185 0.30357 0.0609034 0.419868 0.23769 0.507801C0.591263 0.683666 0.991206 0.799965 1.41144 0.870878C1.39695 0.958811 1.38535 1.05809 1.37666 1.16588C1.25494 2.69478 1.33608 4.52718 1.51867 6.37945C1.75052 8.75647 1.97368 11.1363 2.22292 13.519C2.249 13.7743 2.46926 13.9785 2.73878 13.9814H2.75038C4.8892 14.0069 7.03093 14.0097 9.17845 13.9672L10.2508 13.9871C10.5145 13.9927 10.7463 13.8027 10.7811 13.5389L10.784 13.519L10.8681 12.9007C11.3202 9.39186 11.7404 5.88021 12.0244 2.37141C12.065 1.86934 12.0737 1.40415 12.0389 1.07227ZM1.91861 1.31622C1.90702 1.19992 1.86644 1.05809 1.82007 0.927609C1.96788 0.944628 2.11858 0.955975 2.26639 0.961648C3.00251 0.995686 3.73864 1.03823 4.47477 1.0666C4.28929 1.60554 4.22553 2.22107 4.23133 2.83944C4.23133 2.89617 4.23133 2.95574 4.23133 3.01247C3.52128 3.00963 2.81124 3.03232 2.10119 3.01247C2.04033 2.448 1.97657 1.88352 1.91861 1.31622ZM2.18234 3.71309C2.54171 3.8691 2.93876 3.94569 3.3416 3.97122C3.64011 3.99108 3.94151 4.01093 4.24002 4.03079C4.24292 4.69454 4.25161 5.35829 4.2748 6.02204C3.66909 6.02204 3.06048 6.0419 2.45477 6.02488C2.36203 5.25334 2.27218 4.4818 2.18234 3.71309ZM2.54171 6.74252C2.86051 6.88435 3.21118 6.95526 3.56475 6.98079C3.81979 6.99781 4.07193 7.01767 4.32696 7.03469C4.35015 7.37791 4.37913 7.71829 4.41681 8.06152C4.4197 8.27709 4.41681 8.49551 4.4226 8.71108C4.4284 8.9607 4.43709 9.21032 4.44289 9.45993C3.91543 9.45993 3.38797 9.47412 2.86051 9.46561C2.75907 8.55791 2.64894 7.65022 2.54171 6.74252ZM3.24016 12.9489C3.15322 12.0582 3.05758 11.1647 2.95904 10.274C3.19379 10.3534 3.44013 10.3988 3.68937 10.4187C3.9589 10.4385 4.22553 10.4584 4.49506 10.4811C4.54143 11.2611 4.60808 12.0384 4.72111 12.8099C4.72981 12.8751 4.7443 12.9375 4.75879 12.9971C4.25161 12.9772 3.74444 12.9631 3.24016 12.9489ZM6.86284 13.0964C6.42812 13.0709 5.99339 13.0482 5.55578 13.0283C5.57606 12.9404 5.59055 12.8439 5.59055 12.739C5.59925 12.0213 5.61084 11.298 5.56447 10.5832C5.56447 10.5719 5.56157 10.5577 5.56157 10.5463C6.07744 10.569 6.59621 10.5719 7.11497 10.5321C7.18743 10.5378 7.25698 10.5435 7.32944 10.5492C7.28886 11.2838 7.26858 12.0185 7.29176 12.7532C7.29466 12.8751 7.30915 12.9886 7.33233 13.0907C7.17584 13.0935 7.01934 13.0964 6.86284 13.0964ZM7.5439 8.00479C7.52072 8.22036 7.49463 8.43594 7.47434 8.65152C7.44536 8.97205 7.41638 9.29258 7.3903 9.61594C7.10628 9.63296 6.82226 9.64998 6.53535 9.66416C6.18467 9.57907 5.8311 9.53085 5.47753 9.50248C5.40797 8.71392 5.32682 7.9282 5.25437 7.13964C5.25437 7.12546 5.25727 7.11411 5.25727 7.09993C5.90935 7.13397 6.56143 7.14815 7.21641 7.09993C7.33233 7.10844 7.44826 7.11695 7.56419 7.12546C7.55549 7.41195 7.5468 7.70695 7.5439 8.00479ZM7.62505 6.16954C7.28597 6.18656 6.94398 6.20642 6.6049 6.22344C6.17888 6.12699 5.75285 6.07877 5.32392 6.05041C5.34131 5.398 5.32103 4.74843 5.28625 4.09319C5.94992 4.12439 6.6165 4.1329 7.28307 4.08468C7.44536 4.09603 7.60766 4.10737 7.77285 4.11588C7.79024 4.11588 7.80763 4.11588 7.82502 4.11872C7.74677 4.79949 7.67432 5.4831 7.62505 6.16954ZM7.92935 3.15146C7.49173 3.17132 7.05411 3.19684 6.61649 3.21386C6.15279 3.11742 5.68619 3.06636 5.21669 3.04083C5.17322 2.39127 5.12975 1.7417 5.10946 1.09213C5.91225 1.11482 6.71793 1.12049 7.52361 1.07795C7.74097 1.08929 7.95833 1.10064 8.17569 1.10915C8.24815 1.11198 8.3206 1.11482 8.39305 1.11482C8.1612 1.61973 8.03079 2.20122 7.96703 2.79689C7.95544 2.91319 7.94094 3.03232 7.92935 3.15146ZM9.86821 13.0567C9.27409 13.0652 8.68287 13.0737 8.08875 13.0822C8.12353 12.9943 8.14961 12.895 8.1641 12.7872C8.25684 12.0752 8.35248 11.3576 8.39016 10.6428C8.39016 10.6286 8.39016 10.6116 8.39305 10.5974C8.97268 10.6087 9.55231 10.5917 10.129 10.5236C10.0392 11.3661 9.95225 12.2114 9.86821 13.0567ZM10.416 7.83459C10.3493 8.43878 10.2855 9.0458 10.2218 9.64998C9.75228 9.60176 9.27989 9.54787 8.81039 9.55354C8.68287 9.55638 8.55825 9.55921 8.43073 9.56488C8.45392 8.76782 8.46551 7.97075 8.4858 7.17651C8.48869 7.168 8.48869 7.16233 8.49159 7.15382C9.16396 7.168 9.83633 7.15382 10.5058 7.0744C10.4739 7.32685 10.442 7.58214 10.416 7.83459ZM10.6101 6.22627C10.584 6.2206 10.5609 6.21493 10.5348 6.21209C10.0334 6.16387 9.52913 6.10997 9.02775 6.11565C8.91182 6.11848 8.793 6.12132 8.67707 6.12416C8.77271 5.46892 8.82778 4.81084 8.87125 4.14709C9.53782 4.1556 10.2073 4.1329 10.871 4.05915C10.8826 4.05915 10.8941 4.05632 10.9057 4.05348C10.8014 4.7768 10.7029 5.50295 10.6101 6.22627ZM11.1492 2.32603C11.1057 2.62954 11.0622 2.93305 11.0188 3.23939C10.9666 3.22237 10.9144 3.21103 10.8536 3.20535C10.3145 3.15713 9.76967 3.10324 9.22772 3.10891C9.12628 3.10891 9.02485 3.11458 8.92341 3.11742C8.95819 2.45651 8.99007 1.79276 9.04514 1.13468C9.83923 1.1517 10.6333 1.14886 11.4245 1.11198C11.3173 1.41266 11.2187 1.82963 11.1492 2.32603Z")
+mixin productOrder(title, newPrice, oldPrice, size, color, article, href)
+    .product.product_cart.product_cart--not-change
+        a.product_cart__image(style!=attributes.style href=href title=title)
+        .product_cart__content
+            a.product_cart__title(href=href title=title)= title
+            ul.product_cart__options
+                li.product_cart__options-item Количество: 
+                    span 1
+                li.product_cart__options-item Цвет: 
+                    span= color
+                li.product_cart__options-item Размер: 
+                    span= size
+                li.product_cart__options-item Артикул: 
+                    span= article
+        .product_cart__price
+            if oldPrice!=''
+                .product__price-old.product_cart__price-old= oldPrice
+                .product__price-new.product_cart__price-new= newPrice
+            else
+                .product__price-new.product__price_single= newPrice

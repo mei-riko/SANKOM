@@ -41,6 +41,10 @@ $(document).ready(() =>{
     addFocusListener( inputs[i] );
   }
 
+  $('.input.input_label-inside').on('click', function(){
+    $(this).find('.input__field').focus();
+  });
+
   // Open More Content
   $('.open-content').on('click', function(){
     let block = $(this);

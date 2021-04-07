@@ -7,5 +7,9 @@
         color: $black;
         border-color: $light-grey;
         background-color: $light-grey;
+
+        .btn__icon{
+            fill: $black;
+        }
     }
 }

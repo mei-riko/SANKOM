@@ -1945,8 +1945,12 @@ a {
   color: #3A3A3A;
 }
 
-a:hover, a:focus {
+a:hover {
   color: #DD0330;
+  outline: none;
+}
+
+a:focus {
   outline: none;
 }
 
@@ -1955,6 +1959,14 @@ a:hover, a:focus {
 }
 
 .link-inverse:hover {
+  color: #666666;
+}
+
+.link-action {
+  color: #DD0330;
+}
+
+.link-action:hover {
   color: #666666;
 }
 
@@ -2074,6 +2086,10 @@ table td {
 
 .text-small, small, .small {
   font-size: 11px;
+}
+
+.text-smaller {
+  font-size: 13px;
 }
 
 .text-lead, .lead {
@@ -2678,11 +2694,30 @@ blockquote, .blockquote {
   transition: all .4s;
 }
 
-.btn:hover, .btn:focus {
+.btn__icon {
+  fill: #3A3A3A;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.btn__icon_left {
+  margin-right: 10px;
+}
+
+.btn__icon_right {
+  margin-left: 10px;
+}
+
+.btn:hover {
   color: #DD0330;
   border-color: #DD0330;
   text-decoration: none;
   outline: none;
+}
+
+.btn:hover .btn__icon {
+  fill: #DD0330;
 }
 
 .btn--full {
@@ -2693,6 +2728,18 @@ blockquote, .blockquote {
   padding: 4px 12px;
   min-width: 120px;
   border-radius: 2px;
+}
+
+.btn--has-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .btn-group {
@@ -2717,6 +2764,10 @@ blockquote, .blockquote {
   background-color: #FCFBFA;
 }
 
+.btn_inverse:hover .btn__icon {
+  fill: #3A3A3A;
+}
+
 .btn_action {
   border-color: #bf0329;
   background-color: #DD0330;
@@ -2729,14 +2780,25 @@ blockquote, .blockquote {
   color: #ffffff;
 }
 
+.btn_action:hover .btn__icon, .btn_action:focus .btn__icon {
+  fill: #ffffff;
+}
+
 .btn_secondary {
   background-color: #f7f5f4;
-  border-color: #FCFBFA;
+  border-color: #EBE7E4;
   text-align: center;
 }
 
 .btn_secondary:hover {
-  background: #ece8e5;
+  background: #ffffff;
+}
+
+.form-block {
+  padding: 50px 50px;
+  border: 1px solid #EBE7E4;
+  border-radius: 6px;
+  background-color: #ffffff;
 }
 
 .form {
@@ -2761,6 +2823,9 @@ blockquote, .blockquote {
   display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2770,12 +2835,22 @@ blockquote, .blockquote {
   max-width: 100%;
 }
 
-.form__line > * {
-  margin-right: 12.5px;
+.form__line-input {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc(100% - 175px);
+  flex: 0 0 calc(100% - 175px);
+  max-width: calc(100% - 175px);
 }
 
-.form__line > *:last-child {
-  margin-right: 0;
+.form__line-field {
+  width: 100%;
+}
+
+.form__line-btn {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 160px;
+  flex: 0 0 160px;
+  max-width: 160px;
 }
 
 .form__validation {
@@ -2786,13 +2861,6 @@ blockquote, .blockquote {
 .form__agree {
   font-size: 12px;
   color: #666666;
-}
-
-.form-block {
-  padding: 50px 50px;
-  border: 1px solid #EBE7E4;
-  border-radius: 6px;
-  background-color: #ffffff;
 }
 
 .input {
@@ -2879,6 +2947,10 @@ blockquote, .blockquote {
   transition: .4s;
 }
 
+.input__field_number {
+  width: 90px;
+}
+
 .input__field--focus ~ .input__label_inside {
   top: 0;
   font-size: 11px;
@@ -2888,6 +2960,23 @@ blockquote, .blockquote {
   opacity: 1;
 }
 
+.input__field--full {
+  width: 100%;
+}
+
+.input__label {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.input__label_top {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 0;
+  margin-bottom: 5px;
+}
+
 .input__label_inside {
   position: absolute;
   top: 50%;
@@ -2895,22 +2984,21 @@ blockquote, .blockquote {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin: 0;
-  padding: 0;
   font-size: 14px;
-  line-height: 1;
   color: #666666;
   -webkit-transition: all ease .2s;
   -o-transition: all ease .2s;
   transition: all ease .2s;
 }
 
-.input--full {
-  width: 100%;
-}
-
-.input--has-validation {
-  margin-bottom: 8.33333px;
+.input_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .checkbox {
@@ -3001,6 +3089,7 @@ blockquote, .blockquote {
   position: relative;
   cursor: pointer;
   padding-left: 24px;
+  margin: 0;
 }
 
 .radio__label:before {

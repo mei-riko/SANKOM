@@ -71,14 +71,24 @@ a{
 
     color: $link-color;
 
-    &:hover, &:focus{
+    &:hover {
         color: $link-hover-color;
+        outline: none;
+    }
+    &:focus {
         outline: none;
     }
 }
 
 .link-inverse{
     color: $white;
+
+    &:hover{
+        color: $grey;
+    }
+}
+.link-action{
+    color: $action;
 
     &:hover{
         color: $grey;
@@ -142,6 +152,7 @@ table{
 .text-covered{font-family: 'Covered By Your Grace', cursive; color: $action;}
 
 .text-small,small,.small{font-size: map-get($map: $font-size, $key: 'xs');}
+.text-smaller{font-size: map-get($map: $font-size, $key: 'sm');}
 .text-lead,.lead{font-size: map-get($map: $font-size, $key: 'lg');}
 
 .text-spacing{letter-spacing: $letter-spacing;}

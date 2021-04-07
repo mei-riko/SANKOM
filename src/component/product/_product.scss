@@ -44,7 +44,7 @@
         }
     }
 
-    // Label Product
+    // Label (Sale, New))
     &__status{
         position: absolute;
         top: map-get($map: $spacers, $key: 1);
@@ -57,7 +57,7 @@
 
         z-index: 3;
     }
-
+    // Title
     &__title{
         display: flex;
         align-items: flex-end;
@@ -68,7 +68,7 @@
         line-height: 18px;
         height: 24px;
     }
-
+    // Price
     &__price-old{
         display: inline-block;
         text-decoration: line-through;
@@ -82,7 +82,7 @@
         display: inline-block;
         font-weight: $font-weight-bold;
     }
-
+    // Info Label
     &__label{
         position: absolute;
         left: 0;
@@ -94,5 +94,13 @@
         color: $action;
 
         // transform: translateY(50%);
+    }
+    // Icon (delete)
+    &__icon{
+        fill: $grey;
+        transition: .4s;
+        &:hover{
+            fill: $action;
+        }
     }
 }
