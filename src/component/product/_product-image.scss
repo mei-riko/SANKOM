@@ -1,0 +1,24 @@
+.product-image{
+    &__item{
+        border-radius: $border-radius;
+        overflow: hidden;
+        outline: none;
+
+        &:hover, &:focus{
+            outline: none;
+        }
+
+        // Slick
+        &.slick-slide{
+            height: auto;
+        }
+    }
+    &__link{
+        cursor: pointer;
+    }    
+}
+
+.product-image_complect{
+    padding-right: $spacer/2;
+}
+

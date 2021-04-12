@@ -11,13 +11,13 @@
     <link href="/css/sliders.css" rel="stylesheet"/>
     <link href="/css/previews.css" rel="stylesheet"/>
     <link href="/css/filters.css" rel="stylesheet"/>
-    <link href="/css/products.css" rel="stylesheet"/>
+    <link href="/css/product-preview.css" rel="stylesheet"/>
     <link href="/css/faq.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="/js/jquery.min.js"></script>
     <header class="header"></header>
-    <main class="mt-3 mb-3">
+    <main class="mt-3">
       <section class="content content_category-slider container">
         <div class="content__inside">
           <div class="slider-container">
@@ -149,7 +149,7 @@
                 <form class="form" action="">
                   <div class="form__col">
                         <div class="radio">
-                          <input class="radio__input" type="radio" id="radio1" name="news"/>
+                          <input class="radio__input" type="radio" id="radio1" name="news" checked="checked"/>
                           <label class="radio__label" for="radio1">Получать все новости SANKOM</label>
                         </div>
                   </div>
@@ -166,8 +166,8 @@
                         </div>
                   </div>
                   <div class="form__line mt-2">
-                        <div class="input input_label-inside">
-                          <input class="input__field" placeholder=""/>
+                        <div class="input input_label-inside form__line-input">
+                          <input class="input__field form__line-field" placeholder=""/>
                           <label class="input__label input__label_inside bg-white">E-mail</label>
                         </div><a class="btn btn_action btn_icon-check" href="">Подписаться</a>
                   </div>
@@ -194,6 +194,24 @@
         </div>
       </aside>
     </main>
+    <footer class="footer container">
+      <div class="row"> 
+        <div class="col-5">
+          <div class="footer__nav"><a class="footer__nav-item" href="#">Способы оплаты</a><a class="footer__nav-item" href="#">Доставка</a><a class="footer__nav-item" href="#">Программа лояльности</a><a class="footer__nav-item" href="#">Гарантия</a><a class="footer__nav-item" href="#">Возврат</a><a class="footer__nav-item" href="#">Контакты</a></div>
+        </div>
+        <div class="col-2">
+          <div class="footer__network"><a class="footer__network-item" href="#"><img class="img-fluid" src="../icon/vk.svg"/></a><a class="footer__network-item" href="#"><img class="img-fluid" src="../icon/fb.svg"/></a></div>
+        </div>
+        <div class="col-5">
+          <div class="footer__information"> 
+            <div class="footer__copyright">© 2021 SANKOM Все права защищены </div>
+            <div class="footer__nav"><a href="#">Политика конфиденциальности</a>
+              <div class="footer__nav-sep">|</div><a href="#">Условия продажи</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./js/jquery.inputmask.min.js"></script>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>

@@ -1,0 +1,28 @@
+.slider_video{
+    &:not(.owl-loaded){
+        grid-gap: $spacer-gutter;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__item{
+        position: relative;
+        transition: .3s;
+
+        &:before{
+            content: '';
+            display: block;
+            width: 36px;
+            height: 36px;
+
+            position: absolute;
+            top: calc(50% - 18px);
+            left: calc(50% - 18px);
+
+            background: no-repeat url('../icon/play.svg') center / contain;
+            cursor: pointer;
+        }
+        &:hover{
+            filter: brightness(0.75);
+        }
+    }
+}

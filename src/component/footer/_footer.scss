@@ -1,2 +1,48 @@
 .footer{
+    font-size: map-get($map: $font-size, $key: "xs");
+    padding: $spacer/2 0;
+
+    &__nav{
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item{
+            margin-right: map-get($map: $spacers, $key: 1);
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &-sep{
+            margin: 0 4px;
+        }
+    }
+    &__network{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &-item{
+            margin-right: map-get($map: $spacers, $key: 1);
+            filter: opacity(.75);
+            cursor: pointer;
+            transition: .3s;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            &:hover{
+                filter: opacity(1);
+            }
+        }
+    }
+    &__information{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    &__copyright{
+        margin-right: map-get($map: $spacers, $key: 1);
+    }
 }

@@ -2,6 +2,7 @@ import $ from 'jquery'
 
 import '../component/slider/slider';
 import '../component/filters/filter';
+import '../component/product/product';
 
 $(document).ready(() =>{
   $(".scroll").on('click', function() {

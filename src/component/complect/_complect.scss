@@ -40,21 +40,24 @@
         margin-bottom: $grid-gutter-width/2;
 
         &_item-2{
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
         &_item-3{
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
 
             .complect__image-item:nth-child(1){
                 grid-column: 1 / 3;
                 grid-row: 1 / 3;
             }
         }
+        &_full{
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
     }
 
     &__image-item{
         border-radius: 4px;
-        background: no-repeat center / cover;
+        background: #ebe7e4 no-repeat center / contain;
     }
 
     &__price{

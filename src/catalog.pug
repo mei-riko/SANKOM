@@ -14,14 +14,14 @@ html(lang="ru")
         link(href='/css/sliders.css', rel='stylesheet')
         link(href='/css/previews.css', rel='stylesheet')
         link(href='/css/filters.css', rel='stylesheet')
-        link(href='/css/products.css', rel='stylesheet')
+        link(href='/css/product-preview.css', rel='stylesheet')
         link(href='/css/faq.css', rel='stylesheet')
 
     body
         script(src="/js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3.mb-3
+        main.mt-3
             section.content.content_category-slider.container
                 .content__inside
                     .slider-container
@@ -67,13 +67,13 @@ html(lang="ru")
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
                                 form.form(action="")
                                     .form__col
-                                        +radio('radio1', 'Получать все новости SANKOM','news')
+                                        +radio('radio1', 'Получать все новости SANKOM','news','checked')
                                     .form__col
                                         +radio('radio2', 'Акции и скидки','news')
                                     .form__col
                                         +radio('radio3', 'Персональные предложения','news')
                                     .form__line.mt-2
-                                        +input('', 'E-mail')(label="input__label_inside bg-white" class="input_label-inside")
+                                        +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
                         .col-6
                             a.faq.faq_link.bg-white(href="text.html")

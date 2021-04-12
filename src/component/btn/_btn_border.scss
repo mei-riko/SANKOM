@@ -1,0 +1,10 @@
+.btn_border{
+    border-color: $dark-grey;
+    color: $dark-grey;
+    text-align: center;
+
+    &:hover {
+        border-color: $action;
+        color: $action;
+    }
+}

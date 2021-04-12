@@ -98,7 +98,21 @@ a{
     font-size: map-get($map: $font-size, $key: xs);
 
     &__icon{
+        fill: $grey;
         margin-right: 4px;
+    }
+    &__link{
+        padding-bottom: 2px;
+        border-bottom: 1px dashed $grey;
+    }
+
+    &:hover{
+        color: $action;
+        text-decoration: none;
+
+        .table-size__link{
+            border-color: $action;
+        }
     }
 }
 

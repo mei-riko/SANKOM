@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, margin, stagePadding) => {
+export let sliderInitialized = (countShow, sliderClass, arrows, dots, loop, margin, stagePadding) => {
     let $sliderItem = $(sliderClass);
 
     if( $sliderItem.length === 0 ){ return null; }

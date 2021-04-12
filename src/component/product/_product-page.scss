@@ -1,0 +1,288 @@
+.product-page{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    align-items: flex-end;
+
+    // Simple Product Information
+    &__title{
+        font-size: 18px;
+        line-height: $line-height-heading;
+
+        flex: 0 0 calc(100% - 140px);
+        margin-bottom: 10px;
+
+        &_complect{
+            flex: 0 0 100%;
+        }
+    }
+    &__article{
+        font-size: map-get($map: $font-size, $key: "xs");
+        line-height: $line-height-heading;
+        color: $grey-text;
+        text-align: right;
+
+        flex: 0 0 140px;
+        margin-bottom: 10px;
+    }
+    &__price{
+        line-height: $line-height-heading;
+
+        flex: 0 0 calc(100% - 240px);
+
+        &-old{
+            font-size: 16px;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        &-new{
+            font-size: 18px;
+            font-weight: $font-weight-bolder;
+            color: $action;
+        }
+    }
+    &__cashback{
+        font-size: map-get($map: $font-size, $key: "xs");
+        line-height: $line-height-heading;
+        text-align: right;
+
+        flex: 0 0 240px;
+
+        &-icon{
+            padding-left: 10px;
+        }
+    }
+    &__complect{
+        flex: 0 0 100%;
+        margin: map-get($map: $spacers, $key: 2) 0;
+    }
+    &__complect-link{
+        font-size: map-get($map: $font-size, $key: "xs");
+        line-height: $line-height-heading;
+        color: $grey;
+
+        padding-bottom: 2px;
+        border-bottom: 1px dashed $grey;
+
+        &:hover{
+            text-decoration: none;
+            border-color: $action;
+        }
+    }
+
+    // Complect Product Information
+    &__complect-title{
+        line-height: $line-height-heading;
+        flex-grow: 2;
+
+        span{
+            margin-right: 10px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    &__complect-table{
+        flex-grow: 1;
+    }
+    
+    // Product's Option
+    &__option{
+        margin-top: map-get($map: $spacers, $key: 2);
+        flex: 0 0 100%;
+
+        &_complect{
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: space-between;
+
+            & + .product-page__option_complect {
+                margin-top: 10px;
+            }
+        }
+    }
+    &__size{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+
+        width: 100%;
+        margin: 10px 0 15px;
+
+        &-item{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        &-input{
+            display: none;
+    
+            &:checked + .product-page__size-label {
+                color: $action;
+                border-color: $action;
+
+                &:hover{
+                    background-color: $white;
+                }
+            }
+        }
+        &-label{
+            font-size: map-get($map: $font-size, $key: "sm");
+            line-height: 1;
+            border: 1px solid $border-color;
+            border-radius: $border-radius/2;
+            background-color: $white;
+            
+            padding: 10px;
+            margin: 0;
+            flex: 0 0 100%;
+            text-align: center;
+
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover{
+                background-color: $light-bg;
+            }
+        }
+
+        &_complect{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &_has-default{
+            grid-template-columns: 100px repeat(auto-fit, minmax(80px, 1fr));
+        }
+    }
+    
+    // Product Buttons
+    &__btns{
+        flex: 0 0 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    &__buy{
+        flex-grow: 2;
+        padding-right: 5px;
+    }
+    &__quick-buy{
+        flex-grow: 1;
+        padding-left: 5px;
+    }
+
+    // Hidden Quick Buy Block
+    &__quick{
+        display: none;
+
+        margin-top: $spacer/2;
+        padding: $spacer/2;
+        border: 1px solid $border-color;
+    }
+
+    // Blockquote
+    &__blockquote{
+        margin-top: $spacer;
+        margin-bottom: $spacer/2;
+
+        display: grid;
+        align-items: center;
+
+        grid-gap: 5px;
+        grid-template-areas: 
+        "icon title"
+        "icon content";
+    
+        grid-template-columns: 45px 1fr;
+
+        &-icon{
+            padding-right: map-get($map: $spacers, $key: 1);
+
+            grid-area: icon;
+        }
+        &-title{
+            font-size: map-get($map: $font-size, $key: "sm");
+            font-weight: $font-weight-bold;
+            line-height: $line-height-base;
+            margin-bottom: 0;
+
+            grid-area: title;
+
+            width: 360px;
+            max-width: 100%;
+        }
+        &-content{
+            font-size: map-get($map: $font-size, $key: "sm");
+            line-height: $line-height-base;
+            color: $grey;
+
+            grid-area: content;
+
+            width: 360px;
+            max-width: 100%;
+        }
+    }
+
+    // Links
+    &__subinfo{
+        width: 100%;
+        margin-top: $spacer/2;
+        margin-bottom: $spacer;
+
+        display: grid;
+        grid-gap: $spacer-gutter;
+        grid-template-columns: 1fr 1fr;
+
+        &-item{
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                .product-page__subinfo-icon{
+                    fill: $action;
+                }
+            }
+
+            &:nth-child(2n){
+                justify-content: flex-end;
+            }
+        }
+        &-icon{
+            fill: $grey;
+            margin-right: 10px;
+            height: 14px;
+
+            transition: .3s;
+        }
+        &-link{
+            font-size: map-get($map: $font-size, $key: "xs");
+            line-height: $line-height-base;
+            text-decoration: underline;
+            color: $grey;
+        }
+    }
+    // Help INformation
+    &__help{
+        font-size: map-get($map: $font-size, $key: "sm");
+        line-height: $line-height-base;
+
+        &-svg{
+            margin-right: 5px;
+        }
+    }
+
+    // Product Content Block
+    &__content{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    &__row{
+        margin: 0;
+    }
+    &__col{
+        padding: 0 $spacer;
+    }
+}
