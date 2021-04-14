@@ -5,8 +5,8 @@ import {sliderInitialized} from '../slider/slider';
 $(function(){
   if( $('.product-nav .product-nav__image').length > 0 ){
     let heightMain = $('.product-image .product-image__link').height();
-    let navCount = $('.product-image').data('count');
-    let navOffset = $('.product-image').data('offset');
+    let navCount = $('.product-image').data('count') || 2;
+    let navOffset = $('.product-image').data('offset') } || 25;
     let heightNav = 0;
   
     heightNav = (heightMain - 100)/Number(navCount) - navOffset - 2;

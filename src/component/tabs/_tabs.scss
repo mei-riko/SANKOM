@@ -31,6 +31,8 @@
             border-color: $border-color;
 
             &:hover, &:focus{
+                background-color: $action;
+                color: $white;
                 border-color: $border-color;
                 cursor: default;
             }

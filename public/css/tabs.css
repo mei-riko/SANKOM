@@ -37,6 +37,8 @@
 }
 
 .tabs__item--active:hover, .tabs__item--active:focus {
+  background-color: #DD0330;
+  color: #ffffff;
   border-color: #EBE7E4;
   cursor: default;
 }

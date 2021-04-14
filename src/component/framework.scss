@@ -23,15 +23,14 @@
 @import "form/form";
 
 @import "header/header";
-@import "content/content";
 @import "footer/footer";
 
 @import "modal/modal";
 @import "modal/modal_form";
 
-@import "pagination/pagination";
+@import "navigation/breadcrumb";
+@import "navigation/pagination";
+@import "navigation/navbar";
 
-@import "nav/navbar";
-@import "nav/breadcrumb";
-
+@import "content/content";
 @import "content/content-with-image";

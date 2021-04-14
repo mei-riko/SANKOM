@@ -30,13 +30,13 @@ html(lang="ru")
                     .row.mt-2
                         .col-2
                             //- Category Links
-                            .nav.mb-2
-                                .nav__parent Категории
-                                .nav__children
-                                    a.nav__link(href="#") Обзоры
-                                    a.nav__link(href="#") Видео
-                                    a.nav__link(href="#") Статьи
-                                    a.nav__link(href="#") Фотографии
+                            .filter-nav.mb-2
+                                .filter-nav__parent Категории
+                                .filter-nav__children
+                                    a.filter-nav__link(href="#") Обзоры
+                                    a.filter-nav__link(href="#") Видео
+                                    a.filter-nav__link(href="#") Статьи
+                                    a.filter-nav__link(href="#") Фотографии
                             .filter-row.mb-1
                                 .filter-row__title Параметр фильтрации
                                 .filter-row__content 
@@ -53,14 +53,14 @@ html(lang="ru")
                                 .filter-row__title.filter-row__title--active Параметр фильтрации
                                 .filter-row__content(style="display: block;")
                                     .checkbox
-                                        input.checkbox__input#param1(type="checkbox" name="type" checked="checked")
-                                        label.checkbox__label(for="param1") Параметр 1
+                                        input.checkbox__input#param11(type="checkbox" name="type" checked="checked")
+                                        label.checkbox__label(for="param11") Параметр 1
                                     .checkbox.mt-1
-                                        input.checkbox__input#param2(type="checkbox" name="type")
-                                        label.checkbox__label(for="param2") Параметр 2
+                                        input.checkbox__input#param12(type="checkbox" name="type")
+                                        label.checkbox__label(for="param12") Параметр 2
                                     .checkbox.checkbox--disabled.mt-1
-                                        input.checkbox__input#param3(type="checkbox" name="type" disabled="disabled")
-                                        label.checkbox__label(for="param3") Параметр 3
+                                        input.checkbox__input#param13(type="checkbox" name="type" disabled="disabled")
+                                        label.checkbox__label(for="param13") Параметр 3
                         .col-10
                             h1.h3 Блог: обзоры, статьи и отзывы о товарах
                             .tags-row
