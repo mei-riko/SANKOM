@@ -4,24 +4,23 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
 
-        title Complect
+        title Complect Catalog
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
         
-        link(href='/css/filters.css', rel='stylesheet')
-        link(href='/css/faq.css', rel='stylesheet')
-        link(href='/css/product-preview.css', rel='stylesheet')
+        link(href='./css/filters.css', rel='stylesheet')
+        link(href='./css/faq.css', rel='stylesheet')
+        link(href='./css/product-preview.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        
-        main.mt-3
-            //- Blog
+        main
+            //- Complect
             section.content.container
                 .content__inside
                     include component/filters/filters.pug
@@ -33,15 +32,15 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-2
-                                    .complect__image-item(style="background-image:url('../img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-2.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
                                     span.complect__price-new 10 240 руб.
                                 .complect__label скидка 2560 руб.
 
-                                a.complect__btn(href="#")
+                                a.complect__btn(href="product-complect.html")
                                     <svg class="complect__btn-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#3F2A2D"/>
                                         <path d="M4.50879 3.91807C4.50879 2.52849 5.63782 1.39945 7.0274 1.41682C8.41698 1.41682 9.52864 2.54586 9.52864 3.91807V5.70715H4.50879V3.91807Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
@@ -54,16 +53,16 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-3
-                                    .complect__image-item(style="background-image:url('../img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-2.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-3.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-3.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
                                     span.complect__price-new 10 240 руб.
                                 .complect__label скидка 2560 руб.
 
-                                a.complect__btn(href="#")
+                                a.complect__btn(href="product-complect-2.html")
                                     <svg class="complect__btn-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#3F2A2D"/>
                                         <path d="M4.50879 3.91807C4.50879 2.52849 5.63782 1.39945 7.0274 1.41682C8.41698 1.41682 9.52864 2.54586 9.52864 3.91807V5.70715H4.50879V3.91807Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
@@ -76,15 +75,15 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-2
-                                    .complect__image-item(style="background-image:url('../img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-2.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
                                     span.complect__price-new 10 240 руб.
                                 .complect__label скидка 2560 руб.
 
-                                a.complect__btn(href="#")
+                                a.complect__btn(href="product-complect.html")
                                     <svg class="complect__btn-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#3F2A2D"/>
                                         <path d="M4.50879 3.91807C4.50879 2.52849 5.63782 1.39945 7.0274 1.41682C8.41698 1.41682 9.52864 2.54586 9.52864 3.91807V5.70715H4.50879V3.91807Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
@@ -97,16 +96,16 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-3
-                                    .complect__image-item(style="background-image:url('../img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-2.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-3.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-3.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
                                     span.complect__price-new 10 240 руб.
                                 .complect__label скидка 2560 руб.
 
-                                a.complect__btn(href="#")
+                                a.complect__btn(href="product-complect-2.html")
                                     <svg class="complect__btn-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#3F2A2D"/>
                                         <path d="M4.50879 3.91807C4.50879 2.52849 5.63782 1.39945 7.0274 1.41682C8.41698 1.41682 9.52864 2.54586 9.52864 3.91807V5.70715H4.50879V3.91807Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
@@ -123,13 +122,13 @@ html(lang="ru")
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
                                 form.form(action="")
                                     .form__col
-                                        +radio('radio1', 'Получать все новости SANKOM','news')
+                                        +radio('radio1', 'Получать все новости SANKOM','news','checked')
                                     .form__col
                                         +radio('radio2', 'Акции и скидки','news')
                                     .form__col
                                         +radio('radio3', 'Персональные предложения','news')
                                     .form__line.mt-2
-                                        +input('', 'E-mail')(label="input__label_inside bg-white" class="input_label-inside")
+                                        +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
                         .col-6
                             a.faq.faq_link.bg-white(href="text.html")

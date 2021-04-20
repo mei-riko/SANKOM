@@ -1,18 +1,18 @@
-.nav {
+.filter-nav {
   font-size: 13px;
 }
 
-.nav__parent {
+.filter-nav__parent {
   font-weight: 700;
   line-height: 1.2;
 }
 
-.nav__children {
+.filter-nav__children {
   margin-top: 10px;
   margin-left: 15px;
 }
 
-.nav__link {
+.filter-nav__link {
   display: block;
   margin-bottom: 5px;
 }

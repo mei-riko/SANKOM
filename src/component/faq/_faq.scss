@@ -1,7 +1,6 @@
 .faq{
     display: block;
 
-    padding: $grid-gutter-width/3 $grid-gutter-width/2;
     border: 1px solid $border-color;
     border-radius: $border-radius;
 
@@ -12,9 +11,9 @@
     }
 
     &__title{
-        position: relative;
         display: block;
-        color: $black;
+        position: relative;
+        padding: $spacer-gutter $grid-gutter-width/2;
 
         &:after{
             content: '';
@@ -23,26 +22,27 @@
             height: 10px;
 
             position: absolute;
-            right: 0;
+            right: $grid-gutter-width/2;
             top: 50%;
             transform: translateY(-50%);
 
             background: url('../icon/arrow-right.svg') no-repeat center / contain;
         }
 
+        &:hover, &:focus{
+            text-decoration: none;
+        }
         &:focus{
             color: $black;
         }
 
         &_has-icon{
-            padding-left: 30px;
+            padding-left: 60px;
         }
-
-        
     }
     &__icon{
         position: absolute;
-        left: 0;
+        left: $grid-gutter-width/2;
         top: 50%;
         transform: translateY(-50%);
 
@@ -51,6 +51,6 @@
     }
     &__content{
         display: none;
-        padding: $spacer-gutter 0 0;
+        padding: 0 $grid-gutter-width/2 $spacer-gutter;
     }
 }

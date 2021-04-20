@@ -38,4 +38,20 @@
             }
         }
     }
+
+    &-content{
+        display: none;
+        transition: .3s;
+        
+        &_has-slider{
+            opacity: 0;
+        }
+
+        &--active{
+            display: block;
+        }
+        &--show{
+            opacity: 1;
+        }
+    }
 }

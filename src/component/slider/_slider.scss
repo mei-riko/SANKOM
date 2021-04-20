@@ -4,6 +4,7 @@
     }
     &.owl-loaded{
         position: relative;
+        transition: .5s;
         // margin-bottom: -$spacer;
 
         .owl-nav{
@@ -106,6 +107,7 @@
                 }
             }
         }
+
         &:hover, &:focus{
             outline: none;
             .owl-nav{

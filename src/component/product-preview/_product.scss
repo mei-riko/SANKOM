@@ -1,5 +1,10 @@
 .product{
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding-bottom: map-get($map: $spacers, $key: 2);
 
     // Image Container
@@ -59,14 +64,12 @@
     }
     // Title
     &__title{
-        display: flex;
-        align-items: flex-end;
+        flex-grow: 1;
 
         font-weight: $font-weight-bolder;
         letter-spacing: $letter-spacing;
         margin-bottom: $grid-gutter-width/8;
         line-height: 18px;
-        height: 24px;
     }
     // Price
     &__price-old{

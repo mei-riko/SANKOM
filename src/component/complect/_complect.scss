@@ -35,7 +35,7 @@
 
         display: grid;
         grid-gap: 10px;
-        height: 190px;
+        height: 170px;
 
         margin-bottom: $grid-gutter-width/2;
 
@@ -57,7 +57,7 @@
 
     &__image-item{
         border-radius: 4px;
-        background: #ebe7e4 no-repeat center / contain;
+        background: #dfd3cc no-repeat center / contain;
     }
 
     &__price{

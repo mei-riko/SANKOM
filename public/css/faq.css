@@ -1,6 +1,5 @@
 .faq {
   display: block;
-  padding: 16.66667px 25px;
   border: 1px solid #EBE7E4;
   border-radius: 6px;
   margin-bottom: 15px;
@@ -11,9 +10,9 @@
 }
 
 .faq__title {
-  position: relative;
   display: block;
-  color: #3A3A3A;
+  position: relative;
+  padding: 15px 25px;
 }
 
 .faq__title:after {
@@ -22,7 +21,7 @@
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 0;
+  right: 25px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -30,17 +29,21 @@
   background: url("../icon/arrow-right.svg") no-repeat center/contain;
 }
 
+.faq__title:hover, .faq__title:focus {
+  text-decoration: none;
+}
+
 .faq__title:focus {
   color: #3A3A3A;
 }
 
 .faq__title_has-icon {
-  padding-left: 30px;
+  padding-left: 60px;
 }
 
 .faq__icon {
   position: absolute;
-  left: 0;
+  left: 25px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -51,21 +54,34 @@
 
 .faq__content {
   display: none;
-  padding: 15px 0 0;
+  padding: 0 25px 15px;
 }
 
-.faq_toggle .faq__title:hover, .faq_toggle .faq__title:focus {
-  text-decoration: none;
+.faq_toggle {
+  padding: 0;
 }
 
-.faq_toggle .faq__title:after {
+.faq_toggle__title {
+  padding: 15px 25px;
+}
+
+.faq_toggle__title:after {
+  right: 25px;
+  width: 12px;
+  height: 12px;
   background: url("../icon/plus.svg") no-repeat center/contain;
 }
 
-.faq_toggle--active .faq__title {
+.faq_toggle--active .faq_toggle__title {
   font-weight: 700;
 }
 
-.faq_toggle--active .faq__title:after {
+.faq_toggle--active .faq_toggle__title:after {
   background: url("../icon/minus.svg") no-repeat center/contain;
+}
+
+.faq_link:hover, .faq_link:focus {
+  color: #DD0330;
+  border-color: #EBE7E4;
+  text-decoration: none;
 }

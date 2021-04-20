@@ -113,6 +113,7 @@ a.preview:hover .preview__title {
 }
 
 .preview_slider-tags__image {
+  min-width: 130px;
   border: 1px solid #EBE7E4;
   margin-bottom: 15px;
 }

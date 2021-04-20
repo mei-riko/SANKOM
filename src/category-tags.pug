@@ -9,20 +9,20 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/banners.css', rel='stylesheet')
-        link(href='/css/sliders.css', rel='stylesheet')
-        link(href='/css/previews.css', rel='stylesheet')
+        link(href='./css/banners.css', rel='stylesheet')
+        link(href='./css/sliders.css', rel='stylesheet')
+        link(href='./css/previews.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             section.content.container
                 .content__inside
-                    +banner('Спорт и lifestyle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.', '', '')(class="banner_content-left b-lazy" dataSrc="/img/banner-3.jpg")
+                    +banner('Спорт и lifestyle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.', '', '')(class="banner_content-left b-lazy" dataSrc="./img/banner-3.jpg")
                         p.text-bolder ✓ IMPROVES POSTURE <br/>
                             | ✓ REDUCES UPPER BACK PAIN <br/>
                             | ✓ COVERAGE, SUPPORT, LIFT & SHAPE
@@ -32,25 +32,25 @@ html(lang="ru")
                         li.breadcrumb__item.breadcrumb__item--active Спорт и lifestyle
                     .row 
                         .col-2.mt-2
-                            +categoryTags('Моделирующий эффект','catalog.html')(dataSrc="/img/product-1.jpg")
+                            +categoryTags('Моделирующий эффект','catalog.html')(dataSrc="./img/product-1.jpg")
                         .col-2.mt-2
-                            +categoryTags('Возрастные изменения','category-tags.html')(dataSrc="/img/product-2.jpg")
+                            +categoryTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
                         .col-2.mt-2
-                            +categoryTags('Под платье','category-tags.html')(dataSrc="/img/product-3.jpg")
+                            +categoryTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
                         .col-2.mt-2
-                            +categoryTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="/img/product-4.jpg")
+                            +categoryTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
                         .col-2.mt-2
-                            +categoryTags('Сильная степень утяжки','category-tags.html')(dataSrc="/img/product-5.jpg")
+                            +categoryTags('Сильная степень утяжки','category-tags.html')(dataSrc="./img/product-5.jpg")
                         .col-2.mt-2
-                            +categoryTags('Обычная степень утяжки','category-tags.html')(dataSrc="/img/product-1.jpg")
+                            +categoryTags('Обычная степень утяжки','category-tags.html')(dataSrc="./img/product-1.jpg")
                         .col-2.mt-2
-                            +categoryTags('Убрать бока','category-tags.html')(dataSrc="/img/product-2.jpg")
+                            +categoryTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
                         .col-2.mt-2
-                            +categoryTags('Убрать живот','category-tags.html')(dataSrc="/img/product-3.jpg")
+                            +categoryTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
                         .col-2.mt-2
-                            +categoryTags('Поддержка спины','category-tags.html')(dataSrc="/img/product-4.jpg")
+                            +categoryTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
                         .col-2.mt-2
-                            +categoryTags('На каждый день','category-tags.html')(dataSrc="/img/product-5.jpg")
+                            +categoryTags('На каждый день','category-tags.html')(dataSrc="./img/product-5.jpg")
                     .row.mt-3
                         .col-8
                             p Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 

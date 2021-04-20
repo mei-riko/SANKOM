@@ -9,23 +9,23 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/banners.css', rel='stylesheet')
-        link(href='/css/tags.css', rel='stylesheet')
-        link(href='/css/filters.css', rel='stylesheet')
-        link(href='/css/product-preview.css', rel='stylesheet')
-        link(href='/css/faq.css', rel='stylesheet')
+        link(href='./css/banners.css', rel='stylesheet')
+        link(href='./css/tags.css', rel='stylesheet')
+        link(href='./css/filters.css', rel='stylesheet')
+        link(href='./css/product-preview.css', rel='stylesheet')
+        link(href='./css/faq.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
         main.mt-3
             section.content.container
                 .content__inside
                     //- Banner Main 
-                    +bannerCategory('Идеальная поддержка', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.')(class="banner_content-center" dataSrc="/img/banner-2.jpg")
+                    +bannerCategory('Идеальная поддержка', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.')(class="banner_content-center" dataSrc="./img/banner-2.jpg")
                     //- Banner Tech
                     .banner-intro.mt-2.mb-2
                         .banner-intro__content
@@ -36,9 +36,9 @@ html(lang="ru")
                                 | ✓ REDUCES UPPER BACK PAIN <br/>
                                 | ✓ COVERAGE, SUPPORT, LIFT & SHAPE
                         .banner-intro__image-block.loading
-                            img.banner-intro__image.img-fluid.b-lazy(data-src="/img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
-                            img.banner-intro__image.img-fluid.b-lazy(data-src="/img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
-                            img.banner-intro__image.img-fluid.b-lazy(data-src="/img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                     //- Category's tags
                     .tags
                         a.tags__link.tags__link_category(href="catalog.html") Коррекция и красота
@@ -67,17 +67,17 @@ html(lang="ru")
                         include component/filters/filters.pug
                     .row
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="/img/product-9.jpg" dataSrcHover="/img/product-6.jpg")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-2.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="/img/product-7.jpg" dataSrcHover="/img/product-8.jpg")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-1.jpg")
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="/img/product-1.jpg" dataSrcHover="/img/product-6.jpg")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-3.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="/img/product-2.jpg" dataSrcHover="/img/product-7.jpg")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-3.jpg")
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="/img/product-9.jpg" dataSrcHover="/img/product-6.jpg")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-2.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="/img/product-7.jpg" dataSrcHover="/img/product-8.jpg")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-1.jpg")
             //- Information
             aside.content.content_secondary.container
                 .content__inside
@@ -94,7 +94,7 @@ html(lang="ru")
                                     .form__col
                                         +radio('radio3', 'Персональные предложения','news')
                                     .form__line.mt-2
-                                        +input('', 'E-mail')(label="input__label_inside bg-white" class="input_label-inside")
+                                        +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
                         .col-6
                             +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg')(class="bg-white")

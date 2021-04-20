@@ -9,54 +9,54 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/sliders.css', rel='stylesheet')
-        link(href='/css/previews.css', rel='stylesheet')
-        link(href='/css/filters.css', rel='stylesheet')
-        link(href='/css/product-preview.css', rel='stylesheet')
-        link(href='/css/faq.css', rel='stylesheet')
+        link(href='./css/sliders.css', rel='stylesheet')
+        link(href='./css/previews.css', rel='stylesheet')
+        link(href='./css/filters.css', rel='stylesheet')
+        link(href='./css/product-preview.css', rel='stylesheet')
+        link(href='./css/faq.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             section.content.content_category-slider.container
                 .content__inside
                     .slider-container
                         .slider.slider_subcategory.slider_subcategory-catalog.owl-carousel.owl-theme
                             .slider__item
-                                +subcategory('Бюстгальтеры', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-1.jpg")
+                                +subcategory('Бюстгальтеры', 'gravida odio tellus', 'category.html')(dataSrc="./img/image-1.jpg")
                             .slider__item
-                                +subcategory('Трусы', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-2.jpg")
+                                +subcategory('Трусы', 'gravida odio tellus', 'category.html')(dataSrc="./img/image-2.jpg")
                             .slider__item
-                                +subcategory('Шорты', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-3.jpg")
+                                +subcategory('Шорты', 'gravida odio tellus', 'category.html')(dataSrc="./img/image-3.jpg")
                             .slider__item
-                                +subcategory('Леггинсы', 'gravida odio tellus', 'category.html')(dataSrc="/img/image-4.jpg")
+                                +subcategory('Леггинсы', 'gravida odio tellus', 'category.html')(dataSrc="./img/image-4.jpg")
                             .slider__item
-                                +subcategory('Майки', 'gravida odio tellus', 'category.html')(dataSrc="/img/bg-women.jpg")
+                                +subcategory('Майки', 'gravida odio tellus', 'category.html')(dataSrc="./img/bg-women.jpg")
                             .slider__item
-                                +subcategory('Носки', 'gravida odio tellus', 'category.html')(dataSrc="/img/bg-sales.jpg")
+                                +subcategory('Носки', 'gravida odio tellus', 'category.html')(dataSrc="./img/bg-sales.jpg")
                             .slider__item
-                                +subcategory('Мужское', 'gravida odio tellus', 'category.html')(dataSrc="/img/bg-men.jpg")
+                                +subcategory('Мужское', 'gravida odio tellus', 'category.html')(dataSrc="./img/bg-men.jpg")
             section.content.content_category-filter.container
                 .content__inside
                     include component/filters/filters.pug
                     p.content__category-title.text-center.mt-4.mb-2 Каталог товаров
                     .row
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="/img/product-9.jpg" dataSrcHover="/img/product-6.jpg")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./img/product-9.jpg" dataSrcHover="./img/product-6.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="/img/product-7.jpg" dataSrcHover="/img/product-8.jpg")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="./img/product-7.jpg" dataSrcHover="./img/product-8.jpg")
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="/img/product-1.jpg" dataSrcHover="/img/product-6.jpg")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="./img/product-1.jpg" dataSrcHover="./img/product-6.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="/img/product-2.jpg" dataSrcHover="/img/product-7.jpg")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./img/product-2.jpg" dataSrcHover="./img/product-7.jpg")
                         .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="/img/product-9.jpg" dataSrcHover="/img/product-6.jpg")
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./img/product-9.jpg" dataSrcHover="./img/product-6.jpg")
                         .col-3.mt-2
-                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="/img/product-7.jpg" dataSrcHover="/img/product-8.jpg")
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./img/product-7.jpg" dataSrcHover="./img/product-8.jpg")
             //- Information
             aside.content.content_secondary.container
                 .content__inside
@@ -78,16 +78,16 @@ html(lang="ru")
                         .col-6
                             a.faq.faq_link.bg-white(href="text.html")
                                 .faq__title.faq__title_has-icon О бренде SANKOM, материалах и технологиях производства
-                                    img.faq__icon(src='/icon/faq.svg')
+                                    img.faq__icon(src='./icon/faq.svg')
                             a.faq.faq_link.bg-white(href="text.html")
                                 .faq__title.faq__title_has-icon Подробнее о программе лояльности
-                                    img.faq__icon(src='/icon/faq.svg')
+                                    img.faq__icon(src='./icon/faq.svg')
                             a.faq.faq_link.bg-white(href="text.html")
                                 .faq__title.faq__title_has-icon О бренде SANKOM, материалах и технологиях производства
-                                    img.faq__icon(src='/icon/faq.svg')
+                                    img.faq__icon(src='./icon/faq.svg')
                             a.faq.faq_link.bg-white(href="text.html")
                                 .faq__title.faq__title_has-icon Подробнее о программе лояльности
-                                    img.faq__icon(src='/icon/faq.svg')
+                                    img.faq__icon(src='./icon/faq.svg')
             include component/banner/delivery.pug
         include component/footer/footer.pug
         

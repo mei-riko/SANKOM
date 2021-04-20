@@ -1,2 +1,118 @@
 .navbar{
+    display: flex;
+    align-items: center;
+
+    &__item{
+        margin-right: $spacer/2;
+        padding-right: $spacer-gutter;
+
+        transition: .3s;
+        cursor: pointer;
+
+        &:last-child{
+            margin-right: 0;
+            padding-right: 0;
+        }
+
+        &:hover{
+            color: $action;
+            text-decoration: none;
+        }
+
+        &_action{
+            font-family: 'Covered By Your Grace', cursive; 
+            font-size: 15px;
+            font-weight: $font-weight-bold;
+
+            color: $action;
+
+            &:hover{
+                color: darken($color: $action, $amount: 6);
+            }
+        }
+        &_has-child{
+            position: relative;
+        }
+
+        &-icon{
+            margin-left: 4px;
+        }
+    }
+    &__link{
+        transition: .3s;
+        cursor: pointer;
+
+        &:after{
+            content:'';
+            display: inline-block;
+            
+            width: 14px;
+            height: 8px;
+
+            filter: grayscale(1);
+            background: url("../icon/arrow-down.svg") no-repeat right center / 7px;
+
+            transition: .3s;
+        }
+
+        &:hover{
+            color: $action;
+            text-decoration: none;
+
+            &:after{
+                filter: grayscale(0);
+            }
+        }
+    }
+    &__children{
+        display: none;
+
+        position: absolute;
+        left: -15px;
+        top: 25px;
+
+        z-index: 11;
+
+        padding: 30px;
+        background: $white;
+        border: 1px solid $border-color;
+
+        flex-wrap: nowrap;
+
+        &-col{
+            display: flex;
+            flex-direction: column;
+
+            padding-right: $spacer;
+
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+        &-title{
+            font-size: .85em;
+            font-weight: $font-weight-bold;
+            
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            margin-bottom: 14px;
+        }
+        &-item{
+            white-space: nowrap;
+            margin-bottom: 10px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        &-preview{
+            width: 140px;
+        }
+
+        // Status
+        &--active{
+            display: flex;
+        }
+    }
 }

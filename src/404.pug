@@ -9,16 +9,16 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/sliders.css', rel='stylesheet')
-        link(href='/css/previews.css', rel='stylesheet')
+        link(href='./css/sliders.css', rel='stylesheet')
+        link(href='./css/previews.css', rel='stylesheet')
     body
         script(src="/js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
-            //- FAQ
+        main
+            //- 404
             section.content.container
                 .content__inside
                     .text-center 
@@ -34,17 +34,17 @@ html(lang="ru")
                     .slider-container
                         .slider.slider_subcategory.slider_subcategory-index.owl-carousel.owl-theme
                             .slider__item
-                                +subcategory('Бюстгальтеры', '', 'category.html')(dataSrc='/img/advantage-0.jpg')
+                                +subcategory('Бюстгальтеры', '', 'category.html')(dataSrc='./img/advantage-0.jpg')
                             .slider__item
-                                +subcategory('Трусы', '', 'category.html')(dataSrc='/img/advantage-1.jpg')
+                                +subcategory('Трусы', '', 'category.html')(dataSrc='./img/advantage-1.jpg')
                             .slider__item
-                                +subcategory('Шорты', '', 'category.html')(dataSrc='/img/advantage-2.jpg')
+                                +subcategory('Шорты', '', 'category.html')(dataSrc='./img/advantage-2.jpg')
                             .slider__item
-                                +subcategory('Леггинсы', '', 'category.html')(dataSrc='/img/advantage-3.jpg')
+                                +subcategory('Леггинсы', '', 'category.html')(dataSrc='./img/advantage-3.jpg')
                             .slider__item
-                                +subcategory('Майки', '', 'category.html')(dataSrc='/img/advantage-4.jpg')
+                                +subcategory('Майки', '', 'category.html')(dataSrc='./img/advantage-4.jpg')
                             .slider__item
-                                +subcategory('Носки', '', 'category.html')(dataSrc='/img/advantage-1.jpg')
+                                +subcategory('Носки', '', 'category.html')(dataSrc='./img/advantage-1.jpg')
         include component/footer/footer.pug
         
         script(src="./js/jquery.inputmask.min.js")

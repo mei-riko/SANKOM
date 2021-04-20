@@ -4,6 +4,9 @@
 
 .slider.owl-loaded {
   position: relative;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 .slider.owl-loaded .owl-nav {
@@ -137,14 +140,14 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
-.slider_tags:not(.owl-loaded) {
-  grid-gap: 15px;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-}
-
 .slider_category:not(.owl-loaded) {
   grid-gap: 15px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.slider_tags:not(.owl-loaded) {
+  grid-gap: 15px;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
 .slider_promo:not(.owl-loaded) {

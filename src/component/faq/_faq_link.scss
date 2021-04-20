@@ -1,0 +1,7 @@
+.faq_link{
+    &:hover, &:focus{
+        color: $action;
+        border-color: $body-bg;
+        text-decoration: none;
+    }
+}

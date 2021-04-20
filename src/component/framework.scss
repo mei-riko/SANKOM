@@ -26,11 +26,15 @@
 @import "footer/footer";
 
 @import "modal/modal";
-@import "modal/modal_form";
+
+@import "dialog/dialog";
 
 @import "navigation/breadcrumb";
 @import "navigation/pagination";
+
 @import "navigation/navbar";
+@import "navigation/navbar_secondary";
+@import "navigation/navbar-mobile";
 
 @import "content/content";
 @import "content/content-with-image";

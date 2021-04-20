@@ -5,16 +5,13 @@ import {sliderInitialized} from '../slider/slider';
 $(function(){
   if( $('.product-nav .product-nav__image').length > 0 ){
     let heightMain = $('.product-image .product-image__link').height();
-    let navCount = $('.product-image').data('count') || 2;
-    let navOffset = $('.product-image').data('offset') } || 25;
+    let navCount =  typeof $('.product-image').data('count') !== undefined ? $('.product-image').data('count') : 2;
+    let navOffset = typeof $('.product-image').data('offset') !== undefined ? $('.product-image').data('offset') : 25;
     let heightNav = 0;
   
     heightNav = (heightMain - 100)/Number(navCount) - navOffset - 2;
-  
-    // console.log( heightMain + "::" + navCount + "::" + heightNav);
     $('.product-nav .product-nav__image').css('height', heightNav);
   }
-
   // (countShow, sliderClass, arrows, dots, loop, margin, stagePadding);
   sliderInitialized(2, '.slider.slider_video', false, true, false, 15, 0);
 });
@@ -51,20 +48,7 @@ if( $('.slider-main').length > 0 ){
     });
 
   });
-  
 }
-
-// if( $('.slider-nav').length > 0 ){
-//   $(sliderNav).slick({
-//     slidesToShow: 3,
-//     dots: false,
-//     arrows: false,
-//     asNavFor: sliderMain,
-
-//     focusOnSelect: true,
-//     autoplay: false,
-//   });
-// }
 
 // Quick Buy Block
 $('#quickBuy').on('click', function(){

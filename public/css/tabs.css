@@ -42,3 +42,22 @@
   border-color: #EBE7E4;
   cursor: default;
 }
+
+.tabs-content {
+  display: none;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.tabs-content_has-slider {
+  opacity: 0;
+}
+
+.tabs-content--active {
+  display: block;
+}
+
+.tabs-content--show {
+  opacity: 1;
+}

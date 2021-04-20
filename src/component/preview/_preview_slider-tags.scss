@@ -2,8 +2,10 @@
     text-align: center;
 
     &__image{
+        min-width: 130px;
         border: 1px solid $border-color;
         margin-bottom: map-get($map: $spacers, $key: 1);
+
         &:before{
             padding-bottom: 100%;
         }

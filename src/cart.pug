@@ -9,16 +9,16 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/cart.css', rel='stylesheet')
-        link(href='/css/product-preview.css', rel='stylesheet')
+        link(href='./css/cart.css', rel='stylesheet')
+        link(href='./css/product-preview.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             //- Order
             section.content.container
                 .content__inside
@@ -80,10 +80,10 @@ html(lang="ru")
                                 p.cart-sidebar__title Корзина 
                                     span (3)
                                 .cart-sidebar__content
-                                    +productCart('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-1.jpg');")
-                                    +productCart('Shaper Classic Peach', '16 999 руб.', '', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-2.jpg');")
-                                    +productCart('Shaper Classic Peach', '6 999 руб.', '', 'L', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-3.jpg');")
-                                    +productCart('Shaper Classic Peach', '6 999 руб.', '', 'XXL', 'фиолетовый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-4.jpg');")
+                                    +productCart('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-1.jpg');")
+                                    +productCart('Shaper Classic Peach', '16 999 руб.', '', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-2.jpg');")
+                                    +productCart('Shaper Classic Peach', '6 999 руб.', '', 'L', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-3.jpg');")
+                                    +productCart('Shaper Classic Peach', '6 999 руб.', '', 'XXL', 'фиолетовый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-4.jpg');")
                                 .cart-sidebar__prop.cart-sidebar__prop--first
                                     span.cart-sidebar__prop-title Скидка
                                     span.cart-sidebar__prop-value —

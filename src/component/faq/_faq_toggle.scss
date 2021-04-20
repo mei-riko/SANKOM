@@ -1,15 +1,19 @@
 .faq_toggle{
-    .faq__title{
-        &:hover, &:focus{
-            text-decoration: none ;
-        }
+    padding: 0;
+
+    &__title{
+        padding: $spacer-gutter $grid-gutter-width/2;
         &:after{
+            right: $grid-gutter-width/2;
+
+            width: 12px;
+            height: 12px;
             background: url('../icon/plus.svg') no-repeat center / contain;
         }
     }
 
     &--active{
-        .faq__title{
+        .faq_toggle__title{
             font-weight: $font-weight-bold;
             &:after{
                 background: url('../icon/minus.svg') no-repeat center / contain;

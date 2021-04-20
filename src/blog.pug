@@ -9,17 +9,17 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/filters.css', rel='stylesheet')
-        link(href='/css/tags.css', rel='stylesheet')
-        link(href='/css/previews.css', rel='stylesheet')
+        link(href='./css/filters.css', rel='stylesheet')
+        link(href='./css/tags.css', rel='stylesheet')
+        link(href='./css/previews.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             //- Blog
             section.content.container
                 .content__inside
@@ -90,22 +90,22 @@ html(lang="ru")
                                     a.tags-row__show(data-trigger="click" href="javascript:;") Показать все теги
                             .row.mt-3
                                 .col-4.mb-2
-                                    +blogCol("Позы йоги для снятия напряжения позвоночника", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="/img/image-1.jpg")
+                                    +blogCol("Позы йоги для снятия напряжения позвоночника", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="./img/image-1.jpg")
                                         span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
                                         span.tags__link.tags__link_disabled Леггинсы LIGHT BLUE JEANS
                                 .col-4.mb-2
-                                    +blogCol("Потрясающий эффект коррекции майки SANKOM", "", "text.html")(dataSrc="/img/image-2.jpg")
+                                    +blogCol("Потрясающий эффект коррекции майки SANKOM", "", "text.html")(dataSrc="./img/image-2.jpg")
                                         span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
                                         span.tags__link.tags__link_disabled Леггинсы LIGHT BLUE JEANS
                                 .col-4.mb-2
-                                    +blogCol("Фотоссесия моделей Plus Size", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="/img/image-3.jpg")
+                                    +blogCol("Фотоссесия моделей Plus Size", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="./img/image-3.jpg")
                                         span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
                                         span.tags__link.tags__link_disabled Шорты Long Shaper COOLING
                                         span.tags__link.tags__link_disabled Майка VEST BODY SHAPER
                                         span.tags__link.tags__link_disabled Шорты Long Shaper БАМБУК
                                         span.tags__link.tags__link_disabled Трусы Briefs Shaper COOLING
                                 .col-4.mb-2
-                                    +blogCol("Позы йоги для снятия напряжения позвоночника", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="/img/image-4.jpg")
+                                    +blogCol("Позы йоги для снятия напряжения позвоночника", "Aliquam, porttitor tortor neque diam quam nulla massa tellus pretium quam mauris magna senectus", "text.html")(dataSrc="./img/image-4.jpg")
                                         span.tags__link.tags__link_disabled Шорты Long Shaper АЛОЭ
                                         span.tags__link.tags__link_disabled Леггинсы LIGHT BLUE JEANS
                             .pagination.mt-2

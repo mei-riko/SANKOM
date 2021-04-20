@@ -1,2 +1,151 @@
 .header{
+    &__sep{
+        background-color: darken($color: $body-bg, $amount: 6);
+        height: 1px;
+    }
+    // Editional
+    &__action{
+        &-banner{
+            background-color: $action;
+            color: $white;
+
+            text-align: center;
+
+            font-size: map-get($map: $font-size, $key: "sm" );
+            line-height: map-get($map: $font-size, $key: "md" );
+
+            padding: 10px $spacer;
+        }
+        &-link{
+            text-decoration: underline;
+            color: $white;
+
+            &:hover{
+                color: $light-grey;
+            }
+        }
+    }
+    // Secondary Nav
+    &__secondary{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: map-get($map: $font-size, $key: "sm");
+        line-height: $line-height-heading;
+        padding: $spacer-gutter 0;
+
+        &-nav{
+            flex-grow: 1;
+            padding: 0 $spacer-gutter;
+        }
+    }
+    &__location{
+        flex: 0 0 100px;
+        max-width: 100px;
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        cursor: pointer;
+
+        &-icon{
+            flex: 0 0 15px;
+            max-width: 15px;
+
+            margin-right: 10px;
+
+            path{
+                fill: $action;
+            }
+            circle{
+                fill: $white;
+            }
+        }
+        &-place{
+            color: $dark-grey;
+            border-bottom: 1px dashed $dark-grey;
+            transition: .3s;
+
+            &:hover{
+                color: $action;
+                border-color: $action;
+            }
+        }
+    }
+    &__contact{
+        padding-left: $grid-gutter-width/2;
+    }
+    &__phone{
+        font-size: map-get($map: $font-size, $key: "sm");
+        font-weight: $font-weight-bold;
+        white-space: nowrap;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    // Main Nav
+    &__main{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: map-get($map: $font-size, $key: "sm");
+        line-height: $line-height-heading;
+        padding: $grid-gutter-width/2 0;
+    }
+    &__logo{
+        flex: 0 0 150px;
+    }
+    &__nav{
+        flex-grow: 1;
+        padding: 0 $spacer;
+    }
+
+    &__btn-group{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    &__btn-icon{
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        text-align: center;
+
+        cursor: pointer;
+        transition: .3s;
+    }
+    &__btn-cabinet{
+        background: url('../icon/icon-cabinet.svg') no-repeat center / 18px;
+        margin-right: 8px;
+        &:hover{
+            background-color: $light-grey;
+        }
+    }
+    &__cart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: $action url('../icon/icon-cart.svg') no-repeat center / contain;
+        
+        &-count{
+            font-size: 8px;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        &:hover{
+            background-color: darken($color: $action, $amount: 6);
+        }
+
+        &--empty{
+            background-color: $light-grey;
+        }
+    }
 }

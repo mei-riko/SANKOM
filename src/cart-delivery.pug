@@ -9,16 +9,16 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/cart.css', rel='stylesheet')
-        link(href='/css/product-preview.css', rel='stylesheet')
+        link(href='./css/cart.css', rel='stylesheet')
+        link(href='./css/product-preview.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             //- Delivery & Payment
             section.content.container
                 .content__inside
@@ -86,7 +86,7 @@ html(lang="ru")
                                         label.input__label.input__label_top Звонок для подтверждения заказа
                             .cart__btn-group.mt-1
                                 .cart__btn-prev
-                                    a.btn.btn--full.btn--has-icon(href="catalog.html") 
+                                    a.btn.btn--full.btn--has-icon(href="cart.html") 
                                         <svg class="btn__icon btn__icon_left" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 216 371">
                                             <path d="M215.92 24.848L191.781 0L0.894989 185.401L191.781 370.814L215.92 345.961L50.638 185.401L215.92 24.848Z"/>
                                         </svg>
@@ -118,10 +118,10 @@ html(lang="ru")
                             .cart-sidebar.mt-2
                                 p.cart-sidebar__title Ваш заказ
                                 .cart-sidebar__content
-                                    +productOrder('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-1.jpg');")
-                                    +productOrder('Shaper Classic Peach', '16 999 руб.', '', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-2.jpg');")
-                                    +productOrder('Shaper Classic Peach', '6 999 руб.', '', 'L', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-3.jpg');")
-                                    +productOrder('Shaper Classic Peach', '6 999 руб.', '', 'XXL', 'фиолетовый', 'SAN-071CWH', 'product.html')(style="background-image:url('/img/product-4.jpg');")
+                                    +productOrder('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-1.jpg');")
+                                    +productOrder('Shaper Classic Peach', '16 999 руб.', '', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-2.jpg');")
+                                    +productOrder('Shaper Classic Peach', '6 999 руб.', '', 'L', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-3.jpg');")
+                                    +productOrder('Shaper Classic Peach', '6 999 руб.', '', 'XXL', 'фиолетовый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-4.jpg');")
                                 .cart-sidebar__prop.cart-sidebar__prop--first
                                     span.cart-sidebar__prop-title Скидка
                                     span.cart-sidebar__prop-value —

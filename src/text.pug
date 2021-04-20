@@ -9,19 +9,18 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
-        link(href='/css/framework.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
 
-        link(href='/css/tags.css', rel='stylesheet')
-        link(href='/css/person.css', rel='stylesheet')
-        link(href='/css/sliders.css', rel='stylesheet')
-        link(href='/css/product-preview.css', rel='stylesheet')
+        link(href='./css/tags.css', rel='stylesheet')
+        link(href='./css/person.css', rel='stylesheet')
+        link(href='./css/sliders.css', rel='stylesheet')
+        link(href='./css/product-preview.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src='./js/jquery.min.js')
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
-            //- FAQ
+        main
             section.content.container
                 .content__inside
                     ul.breadcrumb
@@ -34,7 +33,7 @@ html(lang="ru")
                         .col-8.content__text
                             p.text-spacing.text-small.text-uppercase.text-bolder Статья
                             h1.h3.mt-1.mb-2 Позы йоги для снятия напряжения позвоночника
-                            img.img-fluid(src="../img/banner-1.jpg" title="" alt="")
+                            img.img-fluid(src="./img/banner-1.jpg" title="" alt="")
                             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor sed massa eros massa. Massa ultricies elit bibendum quisque. Id suspendisse donec nunc quam ut morbi. Diam sit lorem risus nunc auctor sit nisl elit augue. Eget enim mauris sit fames id. Proin vitae proin sodales vitae, suspendisse arcu quam. A pharetra sit dictumst ipsum arcu eu vitae.
                             
                             p Adipiscing amet, odio aenean posuere tincidunt habitant. Ullamcorper et tincidunt hac neque, dolor posuere. Consequat in purus varius cursus amet aliquam bibendum aliquam. Placerat et accumsan, bibendum aliquet mattis. In sit lobortis porta eleifend libero pretium. Mauris ullamcorper nec egestas sit tortor.
@@ -74,14 +73,13 @@ html(lang="ru")
                         p.h4.mb-2 Леггинсы Sankom — идеальный выбор для занятий йогой
                         .slider.slider_recommendation.owl-carousel.owl-theme.product-grid.product-grid_sm
                             .slider__item
-                                +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('/img/product-1.jpg');")
+                                +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('./img/product-1.jpg');")
                             .slider__item
-                                +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('/img/product-2.jpg');")
+                                +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('./img/product-2.jpg');")
                             .slider__item
-                                +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('/img/product-3.jpg');")
+                                +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('./img/product-3.jpg');")
                             .slider__item
-                                +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('/img/product-4.jpg');")
-                    
+                                +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('./img/product-4.jpg');")
         include component/footer/footer.pug
         
         script(src="./js/jquery.inputmask.min.js")

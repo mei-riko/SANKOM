@@ -3,6 +3,8 @@ import $ from 'jquery'
 import '../component/slider/slider';
 import '../component/filters/filter';
 import '../component/product/product';
+import '../component/tabs/tabs';
+import '../component/navigation/nav';
 
 $(document).ready(() =>{
   $(".scroll").on('click', function() {
@@ -23,6 +25,7 @@ $(document).ready(() =>{
   $('a[data-trigger="click"]').on('click', function(e){
     e.preventDefault();
   })
+
   // Input
   const addFocusListener = (elem) => {
     // console.log ( elem );
@@ -36,12 +39,10 @@ $(document).ready(() =>{
       }
     });
   }
-
   let inputs = $('.input__field');
   for(let i = 0; i < inputs.length; i++) {
     addFocusListener( inputs[i] );
   }
-
   $('.input.input_label-inside').on('click', function(){
     $(this).find('.input__field').focus();
   });
@@ -61,7 +62,6 @@ $(document).ready(() =>{
     
     $('[data-content=' + blockId + ']').slideToggle();
   });
-
   // Show More Tags
   $('.tags-row .tags-row__show').on('click', function(){
     let tagsShow = $(this);

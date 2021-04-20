@@ -34,31 +34,26 @@ html(lang="ru")
                             .product-slider__nav
                                 .slider-nav.product-nav#productMain
                                     .product-nav__item
-                                        .product-nav__image(style="background-image: url('../img/slider-1.jpg');")
-                                        //- img.img-fluid(src="../img/slider-1.jpg")
+                                        .product-nav__image(style="background-image: url('./product/prod-1.jpg');")
+                                        //- img.img-fluid(src="./img/slider-1.jpg")
                                     .product-nav__item
-                                        .product-nav__image(style="background-image: url('../img/slider-2.jpg');")
-                                        //- img.img-fluid(src="../img/slider-2.jpg")
+                                        .product-nav__image(style="background-image: url('./product/prod-2.jpg');")
+                                        //- img.img-fluid(src="./img/slider-2.jpg")
                                     .product-nav__item
-                                        .product-nav__image(style="background-image: url('../img/slider-3.jpg');")
-                                        //- img.img-fluid(src="../img/slider-3.jpg")
-                                    .product-nav__item
-                                        .product-nav__image(style="background-image: url('../img/slider-4.jpg');")
-                                        //- img.img-fluid(src="../img/slider-4.jpg")
+                                        .product-nav__image(style="background-image: url('./product/prod-3.jpg');")
+                                        //- img.img-fluid(src="./img/slider-3.jpg")
                             .product-slider__main
                                 .slider-main.product-image(data-nav="#productMain" data-vertical="true" data-count="3" data-offset="25")
                                     .product-image__item
-                                        a.product-image__link(data-fancybox="gallery" data-src="../img/slider-1.jpg")
-                                            img.img-fluid(src="../img/slider-1.jpg")
+                                        a.product-image__link(data-fancybox="gallery" data-src="./product/prod-1.jpg")
+                                            img.img-fluid(src="./product/prod-1.jpg")
                                     .product-image__item
-                                        a.product-image__link(data-fancybox="gallery" data-src="../img/slider-2.jpg")
-                                            img.img-fluid(src="../img/slider-2.jpg")
+                                        a.product-image__link(data-fancybox="gallery" data-src="./product/prod-2.jpg")
+                                            img.img-fluid(src="./product/prod-2.jpg")
                                     .product-image__item
-                                        a.product-image__link(data-fancybox="gallery" data-src="../img/slider-3.jpg")
-                                            img.img-fluid(src="../img/slider-3.jpg")
-                                    .product-image__item
-                                        a.product-image__link(data-fancybox="gallery" data-src="../img/slider-4.jpg")
-                                            img.img-fluid(src="../img/slider-4.jpg")
+                                        a.product-image__link(data-fancybox="gallery" data-src="./product/prod-3.jpg")
+                                            img.img-fluid(src="./product/prod-3.jpg")
+                                    
                         .col-5
                             .product-page.pt-2
                                 //- Основное о товаре
@@ -206,14 +201,14 @@ html(lang="ru")
                             p Оригинальный бюстгальтер SANKOM продается только на нашем сайте.
                             .slider.slider_video.owl-carousel.owl-theme
                                 .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="../img/image-1.jpg" href="javascript:;")
-                                        img.img-fluid(src="../img/prev-1.jpg")
+                                    a(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-1.jpg")
                                 .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="../img/image-2.jpg" href="javascript:;")
-                                        img.img-fluid(src="../img/prev-2.jpg")
+                                    a(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-2.jpg")
                                 .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="../img/image-3.jpg" href="javascript:;")
-                                        img.img-fluid(src="../img/prev-1.jpg")
+                                    a(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-1.jpg")
             section.content.container#complect
                 .content__inside
                     p.h3.text-center В комплекте выгоднее
@@ -225,8 +220,8 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-2
-                                    .complect__image-item(style="background-image:url('../img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-2.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
@@ -246,9 +241,9 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-3
-                                    .complect__image-item(style="background-image:url('../img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-2.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-3.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-3.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
@@ -268,9 +263,9 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_full
-                                    .complect__image-item(style="background-image:url('../img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-2.jpg');")
-                                    .complect__image-item(style="background-image:url('../img/product-3.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./img/product-3.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
@@ -292,7 +287,7 @@ html(lang="ru")
                     a.text-underline.text-action(href="#") Подробнее.
         .modal#tableSize
             .modal__content
-                img.img-fluid(src="../img/size-demo.jpg")
+                img.img-fluid(src="./img/size-demo.jpg")
         script(src="./js/jquery.inputmask.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

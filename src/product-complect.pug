@@ -9,15 +9,15 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
-        link(href='/css/framework.css', rel='stylesheet')
-        link(href='/css/product.css', rel='stylesheet')
-        link(href='/css/sliders.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
+        link(href='./css/product.css', rel='stylesheet')
+        link(href='./css/sliders.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             //- Complect
             section.content.container
                 .content__inside
@@ -34,42 +34,42 @@ html(lang="ru")
                                     //- Product 1
                                     .slider-main.product-image.product-image_complect(data-nav="#product1" data-vertical="false" data-count="3")
                                         .product-image__item
-                                            a.product-image__link(data-fancybox="gallery" data-src="../img/slider-1.jpg")
-                                                img.img-fluid(src="../img/slider-1.jpg")
+                                            a.product-image__link(data-fancybox="gallery" data-src="./img/slider-1.jpg")
+                                                img.img-fluid(src="./img/slider-1.jpg")
                                         .product-image__item
-                                            a.product-image__link(data-fancybox="gallery" data-src="../img/slider-2.jpg")
-                                                img.img-fluid(src="../img/slider-2.jpg")
+                                            a.product-image__link(data-fancybox="gallery" data-src="./img/slider-2.jpg")
+                                                img.img-fluid(src="./img/slider-2.jpg")
                                         .product-image__item
-                                            a.product-image__link(data-fancybox="gallery" data-src="../img/slider-3.jpg")
-                                                img.img-fluid(src="../img/slider-3.jpg")
+                                            a.product-image__link(data-fancybox="gallery" data-src="./img/slider-3.jpg")
+                                                img.img-fluid(src="./img/slider-3.jpg")
                                         .product-image__item
-                                            a.product-image__link(data-fancybox="gallery" data-src="../img/slider-4.jpg")
-                                                img.img-fluid(src="../img/slider-4.jpg")
+                                            a.product-image__link(data-fancybox="gallery" data-src="./img/slider-4.jpg")
+                                                img.img-fluid(src="./img/slider-4.jpg")
                                     //- Product 1 Nav
                                     .slider-nav.product-nav.product-nav_complect#product1
                                         .product-nav_complect__item
-                                            img.img-fluid(src="../img/slider-1.jpg")
+                                            img.img-fluid(src="./img/slider-1.jpg")
                                         .product-nav_complect__item
-                                            img.img-fluid(src="../img/slider-2.jpg")
+                                            img.img-fluid(src="./img/slider-2.jpg")
                                         .product-nav_complect__item
-                                            img.img-fluid(src="../img/slider-3.jpg")
+                                            img.img-fluid(src="./img/slider-3.jpg")
                                         .product-nav_complect__item
-                                            img.img-fluid(src="../img/slider-4.jpg")
+                                            img.img-fluid(src="./img/slider-4.jpg")
                                 .col-6.product-slider.product-slider_block
                                     //- Product 2
                                     .slider-main.product-image.product-image_complect(data-nav="#product2" data-vertical="false" data-count="3")
                                         .product-image__item
-                                            a.product-image__link(data-fancybox="gallery" data-src="../img/slider-1.jpg")
-                                                img.img-fluid(src="../img/slider-2.jpg")
+                                            a.product-image__link(data-fancybox="gallery" data-src="./img/slider-1.jpg")
+                                                img.img-fluid(src="./img/slider-2.jpg")
                                         .product-image__item
-                                            a.product-image__link(data-fancybox="gallery" data-src="../img/slider-2.jpg")
-                                                img.img-fluid(src="../img/slider-3.jpg")
+                                            a.product-image__link(data-fancybox="gallery" data-src="./img/slider-2.jpg")
+                                                img.img-fluid(src="./img/slider-3.jpg")
                                     //- Product 2 Nav
                                     .slider-nav.product-nav.product-nav_complect#product2
                                         .product-nav_complect__item
-                                            img.img-fluid(src="../img/slider-2.jpg")
+                                            img.img-fluid(src="./img/slider-2.jpg")
                                         .product-nav_complect__item
-                                            img.img-fluid(src="../img/slider-3.jpg")
+                                            img.img-fluid(src="./img/slider-3.jpg")
                         .col-5
                             .product-page.pt-2
                                 //- Основное о товаре
@@ -242,14 +242,14 @@ html(lang="ru")
                             p Оригинальный бюстгальтер SANKOM продается только на нашем сайте.
                             .slider.slider_video.owl-carousel.owl-theme
                                 .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="../img/image-1.jpg" href="javascript:;")
-                                        img.img-fluid(src="../img/prev-1.jpg")
+                                    a(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-1.jpg")
                                 .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="../img/image-2.jpg" href="javascript:;")
-                                        img.img-fluid(src="../img/prev-2.jpg")
+                                    a(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-2.jpg")
                                 .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="../img/image-3.jpg" href="javascript:;")
-                                        img.img-fluid(src="../img/prev-1.jpg")
+                                    a(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-1.jpg")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         .modal#modalCashbackInfo
@@ -259,7 +259,7 @@ html(lang="ru")
                     a.text-underline.text-action(href="#") Подробнее.
         .modal#tableSize
             .modal__content
-                img.img-fluid(src="../img/size-demo.jpg")
+                img.img-fluid(src="./img/size-demo.jpg")
         script(src="./js/jquery.inputmask.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

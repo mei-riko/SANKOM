@@ -62,10 +62,10 @@ mixin blogCol(title, intro, href)
 mixin faq(title, icon)
     .faq(class!=attributes.class)
         if icon!=''
-            a.faq__title.faq__title_has-icon(href="#")!= title
+            a.faq__title.faq__title_has-icon(href="#" class!=attributes.classTitle)!= title
                 img.faq__icon(src=icon)
         else
-            a.faq__title(href="#")!= title
+            a.faq__title(href="#" class!=attributes.classTitle)!= title
         if block
             .faq__content
                 block
@@ -93,18 +93,19 @@ mixin bannerCategory(title, intro)
                 block
 //- Products
 mixin product(title, newPrice, oldPrice, status, label, href)
-    .product
+    .product(class=attributes.class)
         a.product__image-block.loading(href=href title=title)
             .product__image.b-lazy(data-src!=attributes.dataSrc)
             .product__image.product__image_hover.b-lazy(data-src!=attributes.dataSrcHover)
             if status!=''
                 .product__status.text-covered= status
         a.product__title(href=href title=title)= title
-        if oldPrice!=''
-            .product__price-old= oldPrice
-            .product__price-new= newPrice
-        else
-            .product__price-new= newPrice
+        .product__price
+            if oldPrice!=''
+                .product__price-old= oldPrice
+                .product__price-new= newPrice
+            else
+                .product__price-new= newPrice
         .product__label!= label
 mixin productSmall(title, newPrice, oldPrice, status, href)
     .product.product_small
