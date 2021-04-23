@@ -40,17 +40,29 @@
             flex-grow: 1;
             padding: 0 $spacer-gutter;
         }
+        &-callback{
+            position: relative;
+        }
+        &-dialog{
+            left: -($spacer-gutter);
+            top: $spacer/2;
+
+            max-width: unset;
+        }
     }
     &__location{
+        position: relative;
+
         flex: 0 0 100px;
         max-width: 100px;
 
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
+        &-link{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
 
-        cursor: pointer;
-
+            cursor: pointer;
+        }
         &-icon{
             flex: 0 0 15px;
             max-width: 15px;
@@ -73,6 +85,24 @@
                 color: $action;
                 border-color: $action;
             }
+        }
+    }
+    // Choose Client City
+    &__modal-location{
+        top: $spacer/2;
+        left: 0;
+        text-align: center;
+    }
+    &__modal-title{
+        white-space: nowrap;
+        margin-bottom: $spacer-gutter;
+    }
+    &__modal-option{
+        display: flex;
+        justify-content: center;
+
+        & > * {
+            margin: 0 4px;
         }
     }
     &__contact{

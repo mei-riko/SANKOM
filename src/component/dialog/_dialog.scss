@@ -1,3 +1,74 @@
 .dialog{
     display: none;
+
+    position: absolute;
+    z-index: 99;
+
+    padding: $spacer-gutter;
+    background: $white;
+    border: 1px solid $border-color;
+
+    &__true{
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        white-space: nowrap;
+
+        padding: 4px 10px 5px;
+        border: 1px solid $border-color;
+        color: $white;
+        background-color: $action;
+        border-radius: $spacer-gutter;
+
+        transition: .3s;
+
+        &:hover{
+            color: $white;
+            background-color: lighten($color: $action, $amount: 6);
+            text-decoration: none;
+        }
+    }
+    &__false{
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        white-space: nowrap;
+
+        padding: 4px 10px 5px;
+        border: 1px solid $border-color;
+        background-color: $light-bg;
+        border-radius: $spacer-gutter;
+
+        transition: .3s;
+
+        &:hover{
+            color: $dark-grey;
+            background-color: $light-grey;
+            text-decoration: none;
+        }
+    }
+
+    &--active{
+        display: block;
+    }
+}
+
+.dialog_networks{
+    width: 210px;
+    max-width: 100%;
+    padding: 0;
+
+    &__item{
+        padding: $spacer/5 $spacer-gutter;
+        background: $white;
+        transition: .3s;
+
+        border-bottom: 1px solid $border-color;
+
+        &:last-child{
+            border-bottom: none;
+        }
+
+        &:hover{
+            background: $light-bg;
+        }
+    }
 }

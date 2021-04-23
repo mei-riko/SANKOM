@@ -11,10 +11,12 @@
         font-size: 9px;
         font-weight: $font-weight-bold;
         padding: 0 $spacer-gutter;
+        text-transform: uppercase;
     }
 
     &:hover{
         text-decoration: none;
+        
         .networks__icon{
             fill: $action;
         }

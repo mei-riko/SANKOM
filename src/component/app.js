@@ -6,6 +6,7 @@ import '../component/product/product';
 import '../component/tabs/tabs';
 import '../component/navigation/nav';
 import '../component/sidebar/sidebar';
+import '../component/dialog/dialog';
 
 $(document).ready(() =>{
   $(".scroll").on('click', function() {
@@ -96,9 +97,6 @@ $(document).ready(() =>{
       // }],
       success: function(element){
         setTimeout(function(){
-          // We want to remove the loader gif now.
-          // First we find the parent container
-          // then we remove the "loading" class which holds the loader image
           var parent = element.parentNode;
           parent.className = parent.className.replace(/\bloading\b/,'');
         }, 200);
