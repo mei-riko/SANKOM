@@ -18,7 +18,7 @@
         }
     }
     &__article{
-        font-size: map-get($map: $font-size, $key: "xs");
+        font-size: 9px;
         line-height: $line-height-heading;
         color: $grey-text;
         text-align: right;
@@ -73,16 +73,14 @@
 
     // Complect Product Information
     &__complect-title{
+        font-size: map-get($map: $font-size, $key: 'sm');
+        font-weight: $font-weight-bold;
         line-height: $line-height-heading;
-        flex-grow: 2;
-
-        span{
-            margin-right: 10px;
-
-            &:last-child{
-                margin-right: 0;
-            }
-        }
+    }
+    &__complect-article{
+        font-size: 9px;
+        line-height: 14px;
+        color: $grey-text;
     }
     &__complect-table{
         flex-grow: 1;
@@ -98,6 +96,7 @@
             flex-wrap: wrap;
 
             justify-content: space-between;
+            align-items: flex-end;
 
             & + .product-page__option_complect {
                 margin-top: 10px;

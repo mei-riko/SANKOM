@@ -10,8 +10,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
         link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/product.css', rel='stylesheet')
-        link(href='./css/sliders.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
 
     body
         script(src="./js/jquery.min.js")
@@ -111,9 +110,8 @@ html(lang="ru")
                                 .hr.mt-2
                                 //- Вариации товара
                                 .product-page__option.product-page__option_complect
-                                    .product-page__complect-title
-                                        span.text-bold.text-smaller Бюстгальтер Classic Black Bra 
-                                        span.text-grey.text-small SAN-071CWH
+                                    .product-page__complect-title Бюстгальтер Facilisis duis montes, viverra lorem rhoncus blandit 
+                                    .product-page__complect-article SAN-071CWH
                                     .product-page__complect-table.text-right
                                         a.table-size(href="javascript:;" data-fancybox="size" data-src="#tableSize1")
                                             svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -142,9 +140,8 @@ html(lang="ru")
                                             input.product-page__size-input(type="radio" id="size7" name="size")
                                             label.product-page__size-label(for="size7") L-XL
                                 .product-page__option.product-page__option_complect
-                                    .product-page__complect-title
-                                        span.text-bold.text-smaller Леггинсы Black&Silver 
-                                        span.text-grey.text-small SAN-071CWH
+                                    .product-page__complect-title Леггинсы Black&Silver 
+                                    .product-page__complect-article SAN-071CWH
                                     .product-page__complect-table.text-right
                                         a.table-size(href="javascript:;" data-fancybox="size" data-src="#tableSize2")
                                             svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -167,9 +164,8 @@ html(lang="ru")
                                             input.product-page__size-input(type="radio" id="size25" name="sizeSecond")
                                             label.product-page__size-label(for="size25") M
                                 .product-page__option.product-page__option_complect
-                                    .product-page__complect-title
-                                        span.text-bold.text-smaller Леггинсы Silver 
-                                        span.text-grey.text-small SAN-071CWH
+                                    .product-page__complect-title Леггинсы Silver 
+                                    .product-page__complect-article SAN-071CWH
                                     .product-page__complect-table.text-right
                                         a.table-size(href="javascript:;" data-fancybox="size" data-src="#tableSize3")
                                             svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -292,6 +288,7 @@ html(lang="ru")
                                         img.img-fluid(src="./img/prev-1.jpg")
             include component/banner/delivery.pug
         include component/footer/footer.pug
+        include component/sidebar/sidebar.pug
         .modal#modalCashbackInfo
             .modal__content
                 p Стaтусный Кэшбэк за эту покупку: от 2% – 20% (348₽ – 2 609₽)

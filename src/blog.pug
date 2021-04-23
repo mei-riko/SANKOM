@@ -10,11 +10,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         
         link(href='./css/framework.css', rel='stylesheet')
-
-        link(href='./css/filters.css', rel='stylesheet')
-        link(href='./css/tags.css', rel='stylesheet')
-        link(href='./css/previews.css', rel='stylesheet')
-
+        link(href='./css/styles.css', rel='stylesheet')
     body
         script(src="./js/jquery.min.js")
         include component/mixin.pug
@@ -116,7 +112,8 @@ html(lang="ru")
                                 a.pagination__link(href="#") 4
                                 a.pagination__link.pagination__link_next(href="#") &nbsp;
         include component/footer/footer.pug
-        
+        include component/sidebar/sidebar.pug
+
         script(src="./js/jquery.inputmask.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

@@ -10,12 +10,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
         link(href='./css/framework.css', rel='stylesheet')
-
-        link(href='./css/banners.css', rel='stylesheet')
-        link(href='./css/tags.css', rel='stylesheet')
-        link(href='./css/filters.css', rel='stylesheet')
-        link(href='./css/product-preview.css', rel='stylesheet')
-        link(href='./css/faq.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
 
     body
         script(src="./js/jquery.min.js")
@@ -28,7 +23,7 @@ html(lang="ru")
                     +bannerCategory('Идеальная поддержка', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.')(class="banner_content-center" dataSrc="./img/banner-2.jpg")
                     //- Banner Tech
                     .banner-intro.mt-2.mb-2
-                        .banner-intro__content
+                        .banner-intro__content.banner-intro__content_left
                             p.banner-intro__label.text-covered Wow
                             p.banner-intro__title Уникальные патентные технологии
                             p.text-grey The only bra in the world that uses the natural weight of the breasts to pull your shoulders backward and improve your posture!
@@ -103,6 +98,7 @@ html(lang="ru")
                             +faq('Таблицы размеров', '/icon/faq.svg')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
+        include component/sidebar/sidebar.pug
         
         script(src="./js/jquery.inputmask.min.js")
 

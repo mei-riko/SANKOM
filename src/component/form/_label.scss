@@ -1,0 +1,10 @@
+.label{
+    font-size: map-get($map: $font-size, $key: xs);
+    font-weight: $font-weight-bold;
+    padding: 6px 0;
+    margin-bottom: 5px;
+
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}

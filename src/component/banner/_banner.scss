@@ -17,14 +17,28 @@
 
         position: relative;
         z-index: 2;
+
+        width: 440px;
+        max-width: 100%;
     }
     &__intro{
         position: relative;
         z-index: 2;
+
+        width: 440px;
+        max-width: 100%;
+
+        &_center{
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     &__content{
         position: relative;
         z-index: 2;
+
+        width: 440px;
+        max-width: 100%;
     }
     &__image{
         position: absolute;
@@ -43,36 +57,38 @@
     &_content-center{
         text-align: center;
         justify-content: center;
-
-        .banner__intro{
-            width: 420px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
     }
     &_content-left{
         text-align: left;
         justify-content: center;
-        
-        .banner__intro{
-            width: 480px;
-            max-width: 100%;
-        }
     }
-}
+    &_content-right{
+        text-align: left;
+        justify-content: center;
+    }
 
-.banner_small{
-    padding: $spacer-gutter $grid-gutter-width/2;
+    &_inside{
+        min-height: 360px;
+    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .banner{
         padding: $spacer $grid-gutter-width;
+
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .banner{
         padding: $grid-gutter-width;
+
+        &__image{   
+            background: no-repeat center / cover;
+    
+            &_mobile{
+                display: block;
+            }
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){

@@ -23,6 +23,7 @@ function navbarUnHover(){
 }
 
 $(function(){
+    // Check Windows Size
     if ( $(window).width() > 1400 || !window.matchMedia('screen and (max-width: 1400px)').matches ){
         $(".navbar").removeClass("navbar--mobile").addClass("navbar--desktop");
     }else{
@@ -31,18 +32,18 @@ $(function(){
 
     // Desktop Hover Nav
     var timeout = null;
-    // Задержка скрытия меню 0.4сек
+    // Задержка скрытия меню 0.3сек
     $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child')
         .mouseenter(function(event){
             clearTimeout(timeout);
             let nav = $(this);
             timeout = setTimeout( function(){
                 navbarHover( nav );
-            }, 200);
+            }, 100);
         })
         .mouseleave(function(event){
             clearTimeout(timeout);
-            timeout = setTimeout( navbarUnHover , 400);
+            timeout = setTimeout( navbarUnHover , 300);
         });
 });
 

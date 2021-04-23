@@ -31,5 +31,10 @@
                 border-color: $border-color;
             }
         }
+        &_inline{
+            &:hover, &:focus{
+                border-color: $border-color;
+            }
+        }
     }
 }

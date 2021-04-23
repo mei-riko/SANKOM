@@ -15,6 +15,10 @@
         margin: map-get($map: $spacers, $key: 2) 0;
 
         overflow-y: auto;
+
+        &_preview{
+            height: 380px;
+        }
     }
 
     &__prop{
@@ -30,9 +34,4 @@
             padding-top: map-get($map: $spacers, $key: 2);
         }
     }
-}
-
-.cart-sidebar_cashback{
-    background: $white;
-    border: 1px solid $border-color;
 }

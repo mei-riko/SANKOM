@@ -5,6 +5,7 @@ import '../component/filters/filter';
 import '../component/product/product';
 import '../component/tabs/tabs';
 import '../component/navigation/nav';
+import '../component/sidebar/sidebar';
 
 $(document).ready(() =>{
   $(".scroll").on('click', function() {
@@ -89,11 +90,11 @@ $(document).ready(() =>{
   if( $('.b-lazy').length > 0 ){
     var bLazy = new Blazy({
       offset: 100, 
-      breakpoints: [{
-        width: 576 // Max-width
-        , src: 'data-src-small'
-      }]
-      , success: function(element){
+      // breakpoints: [{
+      //   width: 768, 
+      //   src: 'data-src-small'
+      // }],
+      success: function(element){
         setTimeout(function(){
           // We want to remove the loader gif now.
           // First we find the parent container

@@ -9,15 +9,14 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
-        link(href='/css/framework.css', rel='stylesheet')
-        link(href='/css/product.css', rel='stylesheet')
-        link(href='/css/sliders.css', rel='stylesheet')
+        link(href='./css/framework.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
 
     body
-        script(src="/js/jquery.min.js")
+        script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             //- Product
             section.content.container
                 .content__inside
@@ -25,7 +24,7 @@ html(lang="ru")
                         li.breadcrumb__item 
                             a.breadcrumb__link(href="index.html") Главная
                         li.breadcrumb__item 
-                            a.breadcrumb__link(href="catalog.html") Каталог
+                            a.breadcrumb__link Каталог
                         li.breadcrumb__item 
                             a.breadcrumb__link(href="category.html") Бюстгальтер
                         li.breadcrumb__item.breadcrumb__item--active Classic White
@@ -211,7 +210,30 @@ html(lang="ru")
                                         img.img-fluid(src="./img/prev-1.jpg")
             section.content.container#complect
                 .content__inside
-                    p.h3.text-center В комплекте выгоднее
+                    //- Category's tags
+                    .tags
+                        .tags__link.tags__link_inline.tags__link_category Коррекция и красота
+                        .tags__link.tags__link_inline Для повседневного использования
+                        .tags__link.tags__link_inline Убрать бока
+                        .tags__link.tags__link_inline Убрать живот
+                        .tags__link.tags__link_inline Тонкая талия
+                        .tags__link.tags__link_inline Пуш-ап эффект
+                        .tags__link.tags__link_inline Моделирующий эффект
+                        .tags__link.tags__link_inline Под верхнюю одежду
+                        .tags__link.tags__link_inline Под вечерний наряд
+                        .tags__link.tags__link_inline Для лета
+                        .tags__link.tags__link_inline.tags__link_category Спорт и lifestyle
+                        .tags__link.tags__link_inline Помощь для начинающих в спорте
+                        .tags__link.tags__link_inline При сгонке веса
+                        .tags__link.tags__link_inline Силовые тренировки
+                        .tags__link.tags__link_inline.tags__link_category Забота о здоровье
+                        .tags__link.tags__link_inline При болях в спине и пояснице
+                        .tags__link.tags__link_inline Поддержка спины
+                        .tags__link.tags__link_inline Исправление осанки
+                        .tags__link.tags__link_inline Шейный остеохондроз
+                        .tags__link.tags__link_inline Восстановление после родов
+                        .tags__link.tags__link_inline Сидячий образ жизни
+                    p.mt-2.h3.text-center В комплекте выгоднее
                     p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.
                     .row.justify-content-center.mt-1
                         .col-3.mt-2
@@ -220,15 +242,15 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-2
-                                    .complect__image-item(style="background-image:url('./img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('./img/product-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-2.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
                                     span.complect__price-new 10 240 руб.
                                 .complect__label скидка 2560 руб.
 
-                                a.complect__btn(href="#")
+                                a.complect__btn(href="product-complect.html")
                                     <svg class="complect__btn-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#3F2A2D"/>
                                         <path d="M4.50879 3.91807C4.50879 2.52849 5.63782 1.39945 7.0274 1.41682C8.41698 1.41682 9.52864 2.54586 9.52864 3.91807V5.70715H4.50879V3.91807Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
@@ -241,16 +263,16 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_item-3
-                                    .complect__image-item(style="background-image:url('./img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('./img/product-2.jpg');")
-                                    .complect__image-item(style="background-image:url('./img/product-3.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-3.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
                                     span.complect__price-new 10 240 руб.
                                 .complect__label скидка 2560 руб.
 
-                                a.complect__btn(href="#")
+                                a.complect__btn(href="product-complect-2.html")
                                     <svg class="complect__btn-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#3F2A2D"/>
                                         <path d="M4.50879 3.91807C4.50879 2.52849 5.63782 1.39945 7.0274 1.41682C8.41698 1.41682 9.52864 2.54586 9.52864 3.91807V5.70715H4.50879V3.91807Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
@@ -263,16 +285,16 @@ html(lang="ru")
                                 p.complect__intro Скидка при покупке комплекта 20%
                                 
                                 .complect__image.complect__image_full
-                                    .complect__image-item(style="background-image:url('./img/product-1.jpg');")
-                                    .complect__image-item(style="background-image:url('./img/product-2.jpg');")
-                                    .complect__image-item(style="background-image:url('./img/product-3.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-1.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-2.jpg');")
+                                    .complect__image-item(style="background-image:url('./product/prod-3.jpg');")
 
                                 .complect__price
                                     span.complect__price-old 12 800 руб.
                                     span.complect__price-new 10 240 руб.
                                 .complect__label скидка 2560 руб.
 
-                                a.complect__btn(href="#")
+                                a.complect__btn(href="product-complect-2.html")
                                     <svg class="complect__btn-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#3F2A2D"/>
                                         <path d="M4.50879 3.91807C4.50879 2.52849 5.63782 1.39945 7.0274 1.41682C8.41698 1.41682 9.52864 2.54586 9.52864 3.91807V5.70715H4.50879V3.91807Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
@@ -280,6 +302,8 @@ html(lang="ru")
                                     </svg>
                                     | Купить комплект
         include component/footer/footer.pug
+        include component/sidebar/sidebar.pug
+
         .modal#modalCashbackInfo
             .modal__content
                 p Стaтусный Кэшбэк за эту покупку: от 2% – 20% (348₽ – 2 609₽)

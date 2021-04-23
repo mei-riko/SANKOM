@@ -10,7 +10,13 @@
     &__content{
         flex: 0 0 45%;
         max-width: 45%;
-        padding-right: map-get($map: $spacers, $key: 3);
+
+        &_left{
+            padding-right: map-get($map: $spacers, $key: 3);
+        }
+        &_right{
+            padding-left: map-get($map: $spacers, $key: 3);
+        }
     }
     &__image-block{
         flex: 0 0 55%;

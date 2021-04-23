@@ -75,7 +75,7 @@ mixin banner(title, intro, link, href)
         .banner__image.banner__image_mobile.b-lazy(data-src!=attributes.dataSrcSmall)
         p.banner__title= title
         if intro!=''
-            p.banner__intro= intro
+            .banner__intro(class!=attributes.classIntro)= intro
         if block
             .banner__content
                 block

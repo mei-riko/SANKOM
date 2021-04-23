@@ -10,8 +10,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
 
         link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/product.css', rel='stylesheet')
-        link(href='./css/sliders.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
 
     body
         script(src="./js/jquery.min.js")
@@ -252,6 +251,7 @@ html(lang="ru")
                                         img.img-fluid(src="./img/prev-1.jpg")
             include component/banner/delivery.pug
         include component/footer/footer.pug
+        include component/sidebar/sidebar.pug
         .modal#modalCashbackInfo
             .modal__content
                 p Стaтусный Кэшбэк за эту покупку: от 2% – 20% (348₽ – 2 609₽)

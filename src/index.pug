@@ -10,28 +10,22 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
         
         link(href='./css/framework.css', rel='stylesheet')
-
-        link(href='./css/banners.css', rel='stylesheet')
-        link(href='./css/sliders.css', rel='stylesheet')
-        link(href='./css/previews.css', rel='stylesheet')
-        link(href='./css/product-preview.css', rel='stylesheet')
-        link(href='./css/tabs.css', rel='stylesheet')
-        link(href='./css/faq.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
 
     body
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        main
             //- Promo and Tags
             section.content.container
                 .content__inside
                     //- Slider Promo
                     .slider.slider_banner.owl-carousel.owl-theme
                         .slider__item
-                            +banner('Только эко-материалы', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', 'Коллекции 2021', 'catalog.html')(class="banner_content-center b-lazy" dataSrc="./img/banner-1.jpg" dataSrcSmall="./img/bannerSmall.jpg")
+                            +banner('Весна время спорта', 'Introducing Stretch Twill Pants! Comfy and seasonless, these pull-on staples are the perfect additions to your wardrobe.', 'Спорт и здоровье', 'category.html')(class="banner_content-center" classIntro="banner__intro_center" dataSrc="./img/banner-2.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
                         .slider__item
-                            +banner('Весна время спорта', 'Introducing Stretch Twill Pants! Comfy and seasonless, these pull-on staples are the perfect additions to your wardrobe.', 'Спорт и здоровье', 'category.html')(class="banner_content-center b-lazy" dataSrc="./img/banner-2.jpg" dataSrcSmall="./img/bannerSmall.jpg")
+                            +banner('Только эко-материалы', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', 'Коллекции 2021', 'catalog.html')(class="banner_content-center" classIntro="banner__intro_center" dataSrc="./img/banner-1.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
                     //- Category In Catalog
                     .row.align-items-center.mt-1.mb-2
                         .col-8
@@ -208,13 +202,14 @@ html(lang="ru")
                                     .form__col
                                         +radio('radio3', 'Персональные предложения','news')
                                     .form__line.mt-2
-                                        +input('', 'E-mail')(label="input__label_inside" class="input_label-inside")
+                                        +input('', 'E-mail')(label="input__label_inside" class="input_label-inside" field="input__field--full")
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
                             +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg')(class="bg-white")
                             +faq('Подробнее о программе лояльности', '/icon/faq.svg')(class="bg-white")
                             +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
+        include component/sidebar/sidebar.pug
         
         script(src="./js/jquery.inputmask.min.js")
 

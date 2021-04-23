@@ -75,9 +75,8 @@
         }
 
     }
-}
 
-.input_column{
-    display: flex;
-    flex-direction: column-reverse;
+    &--full{
+        width: 100%;
+    }
 }

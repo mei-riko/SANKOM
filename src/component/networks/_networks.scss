@@ -1,0 +1,22 @@
+.networks{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &__icon{
+        fill: $dark-grey;
+        transition: .3s;
+    }
+    &__title{
+        font-size: 9px;
+        font-weight: $font-weight-bold;
+        padding: 0 $spacer-gutter;
+    }
+
+    &:hover{
+        text-decoration: none;
+        .networks__icon{
+            fill: $action;
+        }
+    }
+}
