@@ -1,10 +1,10 @@
 .filters
-    button.filters__category(href="" id="filtersCategoryOpen") 
+    a.filters__category(href="#" data-sidebar="filtersCategoryOpen") 
         <svg class="filters__icon" width="24" height="24" viewBox="0 0 24 24" fill="#3A3A3A" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 6H22V7H2V6ZM9 11.5H22V12.5H9V11.5ZM2 17H22V18H2V17Z"/>
         </svg>
         | Категории
-    button.filters__item(href="" id="filtersOpen") 
+    a.filters__item(href="#" data-sidebar="filtersOpen") 
         <svg class="filters__icon" width="24" height="24" viewBox="0 0 24 24" fill="#3A3A3A" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 6H22V7H2V6ZM2 11.5H22V12.5H2V11.5ZM2 17H22V18H2V17Z"/>
             <rect x="4" y="5" width="1" height="3"/>
@@ -16,3 +16,65 @@
     .filters__info
         span.filters__info-item 32 товар(-а, -ов)
         //- span.filters__info-item 1 стр. из 4
+
+.sidebar.sidebar_filters#filtersCategoryOpen
+    .sidebar__close Закрыть
+    .sidebar__content
+        //- Category Links
+        .filter-nav
+            a.filter-nav__parent.filter-nav__parent_link(href="catalog.html") Женщины
+            .filter-nav__children
+                a.filter-nav__link(href="category.html") Корректирующие трусы
+                a.filter-nav__link.filter-nav__link--here(href="category.html") Бюстгалтеры
+                a.filter-nav__link(href="category.html") Майки
+                a.filter-nav__link(href="category.html") Леггинсы и капри
+                a.filter-nav__link(href="category.html") Носки и гольфы
+                a.filter-nav__link(href="category.html") Колготки
+                a.filter-nav__link(href="category.html") Противовирусные маски
+            .filter-nav__parent Коллекции
+            .filter-nav__children
+                a.filter-nav__link(href="category.html") Белье из бамбука
+                a.filter-nav__link(href="category.html") Белье из алоэ
+                a.filter-nav__link(href="category.html") Белье Cooling с охлаждающим эффектом
+                a.filter-nav__link(href="category.html") Белье из soft-touch
+                a.filter-nav__link(href="category.html") Белье из органического хлопка
+            a.filter-nav__parent.filter-nav__parent_link.filter-nav__parent--here(href="catalog.html") Мужская серия
+            .filter-nav__children
+                a.filter-nav__link(href="category.html") Корректирующие шорты
+                a.filter-nav__link(href="category.html") Утягивающие майки Mey
+                a.filter-nav__link(href="category.html") Носки и гольфы
+                a.filter-nav__link(href="category.html") Противовирусные маски
+            .filter-nav__parent Другое
+            .filter-nav__children
+                a.filter-nav__link(href="category.html") Новинки
+                a.filter-nav__link(href="category.html") Предзаказ
+                a.filter-nav__link(href="category-complect.html") Комплекты с выгодой
+                a.filter-nav__link(href="category-sale.html") Sale - распродажа
+                a.filter-nav__link(href="sales.html") Акции
+.sidebar.sidebar_filters#filtersOpen
+    .sidebar__close Закрыть
+    .sidebar__content
+        .filter-row.mb-1
+            .filter-row__title Параметр фильтрации
+            .filter-row__content 
+                .checkbox
+                    input.checkbox__input#param1(type="checkbox" name="type" checked="checked")
+                    label.checkbox__label(for="param1") Параметр 1
+                .checkbox.mt-1
+                    input.checkbox__input#param2(type="checkbox" name="type")
+                    label.checkbox__label(for="param2") Параметр 2
+                .checkbox.checkbox--disabled.mt-1
+                    input.checkbox__input#param3(type="checkbox" name="type" disabled="disabled")
+                    label.checkbox__label(for="param3") Параметр 3
+        .filter-row.mb-1
+            .filter-row__title Параметр фильтрации
+            .filter-row__content
+                .checkbox
+                    input.checkbox__input#param11(type="checkbox" name="type" checked="checked")
+                    label.checkbox__label(for="param11") Параметр 1
+                .checkbox.mt-1
+                    input.checkbox__input#param12(type="checkbox" name="type")
+                    label.checkbox__label(for="param12") Параметр 2
+                .checkbox.checkbox--disabled.mt-1
+                    input.checkbox__input#param13(type="checkbox" name="type" disabled="disabled")
+                    label.checkbox__label(for="param13") Параметр 3

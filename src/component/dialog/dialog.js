@@ -15,7 +15,8 @@ function openDialogOnClick( elem ){
     }
 }
 
-$('[data-dialog]').on('click', function(){
+$('[data-dialog]').on('click', function( event ){
+    event.preventDefault();
     openDialogOnClick( $(this) );
 });
 

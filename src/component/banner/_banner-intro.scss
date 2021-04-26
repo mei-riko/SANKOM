@@ -55,7 +55,13 @@
         &__content{
             flex: 0 0 65%;
             max-width: 65%;
-            padding-right: map-get($map: $spacers, $key: 2);
+
+            &_left{
+                padding-right: map-get($map: $spacers, $key: 2);
+            }
+            &_right{
+                padding-left: map-get($map: $spacers, $key: 2);
+            }
         }
         &__image-block{
             flex: 0 0 35%;
@@ -68,10 +74,20 @@
         &__content{
             flex: 0 0 100%;
             max-width: 100%;
-            padding-right: 0;
-            padding-bottom: map-get($map: $spacers, $key: 2);
+
+            &_left{
+                order: 1;
+                padding-bottom: map-get($map: $spacers, $key: 2);
+                padding-right: 0;
+            }
+            &_right{
+                order: 1;
+                padding-bottom: map-get($map: $spacers, $key: 2);
+                padding-left: 0;
+            }
         }
         &__image-block{
+            order: 2;
             flex: 0 0 100%;
             max-width: 100%;
         }
@@ -80,5 +96,17 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .banner-intro{
         padding: map-get($map: $spacers, $key: 2);
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .banner-intro{
+        &__label{
+            font-size: 28px;
+            line-height: 22px;
+        }
+        &__title {
+            font-size: 17px;
+        }
     }
 }

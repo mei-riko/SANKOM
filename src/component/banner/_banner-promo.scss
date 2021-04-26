@@ -32,3 +32,27 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .banner-promo{
+        padding: $spacer-gutter;
+        display: block;
+        text-align: center;
+
+        color: $black;
+        background: $body-bg;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+
+        &__content{
+            padding: 0 0 $spacer-gutter;
+        }
+        &__link{
+            color: $black;
+    
+            &:hover, &:focus{
+                color: $action;
+            }
+        }
+    }
+}

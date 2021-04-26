@@ -1,3 +1,73 @@
 .navbar-mobile{
     display: none;
+
+    border-top: 1px solid $border-color;
+
+    &__icon{
+        height: 16px;
+        margin-bottom: 4px;
+    }
+    &__cart{
+        &-icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            // background: $action url('../icon/icon-cart.svg') no-repeat center / contain;
+            background: $action;
+
+
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            margin: 0 auto 4px;
+
+            &:hover{
+                background-color: darken($color: $action, $amount: 6);
+            }
+    
+            &--empty{
+                background-color: $light-grey;
+            }
+        }
+
+        
+        &-count{
+            font-size: 8px;
+            line-height: 1;
+            color: $white;
+        }
+    }
+    &__item{
+        padding: 10px 4px;
+        overflow: hidden;
+
+        text-align: center;
+        background-color: $white;
+        border-right: 1px solid $border-color;
+
+        font-size: 10px;
+        line-height: 1;
+        font-weight: $font-weight-bolder;
+
+        &:last-of-type{
+            border-right: none;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .navbar-mobile{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        flex-wrap: nowrap;
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+
+        height: $spacer;
+    }
 }

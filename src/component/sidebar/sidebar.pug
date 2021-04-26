@@ -1,4 +1,5 @@
 .sidebar.sidebar_cart#cart 
+    .sidebar__close Закрыть
     .sidebar__content
         p.sidebar__title Ваша корзина (3)
         .cart-sidebar.cart-sidebar_preview.mt-1
@@ -50,7 +51,7 @@
                 +input('', 'Ваше имя *')(class="input_column mb-1" type="text" label="input__label_top" field="input__field--full")
                 +input('', 'Телефон *')(class="input_column mb-1" type="text" label="input__label_top" field="input__field--full")
                 .label Тема звонка
-                +radio('radioTheme1', 'Помощь в выборе размера','contactTheme')
+                +radio('radioTheme1', 'Помощь в выборе размера','contactTheme','checked')
                 +radio('radioTheme2', 'Помощь в оформлении заказа','contactTheme')
                 +radio('radioTheme3', 'Вопрос по доставке или возврату','contactTheme')
                 +radio('radioTheme4', 'Другое','contactTheme')
@@ -61,7 +62,7 @@
                 +textarea('Пишите здесь...', 'Сообщение *')(class="input_column mb-1" label="input__label_top" field="input__field--full")
                 .label Как вам ответить?
                 .form__col#sidebarCallbackEmail
-                    +radio('radioType1', 'На e-mail','contactType')
+                    +radio('radioType1', 'На e-mail','contactType','checked')
                 .form__col#sidebarCallbackTel
                     +radio('radioType2', 'По телефону','contactType')
                 .form__offset-group

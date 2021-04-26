@@ -16,6 +16,7 @@ html(lang="ru")
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
+        include component/navigation/navbar.pug
         main
             //- Promo and Tags
             section.content.container
@@ -27,10 +28,10 @@ html(lang="ru")
                         .slider__item
                             +banner('Только эко-материалы', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', 'Коллекции 2021', 'catalog.html')(class="banner_content-center" classIntro="banner__intro_center" dataSrc="./img/banner-1.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
                     //- Category In Catalog
-                    .row.align-items-center.mt-1.mb-2
-                        .col-8
+                    .row.align-items-center.mt-3.mb-2
+                        .col-8.col-xs-6
                             h2.content__block-title.mb-0 SHOP BY CATEGORY
-                        .col-4.text-right
+                        .col-4.col-xs-6.text-right
                             a.content__block-link(href="catalog.html") Каталог товаров
                     .slider-container
                         .slider.slider_subcategory.slider_subcategory-index.owl-carousel.owl-theme
@@ -48,7 +49,7 @@ html(lang="ru")
                                 +subcategory('Носки', '', 'category.html')(dataSrc='./img/advantage-1.jpg')
                     //- Slider Tags
                     h3.content__block-title.mt-3.mb-0 HEALTH, SPORT & BEAUTY
-                    .mt-1.mb-2.tabs.d-flex
+                    .mt-1.mb-2.mb-xs-1.tabs.d-flex
                         .tabs__item.tabs__item--active(data-content="#tabBeauty") Коррекция и красота
                         .tabs__item(data-content="#tabHealth") Забота о здоровье
                         .tabs__item(data-content="#tabSport") Спорт и lifestyle
@@ -129,9 +130,9 @@ html(lang="ru")
                 .content__inside
                     //- Blog Promo Pages 
                     .row.align-items-center.mb-2
-                        .col-10
+                        .col-10.col-xs-12
                             h4.content__block-title.text-uppercase #BLOG_SANKOM
-                        .col-2.text-right 
+                        .col-2.d-xs-none.text-right
                             +btn('blog.html', 'Перейти в блог')
                     .slider-container
                         .slider.slider_promo.owl-carousel.owl-theme
@@ -145,25 +146,29 @@ html(lang="ru")
                                 +promo('Особенности алоэ вера', 'text.html')(dataSrc="./img/image-2.jpg")  
                             .slider__item
                                 +promo('Об экологичности материалов', 'text.html')(dataSrc="./img/image-1.jpg")              
+                    .d-none.d-xs-block.mt-xs-2
+                        +btn('blog.html', 'Перейти в блог')
                     //- Products
-                    .row.align-items-center.mt-4.mb-2
-                        .col-10
+                    .row.align-items-center.mt-4.mb-2.mt-xs-3
+                        .col-10.col-xs-12
                             h4.content__block-title.text-uppercase Выбор наших покупателей
-                        .col-2.text-right 
+                        .col-2.d-xs-none.text-right
                             +btn('category.html', 'Новинки SANKOM')(class="btn_action")
                     .product-grid.product-grid_lg
                         +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', '', 'product.html')(dataSrc='./img/product-1.jpg' dataSrcHover='./img/product-6.jpg')
                         +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc='./img/product-2.jpg' dataSrcHover='./img/product-6.jpg')
                         +product('Hypoallergenic Compression Socks Grey', '1 119 руб.', '', 'new', '', 'product.html')(dataSrc='./img/product-3.jpg' dataSrcHover='./img/product-6.jpg')
                         +product('Men Shaper Classic Black', '3 599 руб.', '', '', '', 'product.html')(dataSrc='./img/product-4.jpg' dataSrcHover='./img/product-6.jpg')
-                        +product('Shaper Classic Peach', '889 руб.', '', '', 'по предзаказу', 'product.html')(dataSrc='./img/product-5.jpg' dataSrcHover='./img/product-6.jpg')
+                        +product('Shaper Classic Peach', '889 руб.', '', '', 'по предзаказу', 'product.html')(class="d-xs-none" dataSrc='./img/product-5.jpg' dataSrcHover='./img/product-6.jpg')
                     .product-grid.product-grid_sm.mt-2
                         +productSmall('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', 'product.html')(style="background-image:url('./img/product-1.jpg');")
                         +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('./img/product-2.jpg');")
                         +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('./img/product-3.jpg');")
                         +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('./img/product-4.jpg');")
+                    .d-none.d-xs-block.mt-xs-2
+                        +btn('category.html', 'Новинки SANKOM')(class="btn_action")
                     //- Small Banner
-                    .mt-3
+                    .mt-3.mt-xs-2
                         .banner-promo 
                             .banner-promo__content ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM 
                                 a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
@@ -171,7 +176,7 @@ html(lang="ru")
             aside.content.content_secondary.container
                 .content__inside
                     .row 
-                        .col-6
+                        .col-6.col-xs-12
                             .content-with-image
                                 .content-with-image__image
                                     img.img-fluid(src="./img/FAQ.jpg" title="" alt="")
@@ -190,19 +195,19 @@ html(lang="ru")
                                     +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-3.jpg")
                                 .col-6.col-sm-12.mt-2
                                     +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-4.jpg")
-                        .col-6
+                        .col-6.col-xs-12.mt-xs-2
                             .form-block.mb-2
                                 p.h4.mb-1 Персональные скидки и новости
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
                                 form.form(action="")
                                     .form__col
-                                        +radio('radio1', 'Получать все новости SANKOM','news')
+                                        +radio('radio1', 'Получать все новости SANKOM','news','checked')
                                     .form__col
                                         +radio('radio2', 'Акции и скидки','news')
                                     .form__col
                                         +radio('radio3', 'Персональные предложения','news')
                                     .form__line.mt-2
-                                        +input('', 'E-mail')(label="input__label_inside" class="input_label-inside" field="input__field--full")
+                                        +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
                             +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg')(class="bg-white")
                             +faq('Подробнее о программе лояльности', '/icon/faq.svg')(class="bg-white")

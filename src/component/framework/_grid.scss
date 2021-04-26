@@ -262,6 +262,10 @@
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+        padding-right: $spacer-gutter/2;
+        padding-left: $spacer-gutter/2;
+    }
     .col-xs-1{
         flex: 0 0 8.33333%;
         max-width: 8.33333%

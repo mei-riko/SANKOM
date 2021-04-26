@@ -1,6 +1,5 @@
 import $ from 'jquery';
-import {sliderInitialized} from '../slider/slider';
-
+// import {sliderInitialized} from '../slider/slider';
 
 $(function(){
   if( $('.product-nav .product-nav__image').length > 0 ){
@@ -9,11 +8,11 @@ $(function(){
     let navOffset = typeof $('.product-image').data('offset') !== undefined ? $('.product-image').data('offset') : 25;
     let heightNav = 0;
   
-    heightNav = (heightMain - 100)/Number(navCount) - navOffset - 2;
-    $('.product-nav .product-nav__image').css('height', heightNav);
+    if(window.innerWidth > 420){
+      heightNav = (heightMain - 100)/Number(navCount) - navOffset - 2;
+      $('.product-nav .product-nav__image').css('height', heightNav);
+    }
   }
-  // (countShow, sliderClass, arrows, dots, loop, margin, stagePadding);
-  sliderInitialized(2, '.slider.slider_video', false, true, false, 15, 0);
 });
 
 // Sliders Vertical
@@ -45,12 +44,31 @@ if( $('.slider-main').length > 0 ){
       vertical: sliderNavOrientation,
       verticalSwiping: sliderNavOrientation,
       centerMode: sliderNavOrientation,
+      responsive: [
+        {
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 2,
+            vertical: false,
+            verticalSwiping: false,
+            centerMode: false,
+          }
+        }
+      ],
     });
-
   });
 }
-
 // Quick Buy Block
-$('#quickBuy').on('click', function(){
-  $('#quickBlock').slideToggle();
+$('#quickBuy').on('click', function(){ $('#quickBlock').slideToggle(); });
+
+$(window).on('resize', function(){
+  let heightMain = $('.product-image .product-image__link').height();
+  let navCount =  typeof $('.product-image').data('count') !== undefined ? $('.product-image').data('count') : 2;
+  let navOffset = typeof $('.product-image').data('offset') !== undefined ? $('.product-image').data('offset') : 25;
+  let heightNav = 0;
+
+  if(window.innerWidth > 420){
+    heightNav = (heightMain - 100)/Number(navCount) - navOffset - 2;
+    $('.product-nav .product-nav__image').css('height', heightNav);
+  }
 });

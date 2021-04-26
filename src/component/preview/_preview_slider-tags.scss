@@ -17,3 +17,11 @@
         line-height: $line-height-heading;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_slider-tags{
+        &__image{
+            min-width: 90px;
+        }
+    }
+}

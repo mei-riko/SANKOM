@@ -67,6 +67,7 @@
         border-bottom-right-radius: $border-radius;
     }
 
+    // Modificate
     &_secondary{
         background-color: $light-bg;
     }
@@ -77,5 +78,21 @@
     }
     &_category-filter{
         padding-top: $grid-gutter-width/2;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content{
+        &__block-title{
+            font-size: 18px;
+        }
+
+        // Modificate
+        &_category-slider{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        &_category-filter{
+            padding-top: 0;
+        }
     }
 }

@@ -122,7 +122,24 @@
 
 .slider-container{
     &--active{
-        margin-right: -$grid-gutter-width;
-        margin-left: -$grid-gutter-width;
+        margin-right: -($grid-gutter-width/2);
+        margin-left: -($grid-gutter-width/2);
     }
 }
+
+// < 440px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .slider-container{
+        &--active{
+            margin-right: -$spacer-gutter;
+            margin-left: -$spacer-gutter;
+        }
+    }
+    .slider-xs-container{
+        &--active{
+            margin-right: -$spacer-gutter;
+            margin-left: -$spacer-gutter;
+        }
+    }
+}
+  

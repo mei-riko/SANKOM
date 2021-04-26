@@ -17,7 +17,7 @@
             content: '';
             display: block;
             width: 100%;
-            padding-bottom: 150%;
+            padding-bottom: 125%;
         }
 
         &.loading{
@@ -49,7 +49,7 @@
         }
     }
 
-    // Label (Sale, New))
+    // Label (Sale, New)
     &__status{
         position: absolute;
         top: map-get($map: $spacers, $key: 1);
@@ -75,10 +75,10 @@
     &__price-old{
         display: inline-block;
         text-decoration: line-through;
+        margin-right: 4px;
 
         & + .product__price-new{
             color: $action;
-            margin-left: 4px;
         }
     }
     &__price-new{
@@ -92,6 +92,7 @@
         bottom: 0;
     
         font-size: map-get($map: $font-size, $key: xs);
+        line-height: map-get($map: $font-size, $key: sm);
         font-weight: $font-weight-bold;
         letter-spacing: 1px;
         color: $action;
@@ -104,6 +105,25 @@
         transition: .4s;
         &:hover{
             fill: $action;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .product{
+        padding-bottom: 0;
+        // Image Container
+        &__image-block{
+            margin-bottom: $spacer-gutter;
+        }   
+        // Label (Sale, New)
+        &__status{
+            font-size: 18px;
+        }
+        // Info Label
+        &__label{
+            position: unset;
+            margin-top: $spacer-gutter;
         }
     }
 }

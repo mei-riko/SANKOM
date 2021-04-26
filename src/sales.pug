@@ -16,6 +16,7 @@ html(lang="ru")
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
+        include component/navigation/navbar.pug
         main
             section.content.container
                 .content__inside
@@ -28,20 +29,22 @@ html(lang="ru")
                             span.text-bold Актуальные АКЦИИ И СКИДКИ до 70%. 
                             a.text-underline(href="#") Подписаться на рассылку
                     .row
-                        .col-6.mt-2
+                        .col-6.col-xs-12.mt-2
                             a.d-block(href="#")
                                 .img-background-fluid(style="background-image:url('./img/banner-sale-1.jpg');")
-                                p.mt-1.text-spacing.text-bolder Актуальные акции и скидки до 70%
-                        .col-6.mt-2
+                                p.mt-1.text-spacing.text-bolder Скидка при&nbsp;покупке комплекта товаров
+                        .col-6.col-xs-12.mt-2
                             a.d-block(href="#")
                                 .img-background-fluid(style="background-image:url('./img/banner-sale-2.jpg');")
-                                p.mt-1.text-spacing.text-bolder Актуальные акции и скидки до 70%
-                        .col-4.mt-2
+                                p.mt-1.text-spacing.text-bolder Выгодная цена для&nbsp;оформивших предзаказ
+                        .col-4.col-xs-12.mt-2
                             a.d-block(href="#")
                                 .img-background-fluid(style="background-image:url('./img/banner-sale-2.jpg');")
-                        .col-8.mt-2
+                                p.mt-1.text-spacing.text-bolder Распродажа коллекции&nbsp;2019 года 
+                        .col-8.col-xs-12.mt-2
                             a.d-block(href="#")
                                 .img-background-fluid(style="background-image:url('./img/banner-sale-1.jpg');")
+                                p.mt-1.text-spacing.text-bolder Скидка на&nbsp;продукция для&nbsp;восстановления после&nbsp;родов
                     .pagination.mt-2
                         a.pagination__link.pagination__link_prev(href="#") &nbsp;
                         a.pagination__link(href="#") 1

@@ -54,3 +54,23 @@
         padding: 0 $grid-gutter-width/2 $spacer-gutter;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .faq{
+        &__title{
+            padding-right: $spacer-gutter;
+            line-height: $line-height-base;
+
+            &_has-icon{
+                padding-left: 40px;
+                padding-right: $spacer/2;
+            }
+            &:after{
+                right: $spacer-gutter;
+            }
+        }
+        &__icon{
+            left: 12px;
+        }
+    }
+}

@@ -29,9 +29,23 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){}
 
-// < 576px
-// @media all and (max-width: map-get($grid-breakpoints, 'xs')){
-//   .container{
-//       width: 100%;
-//   }
-// }
+// < 440px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+  .container {
+    width: 100%;
+    padding-left: $spacer-gutter;
+    padding-right: $spacer-gutter;
+  }
+  .row{
+    margin-right: -($spacer-gutter/2);
+    margin-left: -($spacer-gutter/2);
+  }
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0
+  }
+  .no-gutters>.col,.no-gutters>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0
+  }
+}

@@ -16,11 +16,12 @@ html(lang="ru")
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
-        main.mt-3
+        include component/navigation/navbar.pug
+        main
             section.content.container
                 .content__inside
                     //- Banner Main 
-                    +bannerCategory('Идеальная поддержка', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.')(class="banner_content-center" dataSrc="./img/banner-2.jpg")
+                    +bannerCategory('Идеальная поддержка', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.')(class="banner_content-center"  dataSrc="./img/banner-2.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
                     //- Banner Tech
                     .banner-intro.mt-2.mb-2
                         .banner-intro__content.banner-intro__content_left
@@ -58,26 +59,26 @@ html(lang="ru")
                         a.tags__link(href="catalog.html") Восстановление после родов
                         a.tags__link(href="catalog.html") Сидячий образ жизни
                     //- Filter's block
-                    .mt-3
+                    .mt-3.mt-xs-2
                         include component/filters/filters.pug
                     .row
-                        .col-3.mt-2
-                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-2.jpg")
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-6
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-0.jpg")
+                        .col-3.mt-2.col-xs-6
                             +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-1.jpg")
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-6
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-3.jpg")
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-6
                             +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-3.jpg")
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-6
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-2.jpg")
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-6
                             +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-1.jpg")
             //- Information
             aside.content.content_secondary.container
                 .content__inside
                     .row 
-                        .col-6
+                        .col-6.col-xs-12
                             .form-block
                                 p.h4.mb-1 Персональные скидки и новости
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
@@ -91,11 +92,11 @@ html(lang="ru")
                                     .form__line.mt-2
                                         +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                        .col-6
-                            +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg')(class="bg-white")
-                            +faq('Подробнее о программе лояльности', '/icon/faq.svg')(class="bg-white")
-                            +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg')(class="bg-white")
-                            +faq('Таблицы размеров', '/icon/faq.svg')(class="bg-white")
+                        .col-6.col-xs-12.mt-xs-2
+                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Таблицы размеров', './icon/faq.svg', 'faq.html')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug

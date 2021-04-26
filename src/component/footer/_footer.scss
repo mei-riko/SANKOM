@@ -46,3 +46,41 @@
         margin-right: map-get($map: $spacers, $key: 1);
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .footer{
+        padding: map-get($map: $spacers, $key: 2) $spacer-gutter map-get($map: $spacers, $key: 4);
+
+        &__col-nav{
+            order: 1;
+            margin-bottom: $spacer-gutter;
+        }
+        
+        &__col-info{
+            order: 2;
+            margin-bottom: $spacer-gutter;
+        }
+        &__information{
+            justify-content: flex-start;
+        }
+        &__copyright{
+            margin-right: 0;
+            margin-bottom: $spacer-gutter/3;
+        }
+
+        &__col-network{
+            order: 3;
+        }
+        &__network{
+            justify-content: flex-start;
+        }        
+
+        &__nav-item{
+            text-decoration: underline;
+        }
+        &__link{
+            color: $grey;
+            text-decoration: underline;
+        }
+    }
+}

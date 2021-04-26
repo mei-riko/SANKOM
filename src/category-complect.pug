@@ -16,14 +16,15 @@ html(lang="ru")
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
+        include component/navigation/navbar.pug
         main
             //- Complect
             section.content.container
                 .content__inside
                     include component/filters/filters.pug
-                    p.content__category-title.text-center.mt-4.mb-2 Комплекты со скидкой
+                    p.content__category-title.text-center.text-xs-left.mt-4.mb-2.mt-xs-2.mb-xs-0 Комплекты со скидкой
                     .row
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-12
                             .complect
                                 p.complect__title Комплект «Classic база»
                                 p.complect__intro Скидка при покупке комплекта 20%
@@ -44,7 +45,7 @@ html(lang="ru")
                                         <path d="M12.4293 14.6005H1.45166L2.30278 6.12402H11.5608L12.4293 14.6005Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
                                     </svg>
                                     | Купить комплект
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-12
                             .complect
                                 p.complect__title Шорты в подарок к комплекту
                                 p.complect__intro Скидка при покупке комплекта 20%
@@ -66,7 +67,7 @@ html(lang="ru")
                                         <path d="M12.4293 14.6005H1.45166L2.30278 6.12402H11.5608L12.4293 14.6005Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
                                     </svg>
                                     | Купить комплект
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-12
                             .complect
                                 p.complect__title Комплект «Classic база»
                                 p.complect__intro Скидка при покупке комплекта 20%
@@ -87,7 +88,7 @@ html(lang="ru")
                                         <path d="M12.4293 14.6005H1.45166L2.30278 6.12402H11.5608L12.4293 14.6005Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
                                     </svg>
                                     | Купить комплект
-                        .col-3.mt-2
+                        .col-3.mt-2.col-xs-12
                             .complect
                                 p.complect__title Шорты в подарок к комплекту
                                 p.complect__intro Скидка при покупке комплекта 20%
@@ -113,7 +114,7 @@ html(lang="ru")
             aside.content.content_secondary.container
                 .content__inside
                     .row 
-                        .col-6
+                        .col-6.col-xs-12
                             .form-block
                                 p.h4.mb-1 Персональные скидки и новости
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
@@ -127,7 +128,7 @@ html(lang="ru")
                                     .form__line.mt-2
                                         +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                        .col-6
+                        .col-6.col-xs-12.mt-xs-2
                             a.faq.faq_link.bg-white(href="text.html")
                                 .faq__title.faq__title_has-icon О бренде SANKOM, материалах и технологиях производства
                                     img.faq__icon(src='/icon/faq.svg')

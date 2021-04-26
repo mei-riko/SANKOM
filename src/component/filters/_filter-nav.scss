@@ -2,15 +2,76 @@
     font-size: map-get($map: $font-size, $key: sm);
 
     &__parent{
+        display: block;
         font-weight: $font-weight-bold;
         line-height: $line-height-heading;
+
+        // Modificate
+        &_link{
+            text-decoration: underline;
+        }
+        // Status
+        &--here{
+            color: $action
+        }
     }
     &__children{
         margin-top: 10px;
         margin-left: map-get($map: $spacers, $key: 1);
+
+        & + .filter-nav__parent{
+            margin-top: map-get($map: $spacers, $key: 1);
+        }
     }
     &__link{
         display: block;
         margin-bottom: 5px;
+
+        // Status
+        &--here{
+            font-weight: $font-weight-bold;
+            color: $action
+        }
+    }
+}
+
+// < 440px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .filter-nav{
+        &__parent{
+            position: relative;
+            line-height: $line-height;
+        }
+        
+        // Modificate
+        &_toggle{
+            &__parent{
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+        
+                    position: absolute;
+                    top: calc(50% - 5px);
+                    right: 0;
+        
+                    background: url('../icon/plus.svg') no-repeat center / contain;
+                    filter: grayscale(1);
+                    transition: .3s;
+                }
+        
+                // Status
+                &--active{
+                    &:after{
+                        background: url('../icon/minus.svg') no-repeat center / contain;
+                    }
+                }
+            }
+            &__children{
+                display: none;
+                margin-left: 0;
+            }
+        }
     }
 }

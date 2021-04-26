@@ -137,7 +137,7 @@ table{
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 101;
+    z-index: 99;
 
     background: rgba(0,0,0,.4);
 
@@ -150,12 +150,6 @@ table{
 .p-relative{position: relative;}
 .p-sticky{position: sticky; top: 0; left: 0; z-index: 101;}
 .p-absolute{position: absolute; top: 0; left: 0; z-index: 101;}
-
-.d{
-    &-flex{display: flex;}
-    &-none{display: none;}
-    &-block{display: block;}
-}
 
 .text-white{color: $white;}
 .text-black{color: $black;}
@@ -211,11 +205,6 @@ blockquote, .blockquote{
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
-    .d-xl{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
     .text-xl{
         &-left{text-align: left;}
         &-center{text-align: center;}
@@ -223,12 +212,6 @@ blockquote, .blockquote{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){   
-    .d-lg{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
-
     .text-lg{
         &-left{text-align: left;}
         &-center{text-align: center;}
@@ -236,12 +219,6 @@ blockquote, .blockquote{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
-    .d-md{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
-    
     .text-md{
         &-left{text-align: left;}
         &-center{text-align: center;}
@@ -249,17 +226,17 @@ blockquote, .blockquote{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    // .h1,h1{font-size: 32px;}
-    // .h2,h2{font-size: 26px;}
-    // .h3,h3{font-size: 22px;}
-    // .h4,h4{font-size: 18px;}
-    // .h5,h5{font-size: 16px;}
-    
-    .d-sm{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
+    // .h1,h1{font-size: 38px;}
+    .h1,h1{font-size: 28px;}
+    // .h2,h2{font-size: 32px;}
+    .h2,h2{font-size: 24px;}
+    // .h3,h3{font-size: 28px;}
+    .h3,h3{font-size: 21px;}
+    // .h4,h4{font-size: 21px;}
+    .h4,h4{font-size: 18px;}
+    // .h5,h5{font-size: 18px;}
+    .h5,h5{font-size: 15px;}
+    // .h6,h6{font-size: 1rem;}
 
     .text-sm{
         &-left{text-align: left;}
@@ -268,18 +245,23 @@ blockquote, .blockquote{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    html,body {
+        font-size: map-get($font-size, 'sm');
+    }
+    .text-lead,.lead{font-size: map-get($map: $font-size, $key: 'md');}
+    
     .border-block{
         padding: $spacer/2;
     }
-    .d-xs{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
-
     .text-xs{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
+    }
+    .img-background-fluid{
+        height: 180px;
+    }
+    blockquote, .blockquote{
+        padding: $spacer/2;
     }
 }

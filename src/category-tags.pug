@@ -16,6 +16,7 @@ html(lang="ru")
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
+        include component/navigation/navbar.pug
         main
             section.content.container
                 .content__inside
@@ -28,28 +29,28 @@ html(lang="ru")
                             a.breadcrumb__link(href="index.html") Главная
                         li.breadcrumb__item.breadcrumb__item--active Спорт и lifestyle
                     .row 
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Моделирующий эффект','catalog.html')(dataSrc="./img/product-1.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Сильная степень утяжки','category-tags.html')(dataSrc="./img/product-5.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Обычная степень утяжки','category-tags.html')(dataSrc="./img/product-1.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
-                        .col-2.mt-2
+                        .col-2.mt-2.col-xs-6
                             +categoryTags('На каждый день','category-tags.html')(dataSrc="./img/product-5.jpg")
-                    .row.mt-3
-                        .col-8
+                    .row.mt-3.mt-xs-2
+                        .col-8.col-xs-12
                             p Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
                                 | pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
                                 | condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
@@ -66,7 +67,7 @@ html(lang="ru")
                             p 
                                 a.text-small.text-bolder.text-underline.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
                     //- Banner Tech
-                    .banner-intro.mt-2.mb-2
+                    .banner-intro.mt-2
                         .banner-intro__image-block.loading
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")

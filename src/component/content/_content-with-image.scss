@@ -13,3 +13,17 @@
         transform: translateX(-10%);
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-with-image{
+        display: block;
+
+        &__image{
+            display: none;
+        }
+        &__content{
+            max-width: 100%;
+            transform: none;
+        }
+    }
+}

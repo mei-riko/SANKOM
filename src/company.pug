@@ -16,20 +16,21 @@ html(lang="ru")
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
+        include component/navigation/navbar.pug
         main
             //- Company
             section.content.container
                 .content__inside
-                    +banner('О компании Sankom', 'Сегодня продукция SANKOM с успехом продается в 86 странах мира, компания имеет 5 представительств, одно из которых в конце 2014 г. было открыто в Москве.', '', '')(class="banner_content-center b-lazy" dataSrc="./img/banner-1.jpg" dataSrcSmall="./img/bannerSmall.jpg")
-                    .row.justify-content-center.mt-4
-                        .col-8
+                    +banner('О компании Sankom', 'Сегодня продукция SANKOM с успехом продается в 86 странах мира, компания имеет 5 представительств, одно из которых в конце 2014 г. было открыто в Москве.', '', '')(class="banner_content-center b-lazy" dataSrc="./img/banner-2.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
+                    .row.justify-content-center.mt-4.mt-xs-2
+                        .col-8.col-xs-12
                             p Компания SANKOM Switzerland основана в 2003 году с центральным офисом в городе Далемнт кантона Юра в Швейцарии. С момента основания деятельность SANKOM была направлена на программы оздоровления и контроля веса.
                             p Тридцатилетний опыт ученых и докторов под руководством основателя компании, профессора, доктора медицинских наук Сержа Мазурика, работают над созданием инновационных продуктов в области контроля веса. За 30 лет были опубликованы десятки научных трудов, которые легли в основу серии собственных литературных изданий «Intuitive Nutrition» и были переведены на 17 языков, став бестселлерами. Инновационные разработки компании защищены патентами в 146 странах и удостоены международными сертификатами качества.
-                            .blockquote.mt-3
+                            .blockquote.mt-3.mt-xs-2
                                 .row.align-items-center
-                                    .col-2
+                                    .col-2.col-xs-12
                                         img(src="./icon/icon.svg" alt="" title="")
-                                    .col-10
+                                    .col-10.col-xs-12.mt-xs-2
                                         p «Белье SANKOM создает не только визуальный эффект, делая фигуру более стройной и привлекательной, но также создает отличный профилактический эффект.»
                                         p.text-grey — Meisha Johnson, Founder and Owner of Neema Fine Arts Gallery 
                     h4.text-center.mt-3.mb-2 Уникальные технологии и эко-материалы
@@ -48,7 +49,7 @@ html(lang="ru")
             aside.content.content_secondary.container
                 .content__inside
                     .row 
-                        .col-6
+                        .col-6.col-xs-12
                             .content-with-image
                                 .content-with-image__image
                                     img.img-fluid(src="./img/FAQ.jpg" title="" alt="")
@@ -67,7 +68,7 @@ html(lang="ru")
                                     +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-3.jpg")
                                 .col-6.col-sm-12.mt-2
                                     +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-4.jpg")
-                        .col-6
+                        .col-6.col-xs-12.mt-xs-2
                             .form-block.mb-2
                                 p.h4.mb-1 Персональные скидки и новости
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
@@ -81,9 +82,9 @@ html(lang="ru")
                                     .form__line.mt-2
                                         +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg')(class="bg-white")
-                            +faq('Подробнее о программе лояльности', './icon/faq.svg')(class="bg-white")
-                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg')(class="bg-white")
+                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug

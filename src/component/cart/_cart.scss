@@ -106,3 +106,44 @@
         padding-left: $spacer-gutter/2;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .cart{
+        &__steps{
+            &-item{
+                padding-right: $spacer/2;
+                margin-bottom: 8px;
+            }
+        }
+        &__block{
+            &-title{
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                margin-bottom: map-get($map: $spacers, $key: 2);
+            }
+            &-content{
+                flex: 0 0 100%;
+                max-width: 100%;
+    
+                padding-left: 0;
+            }
+        }
+        &__btn-group{
+            flex-wrap: wrap;
+        }
+        &__btn-prev{
+            flex: 0 0 100%;
+            max-width: 100%;
+    
+            padding-right: 0;
+            padding-bottom: $spacer-gutter/2;
+        }
+        &__btn-next{
+            flex: 0 0 100%;
+            max-width: 100%;
+            
+            padding-left: 0;
+        }
+    }
+}

@@ -57,14 +57,17 @@
     &_content-center{
         text-align: center;
         justify-content: center;
+        align-items: center;
     }
     &_content-left{
         text-align: left;
         justify-content: center;
+        align-items: flex-start;
     }
     &_content-right{
         text-align: left;
         justify-content: center;
+        align-items: flex-end;
     }
 
     &_inside{
@@ -103,4 +106,15 @@
             font-size: 28px;
         }
     }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .banner{
+        padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 2);
+        
+        &__title{
+            font-size: 22px;
+        }
+    }
+
 }

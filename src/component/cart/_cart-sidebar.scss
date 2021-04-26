@@ -35,3 +35,9 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .cart-sidebar{
+        padding: map-get($map: $spacers, $key: 1);
+    }
+}

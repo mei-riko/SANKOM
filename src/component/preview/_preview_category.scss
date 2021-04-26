@@ -12,3 +12,11 @@
         margin-bottom: 2px;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_category{
+        &__image{
+            margin-bottom: map-get($map: $spacers, $key: 1);
+        }
+    }
+}

@@ -59,13 +59,13 @@ mixin blogCol(title, intro, href)
             .tags.preview_blog-col__tags
                 block
 //- Items
-mixin faq(title, icon)
+mixin faq(title, icon, href)
     .faq(class!=attributes.class)
         if icon!=''
-            a.faq__title.faq__title_has-icon(href="#" class!=attributes.classTitle)!= title
+            a.faq__title.faq__title_has-icon(href=href class!=attributes.classTitle)!= title
                 img.faq__icon(src=icon)
         else
-            a.faq__title(href="#" class!=attributes.classTitle)!= title
+            a.faq__title(href=href class!=attributes.classTitle)!= title
         if block
             .faq__content
                 block
@@ -106,7 +106,8 @@ mixin product(title, newPrice, oldPrice, status, label, href)
                 .product__price-new= newPrice
             else
                 .product__price-new= newPrice
-        .product__label!= label
+        if label!=''
+            .product__label!= label
 mixin productSmall(title, newPrice, oldPrice, status, href)
     .product.product_small
         a.product_small__image(style!=attributes.style href=href title=title)
@@ -138,7 +139,7 @@ mixin productCart(title, newPrice, oldPrice, size, color, article, href)
             else
                 .product__price-new.product__price_single= newPrice
         .product_cart__input
-            input.input__field.input__field_number(placeholder=placeholder type="number" value="1")
+            input.product_cart__input-field.input__field.input__field_number(placeholder=placeholder type="number" value="1")
         .product_cart__delete
             button.product_cart__reset(type=reset)
                 svg.product__icon(width="13" height="14" viewBox="0 0 13 14" xmlns="http://www.w3.org/2000/svg")

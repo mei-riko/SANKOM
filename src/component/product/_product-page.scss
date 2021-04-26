@@ -23,7 +23,7 @@
         color: $grey-text;
         text-align: right;
 
-        flex: 0 0 140px;
+        flex: 0 0 100px;
         margin-bottom: 10px;
     }
     &__price{
@@ -76,6 +76,8 @@
         font-size: map-get($map: $font-size, $key: 'sm');
         font-weight: $font-weight-bold;
         line-height: $line-height-heading;
+
+        padding-right: 10px;
     }
     &__complect-article{
         font-size: 9px;
@@ -84,6 +86,7 @@
     }
     &__complect-table{
         flex-grow: 1;
+        padding-left: 10px;
     }
     
     // Product's Option
@@ -189,13 +192,15 @@
 
         display: grid;
         align-items: center;
+        width: 100%;
+        max-width: 100%;
 
         grid-gap: 5px;
         grid-template-areas: 
         "icon title"
         "icon content";
     
-        grid-template-columns: 45px 1fr;
+        grid-template-columns: 45px calc(100% - 45px);
 
         &-icon{
             padding-right: map-get($map: $spacers, $key: 1);
@@ -247,6 +252,7 @@
 
             &:nth-child(2n){
                 justify-content: flex-end;
+                text-align: right;
             }
         }
         &-icon{
@@ -283,5 +289,88 @@
     }
     &__col{
         padding: 0 $spacer;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .product-page{
+        // Simple Product Information
+        &__title{
+            flex: 0 0 calc(100% - 100px);
+            max-width: calc(100% - 100px);
+            margin-bottom: map-get($map: $spacers, $key: 2);
+        }
+        &__article{
+            flex: 0 0 100px;
+            max-width: 100px;
+            margin-bottom: map-get($map: $spacers, $key: 2);
+        }
+        &__price{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        &__cashback{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 0;
+
+            text-align: left;
+        }
+        &__order{
+            margin-bottom: map-get($map: $spacers, $key: 1);
+        }
+
+        // Complect Product Information
+        &__complect-table{
+            margin-top: 10px;
+        }
+
+        // Product's Option
+        &__option{
+            margin-top: map-get($map: $spacers, $key: 1);
+        }
+        &__size{
+            display: grid;
+            grid-gap: 6px;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+
+            &_has-default{
+                grid-template-columns: 100px repeat(auto-fit, minmax(60px, 1fr));
+            }
+        }
+
+        // Product Buttons
+        &__btns{
+            flex-wrap: wrap;
+        }
+        &__buy{
+            flex: 0 0 100%;
+            padding-right: 0;
+            padding-bottom: 10px;
+        }
+        &__quick-buy{
+            flex: 0 0 100%;
+            padding-left: 0;
+        }
+
+        // Blockquote
+        &__blockquote{
+            margin: map-get($map: $spacers, $key: 2) 0;
+        }
+
+        // Links
+        &__subinfo{
+            margin: map-get($map: $spacers, $key: 2) 0;
+        }
+        // Help INformation
+        &__help{
+            font-size: map-get($map: $font-size, $key: 'xs');
+        }
+
+        // Product Content Block
+        &__col{
+            padding: 0;
+        }
     }
 }

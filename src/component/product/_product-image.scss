@@ -22,3 +22,8 @@
     padding-right: $spacer/2;
 }
 
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .product-image_complect{
+        padding-right: 0;
+    }
+}

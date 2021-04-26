@@ -38,6 +38,8 @@
     &__title{
         font-size: map-get($map: $font-size, $key: sm);
         font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+        
         padding-left: $border-radius;
         margin-bottom: map-get($map: $spacers, $key: 0);
         color: $black;
@@ -58,6 +60,7 @@
     }
     &__link{
         font-size: map-get($map: $font-size, $key: sm);
+        line-height: 1.4;
         font-weight: $font-weight-bold;
         color: $action;
         text-decoration: underline;

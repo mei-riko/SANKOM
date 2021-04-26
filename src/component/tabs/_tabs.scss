@@ -55,3 +55,9 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .tabs{
+        padding-bottom: $spacer-gutter;
+    }
+}

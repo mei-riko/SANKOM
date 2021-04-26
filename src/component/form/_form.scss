@@ -58,3 +58,25 @@
         margin-top: 8px;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .form{
+        &__col{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &__line{
+            flex-wrap: wrap;
+    
+            &-input{
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+            &-btn{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

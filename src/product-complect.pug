@@ -16,6 +16,7 @@ html(lang="ru")
         script(src="./js/jquery.min.js")
         include component/mixin.pug
         include component/header/header.pug
+        include component/navigation/navbar.pug
         main
             //- Complect
             section.content.container
@@ -26,10 +27,10 @@ html(lang="ru")
                         li.breadcrumb__item 
                             a.breadcrumb__link(href="category-complect.html") Комплекты
                         li.breadcrumb__item.breadcrumb__item--active Classic база
-                    .row.mt-2
-                        .col-7
+                    .row.mt-2.mt-xs-1
+                        .col-7.col-xs-12
                             .row.no-gutters
-                                .col-6.product-slider.product-slider_block
+                                .col-6.product-slider.product-slider_complect.product-slider_block
                                     //- Product 1
                                     .slider-main.product-image.product-image_complect(data-nav="#product1" data-vertical="false" data-count="3")
                                         .product-image__item
@@ -54,7 +55,7 @@ html(lang="ru")
                                             img.img-fluid(src="./img/slider-3.jpg")
                                         .product-nav_complect__item
                                             img.img-fluid(src="./img/slider-4.jpg")
-                                .col-6.product-slider.product-slider_block
+                                .col-6.product-slider.product-slider_complect.product-slider_block
                                     //- Product 2
                                     .slider-main.product-image.product-image_complect(data-nav="#product2" data-vertical="false" data-count="3")
                                         .product-image__item
@@ -69,7 +70,7 @@ html(lang="ru")
                                             img.img-fluid(src="./img/slider-2.jpg")
                                         .product-nav_complect__item
                                             img.img-fluid(src="./img/slider-3.jpg")
-                        .col-5
+                        .col-5.col-xs-12
                             .product-page.pt-2
                                 //- Основное о товаре
                                 h1.product-page__title.product-page__title_complect Комплект «Classic база»
@@ -89,9 +90,8 @@ html(lang="ru")
                                 .hr.mt-2
                                 //- Вариации товара
                                 .product-page__option.product-page__option_complect
-                                    .product-page__complect-title
-                                        span.text-bold.text-smaller Бюстгальтер Classic Black Bra 
-                                        span.text-grey.text-small SAN-071CWH
+                                    .product-page__complect-title Бюстгальтер Classic Black Bra 
+                                    .product-page__complect-article SAN-071CWH
                                     .product-page__complect-table.text-right
                                         a.table-size(href="javascript:;" data-fancybox data-src="#tableSize")
                                             svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -120,9 +120,8 @@ html(lang="ru")
                                             input.product-page__size-input(type="radio" id="size7" name="size")
                                             label.product-page__size-label(for="size7") L-XL
                                 .product-page__option.product-page__option_complect
-                                    .product-page__complect-title
-                                        span.text-bold.text-smaller Леггинсы Black&Silver 
-                                        span.text-grey.text-small SAN-071CWH
+                                    .product-page__complect-title Леггинсы Black&Silver 
+                                    .product-page__complect-article SAN-071CWH
                                     .product-page__complect-table.text-right
                                         a.table-size(href="javascript:;" data-fancybox data-src="#tableSize")
                                             svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -224,31 +223,53 @@ html(lang="ru")
                                     a.text-underline(href="#") Напишите нам
             section.content.content_secondary.container.product-page
                 .content__inside.product-page__content
-                    .row.product-page__row
-                        .col-7.product-page__col
-                            p.text-smaller.text-spacer.text-bolder.text-uppercase Описание товара
-                            p 
-                                span.text-bold Эффективность: 
-                                | профилактика искривления позвоночника, предотвращает развитие сутулости, препятствует болям в спине, профилактика остеохондроза, не сковывает движения, микромассажный эффект
-                            p Placerat nulla amet ullamcorper turpis sit. Facilisis duis montes, viverra lorem rhoncus blandit. Semper vitae imperdiet pretium, et proin commodo. Sed tellus sollicitudin sed sociis. 
-                            p.d-none(data-content="moreInfo") At odio neque vestibulum nec quisque. Mauris, rhoncus gravida et tincidunt amet, sem pharetra, lobortis. Imperdiet convallis ultricies leo sit. A varius curabitur lorem purus consequat, sapien diam. Viverra duis urna mauris sed nunc, neque nisi. Eget eleifend in magna diam ridiculus a proin. Enim orci quis justo, pulvinar risus. 
-                                | Condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
-                                | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
-                            p
-                                a.text-bolder.text-underline.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
-                        .col-5.product-page__col
-                            p.text-smaller.text-spacer.text-bolder.text-uppercase Коллекция Sankom classic
-                            p Оригинальный бюстгальтер SANKOM продается только на нашем сайте.
-                            .slider.slider_video.owl-carousel.owl-theme
-                                .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
-                                        img.img-fluid(src="./img/prev-1.jpg")
-                                .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
-                                        img.img-fluid(src="./img/prev-2.jpg")
-                                .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
-                                        img.img-fluid(src="./img/prev-1.jpg")
+                    .mb-2.tabs.d-flex
+                        .tabs__item.tabs__item--active(data-content="#product1") Classic Black Bra
+                        .tabs__item(data-content="#product2") Black&Silver
+                    .tabs-content.tabs-content--active#product1
+                        .row.product-page__row
+                            .col-7.col-xs-12.mb-xs-2.product-page__col
+                                p.text-smaller.text-spacer.text-bolder.text-uppercase Описание товара
+                                p 
+                                    span.text-bold Эффективность: 
+                                    | профилактика искривления позвоночника, предотвращает развитие сутулости, препятствует болям в спине, профилактика остеохондроза, не сковывает движения, микромассажный эффект
+                                p Placerat nulla amet ullamcorper turpis sit. Facilisis duis montes, viverra lorem rhoncus blandit. Semper vitae imperdiet pretium, et proin commodo. Sed tellus sollicitudin sed sociis. 
+                                p.d-none(data-content="moreInfo") At odio neque vestibulum nec quisque. Mauris, rhoncus gravida et tincidunt amet, sem pharetra, lobortis. Imperdiet convallis ultricies leo sit. A varius curabitur lorem purus consequat, sapien diam. Viverra duis urna mauris sed nunc, neque nisi. Eget eleifend in magna diam ridiculus a proin. Enim orci quis justo, pulvinar risus. 
+                                    | Condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+                                    | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
+                                p
+                                    a.text-bolder.text-underline.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
+                            .col-5.col-xs-12.product-page__col
+                                p.text-smaller.text-spacer.text-bolder.text-uppercase Коллекция Sankom classic
+                                p Оригинальный бюстгальтер SANKOM продается только на нашем сайте.
+                                .slider.slider_video.owl-carousel.owl-theme
+                                    .slider__item.slider_video__item
+                                        a(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                            img.img-fluid(src="./img/prev-1.jpg")
+                                    .slider__item.slider_video__item
+                                        a(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
+                                            img.img-fluid(src="./img/prev-2.jpg")
+                                    .slider__item.slider_video__item
+                                        a(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
+                                            img.img-fluid(src="./img/prev-1.jpg")
+                    .tabs-content#product2
+                        .row.product-page__row
+                            .col-7.col-xs-12.mb-xs-2.product-page__col
+                                p.text-smaller.text-spacer.text-bolder.text-uppercase Описание товара
+                                p Placerat nulla amet ullamcorper turpis sit. Facilisis duis montes, viverra lorem rhoncus blandit. Semper vitae imperdiet pretium, et proin commodo. Sed tellus sollicitudin sed sociis. 
+                            .col-5.col-xs-12.product-page__col
+                                p.text-smaller.text-spacer.text-bolder.text-uppercase Коллекция Sankom classic
+                                p Оригинальный бюстгальтер SANKOM продается только на нашем сайте.
+                                .slider.slider_video.owl-carousel.owl-theme
+                                    .slider__item.slider_video__item
+                                        a(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                            img.img-fluid(src="./img/prev-1.jpg")
+                                    .slider__item.slider_video__item
+                                        a(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
+                                            img.img-fluid(src="./img/prev-2.jpg")
+                                    .slider__item.slider_video__item
+                                        a(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
+                                            img.img-fluid(src="./img/prev-1.jpg")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug

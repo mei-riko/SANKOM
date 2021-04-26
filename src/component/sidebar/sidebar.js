@@ -13,7 +13,8 @@ function openSidebarOnClick( elem ){
     }
 }
 
-$('[data-sidebar]').on('click', function(){
+$('[data-sidebar]').on('click', function( event ){
+    event.preventDefault();
     openSidebarOnClick( $(this) );
 });
 

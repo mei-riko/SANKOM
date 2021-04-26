@@ -1,0 +1,123 @@
+.navbar_mobile{
+    display: block;
+
+    &__title{
+        font-size: map-get($map: $font-size, $key: "xs");
+        font-weight: $font-weight-bold;
+        color: darken($color: $body-bg, $amount: 12);
+        text-transform: uppercase;
+        padding: 0 $spacer-gutter;
+
+        margin: $spacer 0 8px;
+
+        &:first-of-type{
+            margin-top: 0;
+        }
+    }
+    &__parent{
+        position: relative;
+        background-color: $light-bg;
+        margin-bottom: 2px;
+
+        &-link{
+            width: 100%;
+            padding: 0 $spacer-gutter;
+            padding-right: $spacer;
+            line-height: $spacer;
+        }
+        &-icon{
+            width: $spacer;
+            height: $spacer;
+            text-align: center;
+            background: $body-bg;
+
+            font-size: 24px;
+            line-height: $spacer;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__children{
+        display: none;
+
+        &-title{
+            display: block;
+            padding: 5px $spacer-gutter;
+            background: $body-bg;
+            margin-bottom: 2px;
+
+            // text-transform: uppercase;
+            font-weight: $font-weight-bold;
+
+            &_link{
+                display: flex;
+                align-items: center;
+                
+                &:before{
+                    content: '';
+                    display: inline-block;
+
+                    width: 20px;
+                    height: 12px;
+                    background: url('../icon/arrow-right.svg') no-repeat left center / 6px;
+                }
+            }
+
+            &:first-of-type{
+                margin-top: 2px;
+            }
+        }
+        &-item{
+            background: lighten($color: $body-bg, $amount: 2);
+
+            line-height: 1.4;
+            
+            padding: 8px $spacer-gutter;
+            margin-bottom: 2px;
+
+            display: flex;
+            align-items: center;
+            
+            &:before{
+                content: '';
+                display: inline-block;
+
+                width: 20px;
+                height: 12px;
+                background: url('../icon/arrow-right.svg') no-repeat left center / 6px;
+            }
+        }
+    }
+    &__link{
+        display: block;
+        background-color: $light-bg;
+        padding: 0 $spacer-gutter;
+        line-height: $spacer;
+        margin-bottom: 2px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__icon{
+        width: 16px;
+        margin-right: 10px;
+        fill: $black;
+    }
+    &__sublink{
+        display: block;
+        padding: 0 $spacer-gutter;
+        line-height: $spacer;
+        margin-bottom: 2px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
