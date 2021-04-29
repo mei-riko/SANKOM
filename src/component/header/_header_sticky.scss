@@ -1,0 +1,30 @@
+.header_sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+
+    background: $white;
+    border-bottom: 1px solid $border-color;
+
+    transform: translateY(-60px);
+    transition: .6s;
+
+    &__main{
+        padding: 6px 0;
+        height: 50px;
+    }
+
+    &--active{
+        transform: translateY(0);
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .header_sticky{
+        display: none;
+        position: unset;
+        z-index: 0;
+    }
+}

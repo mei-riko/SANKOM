@@ -107,7 +107,10 @@
                 }
             }
         }
-
+        .owl-nav.disabled+.owl-dots{
+            margin-top: map-get($map: $spacers, $key: 2);
+        }
+        
         &:hover, &:focus{
             outline: none;
             .owl-nav{

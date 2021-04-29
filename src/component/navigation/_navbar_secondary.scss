@@ -3,6 +3,7 @@
     line-height: $line-height-heading;
 
     &__sep{
+        color: $border-color;
         padding: 0 10px;
     }
     &__item{

@@ -28,7 +28,7 @@ html(lang="ru")
                         .slider__item
                             +banner('Только эко-материалы', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', 'Коллекции 2021', 'catalog.html')(class="banner_content-center" classIntro="banner__intro_center" dataSrc="./img/banner-1.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
                     //- Category In Catalog
-                    .row.align-items-center.mt-3.mb-2
+                    .row.align-items-center.mt-3.mb-2.mt-sm-2
                         .col-8.col-xs-6
                             h2.content__block-title.mb-0 SHOP BY CATEGORY
                         .col-4.col-xs-6.text-right
@@ -48,80 +48,77 @@ html(lang="ru")
                             .slider__item
                                 +subcategory('Носки', '', 'category.html')(dataSrc='./img/advantage-1.jpg')
                     //- Slider Tags
-                    h3.content__block-title.mt-3.mb-0 HEALTH, SPORT & BEAUTY
-                    .mt-1.mb-2.mb-xs-1.tabs.d-flex
-                        .tabs__item.tabs__item--active(data-content="#tabBeauty") Коррекция и красота
-                        .tabs__item(data-content="#tabHealth") Забота о здоровье
-                        .tabs__item(data-content="#tabSport") Спорт и lifestyle
-                    .tabs-content.tabs-content_has-slider.tabs-content--show.tabs-content--active#tabBeauty
-                        .slider-container
-                            .slider.slider_tags.owl-carousel.owl-theme
-                                .slider__item
-                                    +sliderTags('Моделирующий эффект','category-tags.html')(dataSrc="./img/product-1.jpg")
-                                .slider__item
-                                    +sliderTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
-                                .slider__item
-                                    +sliderTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
-                                .slider__item
-                                    +sliderTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
-                                .slider__item
-                                    +sliderTags('Сильная степень утяжки','category-tags.html')(dataSrc="./img/product-5.jpg")
-                                .slider__item
-                                    +sliderTags('Обычная степень утяжки','category-tags.html')(dataSrc="./img/product-1.jpg")
-                                .slider__item
-                                    +sliderTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
-                                .slider__item
-                                    +sliderTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
-                                .slider__item
-                                    +sliderTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
-                                .slider__item
-                                    +sliderTags('На каждый день','category-tags.html')(dataSrc="./img/product-5.jpg")
-                                .slider__item
-                                    +sliderTags('Для спорта','category-tags.html')(dataSrc="./img/product-1.jpg")
-                                .slider__item
-                                    +sliderTags('Для бега','category-tags.html')(dataSrc="./img/product-2.jpg")
-                    .tabs-content.tabs-content_has-slider#tabHealth
-                        .slider-container
-                            .slider.slider_tags.owl-carousel.owl-theme
-                                .slider__item
-                                    +sliderTags('Моделирующий эффект','category-tags.html')(dataSrc="./img/product-1.jpg")
-                                .slider__item
-                                    +sliderTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
-                                .slider__item
-                                    +sliderTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
-                                .slider__item
-                                    +sliderTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
-                                .slider__item
-                                    +sliderTags('Сильная степень утяжки','category-tags.html')(dataSrc="./img/product-5.jpg")
-                                .slider__item
-                                    +sliderTags('Обычная степень утяжки','category-tags.html')(dataSrc="./img/product-1.jpg")
-                                .slider__item
-                                    +sliderTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
-                                .slider__item
-                                    +sliderTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
-                                .slider__item
-                                    +sliderTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
-                    .tabs-content.tabs-content_has-slider#tabSport
-                        .slider-container
-                            .slider.slider_tags.owl-carousel.owl-theme
-                                .slider__item
-                                    +sliderTags('Моделирующий эффект','category-tags.html')(dataSrc="./img/product-1.jpg")
-                                .slider__item
-                                    +sliderTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
-                                .slider__item
-                                    +sliderTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
-                                .slider__item
-                                    +sliderTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
-                                .slider__item
-                                    +sliderTags('Сильная степень утяжки','category-tags.html')(dataSrc="./img/product-5.jpg")
-                                .slider__item
-                                    +sliderTags('Обычная степень утяжки','category-tags.html')(dataSrc="./img/product-1.jpg")
-                                .slider__item
-                                    +sliderTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
-                                .slider__item
-                                    +sliderTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
-                                .slider__item
-                                    +sliderTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
+                    h3.content__block-title.mt-3.mb-2 HEALTH, SPORT & BEAUTY
+                    .tabs-container.mb-2
+                        .mb-2.mb-xs-1.tabs.d-flex
+                            .tabs__item.tabs__item--active(data-content="#tabBeauty") Красота и коррекция
+                            .tabs__item(data-content="#tabHealth") Забота о здоровье
+                            .tabs__item(data-content="#tabSport") Спорт и lifestyle
+                        .tabs-content.tabs-content_has-slider.tabs-content--show.tabs-content--active#tabBeauty
+                            .slider-container
+                                .slider.slider_tags.owl-carousel.owl-theme
+                                    .slider__item
+                                        +sliderTags('Моделирующий эффект','category-tags.html')(dataSrc="./img/product-1.jpg")
+                                    .slider__item
+                                        +sliderTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
+                                    .slider__item
+                                        +sliderTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
+                                    .slider__item
+                                        +sliderTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
+                                    .slider__item
+                                        +sliderTags('Сильная степень утяжки','category-tags.html')(dataSrc="./img/product-5.jpg")
+                                    .slider__item
+                                        +sliderTags('Обычная степень утяжки','category-tags.html')(dataSrc="./img/product-1.jpg")
+                                    .slider__item
+                                        +sliderTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
+                                    .slider__item
+                                        +sliderTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
+                                    .slider__item
+                                        +sliderTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
+                                    .slider__item
+                                        +sliderTags('На каждый день','category-tags.html')(dataSrc="./img/product-5.jpg")
+                                    .slider__item
+                                        +sliderTags('Для спорта','category-tags.html')(dataSrc="./img/product-1.jpg")
+                                    .slider__item
+                                        +sliderTags('Для бега','category-tags.html')(dataSrc="./img/product-2.jpg")
+                        .tabs-content.tabs-content_has-slider#tabHealth
+                            .slider-container
+                                .slider.slider_tags.owl-carousel.owl-theme
+                                    .slider__item
+                                        +sliderTags('Моделирующий эффект','category-tags.html')(dataSrc="./img/product-1.jpg")
+                                    .slider__item
+                                        +sliderTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
+                                    .slider__item
+                                        +sliderTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
+                                    .slider__item
+                                        +sliderTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
+                                    .slider__item
+                                        +sliderTags('Сильная степень утяжки','category-tags.html')(dataSrc="./img/product-5.jpg")
+                                    .slider__item
+                                        +sliderTags('Обычная степень утяжки','category-tags.html')(dataSrc="./img/product-1.jpg")
+                                    .slider__item
+                                        +sliderTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
+                                    .slider__item
+                                        +sliderTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
+                                    .slider__item
+                                        +sliderTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
+                        .tabs-content.tabs-content_has-slider#tabSport
+                            .slider-container
+                                .slider.slider_tags.owl-carousel.owl-theme
+                                    .slider__item
+                                        +sliderTags('Моделирующий эффект','category-tags.html')(dataSrc="./img/product-1.jpg")
+                                    .slider__item
+                                        +sliderTags('Возрастные изменения','category-tags.html')(dataSrc="./img/product-2.jpg")
+                                    .slider__item
+                                        +sliderTags('Под платье','category-tags.html')(dataSrc="./img/product-3.jpg")
+                                    .slider__item
+                                        +sliderTags('Антицеллюлитный эффект','category-tags.html')(dataSrc="./img/product-4.jpg")
+                                    .slider__item
+                                        +sliderTags('Убрать бока','category-tags.html')(dataSrc="./img/product-2.jpg")
+                                    .slider__item
+                                        +sliderTags('Убрать живот','category-tags.html')(dataSrc="./img/product-3.jpg")
+                                    .slider__item
+                                        +sliderTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
             //- Category
             section.content.content_secondary.container
                 include component/preview/categoryPreview.pug
@@ -129,11 +126,11 @@ html(lang="ru")
             section.content.container
                 .content__inside
                     //- Blog Promo Pages 
-                    .row.align-items-center.mb-2
-                        .col-10.col-xs-12
+                    .row.align-items-center.mt-2.mb-2
+                        .col-10.col-xs-6
                             h4.content__block-title.text-uppercase #BLOG_SANKOM
-                        .col-2.d-xs-none.text-right
-                            +btn('blog.html', 'Перейти в блог')
+                        .col-2.col-xs-6.text-right
+                            +btn('blog.html', 'Перейти в блог')(class="btn_secondary")
                     .slider-container
                         .slider.slider_promo.owl-carousel.owl-theme
                             .slider__item
@@ -146,13 +143,11 @@ html(lang="ru")
                                 +promo('Особенности алоэ вера', 'text.html')(dataSrc="./img/image-2.jpg")  
                             .slider__item
                                 +promo('Об экологичности материалов', 'text.html')(dataSrc="./img/image-1.jpg")              
-                    .d-none.d-xs-block.mt-xs-2
-                        +btn('blog.html', 'Перейти в блог')
                     //- Products
                     .row.align-items-center.mt-4.mb-2.mt-xs-3
-                        .col-10.col-xs-12
+                        .col-10.col-xs-6
                             h4.content__block-title.text-uppercase Выбор наших покупателей
-                        .col-2.d-xs-none.text-right
+                        .col-2.col-xs-6.text-right
                             +btn('category.html', 'Новинки SANKOM')(class="btn_action")
                     .product-grid.product-grid_lg
                         +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', '', 'product.html')(dataSrc='./img/product-1.jpg' dataSrcHover='./img/product-6.jpg')
@@ -165,17 +160,16 @@ html(lang="ru")
                         +productSmall('Shaper Bamboo', '2 459 руб.', '', '', 'product.html')(style="background-image:url('./img/product-2.jpg');")
                         +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('./img/product-3.jpg');")
                         +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('./img/product-4.jpg');")
-                    .d-none.d-xs-block.mt-xs-2
-                        +btn('category.html', 'Новинки SANKOM')(class="btn_action")
                     //- Small Banner
                     .mt-3.mt-xs-2
-                        .banner-promo 
-                            .banner-promo__content ЗАХОДИ ЗНАКОМИТЬСЯ В INSTAGRAM 
+                        .banner-promo
+                            .banner-promo__title Хочешь знать больше?
+                            .banner-promo__content Заходи знакомиться в Instagram 
                                 a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
-                            a.btn.btn_inverse.btn--small(href="#") Подписаться
+                            a.btn.btn_inverse.banner-promo__btn(href="#") Подписаться
             aside.content.content_secondary.container
                 .content__inside
-                    .row 
+                    .row.mt-2.mb-2
                         .col-6.col-xs-12
                             .content-with-image
                                 .content-with-image__image
@@ -196,7 +190,7 @@ html(lang="ru")
                                 .col-6.col-sm-12.mt-2
                                     +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-4.jpg")
                         .col-6.col-xs-12.mt-xs-2
-                            .form-block.mb-2
+                            .form-block.mb-2.d-xs-none
                                 p.h4.mb-1 Персональные скидки и новости
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
                                 form.form(action="")
@@ -209,9 +203,9 @@ html(lang="ru")
                                     .form__line.mt-2
                                         +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                            +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg')(class="bg-white")
-                            +faq('Подробнее о программе лояльности', '/icon/faq.svg')(class="bg-white")
-                            +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg')(class="bg-white")
+                            +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Подробнее о программе лояльности', '/icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg', 'faq.html')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug

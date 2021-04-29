@@ -42,7 +42,7 @@
         &:hover, &:focus{
             color: $black;
             text-decoration: none;
-            background-color: $light-bg;
+            background-color: $lightest-bg;
         }
     }
 
@@ -83,7 +83,7 @@
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content{
         &__block-title{
-            font-size: 18px;
+            font-size: 17px;
         }
 
         // Modificate

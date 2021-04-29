@@ -137,7 +137,7 @@ table{
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 99;
+    z-index: 89;
 
     background: rgba(0,0,0,.4);
 
@@ -246,6 +246,7 @@ blockquote, .blockquote{
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     html,body {
+        background-color: $white;
         font-size: map-get($font-size, 'sm');
     }
     .text-lead,.lead{font-size: map-get($map: $font-size, $key: 'md');}

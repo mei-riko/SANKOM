@@ -43,32 +43,38 @@
 .sidebar#callback
     .sidebar__close Закрыть
     .sidebar__content
-        .mb-2.tabs.d-flex
-            .tabs__item.tabs__item--active(data-content="#tel") Заказать звонок
-            .tabs__item(data-content="#mail") Задать вопрос
-        .tabs-content.tabs-content--active#tel
-            form.form(action="")
-                +input('', 'Ваше имя *')(class="input_column mb-1" type="text" label="input__label_top" field="input__field--full")
-                +input('', 'Телефон *')(class="input_column mb-1" type="text" label="input__label_top" field="input__field--full")
-                .label Тема звонка
-                +radio('radioTheme1', 'Помощь в выборе размера','contactTheme','checked')
-                +radio('radioTheme2', 'Помощь в оформлении заказа','contactTheme')
-                +radio('radioTheme3', 'Вопрос по доставке или возврату','contactTheme')
-                +radio('radioTheme4', 'Другое','contactTheme')
-                +btn('', 'Жду звонка')(class="mt-2 btn_action btn--full")
-        .tabs-content#mail
-            form.form(action="")
-                +input('', 'Ваше имя *')(class="input_column mb-1" type="text" label="input__label_top" field="input__field--full")
-                +textarea('Пишите здесь...', 'Сообщение *')(class="input_column mb-1" label="input__label_top" field="input__field--full")
-                .label Как вам ответить?
-                .form__col#sidebarCallbackEmail
-                    +radio('radioType1', 'На e-mail','contactType','checked')
-                .form__col#sidebarCallbackTel
-                    +radio('radioType2', 'По телефону','contactType')
-                .form__offset-group
-                    +input('', 'E-mail')(label="input__label_inside" class="input--full input_label-inside" field="input__field--full",'checked')
-                    +input('', 'Телефон')(label="input__label_inside" class="input--full input_label-inside d-none" field="input__field--full")
-                +btn('', 'Отправить сообщение')(class="mt-2 btn_action btn--full")
+        .tabs-container
+            .mb-2.tabs.d-flex
+                .tabs__item.tabs__item--active(data-content="#tel") Заказать звонок
+                .tabs__item(data-content="#mail") Задать вопрос
+            .tabs-content.tabs-content--active#tel
+                form.form(action="")
+                    +input('', 'Ваше имя *')(label="input__label_inside" class="input--full input_label-inside mb-1" field="input__field--full")
+                    +input('', 'Телефон *')(label="input__label_inside" class="input--full input_label-inside mb-1" field="input__field--full")
+                    .label Тема звонка
+                    +radio('radioTheme1', 'Помощь в выборе размера','contactTheme','checked')
+                    +radio('radioTheme2', 'Помощь в оформлении заказа','contactTheme')
+                    +radio('radioTheme3', 'Вопрос по доставке или возврату','contactTheme')
+                    +radio('radioTheme4', 'Другое','contactTheme')
+                    +btn('', 'Жду звонка')(class="mt-2 btn_action btn--full")
+            .tabs-content#mail
+                form.form(action="")
+                    +input('', 'Ваше имя *')(label="input__label_inside" class="input--full input_label-inside mb-1" field="input__field--full")
+                    +textarea('', 'Сообщение *')(label="input__label_inside" class="input--full input_label-inside mb-1" field="input__field--full")
+                    //- +textarea('Пишите здесь...', 'Сообщение *')(label="input__label_top" class="input_column mb-1" field="input__field--full")
+                    .label Как вам ответить?
+                    .form__col#sidebarCallbackEmail
+                        +radio('radioType1', 'На e-mail','contactType','checked')
+                    .form__col#sidebarCallbackTel
+                        +radio('radioType2', 'По телефону','contactType')
+                    .form__col#sidebarCallbackWA
+                        +radio('radioType3', 'WhatsApp','contactType')
+                    .form__col#sidebarCallbackTelegram
+                        +radio('radioType4', 'Telegram','contactType')
+                    .form__offset-group
+                        +input('', 'E-mail')(label="input__label_inside" class="input--full input_label-inside" field="input__field--full")
+                        +input('', 'Телефон')(label="input__label_inside" class="input--full input_label-inside d-none" field="input__field--full")
+                    +btn('', 'Отправить сообщение')(class="mt-2 btn_action btn--full")
     .sidebar__secondary.sidebar__networks
         .sidebar__networks-item
             a.networks(href="#")

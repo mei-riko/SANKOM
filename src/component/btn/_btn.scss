@@ -10,11 +10,11 @@
     text-align: center;
 
     color: $body-color;
-    background-color: inherit;
-    padding: 10px 20px;
+    background-color: $body-bg;
+    padding: 10px;
 
     border-radius: $border-radius/2;
-    border: 1px solid $grey;
+    border: 1px solid $border-color;
     min-width: 160px;
     max-width: 100%;
 
@@ -58,15 +58,16 @@
         align-items: center;
         justify-content: center;
     }
+    &--disabled{
+        filter: opacity(0.5);
+        cursor: not-allowed;
+    }
 }
 
-.btn-group{
-
-    display: grid;
-    grid-gap: $grid-gutter-width/4;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .btn{
-        min-width: auto;
+        // font-size: map-get($map: $font-size, $key: 'xs');
+        // padding: 6px 10px;
+        min-width: 1px;
     }
 }

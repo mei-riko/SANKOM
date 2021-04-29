@@ -65,11 +65,13 @@
         }
         &_inside{
             position: absolute;
-            top: 50%;
+            top: 20px;
             left: 15px;
             transform: translateY(-50%);
 
             font-size: map-get($map: $font-size, $key: md);
+            line-height: 20px;
+
             color: $grey;
             transition: all ease .2s;
         }

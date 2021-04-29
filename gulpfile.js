@@ -20,7 +20,7 @@ var gulp = require("gulp"),
         baseDir: './public',
       },
       host: "192.168.100.6",
-      // port: 8080,
+      port: 8080,
     })
   });
   

@@ -1,6 +1,6 @@
 .slider_subcategory{
     &:not(.owl-loaded){
-        grid-gap: $grid-gutter-width/2;
+        grid-gap: $spacer-gutter;
         grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 }
@@ -8,7 +8,7 @@
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .slider_subcategory{
         &:not(.owl-loaded){
-            grid-gap: $grid-gutter-width/2;
+            grid-gap: $spacer-gutter;
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }

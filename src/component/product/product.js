@@ -1,8 +1,12 @@
 import $ from 'jquery';
-// import {sliderInitialized} from '../slider/slider';
 
+// Quick Buy Block
+$('#quickBuy').on('click', function(){ $('#quickBlock').slideToggle(); });
+
+// Height Nav Block
 $(function(){
   if( $('.product-nav .product-nav__image').length > 0 ){
+
     let heightMain = $('.product-image .product-image__link').height();
     let navCount =  typeof $('.product-image').data('count') !== undefined ? $('.product-image').data('count') : 2;
     let navOffset = typeof $('.product-image').data('offset') !== undefined ? $('.product-image').data('offset') : 25;
@@ -18,11 +22,11 @@ $(function(){
 // Sliders Vertical
 if( $('.slider-main').length > 0 ){
   $('.slider-main').each(function(){
-    let sliderMain = $(this);
-    let sliderNav = sliderMain.closest('.product-slider').find('.product-nav');
-    let sliderNavId = sliderMain.data('nav');
-    let sliderNavOrientation = sliderMain.data('vertical');
-    let sliderNavCount = sliderMain.data('count');
+    let sliderMain            = $(this);
+    let sliderNav             = sliderMain.closest('.product-slider').find('.product-nav');
+    let sliderNavId           = sliderMain.data('nav');
+    let sliderNavOrientation  = sliderMain.data('vertical');
+    let sliderNavCount        = sliderMain.data('count');
 
     // console.log( sliderNavId + "::" + sliderNavOrientation );
 
@@ -44,22 +48,10 @@ if( $('.slider-main').length > 0 ){
       vertical: sliderNavOrientation,
       verticalSwiping: sliderNavOrientation,
       centerMode: sliderNavOrientation,
-      responsive: [
-        {
-          breakpoint: 420,
-          settings: {
-            slidesToShow: 2,
-            vertical: false,
-            verticalSwiping: false,
-            centerMode: false,
-          }
-        }
-      ],
+      responsive: sliderResponsive,
     });
   });
 }
-// Quick Buy Block
-$('#quickBuy').on('click', function(){ $('#quickBlock').slideToggle(); });
 
 $(window).on('resize', function(){
   let heightMain = $('.product-image .product-image__link').height();

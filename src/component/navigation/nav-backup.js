@@ -23,15 +23,29 @@ function navbarUnHover(){
 }
 // Mobile Navbar
 function openNavbarOnClick( elem ){
-    const idNavbar = elem.data('navbar');
-    const target = $('.navbar-sidebar#' + idNavbar);
+    const idSidebar = elem.data('id');
+    const navSidebar = elem.data('sidenav');
 
-    console.log( idNavbar + "  " + target );
+    const target = $('.sidebar#' + idSidebar);
+    const targetNavbar = $('.navbar_mobile .navbar_mobile__parent[data-nav="' + navSidebar +'"]');
+
+    let parentActive = $('.navbar_mobile .navbar_mobile__parent.navbar_mobile__parent--active');
 
     if ( target.length > 0 ){
-        target.addClass('navbar-sidebar--active');
+        target.addClass('sidebar--active');
         $('.overlay').removeClass('overlay--disable');
         $('body').addClass('hidden');
+
+        if( targetNavbar.length > 0 && !targetNavbar.hasClass('navbar_mobile__parent--active')){
+            targetNavbar.addClass('navbar_mobile__parent--active');
+            targetNavbar.find('.navbar_mobile__children').addClass('navbar_mobile__children--active');
+            targetNavbar.find('.navbar_mobile__children').show();
+                
+            if( parentActive.length > 0 && targetNavbar !=  parentActive){
+                parentActive.removeClass('navbar_mobile__parent--active');
+                parentActive.find('.navbar_mobile__children').hide();
+            }
+        }
     } else{
         return null;
     }
@@ -62,17 +76,9 @@ $(function(){
         });
 
     // Mobile Sidebar Nav Show
-    $('[data-navbar]').on('click', function( event ){
+    $('[data-sidenav]').on('click', function( event ){
         event.preventDefault();
-        if( !$(this).hasClass('navbar-mobile__item--active') ){
-            openNavbarOnClick( $(this) );
-            $(this).addClass('navbar-mobile__item--active');
-        }else{
-            $(this).removeClass('navbar-mobile__item--active');
-            $(".navbar-sidebar").removeClass("navbar-sidebar--active");
-            $('.overlay').addClass('overlay--disable');
-            $('body').removeClass('hidden');
-        }
+        openNavbarOnClick( $(this) );
     });
     // Mobile Nav Open Children
     $('.navbar_mobile .navbar_mobile__parent .navbar_mobile__parent-icon').on('click', function(){
@@ -105,9 +111,9 @@ $(function(){
 $(window).on("resize", function(){
     if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
         // Hide Navigation Sidebar on Desktop
-        $(".navbar-sidebar").removeClass("navbar-sidebar--active");
+        $(".sidebar.sidebar_nav").removeClass("sidebar--active");
         $('.overlay').addClass('overlay--disable');
-        $('body').removeClass('hidden');
+        $('body').removeClass('hidden')
         // Hide 
         const navbarActive = $(".navbar_mobile .navbar_mobile__parent.navbar_mobile__parent--active");
         navbarActive.find('.navbar_mobile__children').hide();
@@ -118,19 +124,5 @@ $(window).on("resize", function(){
     }else{
         // Remove Class
         $(".navbar").removeClass("navbar--desktop").addClass("navbar--mobile");
-    }
-});
-
-// Cобытие клика по веб-документу
-$(document).on('mouseup', function (e){ 
-    let navbarActive = $(".navbar-sidebar.navbar-sidebar--active"); // элемент
-    let navbarItem = $(".navbar-mobile .navbar-mobile__item");
-    if (!navbarActive.is(e.target) // клик был не по блоку
-          && navbarActive.has(e.target).length === 0 // и не по его дочерним элементам
-          && !navbarItem.is(e.target)
-    ) { 
-        navbarActive.removeClass('navbar-sidebar--active');
-        $('.overlay').addClass('overlay--disable');
-        $('body').removeClass('hidden')
     }
 });

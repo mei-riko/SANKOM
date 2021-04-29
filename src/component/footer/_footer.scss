@@ -36,6 +36,14 @@
                 filter: opacity(1);
             }
         }
+        &-title{
+            display: none;
+
+            font-weight: $font-weight-bolder;
+            text-transform: uppercase;
+            margin-right: map-get($map: $spacers, $key: 1);
+            color: $grey;
+        }
     }
     &__information{
         display: flex;
@@ -49,38 +57,50 @@
 
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .footer{
+        border-top: 1px solid $border-color;
         padding: map-get($map: $spacers, $key: 2) $spacer-gutter map-get($map: $spacers, $key: 4);
 
         &__col-nav{
             order: 1;
-            margin-bottom: $spacer-gutter;
+            margin-bottom: 0;
+            padding-bottom: map-get($map: $spacers, $key: 2);
         }
-        
-        &__col-info{
-            order: 2;
-            margin-bottom: $spacer-gutter;
+        &__nav{
+            justify-content: center;
         }
-        &__information{
-            justify-content: flex-start;
-        }
-        &__copyright{
-            margin-right: 0;
-            margin-bottom: $spacer-gutter/3;
-        }
-
-        &__col-network{
-            order: 3;
-        }
-        &__network{
-            justify-content: flex-start;
-        }        
-
         &__nav-item{
             text-decoration: underline;
+            margin: 5px 10px;
         }
+        
+        &__col-network{
+            order: 2;
+            padding: $spacer-gutter 0;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+        }
+        &__network{
+            &-title{
+                display: inline-block;
+            }
+        }        
         &__link{
             color: $grey;
             text-decoration: underline;
+        }
+
+        &__col-info{
+            order: 3;
+            margin-bottom: 0;
+            padding-top: map-get($map: $spacers, $key: 2);
+        }
+        &__information{
+            justify-content: center;
+            filter: opacity(.5);
+        }
+        &__copyright{
+            margin-right: 0;
+            // margin-bottom: 0;
         }
     }
 }
