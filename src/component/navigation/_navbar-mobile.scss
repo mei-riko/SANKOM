@@ -6,6 +6,10 @@
     &__icon{
         height: 16px;
         margin-bottom: 4px;
+
+        &_sale{
+            width: 46px;
+        }
     }
     &__cart{
         &-icon{
@@ -69,5 +73,9 @@
         z-index: 99;
 
         height: $spacer;
+
+        &--open-sidebar{
+            z-index: 81;
+        }
     }
 }

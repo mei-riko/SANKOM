@@ -4,11 +4,11 @@
     &__title{
         font-size: map-get($map: $font-size, $key: "xs");
         font-weight: $font-weight-bold;
-        color: darken($color: $body-bg, $amount: 12);
+        color: darken($color: $body-bg, $amount: 15);
         text-transform: uppercase;
         padding: 0 $spacer-gutter;
 
-        margin: $spacer 0 8px;
+        margin: $spacer/2 0 8px;
 
         &:first-of-type{
             margin-top: 0;
@@ -16,108 +16,76 @@
     }
     &__parent{
         position: relative;
-        background-color: $light-bg;
-        margin-bottom: 2px;
 
         &-link{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
             width: 100%;
-            padding: 0 $spacer-gutter;
-            padding-right: $spacer;
-            line-height: $spacer;
+            padding: 10px 15px;
+            // padding-right: 40px;
+            line-height: 20px;
+
+            text-decoration: none;
+
+            &:hover, &:focus{
+                color: $black;
+                text-decoration: none;
+            }
+
+            &--active{
+                font-weight: $font-weight-bolder;
+            }
         }
         &-icon{
-            width: $spacer;
-            height: $spacer;
+            flex: 0 0 40px;
+
+            width: 40px;
+            height: 20px;
             text-align: center;
-            background: $body-bg;
+            background: url("../icon/arrow-down.svg") no-repeat center/10px;
+            filter: grayscale(1) opacity(0.5);
 
-            font-size: 24px;
-            line-height: $spacer;
-
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        &:last-child{
-            margin-bottom: 0;
+            &--active{
+                filter:  grayscale(1) opacity(1);
+                transform: rotate(180deg);
+            }
         }
     }
     &__children{
         display: none;
 
-        &-title{
-            display: block;
-            padding: 5px $spacer-gutter;
-            background: $body-bg;
-            margin-bottom: 2px;
-
-            // text-transform: uppercase;
-            font-weight: $font-weight-bold;
-
-            &_link{
-                display: flex;
-                align-items: center;
-                
-                &:before{
-                    content: '';
-                    display: inline-block;
-
-                    width: 20px;
-                    height: 12px;
-                    background: url('../icon/arrow-right.svg') no-repeat left center / 6px;
-                }
-            }
-
-            &:first-of-type{
-                margin-top: 2px;
-            }
-        }
         &-item{
-            background: lighten($color: $body-bg, $amount: 2);
-
-            line-height: 1.4;
-            
-            padding: 8px $spacer-gutter;
-            margin-bottom: 2px;
-
-            display: flex;
-            align-items: center;
-            
-            &:before{
-                content: '';
-                display: inline-block;
-
-                width: 20px;
-                height: 12px;
-                background: url('../icon/arrow-right.svg') no-repeat left center / 6px;
-            }
+            display: block;
+            padding: 10px 15px;
+            padding-left: 40px;
+            line-height: 20px;
         }
     }
     &__link{
         display: block;
-        background-color: $light-bg;
-        padding: 0 $spacer-gutter;
-        line-height: $spacer;
-        margin-bottom: 2px;
-
-        &:last-child{
-            margin-bottom: 0;
-        }
+        padding: 10px 15px;
+        line-height: 20px;
+    }
+    &__sep{
+        height: 1px;
+        background-color: $border-color;
+        margin: map-get($map: $spacers, $key: 2) 0;
     }
     &__icon{
         width: 16px;
         margin-right: 10px;
-        fill: $black;
+        fill: #838383;
     }
     &__sublink{
-        display: block;
-        padding: 0 $spacer-gutter;
-        line-height: $spacer;
-        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
-        &:last-child{
-            margin-bottom: 0;
-        }
+        padding: 10px 15px;
+        line-height: 20px;
+        color: #838383;
     }
 }

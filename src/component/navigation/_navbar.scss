@@ -27,7 +27,8 @@
             font-size: 15px;
             font-weight: $font-weight-bold;
 
-            color: $action;
+            // color: $action;
+            color: #C9002E;
 
             &:hover{
                 color: darken($color: $action, $amount: 6);

@@ -9,7 +9,7 @@
     width: 100%;
     max-height: 90%;
 
-    overflow-y: auto;
+    // overflow-y: auto;
 
     transform: translateY(100%);
     transition: .5s;
@@ -20,6 +20,41 @@
     right: 0;
     z-index: 98;
 
+    &__title{
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+
+        padding: map-get($map: $spacers, $key: 1);
+        border-bottom: 1px solid $border-color;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__content{
+        padding: map-get($map: $spacers, $key: 1) 0 0;
+        overflow-y: auto;
+
+    }
+    &__close{
+        flex: 0 0 40px;
+        width: 40px;
+        height: 20px;
+        background: url('../icon/icon-close.svg') no-repeat center / 20px;
+
+        filter: opacity(.5);
+    }
+    &__link{
+        display: block;
+        padding: 10px map-get($map: $spacers, $key: 1);
+    }
+    &__phone{
+        font-size: 17px;
+        color: $action;
+        font-weight: $font-weight-bold;
+        padding: 0px map-get($map: $spacers, $key: 1);
+
+    }
     &--active{
         transform: translateY(0);
     }
