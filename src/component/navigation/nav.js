@@ -21,6 +21,23 @@ function navbarUnHover(){
     item.removeClass("navbar__link--active");
     $(".navbar .navbar__children" + nav).removeClass("navbar__children--active");
 }
+function navbarDesktopInitialize( itemNav ){
+    // Desktop Hover Nav
+    let timeout = null;
+    // Задержка скрытия меню 0.3сек
+    itemNav
+        .mouseenter(function(event){
+            clearTimeout(timeout);
+            let nav = $(this);
+            timeout = setTimeout( function(){
+                navbarHover( nav );
+            }, 100);
+        })
+        .mouseleave(function(event){
+            clearTimeout(timeout);
+            timeout = setTimeout( navbarUnHover , 300);
+        });
+}
 
 // Mobile Navbar
 function openNavbarOnClick( elem ){
@@ -38,6 +55,9 @@ function openNavbarOnClick( elem ){
     } else{
         return null;
     }
+
+    // Change z-index
+    $('.header.header_sticky').addClass('header_sticky--open-sidebar');
 }
 export function closeNavbarOnClick(){
     $(".navbar-sidebar").removeClass("navbar-sidebar--active");
@@ -46,31 +66,22 @@ export function closeNavbarOnClick(){
     $('.overlay').addClass('overlay--disable');
     $('body').removeClass('hidden');
     $('body').removeClass('open-navbar');
+    // Change z-index
+    $('.header.header_sticky').removeClass('header_sticky--open-sidebar');
 };
+
+
 
 $(function(){
     // Check Windows Size
-    if ( $(window).width() > 1400 || !window.matchMedia('screen and (max-width: 1400px)').matches ){
+    if ( $(window).width() > 1023 || !window.matchMedia('screen and (max-width: 1024px)').matches ){
         $(".navbar").removeClass("navbar--mobile").addClass("navbar--desktop");
     }else{
         $(".navbar").removeClass("navbar--desktop").addClass("navbar--mobile");
     }
 
-    // Desktop Hover Nav
-    var timeout = null;
-    // Задержка скрытия меню 0.3сек
-    $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child')
-        .mouseenter(function(event){
-            clearTimeout(timeout);
-            let nav = $(this);
-            timeout = setTimeout( function(){
-                navbarHover( nav );
-            }, 100);
-        })
-        .mouseleave(function(event){
-            clearTimeout(timeout);
-            timeout = setTimeout( navbarUnHover , 300);
-        });
+    // Desktop Navbar
+    navbarDesktopInitialize( $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child') );
 
     // Mobile Sidebar Nav
     $("[data-navbar]").on("click", function( event ){
@@ -139,13 +150,16 @@ $('.navbar-sidebar .navbar-sidebar__close').on("click", function(){
 
 // Resize
 $(window).on("resize", function(){
-    if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
+    if ( $(window).width() > 1023 || !window.matchMedia('screen and (max-width: 1024px)').matches ){
         // Close Navigation Sidebar on Desktop
         closeNavbarOnClick();
         // Hide Open Children Nav
         const navbarActive = $(".navbar_mobile .navbar_mobile__parent.navbar_mobile__parent--active");
         navbarActive.find('.navbar_mobile__children').hide();
         navbarActive.removeClass("navbar_mobile__parent--active");
+
+        // Desktop Navbar
+        navbarDesktopInitialize( $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child') );
 
         // Remove Class
         $(".navbar").removeClass("navbar--mobile").addClass("navbar--desktop");

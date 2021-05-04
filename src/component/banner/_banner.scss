@@ -20,6 +20,10 @@
 
         width: 440px;
         max-width: 100%;
+
+        &_full{
+            width: 100%;
+        }
     }
     &__intro{
         position: relative;
@@ -53,6 +57,8 @@
             display: none;
         }
     }
+
+    // Modification
     
     &_content-center{
         text-align: center;
@@ -78,12 +84,13 @@
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .banner{
         padding: $spacer $grid-gutter-width;
-
+        min-height: 320px;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .banner{
         padding: $grid-gutter-width;
+        min-height: 480px;
 
         &__image{   
             background: no-repeat center / cover;

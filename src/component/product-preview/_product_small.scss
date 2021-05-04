@@ -43,13 +43,23 @@
         line-height: 18px;
     }
 }
-
-// 440px
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product_small{
+        &__image{
+            flex: 0 0 100px;
+            max-width: 100px;
+        }
+        &__status{
+            left: 115px;
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product_small{
         display: block;
-        padding-bottom: 0;
-        
+
         &__image{
             flex: 0 0 100%;
             max-width: 100%;
@@ -67,4 +77,7 @@
             right: 10px;
         }
     }
-} 
+}
+// 440px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){}
+ 

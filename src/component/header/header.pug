@@ -59,7 +59,10 @@ header.header
                 a.header__phone(href="tel:+7 499 553 07 17") +7 499 553 07 17
     .header__sep
     .container
-        .header__main 
+        .header__main
+            .header__btn-group.d-none.d-lg-block.d-sm-none
+                a.header__btn-icon.header__btn-nav(href="#" data-navbar="navbarMobile")
+                a.header__btn-icon.header__btn-callback(href="#" data-navbar="navbarContact")
             a.header__logo(href="index.html")
                 img.header__logo-img(src="./img/logo.png")
             .header__nav
@@ -80,7 +83,7 @@ header.header
                                 .navbar__children-title Коллекции
                                 a.navbar__children-item(href="category.html") Белье из бамбука
                                 a.navbar__children-item(href="category.html") Белье из алоэ
-                                a.navbar__children-item(href="category.html") Белье Cooling с охлаждающим эффектом
+                                a.navbar__children-item(href="category.html") Белье Cooling (охлаждающее)
                                 a.navbar__children-item(href="category.html") Белье из soft-touch
                                 a.navbar__children-item(href="category.html") Белье из органического хлопка
                             .navbar__children-col
@@ -195,14 +198,18 @@ header.header
 .header.header_sticky
     .container
         .header__main.header_sticky__main
+            .header__btn-group.d-none.d-lg-block.d-sm-none
+                a.header__btn-icon.header__btn-nav(href="#" data-navbar="navbarMobile")
+                a.header__btn-icon.header__btn-callback(href="#" data-navbar="navbarContact")
             a.header__logo(href="index.html")
                 img.header__logo-img(src="./img/logo.png")
             .header__nav
                 .navbar.navbar_header
                     a.navbar__item(href="catalog.html") Каталог товаров
-                    a.navbar__item(href="category-tags.html") Красота и коррекция
+                    a.navbar__item(href="category-tags.html") Красота
                     a.navbar__item(href="category-tags.html") Здоровье
-                    a.navbar__item(href="category-tags.html") Спорт и lifestyle
+                    a.navbar__item(href="category-tags.html") Спорт
+                    a.navbar__item(href="category.html") Для мужчин
                     a.navbar__item(href="category-complect.html") Комплекты
                     a.navbar__item.navbar__item_action(href="category-sale.html") SALE %
                     a.navbar__item(href="category.html") Новинки
@@ -214,5 +221,7 @@ header.header
                         </svg>
             .header__btn-group 
                 a.header__btn-icon.header__btn-cabinet(href="cabinet.html" title="Личный кабинет")
+                a.header__logo.header__logo_secondary(href="index.html")
+                    img.header__logo-img(src="./img/logo.png")
                 a.header__btn-icon.header__cart(href="#" data-sidebar="cart" title="Ваша корзина")
                     span.header__cart-count 12

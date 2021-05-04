@@ -14,7 +14,7 @@ $('.filter-row .filter-row__title').on('click', function(){
 
 // Check Windows Size
 $('.filter-nav_toggle .filter-nav_toggle__parent').on('click', function(){
-    if ( $(window).width() < 576 || window.matchMedia('screen and (max-width: 576px)').matches ){
+    if ( $(window).width() <= 768 || window.matchMedia('screen and (max-width: 768px)').matches ){
         if( !$(this).hasClass('filter-nav_toggle__parent--active') ){
             $(this).addClass('filter-nav_toggle__parent--active');
             $(this).parent().addClass('filter-nav_toggle--active');
@@ -28,7 +28,7 @@ $('.filter-nav_toggle .filter-nav_toggle__parent').on('click', function(){
 });
 
 $(window).on('resize', function(){
-    if ( $(window).width() > 576 || !window.matchMedia('screen and (max-width: 576px)').matches ){
+    if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
         $('.filter-nav_toggle.filter-nav_toggle--active').removeClass('filter-nav_toggle--active');
         $('.filter-nav_toggle__parent.filter-nav_toggle__parent--active').removeClass('filter-nav_toggle__parent--active');
     }

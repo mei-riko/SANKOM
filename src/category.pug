@@ -37,7 +37,7 @@ html(lang="ru")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                     //- Category's tags
                     .tags
-                        a.tags__link.tags__link_category(href="catalog.html") Коррекция и красота
+                        a.tags__link.tags__link_category(href="category-tags.html") Коррекция и красота
                         a.tags__link(href="catalog.html") Для повседневного использования
                         a.tags__link(href="catalog.html") Убрать бока
                         a.tags__link(href="catalog.html") Убрать живот
@@ -47,11 +47,11 @@ html(lang="ru")
                         a.tags__link(href="catalog.html") Под верхнюю одежду
                         a.tags__link(href="catalog.html") Под вечерний наряд
                         a.tags__link(href="catalog.html") Для лета
-                        a.tags__link.tags__link_category(href="catalog.html") Спорт и lifestyle
+                        a.tags__link.tags__link_category(href="category-tags.html") Спорт и lifestyle
                         a.tags__link(href="catalog.html") Помощь для начинающих в спорте
                         a.tags__link(href="catalog.html") При сгонке веса
                         a.tags__link(href="catalog.html") Силовые тренировки
-                        a.tags__link.tags__link_category(href="catalog.html") Забота о здоровье
+                        a.tags__link.tags__link_category(href="category-tags.html") Забота о здоровье
                         a.tags__link(href="catalog.html") При болях в спине и пояснице
                         a.tags__link(href="catalog.html") Поддержка спины
                         a.tags__link(href="catalog.html") Исправление осанки
@@ -62,37 +62,37 @@ html(lang="ru")
                     .mt-3.mt-xs-2
                         include component/filters/filters.pug
                     .row
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-0.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-1.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-3.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-3.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-2.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-1.jpg")
             //- Information
             aside.content.content_secondary.container
                 .content__inside
-                    .row 
-                        .col-6.col-xs-12
+                    .row.mt-2.mb-2
+                        .col-6.col-lg-12
                             .form-block
                                 p.h4.mb-1 Персональные скидки и новости
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
                                 form.form(action="")
-                                    .form__col
+                                    .form__col.mb-xl-1
                                         +radio('radio1', 'Получать все новости SANKOM','news','checked')
-                                    .form__col
+                                    .form__col.mb-xl-1
                                         +radio('radio2', 'Акции и скидки','news')
                                     .form__col
                                         +radio('radio3', 'Персональные предложения','news')
                                     .form__line.mt-2
                                         +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                        .col-6.col-xs-12.mt-xs-2
+                        .col-6.col-lg-12.mt-lg-2
                             +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white")
                             +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white")
                             +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white")

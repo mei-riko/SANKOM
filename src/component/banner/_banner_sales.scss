@@ -14,7 +14,11 @@
         }
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .banner_sales{
+        padding: $spacer/2;
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .banner_sales{
         padding: $spacer-gutter;

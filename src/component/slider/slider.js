@@ -13,11 +13,11 @@ class Responsive {
 }
 // Recommendation Slider
 const recommendationResponsive = new Responsive(
-    {items: 2, stagePadding: 50,},
+    {items: 2, stagePadding: 50, margin: 15,},
+    {items: 2, loop: false, stagePadding: 0, margin: 15,},
+    {items: 2, loop: false, stagePadding: 0, margin: 20, },
     {items: 3, loop: false, stagePadding: 0, margin: 20,},
-    {items: 3, loop: false, stagePadding: 0, margin: 20,},
-    {items: 3, loop: false, stagePadding: 0, margin: 20,},
-    {items: 4, loop: false, stagePadding: 0, margin: 25,},
+    {items: 4, loop: false, stagePadding: 0, margin: 20,},
 );
 // Subcategory Slider
 const subcategoryIndexResponsive = new Responsive(
@@ -36,11 +36,11 @@ const subcategoryCatalogResponsive = new Responsive(
 );
 // Category Slider
 const categoryResponsive = new Responsive(
-    {items: 2, stagePadding: 50,},
-    {items: 2, stagePadding: 50, margin: 15,},
-    {items: 3, },
-    {items: 3, },
-    {items: 4, loop: false, stagePadding: 25, margin: 15,},
+    {items: 1, stagePadding: 60, margin: 20, },
+    {items: 2, stagePadding: 60, margin: 15, },
+    {items: 3, stagePadding: 50, margin: 15, },
+    {items: 3, stagePadding: 60, margin: 20, },
+    {items: 4, loop: false, stagePadding: 25, margin: 10,},
 );
 // Video Slider
 const videoResponsive = new Responsive(

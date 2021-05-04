@@ -29,10 +29,34 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){}
 
-// < 440px
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+  .container {
+    max-width: calc(100% - 50px);
+  }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+  .container {
+    max-width: map-get($map: $container-max-widths, $key: lg);
+  }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+  .container {
+    max-width: map-get($map: $container-max-widths, $key: md);
+  }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+  .container {
+    max-width: map-get($map: $container-max-widths, $key: sm);
+  }
+}
+// < 420px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
   .container {
-    width: 100%;
+    max-width: 100%;
     padding-left: $spacer-gutter;
     padding-right: $spacer-gutter;
   }

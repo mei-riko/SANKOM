@@ -5,3 +5,14 @@
         font-size: 32px;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .banner_category{
+        min-height: 320px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .banner_category{
+        min-height: 480px;
+    }
+}

@@ -13,8 +13,10 @@ function openSidebarOnClick( elem ){
     } else{
         return null;
     }
-    // Change z-index mobile nav
+    // Change z-index
     $('.navbar-mobile').addClass('navbar-mobile--open-sidebar');
+    $('.header.header_sticky').addClass('header_sticky--open-sidebar');
+
 }
 
 $('[data-sidebar]').on('click', function( event ){
@@ -33,8 +35,9 @@ $('.sidebar .sidebar__close').on('click', function(){
     $('body').removeClass('hidden');
     $('body').removeClass('open-sidebar');
 
-    // Change z-index mobile nav
+    // Change z-index
     $('.navbar-mobile').removeClass('navbar-mobile--open-sidebar');
+    $('.header.header_sticky').removeClass('header_sticky--open-sidebar');
 });
 
 // Cобытие клика по веб-документу
@@ -49,7 +52,8 @@ $(document).on('mouseup', function (e){
         $('body').removeClass('hidden');
         $('body').removeClass('open-sidebar');
         
-        // Change z-index mobile nav
+        // Change z-index
         $('.navbar-mobile').removeClass('navbar-mobile--open-sidebar');
+        $('.header.header_sticky').removeClass('header_sticky--open-sidebar');
     }
 });

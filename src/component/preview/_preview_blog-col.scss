@@ -1,5 +1,4 @@
 .preview_blog-col{
-
     &__image{
         margin-bottom: map-get($map: $spacers, $key: 2);
         &:before{
@@ -15,5 +14,14 @@
     }
     &__intro{
         margin-bottom: map-get($map: $spacers, $key: 2);
+    }
+}
+
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .preview_blog-col{
+        &__title{
+            font-size: 15px;
+        }
     }
 }

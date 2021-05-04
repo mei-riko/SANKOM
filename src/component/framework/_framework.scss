@@ -210,22 +210,30 @@ blockquote, .blockquote{
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
+    // Sales Page
+    .img-background-fluid{
+        height: 260px;
+    }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'lg')){   
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    // .h1,h1{font-size: 38px;}
+    .h1,h1{font-size: 32px;}
+    // .h2,h2{font-size: 32px;}
+    .h2,h2{font-size: 28px;}
+    // .h3,h3{font-size: 28px;}
+    .h3,h3{font-size: 24px;}
+    
     .text-lg{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
-    .text-md{
-        &-left{text-align: left;}
-        &-center{text-align: center;}
-        &-right{text-align: right;}
+    // Sales Page
+    .img-background-fluid{
+        height: 220px;
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     // .h1,h1{font-size: 38px;}
     .h1,h1{font-size: 28px;}
     // .h2,h2{font-size: 32px;}
@@ -237,19 +245,40 @@ blockquote, .blockquote{
     // .h5,h5{font-size: 18px;}
     .h5,h5{font-size: 15px;}
     // .h6,h6{font-size: 1rem;}
-
+    
+    .text-md{
+        &-left{text-align: left;}
+        &-center{text-align: center;}
+        &-right{text-align: right;}
+    }
+    blockquote, .blockquote{
+        padding: $spacer/2;
+    }
+    // Sales Page
+    .img-background-fluid{
+        height: 160px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    html, body {
+        background-color: $white;
+    }
     .text-sm{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
+    // Sales Page
+    .img-background-fluid{
+        height: 240px;
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    html,body {
-        background-color: $white;
+    html, body {
         font-size: map-get($font-size, 'sm');
     }
-    .text-lead,.lead{font-size: map-get($map: $font-size, $key: 'md');}
+
+    .text-lead, .lead{font-size: map-get($map: $font-size, $key: 'md');}
     
     .border-block{
         padding: $spacer/2;
@@ -259,10 +288,8 @@ blockquote, .blockquote{
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
+    // Sales Page
     .img-background-fluid{
         height: 180px;
-    }
-    blockquote, .blockquote{
-        padding: $spacer/2;
     }
 }

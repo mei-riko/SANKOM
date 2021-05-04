@@ -39,51 +39,43 @@ html(lang="ru")
             section.content.content_category-filter.container
                 .content__inside
                     include component/filters/filters.pug
-                    p.content__category-title.text-center.text-xs-left.mt-4.mb-2.mt-xs-2.mb-xs-0 Каталог товаров
+                    p.content__category-title.text-center.text-sm-left.mt-3.mt-xs-2.mb-2.mb-md-1.mb-sm-0 Каталог товаров
                     .row
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-0.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на&nbsp;склад', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-0.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-0.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-0.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-0.jpg")
-                        .col-3.mt-2.col-xs-6
+                        .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-0.jpg")
             //- Information
             aside.content.content_secondary.container
                 .content__inside
-                    .row 
-                        .col-6.col-xs-12
+                    .row.mt-2.mb-2
+                        .col-6.col-lg-12
                             .form-block
                                 p.h4.mb-1 Персональные скидки и новости
                                 p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
                                 form.form(action="")
-                                    .form__col
+                                    .form__col.mb-xl-1
                                         +radio('radio1', 'Получать все новости SANKOM','news','checked')
-                                    .form__col
+                                    .form__col.mb-xl-1
                                         +radio('radio2', 'Акции и скидки','news')
                                     .form__col
                                         +radio('radio3', 'Персональные предложения','news')
                                     .form__line.mt-2
                                         +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
                                         +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                        .col-6.col-xs-12.mt-xs-2
-                            a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title_has-icon О бренде SANKOM, материалах и технологиях производства
-                                    img.faq__icon(src='./icon/faq.svg')
-                            a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title_has-icon Подробнее о программе лояльности
-                                    img.faq__icon(src='./icon/faq.svg')
-                            a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title_has-icon О бренде SANKOM, материалах и технологиях производства
-                                    img.faq__icon(src='./icon/faq.svg')
-                            a.faq.faq_link.bg-white(href="text.html")
-                                .faq__title.faq__title_has-icon Подробнее о программе лояльности
-                                    img.faq__icon(src='./icon/faq.svg')
+                        .col-6.col-lg-12.mt-lg-2
+                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('Таблицы размеров', './icon/faq.svg', 'faq.html')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug

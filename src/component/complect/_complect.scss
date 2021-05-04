@@ -15,19 +15,19 @@
         font-size: map-get($map: $font-size, $key: "sm");
         line-height: $line-height-heading;
 
-        margin-bottom: $spacer-gutter/3;
+        margin-bottom: map-get($map: $spacers, $key: 2);
     }
 
-    &__intro{
-        flex: 0 0 100%;
-        max-width: 100%;
+    // &__intro{
+    //     flex: 0 0 100%;
+    //     max-width: 100%;
 
-        font-size: map-get($map: $font-size, $key: "sm");
-        line-height: $line-height-heading;
-        color: $grey;
+    //     font-size: map-get($map: $font-size, $key: "sm");
+    //     line-height: $line-height-heading;
+    //     color: $grey;
 
-        margin-bottom: $grid-gutter-width/2;
-    }
+    //     margin-bottom: $grid-gutter-width/2;
+    // }
 
     &__image{
         flex: 0 0 100%;
@@ -121,11 +121,34 @@
         }
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .complect{
+        &__btn{
+            margin-top: map-get($map: $spacers, $key: 1);
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .complect{
+        &__image{
+            height: 120px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .complect{
+        &__image{
+            height: 180px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .complect{
         padding: map-get($map: $spacers, $key: 1);
 
+        &__title{
+            margin-bottom: map-get($map: $spacers, $key: 1);
+        }
         &__image{
             &_full{
                 grid-template-columns: repeat(3, 1fr);

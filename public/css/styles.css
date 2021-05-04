@@ -26,6 +26,10 @@
   max-width: 100%;
 }
 
+.banner__title_full {
+  width: 100%;
+}
+
 .banner__intro {
   position: relative;
   z-index: 2;
@@ -95,12 +99,14 @@
 @media all and (max-width: 1024px) {
   .banner {
     padding: 50px 50px;
+    min-height: 320px;
   }
 }
 
 @media all and (max-width: 768px) {
   .banner {
     padding: 50px;
+    min-height: 480px;
   }
   .banner__image {
     background: no-repeat center / cover;
@@ -138,6 +144,18 @@
   font-size: 32px;
 }
 
+@media all and (max-width: 1024px) {
+  .banner_category {
+    min-height: 320px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .banner_category {
+    min-height: 480px;
+  }
+}
+
 .banner_sales {
   background-color: #ab0829;
   color: #ffffff;
@@ -154,6 +172,12 @@
 
 .banner_sales a:not(.btn):hover, .banner_sales a:not(.btn):focus {
   color: #FCFBFA;
+}
+
+@media all and (max-width: 576px) {
+  .banner_sales {
+    padding: 25px;
+  }
 }
 
 @media all and (max-width: 420px) {
@@ -249,7 +273,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 50px 75px;
+  padding: 50px;
   background-color: #FCFBFA;
   border-radius: 6px;
 }
@@ -302,9 +326,6 @@
   .banner-intro {
     padding: 50px;
   }
-}
-
-@media all and (max-width: 1024px) {
   .banner-intro__content {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 65%;
@@ -325,7 +346,7 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1024px) {
   .banner-intro__content {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
@@ -864,6 +885,12 @@
   display: inline-block;
 }
 
+@media all and (max-width: 1024px) {
+  .tags-row {
+    padding: 15px;
+  }
+}
+
 .preview {
   display: block;
   width: 100%;
@@ -1103,6 +1130,12 @@ a.preview:hover .preview__title {
   margin-bottom: 25px;
 }
 
+@media all and (max-width: 1024px) {
+  .preview_blog-col__title {
+    font-size: 15px;
+  }
+}
+
 .filter-nav {
   font-size: 13px;
 }
@@ -1113,12 +1146,14 @@ a.preview:hover .preview__title {
   line-height: 1.2;
 }
 
-.filter-nav__parent_link {
-  text-decoration: underline;
+.filter-nav__parent_level-1 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .filter-nav__parent--here {
   color: #ab0829;
+  text-decoration: underline;
 }
 
 .filter-nav__children {
@@ -1132,15 +1167,17 @@ a.preview:hover .preview__title {
 
 .filter-nav__link {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .filter-nav__link--here {
   font-weight: 700;
+  text-decoration: underline;
   color: #ab0829;
 }
 
-@media all and (max-width: 420px) {
+@media all and (max-width: 768px) {
   .filter-nav__parent {
     position: relative;
     line-height: 1.8;
@@ -1293,7 +1330,7 @@ a.preview:hover .preview__title {
   margin-left: 25px;
 }
 
-@media all and (max-width: 420px) {
+@media all and (max-width: 576px) {
   .filters__category {
     font-size: 11px;
     padding-right: 25px;
@@ -2380,10 +2417,21 @@ a.preview:hover .preview__title {
   line-height: 18px;
 }
 
-@media all and (max-width: 420px) {
+@media all and (max-width: 768px) {
+  .product_small__image {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    max-width: 100px;
+  }
+  .product_small__status {
+    left: 115px;
+  }
+}
+
+@media all and (max-width: 576px) {
   .product_small {
     display: block;
-    padding-bottom: 0;
   }
   .product_small__image {
     -webkit-box-flex: 0;
@@ -2521,6 +2569,10 @@ a.preview:hover .preview__title {
   }
 }
 
+.product_in-slider {
+  padding-bottom: 0;
+}
+
 .complect {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2543,17 +2595,6 @@ a.preview:hover .preview__title {
   font-weight: 700;
   font-size: 13px;
   line-height: 1.2;
-  margin-bottom: 5px;
-}
-
-.complect__intro {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
-  font-size: 13px;
-  line-height: 1.2;
-  color: #666666;
   margin-bottom: 25px;
 }
 
@@ -2650,9 +2691,30 @@ a.preview:hover .preview__title {
   text-decoration: none;
 }
 
+@media all and (max-width: 1024px) {
+  .complect__btn {
+    margin-top: 15px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .complect__image {
+    height: 120px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .complect__image {
+    height: 180px;
+  }
+}
+
 @media all and (max-width: 420px) {
   .complect {
     padding: 15px;
+  }
+  .complect__title {
+    margin-bottom: 15px;
   }
   .complect__image_full {
     grid-template-columns: repeat(3, 1fr);

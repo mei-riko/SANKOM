@@ -170,6 +170,13 @@
             background-color: $light-grey;
         }
     }
+    &__btn-nav {
+        background: $action url(../icon/icon-nav.svg) no-repeat center/14px;
+        margin-right: 8px;
+    }
+    &__btn-callback{
+        background: url('../icon/icon-callback.svg') no-repeat center / 20px;
+    }
     &__cart{
         display: flex;
         align-items: center;
@@ -192,16 +199,62 @@
         }
     }
 }
-
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .header{
+        // Main Nav
+        &__main{
+            position: relative;
+        }
+        &__logo{
+            flex: 0 0 120px;
+        }
+        &__nav{
+            flex-grow: 1;
+            padding: 0 $spacer/2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        // Secondary Nav
+        &__secondary{
+            padding: 8px 0;
+        }
+        &__secondary-callback{
+            display: none;
+        }
+        // Main Nav
+        &__main{
+            padding: map-get($map: $spacers, $key: 1) 0;
+        }
+        &__nav{
+            display: none;
+        }
+        &__btn-cabinet{
+            margin-right: map-get($map: $spacers, $key: 1);
+        }
+        &__btn-nav{
+            margin-right: map-get($map: $spacers, $key: 1);
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .header{
+        // Secondary Nav
+        &__location{
+            display: none;
+        }
+        &__secondary-nav{
+            padding-left: 0px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
         border-bottom: 1px solid $border-color;
         // Editional Banner
         &__temp{
             &-banner{
-                font-size: map-get($map: $font-size, $key: "xs" );
-                line-height: map-get($map: $font-size, $key: "sm" );
                 padding: 6px $spacer/2;
             }
         }
@@ -215,14 +268,12 @@
         }
         &__logo{
             display: none;
+
             &_secondary{
                 display: block;
                 flex: 0 0 110px;
                 max-width: calc(100% - 120px);
             }
-        }
-        &__nav{
-            display: none;
         }
         &__btn-group{
             width: 100%;
@@ -232,6 +283,17 @@
         }
         &__btn-cabinet{
             margin-right: 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .header{
+        // Editional Banner
+        &__temp{
+            &-banner{
+                font-size: map-get($map: $font-size, $key: "xs" );
+                line-height: map-get($map: $font-size, $key: "sm" );
+            }
         }
     }
 }

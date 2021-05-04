@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     align-items: center;
 
-    padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
+    padding: map-get($map: $spacers, $key: 3);
     background-color: $light-grey;
     border-radius: $border-radius;
 
@@ -45,13 +45,11 @@
         border: 1px solid $action;
     }
 }
+
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .banner-intro{
         padding: $grid-gutter-width;
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .banner-intro{
+
         &__content{
             flex: 0 0 65%;
             max-width: 65%;
@@ -69,7 +67,7 @@
         }
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .banner-intro{
         &__content{
             flex: 0 0 100%;

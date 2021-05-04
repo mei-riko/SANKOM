@@ -5,9 +5,9 @@ mixin input(placeholder, label)
     .input(class!=attributes.class)
         input.input__field(placeholder=placeholder type!=attributes.type class!=attributes.field)
         label.input__label(class!=attributes.label)= label
-mixin textarea(placeholder, label)
+mixin textarea(placeholder, label, rows)
     .input.input_textarea(class!=attributes.class)
-        textarea.input__field.input__field_textarea(placeholder=placeholder class!=attributes.field)
+        textarea.input__field.input__field_textarea(placeholder=placeholder class!=attributes.field rows=rows)
         label.input__label(class!=attributes.label)= label
 mixin radio(id, title, name, checked)
     .radio(class!=attributes.class)
@@ -73,7 +73,7 @@ mixin banner(title, intro, link, href)
     .banner(class!=attributes.class)
         .banner__image.banner__image_desktop.b-lazy(data-src!=attributes.dataSrc)
         .banner__image.banner__image_mobile.b-lazy(data-src!=attributes.dataSrcSmall)
-        p.banner__title= title
+        p.banner__title(class!=attributes.classTitle)!= title
         if intro!=''
             .banner__intro(class!=attributes.classIntro)= intro
         if block
@@ -109,7 +109,7 @@ mixin product(title, newPrice, oldPrice, status, label, href)
         if label!=''
             .product__label!= label
 mixin productSmall(title, newPrice, oldPrice, status, href)
-    .product.product_small
+    .product.product_small.product_in-slider
         a.product_small__image(style!=attributes.style href=href title=title)
         if status!=''
             .product_small__status.text-covered= status

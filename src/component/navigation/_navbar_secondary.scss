@@ -18,3 +18,11 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .navbar_secondary{
+        &__sep{
+            padding: 0 6px;
+        }
+    }
+}

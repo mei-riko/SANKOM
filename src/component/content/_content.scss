@@ -80,6 +80,15 @@
         padding-top: $grid-gutter-width/2;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content{
+        // Modificate
+        &_category-slider{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content{
         &__block-title{
@@ -87,10 +96,6 @@
         }
 
         // Modificate
-        &_category-slider{
-            padding-top: 0;
-            padding-bottom: 0;
-        }
         &_category-filter{
             padding-top: 0;
         }

@@ -64,10 +64,14 @@
     }
 }
 
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .btn{
+        min-width: 140px;
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .btn{
-        // font-size: map-get($map: $font-size, $key: 'xs');
-        // padding: 6px 10px;
         min-width: 1px;
     }
 }

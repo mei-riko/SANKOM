@@ -2,6 +2,7 @@
     display: none;
 
     border-top: 1px solid $border-color;
+    background-color: $white;
 
     &__icon{
         height: 16px;
@@ -60,12 +61,10 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .navbar-mobile{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-        flex-wrap: nowrap;
-
+        display: block;
+        
         position: fixed;
         bottom: 0;
         left: 0;
@@ -73,6 +72,12 @@
         z-index: 99;
 
         height: $spacer;
+
+        &__container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            flex-wrap: nowrap;
+        }
 
         &--open-sidebar{
             z-index: 81;

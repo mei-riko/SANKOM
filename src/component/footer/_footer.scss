@@ -55,10 +55,9 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .footer{
-        border-top: 1px solid $border-color;
-        padding: map-get($map: $spacers, $key: 2) $spacer-gutter map-get($map: $spacers, $key: 4);
+        padding: map-get($map: $spacers, $key: 2) $spacer-gutter;
 
         &__col-nav{
             order: 1;
@@ -69,38 +68,62 @@
             justify-content: center;
         }
         &__nav-item{
-            text-decoration: underline;
-            margin: 5px 10px;
+            margin: 2px 10px;
+
+            &:last-child{
+                margin: 2px 10px;
+            }
         }
-        
         &__col-network{
             order: 2;
-            padding: $spacer-gutter 0;
-            border-top: 1px solid $border-color;
-            border-bottom: 1px solid $border-color;
+            padding: 0;
         }
         &__network{
             &-title{
                 display: inline-block;
             }
-        }        
-        &__link{
-            color: $grey;
-            text-decoration: underline;
         }
-
         &__col-info{
             order: 3;
             margin-bottom: 0;
-            padding-top: map-get($map: $spacers, $key: 2);
+            padding-top: map-get($map: $spacers, $key: 1);
         }
         &__information{
             justify-content: center;
             filter: opacity(.5);
         }
         &__copyright{
+            width: 100%;
+            text-align: center;
             margin-right: 0;
-            // margin-bottom: 0;
+        }
+        &__link{
+            color: $grey;
+            text-decoration: underline;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .footer{
+        padding: map-get($map: $spacers, $key: 2) $spacer-gutter map-get($map: $spacers, $key: 4);
+        border-top: 1px solid $border-color;
+
+        &__nav-item{
+            text-decoration: underline;
+            margin: 5px 10px;
+        }
+        &__col-info{
+            padding-top: map-get($map: $spacers, $key: 2);
+        }       
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .footer{
+        &__col-network{
+            padding: $spacer-gutter 0;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
         }
     }
 }

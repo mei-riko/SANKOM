@@ -5,7 +5,7 @@
     background-color: $white;
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .form-block{
         padding: $spacer/2;
     }

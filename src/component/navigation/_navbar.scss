@@ -8,6 +8,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
         padding-right: $spacer-gutter;
+        white-space: nowrap;
 
         transition: .3s;
         cursor: pointer;
@@ -138,6 +139,35 @@
         // Status
         &--active{
             display: flex;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .navbar{
+        position: unset;
+        
+        &__item{
+            font-size: map-get($map: $font-size, $key: sm);
+            margin-right: 5px;
+            padding-right: 10px;
+
+            &-icon{
+                width: 16px;
+                height: 16px;
+            }
+        }
+        &__children{
+            left: 0;
+            top: 60px;
+
+            &-col{
+                padding-right: 2*$spacer-gutter;
+    
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
         }
     }
 }

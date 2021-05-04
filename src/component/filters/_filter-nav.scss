@@ -7,12 +7,14 @@
         line-height: $line-height-heading;
 
         // Modificate
-        &_link{
-            text-decoration: underline;
+        &_level-1{
+            text-transform: uppercase;
+            margin-bottom: map-get($map: $spacers, $key: 1);
         }
         // Status
         &--here{
-            color: $action
+            color: $action;
+            text-decoration: underline;
         }
     }
     &__children{
@@ -25,18 +27,20 @@
     }
     &__link{
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        line-height: $line-height-heading;
 
         // Status
         &--here{
             font-weight: $font-weight-bold;
+            text-decoration: underline;
             color: $action
         }
     }
 }
 
-// < 440px
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     .filter-nav{
         &__parent{
             position: relative;
