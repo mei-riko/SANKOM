@@ -9,6 +9,7 @@
     &__title{
         font-size: 18px;
         line-height: $line-height-heading;
+        font-weight: $font-weight-bold;
 
         flex: 0 0 calc(100% - 140px);
         margin-bottom: 10px;
@@ -51,6 +52,7 @@
 
         &-icon{
             padding-left: 10px;
+            cursor: pointer;
         }
     }
     &__complect{
@@ -103,6 +105,49 @@
 
             & + .product-page__option_complect {
                 margin-top: 10px;
+            }
+        }
+    }
+    &__color{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+
+        width: 100%;
+        margin: 10px 0 15px;
+
+        &-item{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        &-input{
+            display: none;
+    
+            &:checked + .product-page__color-label {
+                border-color: $action;
+
+                &:hover{
+                    filter: brightness(1);
+                }
+            }
+        }
+        &-label{
+            border: 1px solid $border-color;
+            border-radius: $border-radius/2;
+            background: $white no-repeat center / cover;
+            
+            padding: 4px;
+            height: 38px;
+
+            margin: 0;
+            flex: 0 0 100%;
+
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover{
+                filter: brightness(0.85);
             }
         }
     }
@@ -283,12 +328,14 @@
     &__content{
         flex: 0 0 100%;
         max-width: 100%;
+        padding: $spacer $spacer/2;
     }
     &__row{
-        margin: 0;
+        margin-left: -$spacer-gutter;
+        margin-right: -$spacer-gutter;
     }
     &__col{
-        padding: 0 $spacer;
+        padding: 0 $spacer-gutter;
     }
 }
 
@@ -296,15 +343,19 @@
     .product-page{
         // Simple Product Information
         &__title{
-            flex: 0 0 calc(100% - 100px);
-            max-width: calc(100% - 100px);
-            margin-bottom: map-get($map: $spacers, $key: 2);
+            font-size: 16px;
+            
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 5px;
         }
         &__article{
-            flex: 0 0 100px;
-            max-width: 100px;
-            margin-bottom: map-get($map: $spacers, $key: 2);
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            text-align: left;
         }
+
         &__price{
             flex: 0 0 100%;
             max-width: 100%;
@@ -313,9 +364,12 @@
         &__cashback{
             flex: 0 0 100%;
             max-width: 100%;
-            margin-bottom: 0;
+            margin-bottom: map-get($map: $spacers, $key: 2);
 
             text-align: left;
+        }
+        &__complect{
+            margin: 0 0 25px;
         }
         &__order{
             margin-bottom: map-get($map: $spacers, $key: 1);

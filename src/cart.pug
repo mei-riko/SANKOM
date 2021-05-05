@@ -24,7 +24,7 @@ html(lang="ru")
                     h1.h4 Оформление заказа
                     .row.mt-2.justify-content-between.cart
                         //- Main Content 
-                        .col-7.col-xs-12.mb-xs-3
+                        .col-7.col-xl-7.col-lg-12.mb-lg-3
                             .cart__steps 
                                 .cart__steps-item.cart__steps-item--active КОРЗИНА
                                     <svg class="cart__steps-icon" viewBox="0 0 15 18" xmlns="http://www.w3.org/2000/svg">
@@ -65,12 +65,12 @@ html(lang="ru")
                                         </svg>
                                         |  Назад в каталог
                                 .cart__btn-next
-                                    a.btn.btn--full.btn--has-icon.btn_secondary(href="cart-delivery.html") Cпособ доставки и оплаты
+                                    a.btn.btn--full.btn--has-icon.btn_secondary(href="cart-delivery.html") Доставка и оплата
                                         <svg class="btn__icon btn__icon_right" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 216 371">
                                             <path d="M0.894989 345.966L25.034 370.814L215.92 185.413L25.034 -3.05176e-05L0.894989 24.853L166.177 185.413L0.894989 345.966Z"/>
                                         </svg>
                         //- Sidebar Content
-                        .col-4.col-xs-12
+                        .col-4.col-xl-5.col-lg-12
                             form.form(action="")
                                 .form__line
                                     +input('', 'Укажите промокод')(label="input__label_inside" class="input_label-inside form__line-input" field="form__line-field")

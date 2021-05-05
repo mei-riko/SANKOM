@@ -106,8 +106,42 @@
         padding-left: $spacer-gutter/2;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .cart{
+        &__block{
+            &-title{
+                flex: 0 0 100%;
+                max-width: 100%;
 
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+                margin-bottom: map-get($map: $spacers, $key: 2);
+            }
+            &-content{
+                flex: 0 0 100%;
+                max-width: 100%;
+    
+                padding-left: 0;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .cart{
+        &__block{
+            &-title{
+                flex: 1 0 200px;
+                max-width: 200px;
+                margin-bottom: map-get($map: $spacers, $key: 0);
+            }
+            &-content{
+                flex: 2 0 calc(100% - 200px);
+                max-width: calc(100% - 200px);
+    
+                padding-left: $spacer/2;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .cart{
         &__steps{
             &-item{
@@ -129,6 +163,10 @@
                 padding-left: 0;
             }
         }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .cart{
         &__btn-group{
             flex-wrap: wrap;
         }

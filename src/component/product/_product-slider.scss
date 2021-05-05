@@ -13,8 +13,8 @@
             flex: 0 0 80px;
             max-width: 80px;
         }
-        
     }
+    
     &__main{
         flex: 0 0 calc(100% - 140px);
         max-width: calc(100% - 140px);
@@ -22,7 +22,7 @@
         height: auto;
         height: intrinsic;
 
-        padding: 0 map-get($map: $spacers, $key: 4) 0 map-get($map: $spacers, $key: 2);
+        padding: 0 map-get($map: $spacers, $key: 4) 0 map-get($map: $spacers, $key: 1);
 
         &_complect{
             flex: 0 0 calc(100% - 80px);

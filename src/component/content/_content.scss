@@ -71,6 +71,10 @@
     &_secondary{
         background-color: $light-bg;
     }
+    &_additional{
+        // border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+    }
     &_category-slider{
         padding-top: $grid-gutter-width/2;
         padding-bottom: $grid-gutter-width/2;

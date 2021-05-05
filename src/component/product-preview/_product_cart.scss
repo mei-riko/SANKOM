@@ -76,8 +76,7 @@
     }
 }
 
-// 440px
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product_cart{
         position: relative;
 
@@ -85,15 +84,10 @@
         "image content"
         "image price"
         "image input";
-        grid-template-columns: 80px 1fr;
-        grid-gap: 10px;
 
+        grid-template-columns: 110px 1fr;
         padding-bottom: map-get($map: $spacers, $key: 2);
 
-        &__image{
-            width: 80px;
-            height: 100px;
-        }
         &__price{
             text-align: left;
         }
@@ -113,6 +107,18 @@
             position: absolute;
             right: map-get($map: $spacers, $key: 1);
             bottom: map-get($map: $spacers, $key: 2);
+        }
+    }
+}
+// 440px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .product_cart{
+        grid-template-columns: 80px 1fr;
+        grid-gap: 10px;
+
+        &__image{
+            width: 80px;
+            height: 100px;
         }
     }
 }

@@ -8,19 +8,22 @@
 
     &__item{
         &:after{
+            color: $grey-text;
             content: '—';
             margin: 0 4px;
         }
 
         &--active{
+            color: $grey-text;
             &:after{
                 display: none;
             }
         }
     }
     &__link{
-        color: $grey;
-        text-decoration: underline;
+        color: $action;
+        font-weight: $font-weight-bolder;
+        // text-decoration: underline;
     }
 }
 
