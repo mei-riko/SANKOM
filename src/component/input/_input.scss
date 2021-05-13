@@ -42,9 +42,24 @@
                 font-size: map-get($map: $font-size, $key: xs);
                 font-weight: $font-weight-bold;
                 color: $action;
-                background-color: $white;
+                // background-color: $white;
 
                 opacity: 1;
+
+                &:after{
+                    content: '';
+                    height: 4px;
+                    width: 100%;
+                    display: block;
+                    background: $white;
+
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    z-index: -1;
+
+                    transform: translateY(-2px);
+                }
             }
         }
         // CSS state

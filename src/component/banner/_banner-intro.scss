@@ -44,6 +44,30 @@
         border-radius: $border-radius;
         border: 1px solid $action;
     }
+    &__video{
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            top: calc(50% - 18px);
+            left: calc(50% - 18px);
+            background: no-repeat url(../icon/play.svg) center/contain;
+
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        &:hover{
+            &:before{
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
@@ -74,18 +98,15 @@
             max-width: 100%;
 
             &_left{
-                order: 1;
-                padding-bottom: map-get($map: $spacers, $key: 2);
+                // padding-bottom: map-get($map: $spacers, $key: 2);
                 padding-right: 0;
             }
             &_right{
-                order: 1;
-                padding-bottom: map-get($map: $spacers, $key: 2);
+                // padding-bottom: map-get($map: $spacers, $key: 2);
                 padding-left: 0;
             }
         }
         &__image-block{
-            order: 2;
             flex: 0 0 100%;
             max-width: 100%;
         }

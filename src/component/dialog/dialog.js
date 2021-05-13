@@ -4,7 +4,7 @@ function openDialogOnClick( elem ){
     const idDialog = elem.data('dialog');
     const target = $('.dialog#' + idDialog);
 
-    console.log( target );
+    // console.log( target );
 
     if ( target.length > 0 ){
         target.toggleClass('dialog--active');

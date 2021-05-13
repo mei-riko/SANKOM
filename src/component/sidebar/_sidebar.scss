@@ -46,11 +46,6 @@
         position: relative;
         cursor: pointer;
         transition: .3s;
-        
-        &:hover{
-            color: $action;
-            border-color: $action;
-        }
 
         &:after{
             content: '';
@@ -58,13 +53,22 @@
 
             width: 14px;
             height: 14px;
-            background: url("../icon/icon-close.svg") no-repeat center/contain;
+            background: url("../icon/icon-close.svg") no-repeat center/8px;
 
             position: absolute;
             top: calc(50% - 8px);
             left: 0;
         }
 
+        &:hover{
+            color: $action;
+            border-color: $action;
+
+            &:after{
+                filter: opacity(.5);
+            }
+        }
+        
         &_right{
             // margin-left: auto;
             text-align: right;

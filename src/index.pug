@@ -166,7 +166,7 @@ html(lang="ru")
                             .banner-promo__title Хочешь знать больше?
                             .banner-promo__content Заходи знакомиться в Instagram 
                                 a.text-underline.banner-promo__link(href="" title="Instagram Sankom Russia") @sankomrussia
-                            a.btn.btn_inverse.banner-promo__btn(href="#") Подписаться
+                            a.btn.btn_border.banner-promo__btn(href="#") Подписаться
             aside.content.content_secondary.container
                 .content__inside
                     .row.mt-2.mb-2
@@ -204,10 +204,11 @@ html(lang="ru")
                                                 +radio('radio3', 'Персональные предложения','news')
                                             .form__line.mt-2
                                                 +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
-                                                +btn('', 'Подписаться')(class="btn_action btn_icon-check")
+                                                .form__line-btn
+                                                    +btn('', 'Подписаться')(class="btn_action btn--full")
                                 .col-12.col-xl-6.col-lg-12
-                                    +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg', 'faq.html')(class="bg-white")
-                                    +faq('Подробнее о программе лояльности', '/icon/faq.svg', 'faq.html')(class="bg-white")
+                                    +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg', 'faq.html')(class="bg-white mb-1")
+                                    +faq('Подробнее о программе лояльности', '/icon/faq.svg', 'faq.html')(class="bg-white mb-1")
                                     +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg', 'faq.html')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug

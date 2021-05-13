@@ -69,9 +69,9 @@
             cursor: pointer;
         }
     }
-    &__complect{
+    &__intro{
         flex: 0 0 100%;
-        margin: map-get($map: $spacers, $key: 2) 0;
+        max-width: 100%;
     }
     // Scroll Anchor To Complect Block
     &__complect-link{
@@ -304,6 +304,9 @@
 
     // Links
     &__subinfo{
+        flex: 0 0 100%;
+        max-width: 100%;
+
         width: 100%;
         margin-top: map-get($map: $spacers, $key: 1);
         // margin-bottom: $spacer;

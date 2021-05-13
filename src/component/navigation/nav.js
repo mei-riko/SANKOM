@@ -74,7 +74,9 @@ export function closeNavbarOnClick(){
     $('body').removeClass('open-navbar');
 };
 
-
+$('.navbar-sidebar .navbar-sidebar__close').on('click', function(){
+    closeNavbarOnClick();
+});
 
 $(function(){
     // Check Windows Size
@@ -105,6 +107,33 @@ $(function(){
     });
 
     // Mobile Nav Slide
+    $('.navbar_mobile .navbar_mobile__category .navbar_mobile__category-title').on('click', function(e){
+        e.preventDefault();
+
+        const parent = $(this).parent();
+        const title = $(this);
+        const children = parent.find('.navbar_mobile__category-children');
+
+        const parentActive = $('.navbar_mobile .navbar_mobile__category.navbar_mobile__category--active');
+
+        
+        if( !parent.hasClass('navbar_mobile__category--active') ){
+            parent.addClass('navbar_mobile__category--active');
+            title.addClass('navbar_mobile__category-title--active');
+            children.show();
+            
+            if( parentActive.length > 0 && parent !=  parentActive){
+                parentActive.removeClass('navbar_mobile__category--active');
+                parentActive.find('.navbar_mobile__category-title').removeClass('navbar_mobile__category-title--active');
+                parentActive.find('.navbar_mobile__category-children').hide();
+            }
+        }else{
+            parent.removeClass('navbar_mobile__category--active');
+            title.removeClass('navbar_mobile__category-title--active');
+            children.hide();
+        }
+
+    });
     $('.navbar_mobile .navbar_mobile__parent .navbar_mobile__parent-link').on('click', function(e){
         e.preventDefault();
 
@@ -137,15 +166,10 @@ $(function(){
 
             children.hide();
         }
-
-        if( parent.offset().top > 75 || parent.offset().top < 0 ){
-            parent.get(0).scrollIntoView();
-        }
+        // if( parent.offset().top > 75 || parent.offset().top < 0 ){
+        //     parent.get(0).scrollIntoView();
+        // }
     });
-});
-
-$('.navbar-sidebar .navbar-sidebar__close').on('click', function(){
-    closeNavbarOnClick();
 });
 
 // Resize
@@ -179,9 +203,10 @@ $(document).on('mouseup', function (e){
           && navbarActive.has(e.target).length === 0 // и не по его дочерним элементам
           && !navbarItem.is(e.target)
           && $('body').hasClass('open-navbar')
-    ) { 
-        navbarActive.removeClass('navbar-sidebar--active');
-        $('.overlay').addClass('overlay--disable');
-        $('body').removeClass('hidden')
+    ) {
+        closeNavbarOnClick();
+        // navbarActive.removeClass('navbar-sidebar--active');
+        // $('.overlay').addClass('overlay--disable');
+        // $('body').removeClass('hidden')
     }
 });

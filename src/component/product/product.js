@@ -5,22 +5,7 @@ $('#quickBuy').on('click', function(){
   $('#quickBlock').slideToggle(); 
 });
 
-// Open Before & After Photo
-$(document).on('click', '[data-open]', function(e){
-  e.preventDefault();
-  const triggerFancybox = $(this).data('open');
-
-  // Add Option
-  $('[data-fancybox="' + triggerFancybox + '"]').fancybox({
-    thumbs : {
-      autoStart : true
-    }
-  })
-  // Click First Element
-  $('[data-fancybox="' + triggerFancybox + '"]')[0].click();
-})
-
-// Sliders Vertical
+// Sliders Product Images
 if( $('.slider-main').length > 0 ){
   $('.slider-main').each(function(){
 

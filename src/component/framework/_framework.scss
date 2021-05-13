@@ -78,7 +78,6 @@ a{
 
     &:hover {
         color: $link-hover-color;
-        border-color: $link-hover-color;
         outline: none;
     }
     &:focus {
@@ -163,7 +162,16 @@ table{
 .text-bolder{font-weight: 500;}
 .text-bold,strong,b{font-weight: 700;}
 .text-underline{text-decoration: underline;}
-.text-dashed{padding-bottom: 2px; border-bottom: 1px dashed $grey;}
+.text-dashed{
+    padding-bottom: 2px;
+    border-bottom: 1px dashed;
+    text-decoration: none;
+    line-height: 1.2;
+
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+}
 
 .text-covered{font-family: 'Covered By Your Grace', cursive; color: $action;}
 

@@ -72,6 +72,11 @@
         line-height: 18px;
     }
     // Price
+    &__price{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
     &__price-old{
         display: inline-block;
         text-decoration: line-through;
@@ -84,6 +89,51 @@
     &__price-new{
         display: inline-block;
         font-weight: $font-weight-bold;
+        margin-right: 4px;
+    }
+    &__price-discount{
+        position: relative;
+        display: inline-block;
+        padding: 3px 6px 3px 8px;
+        margin-left: 10px;
+        height: 20px;
+
+        background: $action;
+        color: $white;
+        border-radius: 0 4px 4px 0;
+
+        font-size: map-get($map: $font-size, $key: 'sm');
+        font-weight: $font-weight-bold;
+        line-height: map-get($map: $font-size, $key: 'sm');
+
+        &:before{
+            content: '';
+            width: 4px; 
+            height: 4px;
+            border-radius: 2px;
+            background: $white;
+
+            position: absolute;
+            top: calc(50% - 2px);
+            left: -2px;
+
+            z-index: 2;
+        }
+        &:after{
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            
+            border-right: 10px solid $action;
+
+            position: absolute;
+            top: 0;
+            left: -10px;
+
+            z-index: 1;
+        }
     }
     // Info Label
     &__label{
@@ -108,7 +158,22 @@
         }
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .product{
+        // Price
+        &__price-new{
+            order: 1;
+        }
+        &__price-discount{
+            order: 2;
+        }
+        &__price-old{
+            flex: 0 0 100%;
+            font-size: map-get($map: $font-size, $key: 'xs');
+            order: 3;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .product{
         padding-bottom: 0;

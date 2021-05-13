@@ -1,0 +1,67 @@
+.content-person{
+    &__intro{
+        position: relative;
+
+        padding: map-get($map: $spacers, $key: 3);
+        background-color: $light-bg;
+        border-radius: $border-radius;
+
+        &:after{
+            content: '';
+
+            position: absolute;
+            top: calc( 50% - 20px);
+            right: -20px;
+
+            width: 0; 
+            height: 0; 
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            
+            border-left: 20px solid $light-bg;
+        }
+    }
+    &__image{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+
+        background: no-repeat center / cover;
+        margin: 0 auto $spacer-gutter;
+    }
+    &__title{
+        font-weight: $font-weight-bolder;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    &__subtitle{
+        font-size: map-get($map: $font-size, $key: 'xs');
+        text-align: center;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content-person{
+        &__intro{
+            padding: $grid-gutter-width;
+
+            &:after{
+                top: -20px;
+                left: calc( 50% - 20px);
+                right: auto;
+
+                border-top: none;
+                border-bottom: 20px solid $light-bg ;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-person{
+        &__intro{
+            padding: map-get($map: $spacers, $key: 2);
+        }
+    }
+}

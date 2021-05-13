@@ -7,7 +7,48 @@
     &__tags{
         position: relative;
         flex: 1;
-        overflow-x: hidden;
+        // overflow-x: hidden;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+
+        margin-left: -4px;
+        margin-right: -4px;
+
+        &-item{
+            display: flex;
+            align-items: center;
+
+            background-color: $light-bg;
+            font-size: map-get($map: $font-size, $key: xs);
+            line-height: map-get($map: $font-size, $key: sm);
+            white-space: nowrap;
+    
+            padding: 4px 10px;
+            border: 1px solid $light-bg;
+            border-radius: $spacer-gutter;
+    
+            margin: 4px;
+    
+            // &:hover, &:focus{
+            //     text-decoration: none;
+            //     border-color: $border-color;
+            // }
+        }
+        &-close{
+            width: 8px;
+            height: 8px;
+            margin-left: 6px;
+
+            background: url("../icon/icon-close.svg") no-repeat center/6px;
+            transition: .2s;
+
+            &:hover{
+                filter: opacity(.5);
+            }
+        }
     }
     &__icon{
         margin-right: 8px;
@@ -59,6 +100,17 @@
     }
 }
 
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .filters{
+        flex-wrap: wrap;
+        &__tags{
+            order: 2;
+            flex: 1 0 100%;
+            max-width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .filters{
         &__category{

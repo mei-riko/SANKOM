@@ -20,7 +20,7 @@ html(lang="ru")
         main
             section.content.container
                 .content__inside
-                    +banner('Спорт и lifestyle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.', '', '')(class="banner_content-left banner_inside" classIntro="banner__intro_left" dataSrc="./img/banner-3.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
+                    +banner('Спорт и lifestyle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.', '', '')(class="banner_content-left banner_inside" classIntro="banner__intro_left" dataSrc="./img/banner-3.jpg" dataSrcSmall="./img/banner-3-mobile.jpg")
                         p.text-bolder.mt-2 ✓ IMPROVES POSTURE <br/>
                             | ✓ REDUCES UPPER BACK PAIN <br/>
                             | ✓ COVERAGE, SUPPORT, LIFT & SHAPE
@@ -68,14 +68,26 @@ html(lang="ru")
                                 a.text-small.text-bolder.text-underline.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
                     //- Banner Tech
                     .banner-intro.mt-2
-                        .banner-intro__image-block.loading
+                        .banner-intro__image-block.loading.order-lg-2
+                            .banner-intro__video(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+                                img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                        .banner-intro__content.banner-intro__content_right.order-lg-1.pb-md-2.pb-lg-3
+                            p.banner-intro__title Фотографии на мобильном снизу
+                            p.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.
+                    //- Banner Tech
+                    .banner-intro.mt-2
+                        .banner-intro__content.banner-intro__content_left.order-lg-2.pt-md-2.pt-lg-3
+                            p.banner-intro__title Фотографии на мобильном вверху
+                            p.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.
+                        .banner-intro__image-block.loading.order-lg-1
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
-                        .banner-intro__content.banner-intro__content_right
-                            p.banner-intro__title Уникальные патентные технологии
-                            p.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.
+            
             //- Category
             aside.content.content_secondary.container
                 include component/preview/categoryPreview.pug

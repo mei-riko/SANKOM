@@ -1,0 +1,264 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        title Product
+
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
+
+        link(href='./css/framework.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
+
+    body
+        script(src="./js/jquery.min.js")
+        include component/mixin.pug
+        include component/header/header.pug
+        include component/navigation/navbar.pug
+        main
+            //- Product
+            section.content.container
+                .content__inside
+                    ul.breadcrumb.d-md-none
+                        li.breadcrumb__item 
+                            a.breadcrumb__link(href="index.html") Главная
+                        li.breadcrumb__item 
+                            a.breadcrumb__link(href="catalog.html") Каталог
+                        li.breadcrumb__item 
+                            a.breadcrumb__link(href="category.html") Шорты
+                        li.breadcrumb__item.breadcrumb__item--active Long Shaper CLASSIC
+                    //- Название товара для мобильного
+                    <!--noindex-->
+                    .d-none.d-lg-flex.d-sm-block.align-items-lg-end 
+                        p.product-page__title Шорты Long Shaper CLASSIC Чёрные
+                        p.product-page__article SAN-071CWH
+                        p.text-bold.text-spacing.text-action Нет в наличии
+                    <!--/noindex-->
+                    .row.no-gutters.mt-2.mt-sm-1
+                        .col-7.col-lg-12
+                            .product-slider
+                                .product-slider__nav
+                                    .slider-nav.product-nav.product-nav_single#productMain
+                                        .product-nav__item
+                                            img.img-fluid(src="./product/prod-1.jpg")
+                                        .product-nav__item
+                                            img.img-fluid(src="./product/prod-0.jpg")
+                                        .product-nav__item
+                                            img.img-fluid(src="./product/prod-2.jpg")
+                                        .product-nav__item
+                                            img.img-fluid(src="./product/prod-3.jpg")
+                                .product-slider__main
+                                    .slider-main.product-image.product-image_single(data-nav="#productMain")
+                                        .product-image__item
+                                            a.product-image__link(data-fancybox="gallery" data-src="./product/prod-1.jpg")
+                                                img.img-fluid(src="./product/prod-1.jpg")
+                                        .product-image__item
+                                            a.product-image__link(data-fancybox="gallery" data-src="./product/prod-0.jpg")
+                                                img.img-fluid(src="./product/prod-0.jpg")
+                                        .product-image__item
+                                            a.product-image__link(data-fancybox="gallery" data-src="./product/prod-2.jpg")
+                                                img.img-fluid(src="./product/prod-2.jpg")
+                                        .product-image__item
+                                            a.product-image__link(data-fancybox="gallery" data-src="./product/prod-3.jpg")
+                                                img.img-fluid(src="./product/prod-3.jpg")
+                        .col-5.col-lg-12
+                            .product-page.pt-2
+                                //- Основное о товаре
+                                h1.product-page__title.d-lg-none Шорты Long Shaper CLASSIC Чёрные
+                                p.product-page__article.d-lg-none SAN-071CWH
+                                .product-page__intro.d-lg-none
+                                    p.text-bold.text-spacing.text-action Нет в наличии
+                                .hr.mt-2.d-lg-none
+                                //- Вариации товара: цвет
+                                .product-page__option
+                                    p.text-small.text-bolder.text-spacer.text-uppercase Цвет: 
+                                        span.text-bold Чёрный
+                                    .product-page__color
+                                        .product-page__color-item
+                                            input.product-page__color-input(value="Черный" type="radio" id="color1" name="color" checked="checked")
+                                            label.product-page__color-label(for="color1" style="background-image: url('./product/prod-1.jpg')") 
+                                        .product-page__color-item
+                                            input.product-page__color-input(value="Серый" type="radio" id="color2" name="color" )
+                                            label.product-page__color-label(for="color2" style="background-image: url('./product/prod-2.jpg')") 
+                                        .product-page__color-item
+                                            input.product-page__color-input(value="Белый" type="radio" id="color3" name="color" )
+                                            label.product-page__color-label(for="color3" style="background-image: url('./product/prod-3.jpg')") 
+                                //- Вариации товара: размеры
+                                .product-page__option
+                                    .row
+                                        .col-7.col-xs-6
+                                            p.text-small.text-bolder.text-spacer.text-uppercase Размеры
+                                        .col-5.col-xs-6
+                                            .text-right
+                                                a.table-size(href="javascript:;" data-fancybox data-src="./img/size-demo.jpg")
+                                                    svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                        path(d="M2.76497 12.4904C8.94718 11.5197 15.1426 10.6406 21.3749 10.0831C21.5139 10.1219 21.6475 10.1013 21.7642 10.0388C22.2469 9.94521 22.3178 9.42411 22.1017 9.05037C22.0579 8.94812 21.9913 8.85084 21.8902 8.76784C21.0174 5.03273 21.4668 1.55764 19.9687 0.5C7.58745 2.31309 2.01669 2.48705 1.76721 2.61526C1.41376 2.5851 0.933384 2.90339 0.942407 3.37071C0.792612 5.1838 1.35822 9.78347 1.76718 11.9409C1.84337 12.3429 2.15672 12.5021 2.46404 12.4765C2.55469 12.501 2.65532 12.5076 2.76497 12.4904ZM2.46404 3.97509C5.4464 3.65101 14.4256 1.8598 19.0698 2.61526C19.3695 3.67291 19.7838 6.69473 19.7838 8.82058C18.7966 8.91573 17.8103 9.02141 16.8248 9.13083C16.8207 8.86013 16.5128 7.26753 16.4577 7C16.2735 6.10673 14.9208 6.40904 15.1057 7.30444C15.1515 7.52717 15.4481 9.06278 15.4442 9.28686C14.5941 9.38704 13.745 9.49459 12.8958 9.60292C12.8413 9.36041 12.4992 7.79475 12.4446 7.55198C12.2452 6.6626 10.8926 6.96335 11.0926 7.8561C11.1379 8.05802 11.4708 9.58186 11.5161 9.78347C10.8288 9.87519 10.1422 9.97558 9.45515 10.0716C9.40592 9.80267 9.05037 8.21592 8.95922 7.95442C8.83202 7.59117 8.5386 7.32364 8.13465 7.41458C7.80153 7.48943 7.47946 7.89457 7.60716 8.2589C7.68569 8.48371 8.03562 10.0333 8.08297 10.2637C7.33515 10.3713 6.58835 10.4877 5.84074 10.5987C5.79465 10.3267 5.44417 8.73568 5.35206 8.46919C5.22638 8.10542 4.93068 7.83892 4.52749 7.9294C4.19356 8.00419 3.87412 8.40882 4 8.77368C4.07878 9.00191 4.43124 10.5621 4.47889 10.8023C3.99054 10.8763 3.50194 10.9448 3.01389 11.021C2.76497 8.62686 2.46404 6.24145 2.46404 3.97509Z")
+                                                    span.table-size__link Таблица размеров
+                                    .product-page__size.product-page__size_has-default
+                                        .product-page__size-item
+                                            input.product-page__size-input(type="radio" id="size1" name="size" checked="checked")
+                                            label.product-page__size-label(for="size1" data-toggle="tooltip" title="Согласовать по телефону") Не знаю
+                                        .product-page__size-item
+                                            input.product-page__size-input(type="radio" id="size3" name="size")
+                                            label.product-page__size-label(for="size3") XS
+                                        .product-page__size-item
+                                            input.product-page__size-input(type="radio" id="size4" name="size")
+                                            label.product-page__size-label(for="size4") S
+                                        .product-page__size-item
+                                            input.product-page__size-input(type="radio" id="size5" name="size")
+                                            label.product-page__size-label(for="size5") M
+                                        .product-page__size-item
+                                            input.product-page__size-input(type="radio" id="size6" name="size")
+                                            label.product-page__size-label(for="size6") L
+                                        .product-page__size-item
+                                            input.product-page__size-input(type="radio" id="size7" name="size")
+                                            label.product-page__size-label(for="size7") L-XL
+                                .hr.mt-2
+                                .product-page__intro.mt-2.mb-2
+                                    p.text-bold.mb-0 Этого товара нет в наличии
+                                    p.text-smaller Подпишитесь, чтобы первыми узнать о появлении этого товара или об аналоге в наличии
+                                    form.form(action="")
+                                        .form__group
+                                            .form__row
+                                                .form__col.form__col_gutters
+                                                    +input('', 'E-mail *')(field="input__field--full" label="input__label_inside" class="input_label-inside")
+                                                .form__col.form__col_gutters.mt-sm-1
+                                                    +btn('', 'Уведомить о поступлении')(class="btn_action btn--full")
+                                .hr.d-sm-none
+                                //- Дополнительные ссылки
+                                .product-page__subinfo
+                                    .product-page__subinfo-item
+                                        <svg class="product-page__subinfo-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.4648 13.9798C13.5531 13.9571 13.6385 13.9174 13.7125 13.8606C13.8577 13.7528 13.9573 13.5796 13.9772 13.3951C13.9801 13.3724 13.9801 13.3497 13.9801 13.327V13.3099V13.2844V13.2305V13.1254L13.9829 12.7053L13.9943 11.0193C13.9972 9.89522 13.9972 8.77401 14 7.6528C13.9943 5.40753 13.9687 3.16795 13.9118 0.931202C13.9089 0.851724 13.9061 0.772245 13.9032 0.695605V0.664382V0.655866L13.9004 0.633158C13.8975 0.616127 13.8975 0.601935 13.8947 0.587742C13.8833 0.53381 13.8719 0.49691 13.8548 0.454332C13.8178 0.372015 13.7637 0.298214 13.6983 0.241444C13.6328 0.184674 13.5531 0.142096 13.4677 0.116549C13.425 0.105195 13.3823 0.0966797 13.3396 0.0966797H13.3083H13.2969H13.2826C13.1318 0.105195 12.9866 0.113711 12.8471 0.122226C12.571 0.142096 12.3205 0.170481 12.1155 0.204543C11.7027 0.272667 11.4608 0.369177 11.5092 0.499748C11.5519 0.616127 11.7995 0.718314 12.2009 0.794953C12.4002 0.831854 12.6393 0.865916 12.9097 0.888624C12.9581 0.891463 13.0094 0.89714 13.0606 0.899978C13.0606 0.931202 13.0577 0.959587 13.0577 0.990811C13.0094 3.33542 12.9553 5.6999 12.961 8.05019L12.9752 10.8887L12.9866 12.308L12.9923 13.0176V13.0261L7.41277 13.0885C5.7133 13.0062 4.00244 12.958 2.28874 12.9296C1.87881 12.9239 1.46889 12.9182 1.05897 12.9126L1.06181 12.6117C1.06466 11.7544 1.06751 10.8944 1.07035 10.0343C1.06751 8.31417 1.06466 6.59403 1.06181 4.87389C1.06181 4.01382 1.06181 3.15376 1.06181 2.29369L1.06751 1.13274L1.40626 1.13557C1.7137 1.13841 2.19195 1.03907 2.34282 0.970941C2.64172 0.831854 2.25173 0.715475 1.671 0.627481C1.43188 0.590581 1.18422 0.556518 0.930866 0.525295C0.868239 0.516779 0.805612 0.511102 0.740138 0.502587L0.643351 0.491233C0.631964 0.488394 0.600651 0.488394 0.575031 0.494071C0.54941 0.499748 0.52379 0.508264 0.501017 0.525295C0.45547 0.55368 0.42131 0.601935 0.407076 0.655866C0.404229 0.670059 0.401383 0.684251 0.401383 0.698444L0.398536 0.723991L0.392843 0.772245C0.387149 0.837531 0.378609 0.902817 0.372916 0.968103C0.318829 1.49323 0.273282 2.03538 0.239122 2.59457C0.165108 3.7101 0.125254 4.88241 0.108174 6.06607C0.0854006 7.47965 0.0654738 8.90174 0.0427003 10.3267L0.0113867 12.4641L0.00284669 12.9977L0 13.2645V13.2986V13.3156V13.3582C0 13.3497 0.00284669 13.4036 0.00854006 13.4377C0.0142334 13.4717 0.0199268 13.4916 0.0284669 13.52C0.045547 13.5711 0.0683205 13.6222 0.099634 13.6676C0.159414 13.7584 0.239122 13.8322 0.335909 13.8833C0.384303 13.9089 0.435543 13.9287 0.48963 13.9401C0.51525 13.9458 0.543717 13.9515 0.569337 13.9543L0.609191 13.9571H0.634811L1.70801 13.9685C4.56608 13.9997 7.42985 14.0054 10.305 13.96C11.0167 13.9713 11.7255 13.9798 12.4372 13.9912L13.2826 13.9997H13.2969H13.3367C13.3111 14.0025 13.4392 13.9912 13.4648 13.9798ZM0.631964 13.3185C0.600651 13.3185 0.572184 13.3156 0.631964 13.3185V13.3185ZM0.637658 0.689929C0.637658 0.658705 0.637658 0.627481 0.637658 0.689929V0.689929ZM13.294 13.3241C13.2969 13.3241 13.2969 13.3241 13.294 13.3241C13.294 13.4207 13.294 13.3923 13.294 13.3241ZM13.3026 0.698444C13.3766 0.698444 13.3566 0.698444 13.3026 0.698444V0.698444Z"/>
+                                            <path d="M4.64291 10.5452C4.58882 10.5424 4.53189 10.5055 4.46926 10.5197C4.41517 10.531 4.34685 10.5935 4.35824 10.7212C4.36393 10.7836 4.39525 10.8603 4.46357 10.9284C4.52904 10.9965 4.63437 11.0533 4.76816 11.0618C4.83648 11.0675 4.9048 11.059 4.98166 11.0306C5.00159 11.0221 5.02436 11.0107 5.04429 10.9994L5.0813 10.9795L5.09553 10.971L5.10407 10.9682L5.12115 10.954H5.124L5.12684 10.9511L5.15531 10.9341C5.23217 10.8858 5.31188 10.8319 5.39443 10.7751C5.55954 10.6588 5.73888 10.5197 5.92676 10.3607C6.25983 10.0769 6.59573 9.79301 6.9288 9.50916L6.94018 9.52051L7.42412 9.97467L8.39484 10.8773L8.64535 11.1072C8.74214 11.1952 8.87308 11.2605 9.01257 11.2889C9.15206 11.3173 9.29155 11.3031 9.41965 11.2605C9.54775 11.2151 9.66446 11.1385 9.75556 11.0363C9.8011 10.9852 9.84096 10.9256 9.87227 10.8631C9.8865 10.8319 9.90074 10.7978 9.91212 10.7666C9.92351 10.7297 9.9349 10.6815 9.94059 10.6389L9.94628 10.6077V10.5963L9.94913 10.5764V10.5651L9.95198 10.5197V10.4998V10.4175V10.2528C9.94059 7.41717 9.88366 4.5815 9.84665 1.74867C9.87227 1.35695 9.89504 0.962401 9.91212 0.567848C9.92351 0.340768 9.74702 0.147749 9.52213 0.136395L9.47943 0.133556C7.79704 0.0455625 6.1061 0.0115003 4.40379 0.000146297C4.09634 -0.00269221 3.84299 0.244258 3.84299 0.553656V0.562171C3.82022 3.61641 3.87146 6.68768 3.8316 9.74191C3.82876 9.97183 3.92839 10.3295 3.99671 10.443C4.1362 10.6673 4.25291 10.3749 4.34116 9.94061C4.63437 8.50432 4.76247 6.76148 4.79663 4.99025C4.82225 3.67886 4.85072 2.36746 4.87634 1.05323C6.22851 1.07878 7.58069 1.09581 8.93856 1.10149C8.9414 2.03536 8.94994 2.96923 8.96987 3.90594C8.95848 4.43674 8.94994 4.96754 8.93856 5.49834L8.91009 8.02462L8.9044 9.28775V9.9548L7.96214 9.1288L7.72302 8.92159L7.60346 8.8194L7.54368 8.76831L7.51521 8.74276C7.46113 8.69734 7.49813 8.72857 7.44974 8.69167C7.42981 8.67747 7.41273 8.66612 7.39281 8.65193C7.37288 8.64057 7.36149 8.6349 7.34441 8.62354C7.3131 8.60651 7.27894 8.59232 7.24763 8.58096C7.18215 8.55826 7.11098 8.53839 7.04266 8.53271C6.90318 8.51852 6.758 8.53839 6.62705 8.59232C6.56157 8.61786 6.49895 8.65477 6.44486 8.69734L6.40501 8.73141L6.37654 8.75695L6.34807 8.78534L6.23421 8.8932L5.32327 9.76462C5.15246 9.92926 4.9902 10.0939 4.85072 10.2472C4.81656 10.2869 4.7824 10.3238 4.74824 10.3607C4.73116 10.3806 4.71692 10.3976 4.69984 10.4175L4.67707 10.4459L4.66568 10.4601V10.4629C4.67707 10.4544 4.64291 10.4828 4.68846 10.443L4.68561 10.4459L4.67992 10.4515L4.65714 10.4771C4.66283 10.4743 4.67422 10.4657 4.68276 10.4657C4.69415 10.4629 4.69984 10.4629 4.69984 10.4629C4.70269 10.4629 4.70554 10.4657 4.70838 10.4657C4.71977 10.4686 4.73116 10.4799 4.734 10.4884C4.7397 10.514 4.69415 10.5509 4.64291 10.5452ZM9.31717 10.3153C9.32001 10.3181 9.32571 10.321 9.32855 10.3238L9.33425 10.3295L9.32571 10.3238L9.31717 10.3153ZM6.95157 9.38142C6.95726 9.37575 6.95726 9.37575 6.95157 9.38142V9.38142Z"/>
+                                        </svg>
+                                        a.product-page__subinfo-link.text-dashed(href="#" data-fancybox="photoGallery" data-src="#photo") Фото «До/После»
+
+                                    .product-page__subinfo-item
+                                        <svg class="product-page__subinfo-icon" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.8473 0.404809C12.8461 0.392981 12.8451 0.380858 12.8438 0.369089C12.8213 0.155713 12.6074 -0.0240083 12.3912 0.00262683C12.2584 0.0190563 12.008 0.409735 11.9272 0.510907C11.7624 0.716643 11.6096 0.930669 11.4187 1.11357C11.0214 1.49378 10.5 1.735 9.99979 1.94867C8.94233 2.40032 7.76013 2.56217 6.63083 2.73121C6.03011 2.82109 5.42562 2.92143 4.83549 3.06882C2.21215 3.7242 0.978398 5.51961 1.26228 8.22256C1.31277 8.70489 2.07157 8.70984 2.0202 8.22256C1.8696 6.78663 2.02573 5.36788 3.30297 4.50237C4.29125 3.83278 5.597 3.65335 6.7456 3.45068C8.65583 3.1136 10.7914 2.81831 12.1799 1.41479C12.3363 3.59734 12.2148 5.88053 11.181 7.82882C9.58554 10.8356 5.68979 10.7824 2.98669 9.44377C3.90328 8.35813 5.00089 7.40419 6.17056 6.52408C6.5563 6.23372 6.17921 5.57336 5.78797 5.86782C3.13641 7.86342 0.817434 10.2023 0.012294 13.5262C-0.103037 14.0024 0.628109 14.2044 0.743322 13.7283C1.08037 12.3367 1.70036 11.1285 2.50339 10.0499C5.34647 11.5108 9.2146 11.662 11.3534 8.94398C13.1698 6.63531 13.144 3.20999 12.8507 0.434305C12.8497 0.424276 12.8488 0.414454 12.8473 0.404809Z"/>
+                                        </svg>
+                                        a.product-page__subinfo-link.text-dashed(href="#" data-sidebar="materials") О материалах
+            section.content.content_secondary.container.product-page
+                .content__inside.product-page__content
+                    .row.product-page__row
+                        .col-7.col-md-12.mb-md-2.product-page__col
+                            p.text-smaller.text-spacer.text-bolder.text-uppercase Описание товара
+                            p 
+                                span.text-bold Эффективность: 
+                                | профилактика искривления позвоночника, предотвращает развитие сутулости, препятствует болям в спине, профилактика остеохондроза, не сковывает движения, микромассажный эффект
+                            p Placerat nulla amet ullamcorper turpis sit. Facilisis duis montes, viverra lorem rhoncus blandit. Semper vitae imperdiet pretium, et proin commodo. Sed tellus sollicitudin sed sociis. 
+                            p.d-none(data-content="moreInfo") At odio neque vestibulum nec quisque. Mauris, rhoncus gravida et tincidunt amet, sem pharetra, lobortis. Imperdiet convallis ultricies leo sit. A varius curabitur lorem purus consequat, sapien diam. Viverra duis urna mauris sed nunc, neque nisi. Eget eleifend in magna diam ridiculus a proin. Enim orci quis justo, pulvinar risus. 
+                                | Condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+                                | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
+                            p
+                                a.text-bolder.text-dashed.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
+                        .hr.d-none.d-sm-block.mb-sm-2
+                        .col-5.col-md-12.mb-sm-2.product-page__col
+                            .hr.d-none.d-md-block.d-sm-none.mb-md-2
+                            p.text-smaller.text-spacer.text-bolder.text-uppercase Коллекция Sankom classic
+                            p Оригинальный бюстгальтер SANKOM продается только на нашем сайте.
+                            .slider.slider_video.owl-carousel.owl-theme
+                                .slider__item.slider_video__item
+                                    a(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-1.jpg")
+                                .slider__item.slider_video__item
+                                    a(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-2.jpg")
+                                .slider__item.slider_video__item
+                                    a(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/prev-1.jpg")
+                        <!--noindex-->
+                        //- Информационный блок с иконкой
+                        .hr.d-none.d-sm-block.mb-sm-2
+                        .col-12.col-sm-12.d-none.d-sm-block.product-page__col
+                            .product-page__blockquote
+                                .product-page__blockquote-icon
+                                    <svg class="product-page__blockquote-svg" width="28" height="34" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.734 11.13V12.5377C14.734 12.9848 14.8361 13.36 15.0376 13.6522C15.3156 14.0555 15.7719 14.2867 16.29 14.2867C16.7977 14.2867 17.3021 14.0705 17.7892 13.6445L23.1063 8.9948C24.2737 7.9739 24.2737 6.31277 23.1063 5.29186L17.7892 0.64215C17.3021 0.215973 16.7977 0 16.29 0C15.5154 0 14.734 0.540893 14.734 1.74893V3.02746C7.18508 3.41732 0.9358 8.48339 0.00703159 15.1162C-0.0450009 15.4866 0.195863 15.8412 0.592825 15.9786C0.705196 16.0174 0.822208 16.0362 0.937755 16.0362C1.23041 16.0362 1.51427 15.9164 1.69504 15.7004C4.18625 12.7238 8.18616 10.9467 12.3947 10.9467C13.1744 10.9467 13.9586 11.0082 14.734 11.13Z" fill="#44C57F"/>
+                                        <path d="M27.4069 18.0215C27.01 17.8839 26.5571 17.9984 26.3047 18.2998C23.8138 21.2762 19.8138 23.0533 15.6053 23.0533C14.8256 23.0533 14.0414 22.9918 13.266 22.8701V21.4623C13.266 20.2542 12.4843 19.7133 11.71 19.7133C11.2023 19.7133 10.6979 19.9295 10.2105 20.3557L4.89344 25.0052C3.72625 26.0261 3.72625 27.6872 4.89369 28.7084L10.2105 33.3579C10.6979 33.784 11.2023 34 11.71 34C12.4843 34 13.266 33.4591 13.266 32.2511V30.9726C20.8152 30.5827 27.0642 25.5166 27.993 18.8841C28.045 18.5134 27.8041 18.1588 27.4069 18.0215Z" fill="#44C57F"/>
+                                    </svg>
+                                .product-page__blockquote-title Размер не&nbsp;подошёл? Привезём другой!
+                                .product-page__blockquote-content Вы можете осуществить обмен неподошедшего по&nbsp;размеру 
+                                    | товара в&nbsp;течение 60&nbsp;дней.
+                        <!--/noindex-->
+            aside.content.container
+                .content__inside.product-page__content
+                    p.text-smaller.text-spacer.text-bolder.text-uppercase Применение товара
+                    //- Category's tags
+                    .tags
+                        a.tags__link.tags__link_category(href="category-tags.html") Коррекция и красота
+                        a.tags__link(href="category-tags.html") Для повседневного использования
+                        a.tags__link(href="category-tags.html") Убрать бока
+                        a.tags__link(href="category-tags.html") Убрать живот
+                        a.tags__link(href="category-tags.html") Тонкая талия
+                        a.tags__link(href="category-tags.html") Пуш-ап эффект
+                        a.tags__link(href="category-tags.html") Моделирующий эффект
+                        a.tags__link(href="category-tags.html") Под верхнюю одежду
+                        a.tags__link(href="category-tags.html") Под вечерний наряд
+                        a.tags__link(href="category-tags.html") Для лета
+                    .tags
+                        a.tags__link.tags__link_category(href="category-tags.html") Спорт и lifestyle
+                        a.tags__link(href="category-tags.html") Помощь для начинающих в спорте
+                        a.tags__link(href="category-tags.html") При сгонке веса
+                        a.tags__link(href="category-tags.html") Силовые тренировки
+                    .tags
+                        a.tags__link.tags__link_category(href="category-tags.html") Забота о здоровье
+                        a.tags__link(href="category-tags.html") При болях в спине и пояснице
+                        a.tags__link(href="category-tags.html") Поддержка спины
+                        a.tags__link(href="category-tags.html") Исправление осанки
+                        a.tags__link(href="category-tags.html") Шейный остеохондроз
+                        a.tags__link(href="category-tags.html") Восстановление после родов
+                        a.tags__link(href="category-tags.html") Сидячий образ жизни
+        include component/footer/footer.pug
+        include component/sidebar/sidebar.pug
+
+        .sidebar#modalCashbackInfo
+            .sidebar__close Закрыть
+            .sidebar__content
+                p.sidebar__title Про кэшбек
+                p Стaтусный кэшбэк за эту покупку: от 2%&nbsp;–&nbsp;20% (348₽&nbsp;–&nbsp;2&nbsp;609₽)
+                p.text-small Накапливайте и оплачивайте до 50% покупки Статусным Кэшбэком, а также повышайте им свой статус. 
+                    a.text-underline.text-action(href="#") Подробнее.
+        .sidebar#materials
+            .sidebar__close Закрыть
+            .sidebar__content
+                p.sidebar__title Бельё из алоэ
+                p Целебные свойства этого растения известны с древнейших времен. Материал из натуральных волокон алоэ – это ежедневная забота и уход за вашей кожей. Волокна алоэ обладают уникальными свойствами:
+                ul
+                    li Ускорение регенерации кожи
+                    li Повышение защитных свойств организма
+                    li Ускорение восстановительных процессов
+                    li Антибактериальное и бактерицидное воздействие
+                    li Улучшение кровотока
+                    li Оптимальная терморегуляция
+                    li Хорошая воздухопроницаемость и гигроскопичность
+                    li Износостойкость и цветоустойчивость при многократных стирках
+                p.text-small Рекомендовано: для повседневного ношения в любое время года, для чувствительной кожи, для восстановления после родов и полостных операций.
+        //- Фото До и После
+        .modal#photo
+            a.d-block.mb-2(href="#" data-fancybox="photo" data-src="./img/before-after.jpg" data-caption="Пример описания первого фото")   
+                //- Лучше использовать миниатюру 
+                img.img-fluid(src="./img/before-after.jpg")
+            a.d-block(href="#" data-fancybox="photo" data-src="./img/before-after-2.jpg" data-caption="Пример описания второго фото")
+                //- Лучше использовать миниатюру 
+                img.img-fluid(src="./img/before-after-2.jpg")
+        
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
+        link(href='./css/owl.carousel.min.css', rel='stylesheet')
+        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
+        script(src="./js/owl.carousel.min.js")
+        
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/app.min.js")

@@ -13,6 +13,15 @@
         </svg>
         | Фильтр и сортировка
     .filters__tags
+        .filters__tags-item
+            span.filters__tags-body L
+            button.filters__tags-close(type="button" aria-label="Remove")
+        .filters__tags-item
+            span.filters__tags-body L-XL
+            button.filters__tags-close(type="button" aria-label="Remove")
+        .filters__tags-item
+            span.filters__tags-body Цена по возрастанию
+            button.filters__tags-close(type="button" aria-label="Remove")
     .filters__info
         span.filters__info-item 32 товар(-а, -ов)
         //- span.filters__info-item 1 стр. из 4
@@ -56,27 +65,27 @@
 .sidebar.sidebar_filters#filtersOpen
     .sidebar__close.sidebar__close_right Закрыть
     .sidebar__content
+        .filter-row.filter-row--active.mb-1
+            .filter-row__title.filter-row__title--active УПОРЯДОЧИТЬ ПО
+            .filter-row__content(style="display: block;")
+                +radio('radio11', 'Рекомендуемые','sort','checked')(class="mb-1")
+                +radio('radio12', 'Цена по возрастанию','sort')(class="mb-1")
+                +radio('radio13', 'Цена по убыванию','sort')
+        .filter-row.filter-row--active.mb-1
+            .filter-row__title.filter-row__title--active Открытый параметр фильтрации
+            .filter-row__content(style="display: block;")
+                +checkbox('type1', 'Параметр 1','checked')(class="mb-1")
+                +checkbox('type2', 'Параметр 2')(class="mb-1")
+                +checkbox('type3', 'Параметр 3')
         .filter-row.mb-1
-            .filter-row__title Параметр фильтрации
-            .filter-row__content 
-                .checkbox
-                    input.checkbox__input#param1(type="checkbox" name="type" checked="checked")
-                    label.checkbox__label(for="param1") Параметр 1
-                .checkbox.mt-1
-                    input.checkbox__input#param2(type="checkbox" name="type")
-                    label.checkbox__label(for="param2") Параметр 2
-                .checkbox.checkbox--disabled.mt-1
-                    input.checkbox__input#param3(type="checkbox" name="type" disabled="disabled")
-                    label.checkbox__label(for="param3") Параметр 3
-        .filter-row.mb-1
-            .filter-row__title Параметр фильтрации
+            .filter-row__title Закрытый параметр фильтрации
             .filter-row__content
-                .checkbox
-                    input.checkbox__input#param11(type="checkbox" name="type" checked="checked")
-                    label.checkbox__label(for="param11") Параметр 1
-                .checkbox.mt-1
-                    input.checkbox__input#param12(type="checkbox" name="type")
-                    label.checkbox__label(for="param12") Параметр 2
-                .checkbox.checkbox--disabled.mt-1
-                    input.checkbox__input#param13(type="checkbox" name="type" disabled="disabled")
-                    label.checkbox__label(for="param13") Параметр 3
+                +checkbox('param1', 'Параметр 1','checked')(class="mb-1")
+                +checkbox('param2', 'Параметр 2')(class="mb-1")
+                +checkbox('param3', 'Параметр 3')(class="mb-1")
+                .checkbox.checkbox--disabled
+                    input.checkbox__input#param4(type="checkbox" name="type" disabled="disabled")
+                    label.checkbox__label(for="param4") Параметр 3
+        .filter-row
+            +checkbox('productAvailible', 'Только товары в наличии','checked')
+        

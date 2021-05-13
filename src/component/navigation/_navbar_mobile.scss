@@ -29,14 +29,17 @@
             line-height: 20px;
 
             text-decoration: none;
+            transition: 0s;
 
             &:hover, &:focus{
                 color: $black;
                 text-decoration: none;
+                transition: 0s;
             }
 
             &--active{
-                font-weight: $font-weight-bolder;
+                // color: $action;
+                font-weight: $font-weight-bold;
             }
         }
         &-icon{
@@ -69,6 +72,57 @@
         padding: 10px 15px;
         line-height: 20px;
     }
+
+    &__category{
+        padding: 0 $spacer-gutter;
+
+        &:last-of-type{
+            padding-bottom: 0;
+        }
+
+        &-title{
+            position: relative;
+
+            // font-size: map-get($map: $font-size, $key: "sm");
+            font-weight: $font-weight-bold;
+            // text-transform: uppercase;
+            padding-right: $spacer;
+            margin-bottom: 10px;
+
+            transition: 0s;
+            
+            &:after{
+                content: '';
+                display: block;
+
+                width: 40px;
+                height: 20px;
+                text-align: center;
+
+                background: url("../icon/arrow-down.svg") no-repeat center/10px;
+                filter: grayscale(1) opacity(0.5);
+
+                position: absolute;
+                top: calc( 50% - 10px );
+                right: $spacer-gutter;
+            }
+
+            &--active{
+                color: $action;
+            
+                &:after{
+                    filter:  grayscale(1) opacity(1);
+                    transform: rotate(180deg);
+                }
+            }
+
+            
+        }
+        &-children{
+            display: none;
+        }
+    }
+
     &__sep{
         height: 1px;
         background-color: $border-color;

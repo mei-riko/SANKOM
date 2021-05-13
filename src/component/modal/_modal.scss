@@ -5,6 +5,12 @@
 }
 
 .modal.fancybox-content{
-    padding: $spacer;
-    background: $light-bg;
+    padding: $spacer-gutter;
+    background: $body-bg;
+
+    .fancybox-close-small{
+        padding: 0;
+        width: 18px;
+        height: 18px;
+    }
 }

@@ -1,0 +1,14 @@
+.form-block
+    p.h4.mb-1 Персональные скидки и новости
+    p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
+    form.form(action="")
+        .form__col.mb-1
+            +radio('radio1', 'Получать все новости SANKOM','news','checked')
+        .form__col.mb-1
+            +radio('radio2', 'Акции и скидки','news')
+        .form__col.mb-1
+            +radio('radio3', 'Персональные предложения','news')
+        .form__line.mt-1
+            +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
+            .form__line-btn
+                +btn('', 'Подписаться')(class="btn_action btn--full")

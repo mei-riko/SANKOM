@@ -15,7 +15,7 @@ mixin radio(id, title, name, checked)
         label.radio__label(for=id class!=attributes.label)!= title
 mixin checkbox(id, title, checked)
     .checkbox(class!=attributes.class)
-        input.checkbox__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        input.checkbox__input(type="checkbox" id=id checked class!=attributes.field)
         label.checkbox__label(for=id)!= title
 //- Preview Items
 mixin category(title, intro, link, href)
@@ -104,6 +104,7 @@ mixin product(title, newPrice, oldPrice, status, label, href)
             if oldPrice!=''
                 .product__price-old= oldPrice
                 .product__price-new= newPrice
+                .product__price-discount 20%
             else
                 .product__price-new= newPrice
         if label!=''

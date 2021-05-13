@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 import '../component/slider/slider';
 import '../component/filters/filter';
-import '../component/product/product';
 import '../component/tabs/tabs';
 import '../component/tags/tags';
 import '../component/faq/faq';
@@ -13,6 +12,10 @@ import '../component/header/header';
 import '../component/navigation/nav';
 import '../component/sidebar/sidebar';
 import '../component/dialog/dialog';
+
+import '../component/product/product';
+import '../component/cart/cart';
+
 
 $(function() {
   // Animate Scroll

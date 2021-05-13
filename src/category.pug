@@ -22,16 +22,16 @@ html(lang="ru")
                 .content__inside
                     //- Banner Main 
                     +bannerCategory('Идеальная поддержка', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.')(class="banner_content-center"  dataSrc="./img/banner-2.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
-                    //- Banner Tech
+                    //- Banner Tech Photo On Mobile Down
                     .banner-intro.mt-2.mb-2
-                        .banner-intro__content.banner-intro__content_left
+                        .banner-intro__content.banner-intro__content_left.order-lg-1.pb-md-2.pb-lg-3
                             p.banner-intro__label.text-covered Wow
                             p.banner-intro__title Уникальные патентные технологии
                             p.text-grey The only bra in the world that uses the natural weight of the breasts to pull your shoulders backward and improve your posture!
                             p ✓ IMPROVES POSTURE <br/>
                                 | ✓ REDUCES UPPER BACK PAIN <br/>
                                 | ✓ COVERAGE, SUPPORT, LIFT & SHAPE
-                        .banner-intro__image-block.loading
+                        .banner-intro__image-block.loading.order-lg-2
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
@@ -61,6 +61,7 @@ html(lang="ru")
                     //- Filter's block
                     .mt-3.mt-xs-2
                         include component/filters/filters.pug
+                    //- Product
                     .row
                         .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-0.jpg")
@@ -74,30 +75,40 @@ html(lang="ru")
                             +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-2.jpg")
                         .col-3.col-lg-4.col-md-6.mt-2
                             +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-1.jpg")
-            //- Information
-            aside.content.content_secondary.container
-                .content__inside
-                    .row.mt-2.mb-2
-                        .col-6.col-lg-12
-                            .form-block
-                                p.h4.mb-1 Персональные скидки и новости
-                                p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
-                                form.form(action="")
-                                    .form__col.mb-xl-1
-                                        +radio('radio1', 'Получать все новости SANKOM','news','checked')
-                                    .form__col.mb-xl-1
-                                        +radio('radio2', 'Акции и скидки','news')
-                                    .form__col
-                                        +radio('radio3', 'Персональные предложения','news')
-                                    .form__line.mt-2
-                                        +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
-                                        +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                        .col-6.col-lg-12.mt-lg-2
-                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white")
-                            +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white")
-                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white")
-                            +faq('Таблицы размеров', './icon/faq.svg', 'faq.html')(class="bg-white")
-            include component/banner/delivery.pug
+                    //- Banner Video 
+                    .banner-video.mt-1.mt-lg-2
+                        img.banner-video__preview.img-fluid(src="./img/banner-video.jpg" title="")
+                        .banner-video__intro(data-fancybox href="./demo/demo-video.mp4")
+                            p.banner-video__title Эффективность белья Sankom
+                            p.banner-video__content The only bra in the world that uses the natural weight of the breasts to pull your shoulders backward and improve your posture!
+                            svg.banner-video__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none")
+                                circle(cx="18" cy="18" r="17" fill="#C9002E" stroke="white" stroke-width="2")
+                                path(d="M13.0846 23.9538C13.0982 24.2359 13.0261 24.734 13.028 25.2124C13.0299 25.8559 13.166 26.464 13.8241 26.464C13.843 26.464 13.861 26.4598 13.8794 26.4584C13.9539 26.463 14.0318 26.4602 14.1163 26.4389C18.7691 25.2698 22.9932 22.7896 26.7396 19.8959C26.9501 19.7331 27.0102 19.5347 26.9763 19.3482C26.9908 19.2489 26.9998 19.1497 27 19.0491C27.0002 18.8233 26.885 18.6213 26.7115 18.4925C26.6889 18.4621 26.6666 18.4319 26.6374 18.4029C23.2759 15.0771 19.361 12.1059 14.8313 10.507C14.6841 10.4552 14.5528 10.4538 14.4377 10.4838C14.1678 10.488 13.901 10.5082 13.6335 10.5571C13.2966 10.6186 13.0919 10.9728 13.1132 11.2916C13.1128 11.3059 13.109 11.3186 13.109 11.3337C13.1091 15.5417 12.8809 19.7469 13.0846 23.9538ZM14.5361 11.8916C18.6849 13.376 22.2817 16.1292 25.3872 19.1627C22.1474 21.6195 18.5096 23.7229 14.5672 24.8615C14.2788 20.5419 14.5094 16.2157 14.5361 11.8916Z" fill="white")
+                    //- Product
+                    p.content__category-title.mt-3.mt-xs-2.mb-2.mb-md-1.mb-sm-0 Рекомендация эксперта
+                    .row
+                        .col-3.col-lg-4.col-md-6.mt-2
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'Sale', '', 'product.html')(dataSrc="./product/prod-1.jpg" dataSrcHover="./product/prod-0.jpg")
+                        .col-3.col-lg-4.col-md-6.mt-2
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', 'ожидаем поступления на склад', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-1.jpg")
+                        .col-3.col-lg-4.col-md-6.mt-2
+                            +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'New+Promo', '', 'product.html')(dataSrc="./product/prod-3.jpg" dataSrcHover="./product/prod-3.jpg")
+                        .col-3.col-lg-4.col-md-6.mt-2
+                            +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc="./product/prod-2.jpg" dataSrcHover="./product/prod-3.jpg")
+                    //- Expert Block
+                    .hr.d-none.d-sm-block.mt-sm-3
+                    .content-person.mt-3
+                        .row.align-items-center.justify-content-center
+                            .col-10.col-xl-9.col-lg-12.order-lg-2
+                                .content-person__intro 
+                                    p Белье SANKOM – отличное решение для быстрого и комфортного восстановления после родов. Швейцарские специалисты разработали действительно отличный продукт, который помогает не только привести в форму мышцы и кожу живота, но также поможет решить много скрытых на первый взгляд проблем. Прежде всего, это правильное физиологическое расположение внутренних органов, которое достигается за счет смещения центра тяжести в правильное положение. Шорты SANKOM заменяют собой ослабленный мышечный корсет мышц тазовой области, что препятствует развитию пролапса и способствует нормализации работы кишечника.
+                                    p Стоит отметить и положительное воздействие шорт SANKOM на мышцы спины, позвоночник и поясницу. За девять месяцев беременности женщина привыкает стоять и ходить со смещенным центром тяжести. Живот выдвинут вперед, а спина откинута назад. Правильно расположенный центр тяжести снимает нагрузку на позвоночник, создает ровную осанку, снимает напряжение с мышц спины и поясницы, что очень важно в первые недели после родов.
+                                        | Также шорты обладают лимфодренажным эффектом, что способствует выведению жидкости и профилактике целлюлита.
+                            .col-2.col-xl-3.order-lg-1.col-lg-6.col-sm-10.col-xs-12.mb-lg-3.mb-sm-2
+                                .content-person__image(style="background-image:url('./img/person.jpg');")
+                                p.content-person__title Муравина Елена Львовна
+                                p.content-person__subtitle Врач высшей категории, кандидат медицинских наук, заместитель главного врача по акушерству и гинекологии ГКБ 72 и роддома №20
+            include component/banner/delivery-bg.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug
         

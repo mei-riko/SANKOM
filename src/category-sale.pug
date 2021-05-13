@@ -24,9 +24,9 @@ html(lang="ru")
                     +banner('Скидки на&nbsp;товары до&nbsp;50%', '','','')(class="banner_sales" classTitle="banner__title_full")
                         .row
                             .col-6.text-right
-                                +btn('#', 'Для женщин')(class="btn_inverse")
+                                +btn('#', 'Для женщин')(class="btn_border")
                             .col-6.text-left
-                                +btn('#', 'Для мужчин')(class="btn_inverse")
+                                +btn('#', 'Для мужчин')(class="btn_border")
                     //- Filter's block
                     .mt-1
                         include component/filters/filters.pug
@@ -49,23 +49,11 @@ html(lang="ru")
                 .content__inside
                     .row.mt-2.mb-2
                         .col-6.col-lg-12
-                            .form-block
-                                p.h4.mb-1 Персональные скидки и новости
-                                p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
-                                form.form(action="")
-                                    .form__col.mb-xl-1
-                                        +radio('radio1', 'Получать все новости SANKOM','news','checked')
-                                    .form__col.mb-xl-1
-                                        +radio('radio2', 'Акции и скидки','news')
-                                    .form__col
-                                        +radio('radio3', 'Персональные предложения','news')
-                                    .form__line.mt-2
-                                        +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
-                                        +btn('', 'Подписаться')(class="btn_action btn_icon-check")
+                            include component/form/form-block.pug
                         .col-6.col-lg-12.mt-lg-2
-                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white")
-                            +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white")
-                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white")
+                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white mb-1")
+                            +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white mb-1")
+                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white mb-1")
                             +faq('Таблицы размеров', './icon/faq.svg', 'faq.html')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
