@@ -9,12 +9,13 @@
     border-bottom: 1px solid $border-color;
 
     transform: translateY(-60px);
-    transition: .6s;
+    transition: transform .6s;
 
     &__main{
         padding: 6px 0;
         height: 50px;
     }
+
 
     &--active{
         transform: translateY(0);

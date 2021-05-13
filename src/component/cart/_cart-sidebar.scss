@@ -18,6 +18,8 @@
 
         &_preview{
             height: 380px;
+            padding-right: 10px;
+            margin: 0;
         }
     }
 
@@ -48,5 +50,11 @@
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .cart-sidebar{
         padding: map-get($map: $spacers, $key: 1);
+
+        &__prop{
+            &--first{
+                padding-top: map-get($map: $spacers, $key: 1);
+            }
+        }
     }
 }

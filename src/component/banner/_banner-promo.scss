@@ -25,6 +25,7 @@
         font-weight: $font-weight-bold;
         font-size: 21px;
         text-transform: uppercase;
+        line-height: $line-height-heading;
     }
     &__content{
         text-transform: uppercase;
@@ -45,15 +46,25 @@
         border-radius: 2px;
     }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     .banner-promo{
-        padding: $spacer $spacer-gutter;
-        margin-right: -($spacer-gutter);
-        margin-left: -($spacer-gutter);
+        &__btn{
+            display: none;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .banner-promo{
+        padding: $spacer $spacer/2;
 
-        width: calc( 100% + 30px );
-        max-width: calc( 100% + 30px );
+        margin-right: -($spacer/2);
+        margin-left: -($spacer/2);
+
+        width: calc( 100% + 50px );
+        max-width: calc( 100% + 50px );
+
+        // width: 100%;
+        // max-width: 100%;
 
         display: block;
         text-align: center;
@@ -64,10 +75,27 @@
             display: block;
         }
         &__content{
-            font-size: 15px;
             text-transform: unset;
             padding: $spacer-gutter 0;
         }
+        &__btn{
+            display: inline-block;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .banner-promo{
+        padding: $spacer $spacer-gutter;
+        margin-right: -($spacer-gutter);
+        margin-left: -($spacer-gutter);
+
+        width: calc( 100% + 30px );
+        max-width: calc( 100% + 30px );
+
+        &__content{
+            font-size: 15px;
+        }
+
         &__btn{
             padding: 10px;
             min-width: 160px;

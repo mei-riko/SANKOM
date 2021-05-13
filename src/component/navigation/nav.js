@@ -2,20 +2,21 @@ import $ from 'jquery';
 
 // Desktop Navbar   
 function navbarHover( itemNav ){
+    let parentHeader = itemNav.closest('.header');
     let item = itemNav.find(".navbar__link");
     let nav = item.data("nav");
 
-    if( $(".navbar__link.navbar__link--active").length > 0 && !item.hasClass("navbar__link--active") ){
+    if( parentHeader.find(".navbar__link.navbar__link--active").length > 0 && !item.hasClass("navbar__link--active") ){
         let navActive = $(".navbar__link.navbar__link--active");
         navActive.removeClass("navbar__link--active");
-        $(".navbar .navbar__children" + navActive.data("nav")).removeClass("navbar__children--active");
+        parentHeader.find(".navbar .navbar__children" + navActive.data("nav")).removeClass("navbar__children--active");
     }
 
     item.addClass("navbar__link--active");
-    $(".navbar .navbar__children" + nav).addClass("navbar__children--active");
+    parentHeader.find(".navbar .navbar__children" + nav).addClass("navbar__children--active");
 }
 function navbarUnHover(){
-    let item = $(".navbar").find(".navbar__link.navbar__link--active");
+    let item = $('.navbar').find(".navbar__link.navbar__link--active");
     let nav = item.data("nav");
 
     item.removeClass("navbar__link--active");
@@ -62,12 +63,15 @@ function openNavbarOnClick( elem ){
 export function closeNavbarOnClick(){
     $(".navbar-sidebar").removeClass("navbar-sidebar--active");
     $(".navbar-mobile .navbar-mobile__item").removeClass("navbar-mobile__item--active");
+    
+    if( $('body').hasClass('open-navbar') && !$('body').hasClass('open-sidebar') ){
+        $('body').removeClass('hidden');
+        $('.overlay').addClass('overlay--disable');
+        // Change z-index
+        $('.header.header_sticky').removeClass('header_sticky--open-sidebar');
+    }
 
-    $('.overlay').addClass('overlay--disable');
-    $('body').removeClass('hidden');
     $('body').removeClass('open-navbar');
-    // Change z-index
-    $('.header.header_sticky').removeClass('header_sticky--open-sidebar');
 };
 
 
@@ -75,16 +79,16 @@ export function closeNavbarOnClick(){
 $(function(){
     // Check Windows Size
     if ( $(window).width() > 1023 || !window.matchMedia('screen and (max-width: 1024px)').matches ){
-        $(".navbar").removeClass("navbar--mobile").addClass("navbar--desktop");
+        $('.navbar').removeClass("navbar--mobile").addClass("navbar--desktop");
     }else{
-        $(".navbar").removeClass("navbar--desktop").addClass("navbar--mobile");
+        $('.navbar').removeClass("navbar--desktop").addClass("navbar--mobile");
     }
 
     // Desktop Navbar
     navbarDesktopInitialize( $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child') );
 
     // Mobile Sidebar Nav
-    $("[data-navbar]").on("click", function( event ){
+    $(document).on('click', "[data-navbar]", function( event ){
         event.preventDefault();
 
         if( !$(this).hasClass('navbar-mobile__item--active') ){
@@ -101,7 +105,7 @@ $(function(){
     });
 
     // Mobile Nav Slide
-    $('.navbar_mobile .navbar_mobile__parent .navbar_mobile__parent-link').on("click", function(e){
+    $('.navbar_mobile .navbar_mobile__parent .navbar_mobile__parent-link').on('click', function(e){
         e.preventDefault();
 
         const parent = $(this).parent();
@@ -140,12 +144,8 @@ $(function(){
     });
 });
 
-$('.navbar-sidebar .navbar-sidebar__close').on("click", function(){
+$('.navbar-sidebar .navbar-sidebar__close').on('click', function(){
     closeNavbarOnClick();
-    // $(this).closest('.navbar-sidebar').removeClass('navbar-sidebar--active');
-    // $('.overlay').addClass('overlay--disable');
-    // $('body').removeClass('hidden');
-    // $('body').removeClass('open-navbar');
 });
 
 // Resize
@@ -162,10 +162,10 @@ $(window).on("resize", function(){
         navbarDesktopInitialize( $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child') );
 
         // Remove Class
-        $(".navbar").removeClass("navbar--mobile").addClass("navbar--desktop");
+        $('.navbar').removeClass("navbar--mobile").addClass("navbar--desktop");
     }else{
         // Remove Class
-        $(".navbar").removeClass("navbar--desktop").addClass("navbar--mobile");
+        $('.navbar').removeClass("navbar--desktop").addClass("navbar--mobile");
     }
 });
 

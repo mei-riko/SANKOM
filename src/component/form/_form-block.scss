@@ -1,11 +1,11 @@
 .form-block{
-    padding: $grid-gutter-width $spacer;
+    padding: $spacer;
     border: 1px solid $border-color;
     // border-radius: $border-radius;
     background-color: $white;
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .form-block{
         padding: $spacer/2;
     }

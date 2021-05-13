@@ -1,15 +1,16 @@
+// Dark Btn
 .btn_inverse{
-    color: $black;
-    border-color: $white;
-    background-color: $white;
+    color: $white;
+    border-color: $dark-grey;
+    background-color: $dark-grey;
 
     &:hover{
-        color: $black;
-        border-color: $light-grey;
-        background-color: $light-grey;
+        color: $white;
+        border-color: $black;
+        background-color: $black;
 
         .btn__icon{
-            fill: $black;
+            fill: $white;
         }
     }
 }

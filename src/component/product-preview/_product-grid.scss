@@ -1,29 +1,31 @@
 .product-grid{
     display: grid;
-    grid-gap: $grid-gutter-width/2;
+    grid-gap: map-get($map: $spacers, $key: 2);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     // Large Product Preview
-    &_lg{
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
+    // &_lg{
+    //     grid-template-columns: repeat(5, minmax(0, 1fr));
+    // }
     // Small Product Preview
-    &_sm{
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+    // &_sm{
+    //     grid-template-columns: repeat(4, minmax(0, 1fr));
+    // }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .product-grid{
-        display: grid;
-        grid-gap: $spacer-gutter;
-    
-        // Large Product Preview
-        &_lg{
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-        // Small Product Preview
         &_sm{
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .product-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product-grid{
+        grid-gap: $spacer-gutter;
     }
 }

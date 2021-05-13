@@ -6,6 +6,8 @@ $(".tabs .tabs__item").on("click", function() {
     let tabContentId = $(this).data("content");
     let tabContent = $(".tabs-content" + tabContentId);
 
+    console.log('');
+
     tabParent.find(".tabs__item").removeClass("tabs__item--active").eq($(this).index()).addClass("tabs__item--active");
     tabContainer.find(".tabs-content").removeClass("tabs-content--show").removeClass("tabs-content--active");
     
@@ -22,7 +24,7 @@ $(".tabs-content.tabs-content_has-slider .slider.slider_tags").on('changed.owl.c
     $(".tabs-content.tabs-content--active").addClass("tabs-content--show");
 })
 
-$("[data-tab]").on("click", function(){
+$(document).on("click", "[data-tab]", function(){
     let tabId = $(this).data("tab");
     let tabContent = $(".tabs-content#" + tabId);
     let tabItem = $(".tabs__item[data-content='#" + tabId + "']");

@@ -52,10 +52,10 @@ const videoResponsive = new Responsive(
 );
 // Tags Slider
 const tagsResponsive = new Responsive(
-    {items: 2, },
-    {items: 3, },
-    {items: 5, },
-    {items: 7, },
+    {items: 2, margin: 15, },
+    {items: 3, margin: 15, },
+    {items: 4, margin: 15, },
+    {items: 6, margin: 15, },
     {items: 9, stagePadding: 25, margin: 15, loop: false,},
 );
 // Index Banner Slider
@@ -69,9 +69,9 @@ const bannerResponsive = new Responsive(
 // Promo Slider
 const promoResponsive = new Responsive(
     {items: 1, },
-    {items: 1, },
-    {items: 2, },
-    {items: 2, },
+    {items: 2, stagePadding: 50, margin: 15, },
+    {items: 2, stagePadding: 50, margin: 15, },
+    {items: 2, stagePadding: 50, margin: 15, },
     {items: 3, stagePadding: 25, margin: 15, loop: false,},
 );
 

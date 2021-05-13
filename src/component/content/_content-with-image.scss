@@ -13,7 +13,31 @@
         transform: translateX(-10%);
     }
 }
-
+// @media all and (max-width: map-get($grid-breakpoints, 'xl')){
+//     .content-with-image{
+//         &__image{
+//             display: none;
+//         }
+//         &__content{
+//             transform: none;
+//             flex: 0 0 100%;
+//             max-width: 100%;
+//         }
+//     }
+// }
+// @media all and (max-width: map-get($grid-breakpoints, 'lg')){
+//     .content-with-image{
+//         &__image{
+//             flex: 0 0 45%;
+//             max-width: 45%;
+//         }
+//         &__content{
+//             flex: 0 0 55%;
+//             max-width: 55%;
+//             transform: translateX(-10%);
+//         }
+//     }
+// }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-with-image{
         display: block;

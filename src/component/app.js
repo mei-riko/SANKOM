@@ -7,6 +7,7 @@ import '../component/tabs/tabs';
 import '../component/tags/tags';
 import '../component/faq/faq';
 import '../component/input/input';
+import '../component/tooltip/tooltip';
 
 import '../component/header/header';
 import '../component/navigation/nav';
@@ -31,9 +32,16 @@ $(function() {
     touch: false
   });
   // Link Disable
-  $('[data-trigger="click"]').on('click', function(e){
+  $(document).on('click', '[data-trigger="click"]', function(e){
     e.preventDefault();
   })
+  // Open Promocode Form
+  $(document).on('click', '.open-promocode', function(e){
+    e.preventDefault();
+    const form = $(this).siblings('.form.form_promocode');
+
+    form.slideToggle();
+  });
   // Open More Content
   $('.open-content').on('click', function(){
     let block = $(this);

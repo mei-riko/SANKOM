@@ -1,17 +1,21 @@
 .faq_toggle{
     padding: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 
     &__title{
-        padding: $spacer-gutter $grid-gutter-width/2;
+        padding: $spacer-gutter $spacer/2 $spacer-gutter 0;
+        cursor: pointer;
+        
         &:after{
-            right: $grid-gutter-width/2;
+            right: $spacer/2;
 
             width: 12px;
             height: 12px;
             background: url('../icon/plus.svg') no-repeat center / contain;
         }
     }
-
     &--active{
         .faq_toggle__title{
             font-weight: $font-weight-bold;

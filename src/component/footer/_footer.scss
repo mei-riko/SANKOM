@@ -105,7 +105,7 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .footer{
-        padding: map-get($map: $spacers, $key: 2) $spacer-gutter map-get($map: $spacers, $key: 4);
+        padding: map-get($map: $spacers, $key: 2) 0 map-get($map: $spacers, $key: 4);
         border-top: 1px solid $border-color;
 
         &__nav-item{
@@ -120,6 +120,10 @@
 
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .footer{
+        &__row{
+            margin-left: -($spacer-gutter);
+            margin-right: -($spacer-gutter);
+        }
         &__col-network{
             padding: $spacer-gutter 0;
             border-top: 1px solid $border-color;

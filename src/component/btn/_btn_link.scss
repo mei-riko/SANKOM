@@ -1,0 +1,15 @@
+.btn_link{
+    padding: 0 0 2px;
+    min-width: 1px;
+    line-height: $line-height-base;
+
+    background: inherit;
+    border: none;
+    border-bottom: 1px dashed $dark-grey;
+    color: $dark-grey;
+
+    &:hover{
+        border-bottom-color: $action;
+        color: $action;
+    }
+}

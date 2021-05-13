@@ -84,8 +84,19 @@
         padding-top: $grid-gutter-width/2;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content{
+        &__block-title{
+            font-size: 20px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .content{
+        &__block-title{
+            font-size: 17px;
+        }
         // Modificate
         &_category-slider{
             padding-top: 0;
@@ -95,10 +106,6 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content{
-        &__block-title{
-            font-size: 17px;
-        }
-
         // Modificate
         &_category-filter{
             padding-top: 0;

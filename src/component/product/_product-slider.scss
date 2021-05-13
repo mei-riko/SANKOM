@@ -1,6 +1,7 @@
 .product-slider{
     display: flex;
     flex-wrap: nowrap;
+    padding-right: map-get($map: $spacers, $key: 4);
 
     &__nav{
         flex: 0 0 140px;
@@ -9,12 +10,11 @@
         height: auto;
         height: intrinsic;
 
-        &_complect{
+        &_complect-lg{
             flex: 0 0 80px;
             max-width: 80px;
         }
     }
-    
     &__main{
         flex: 0 0 calc(100% - 140px);
         max-width: calc(100% - 140px);
@@ -22,24 +22,119 @@
         height: auto;
         height: intrinsic;
 
-        padding: 0 map-get($map: $spacers, $key: 4) 0 map-get($map: $spacers, $key: 1);
+        padding-left: map-get($map: $spacers, $key: 1);
 
-        &_complect{
+        &_complect-lg{
             flex: 0 0 calc(100% - 80px);
             max-width: calc(100% - 80px);
     
-            padding: 0 map-get($map: $spacers, $key: 2) 0 10px;   
+            padding: 0 0 0 10px; 
+        }
+    }
+    // Complect Two Products
+    &_complect-sm{
+        display: block;
+        padding-right: map-get($map: $spacers, $key: 2);
+    }
+    // Complect Three and More Products
+    &_complect-lg{
+        padding-right: map-get($map: $spacers, $key: 2);
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .product-slider{
+        padding-right: map-get($map: $spacers, $key: 2);
+
+        &__nav{
+            flex: 0 0 100px;
+            max-width: 100px;
+
+            &_complect-lg{
+                flex: 0 0 50px;
+                max-width: 50px;
+            }
+        }
+        &__main{
+            flex: 0 0 calc(100% - 100px);
+            max-width: calc(100% - 100px);
+            padding-left: map-get($map: $spacers, $key: 1);
+
+            &_complect-lg{
+                padding: 0 0 0 map-get($map: $spacers, $key: 1);
+
+                flex: 0 0 calc(100% - 50px);
+                max-width: calc(100% - 50px);
+            }
+        }
+
+        &_odd{
+            padding-right: $spacer/4;
+        }
+        &_even{
+            padding-left: $spacer/4;
+            padding-right: 0;
         }
     }
 }
-.product-slider_block{
-    display: block;
-}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .product-slider{
+        padding-right: 0;
 
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+        &__nav{
+            flex: 0 0 120px;
+            max-width: 120px;
+
+            &_complect-lg{
+                flex: 0 0 70px;
+                max-width: 70px;
+            }
+        }
+        &__main{
+            flex: 0 0 calc(100% - 120px);
+            max-width: calc(100% - 120px);
+
+            &_complect-lg{
+                flex: 0 0 calc(100% - 70px);
+                max-width: calc(100% - 70px);
+            }
+        }
+
+        &_odd{
+            padding-right: $spacer/4;
+        }
+        &_even{
+            padding-left: $spacer/4;
+            padding-right: 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product-slider{
+        &__nav{
+            flex: 0 0 100px;
+            max-width: 100px;
+
+            &_complect-lg{
+                flex: 0 0 50px;
+                max-width: 50px;
+            }
+        }
+        &__main{
+            flex: 0 0 calc(100% - 100px);
+            max-width: calc(100% - 100px);
+
+            &_complect-lg{
+                flex: 0 0 calc(100% - 50px);
+                max-width: calc(100% - 50px);
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product-slider{
         flex-wrap: wrap;
-
+        
         &__nav{
             flex: 0 0 100%;
             max-width: 100%;
@@ -48,19 +143,18 @@
         }
         &__main{
             padding: 0;
-
             flex: 0 0 100%;
             max-width: 100%;
 
             order: 1;
         }
-    }
-    .product-slider.product-slider_complect{
-        &:nth-child(2n){
-            padding-left: 10px;
-        }
-        &:nth-child(2n+1){
+
+        &_odd{
             padding-right: 10px;
+        }
+        &_even{
+            padding-left: 10px;
+            padding-right: 0;
         }
     }
 }

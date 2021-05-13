@@ -1,5 +1,6 @@
 .product-nav{
-    height: 100%;
+    height: auto;
+    height: intrinsic;
 
     &__item{
         padding: $spacer-gutter/2 0;
@@ -13,11 +14,6 @@
         &:hover, &:focus{
             outline: none;
         }
-
-        &_sm{
-            padding: 5px 0;
-        }
-
         // Slick
         &.slick-slide{
             height: auto;
@@ -29,20 +25,9 @@
             filter: opacity(1);
         }
     }
-}
-
-.product-nav_complect{
-    height: fit-content;
-    height: auto;
-
-    margin-top: $spacer/2;
-    padding-right: $spacer/2;
-
-    &__item{
+    &__item-complect-sm{
         padding: 0 5px;
         outline: none;
-
-        border-radius: $border-radius;
         overflow: hidden;
 
         filter: opacity(.5);
@@ -61,19 +46,34 @@
         &.slick-current{
             filter: opacity(1);
         }
-        .img-fluid{
-            border-radius: 4px;
-        }
     }
 
-    // Slick
-    .slick-list{
-        margin-left: -5px;
-        margin-right: -5px;
+    // Complect Two Products
+    &_complect-sm{
+        height: fit-content;
+        height: auto;
+    
+        margin-top: $spacer/2;
+    
+        // Slick
+        .slick-list{
+            margin-left: -5px;
+            margin-right: -5px;
+        }
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product-nav{
+        &_complect-sm{
+            margin-top: $spacer-gutter;
+    
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product-nav{
         height: fit-content;
         height: auto;
@@ -85,12 +85,15 @@
             padding: $spacer-gutter 0 0;
             margin: 0 6px;
         }
-    }
-    .product-nav_complect{
-        margin-top: 10px;
-        padding-right: 0;
 
-        margin-left: 0;
-        margin-right: 0;
+        &_complect-sm{
+            margin-top: 10px;
+    
+            // Slick
+            .slick-list{
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
     }
 }

@@ -49,7 +49,7 @@ html(lang="ru")
             aside.content.content_secondary.container
                 .content__inside
                     .row.mt-2.mb-2
-                        .col-6.col-lg-12
+                        .col-6.col-xl-12
                             .content-with-image
                                 .content-with-image__image
                                     img.img-fluid(src="./img/FAQ.jpg" title="" alt="")
@@ -68,23 +68,26 @@ html(lang="ru")
                                     +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-3.jpg")
                                 .col-6.col-sm-12.mt-2
                                     +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-4.jpg")
-                        .col-6.col-lg-12.mt-lg-3.mt-md-2
-                            .form-block.mb-2
-                                p.h4.mb-1 Персональные скидки и новости
-                                p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
-                                form.form(action="")
-                                    .form__col.mb-xl-1
-                                        +radio('radio1', 'Получать все новости SANKOM','news','checked')
-                                    .form__col.mb-xl-1
-                                        +radio('radio2', 'Акции и скидки','news')
-                                    .form__col
-                                        +radio('radio3', 'Персональные предложения','news')
-                                    .form__line.mt-2
-                                        +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
-                                        +btn('', 'Подписаться')(class="btn_action btn_icon-check")
-                            +faq('О бренде SANKOM, материалах и технологиях производства', './icon/faq.svg', 'faq.html')(class="bg-white")
-                            +faq('Подробнее о программе лояльности', './icon/faq.svg', 'faq.html')(class="bg-white")
-                            +faq('Узнать о способах доставки, оплаты и возврата', './icon/faq.svg', 'faq.html')(class="bg-white")
+                        .col-6.col-xl-12.mt-xl-2
+                            .row
+                                .col-12.col-xl-6.col-lg-12
+                                    .form-block.mb-2.mb-xl-0.mb-lg-2.d-sm-none
+                                        p.h4.mb-1 Персональные скидки и новости
+                                        p.text-grey.mb-2 Facilisis nunc proin sapien, dictum quam ornare orci dolor viverra pellentesque
+                                        form.form(action="")
+                                            .form__col
+                                                +radio('radio1', 'Получать все новости SANKOM','news','checked')
+                                            .form__col
+                                                +radio('radio2', 'Акции и скидки','news')
+                                            .form__col
+                                                +radio('radio3', 'Персональные предложения','news')
+                                            .form__line.mt-2
+                                                +input('', 'E-mail')(class="input_label-inside form__line-input" label="input__label_inside bg-white" field="form__line-field" )
+                                                +btn('', 'Подписаться')(class="btn_action btn_icon-check")
+                                .col-12.col-xl-6.col-lg-12
+                                    +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg', 'faq.html')(class="bg-white")
+                                    +faq('Подробнее о программе лояльности', '/icon/faq.svg', 'faq.html')(class="bg-white")
+                                    +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg', 'faq.html')(class="bg-white")
             include component/banner/delivery.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug

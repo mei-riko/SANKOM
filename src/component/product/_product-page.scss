@@ -36,11 +36,17 @@
             font-size: 16px;
             text-decoration: line-through;
             margin-right: 10px;
+
+            display: inline-flex;
+            white-space: nowrap;
         }
         &-new{
             font-size: 18px;
             font-weight: $font-weight-bolder;
             color: $action;
+
+            display: inline-flex;
+            white-space: nowrap;
         }
     }
     &__cashback{
@@ -50,8 +56,16 @@
 
         flex: 0 0 240px;
 
+        position: relative;
+        padding-right: 30px;
+
         &-icon{
-            padding-left: 10px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+
+            transform: translateY(-50%);
+            padding: 0;
             cursor: pointer;
         }
     }
@@ -59,13 +73,11 @@
         flex: 0 0 100%;
         margin: map-get($map: $spacers, $key: 2) 0;
     }
+    // Scroll Anchor To Complect Block
     &__complect-link{
         font-size: map-get($map: $font-size, $key: "xs");
-        line-height: $line-height-heading;
+        line-height: map-get($map: $font-size, $key: "sm");
         color: $grey;
-
-        padding-bottom: 2px;
-        border-bottom: 1px dashed $grey;
 
         &:hover{
             text-decoration: none;
@@ -75,6 +87,9 @@
 
     // Complect Product Information
     &__complect-title{
+        flex: 0 0 calc(100% - 100px);
+        max-width: calc(100% - 100px);
+
         font-size: map-get($map: $font-size, $key: 'sm');
         font-weight: $font-weight-bold;
         line-height: $line-height-heading;
@@ -82,13 +97,20 @@
         padding-right: 10px;
     }
     &__complect-article{
+        flex: 0 0 100px;
+        max-width: 100px;
+
         font-size: 9px;
         line-height: 14px;
         color: $grey-text;
+
+        text-align: right;
     }
-    &__complect-table{
-        flex-grow: 1;
-        padding-left: 10px;
+    &__complect-options{
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        margin-top: 10px;
     }
     
     // Product's Option
@@ -104,7 +126,7 @@
             align-items: flex-end;
 
             & + .product-page__option_complect {
-                margin-top: 10px;
+                margin-top: $spacer-gutter;
             }
         }
     }
@@ -138,7 +160,7 @@
             background: $white no-repeat center / cover;
             
             padding: 4px;
-            height: 38px;
+            height: 68px;
 
             margin: 0;
             flex: 0 0 100%;
@@ -173,6 +195,7 @@
 
                 &:hover{
                     background-color: $white;
+                    border-color: $action;
                 }
             }
         }
@@ -192,7 +215,8 @@
             transition: .3s;
 
             &:hover{
-                background-color: $light-bg;
+                color: $dark-grey;
+                border-color: $dark-grey;
             }
         }
 
@@ -228,6 +252,9 @@
         margin-top: $spacer/2;
         padding: $spacer/2;
         border: 1px solid $border-color;
+
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
     // Blockquote
@@ -245,7 +272,7 @@
         "icon title"
         "icon content";
     
-        grid-template-columns: 45px calc(100% - 45px);
+        grid-template-columns: 45px calc(100% - 50px);
 
         &-icon{
             padding-right: map-get($map: $spacers, $key: 1);
@@ -278,8 +305,8 @@
     // Links
     &__subinfo{
         width: 100%;
-        margin-top: $spacer/2;
-        margin-bottom: $spacer;
+        margin-top: map-get($map: $spacers, $key: 1);
+        // margin-bottom: $spacer;
 
         display: grid;
         grid-gap: $spacer-gutter;
@@ -289,11 +316,11 @@
             display: flex;
             align-items: center;
 
-            &:hover{
-                .product-page__subinfo-icon{
-                    fill: $action;
-                }
-            }
+            // &:hover{
+            //     .product-page__subinfo-icon{
+            //         fill: $action;
+            //     }
+            // }
 
             &:nth-child(2n){
                 justify-content: flex-end;
@@ -309,9 +336,13 @@
         }
         &-link{
             font-size: map-get($map: $font-size, $key: "xs");
-            line-height: $line-height-base;
-            text-decoration: underline;
+            line-height: map-get($map: $font-size, $key: "sm");
+            text-decoration: none;
             color: $grey;
+    
+            &:hover{
+                text-decoration: none;
+            }
         }
     }
     // Help INformation
@@ -338,39 +369,109 @@
         padding: 0 $spacer-gutter;
     }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .product-page{
+        // Simple Product Information
+        &__price{
+            flex: 0 0 calc(100% - 160px);
+            max-width: calc(100% - 160px);
+        }
+        &__cashback{
+            flex: 0 0 160px;
+            max-width: 160px;
+        }
+        // Product Content Block
+        &__content{
+            padding: $spacer 0;
+        }
+        &__row{
+            margin-left: -($spacer/2);
+            margin-right: -($spacer/2);
+        }
+        &__col{
+            padding: 0 $spacer/2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .product-page{
         // Simple Product Information
         &__title{
-            font-size: 16px;
-            
+            flex: 0 0 calc(100% - 100px);
+            max-width: calc(100% - 100px);
+
+            padding-right: $spacer-gutter;
+            margin-bottom: 0;
+        }
+        &__article{
+            flex: 0 0 100px;
+            max-width: 100px;
+        }
+        &__complect{
+            margin: 10px 0 map-get($map: $spacers, $key: 2);
+        }
+        // Product Content Block
+        &__content{
+            padding: $spacer/2 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .product-page{
+        // Simple Product Information
+        &__title{
             flex: 0 0 100%;
             max-width: 100%;
+
+            font-size: 16px;
             margin-bottom: 5px;
         }
         &__article{
             flex: 0 0 100%;
             max-width: 100%;
-
+            
             text-align: left;
         }
-
         &__price{
-            flex: 0 0 100%;
-            max-width: 100%;
+            flex: 1 0 60%;
+            max-width: 60%;
+
+            margin-bottom: $spacer-gutter;
+        }
+        &__cashback{
+            flex: 0 0 40%;
+            max-width: 40%;
+
+            margin-bottom: $spacer-gutter;
+        }
+        &__complect{
+            margin: 0 0 map-get($map: $spacers, $key: 2);
+        }
+
+        // Blockquote
+        &__blockquote{
+            margin: 0;
+        }
+
+        // Product Buttons
+        &__buy{
+            flex: 0 0 50%;
+        }
+        &__quick-buy{
+            flex: 0 0 50%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .product-page{
+        // Simple Product Information
+        &__price{
             margin-bottom: 10px;
         }
         &__cashback{
-            flex: 0 0 100%;
-            max-width: 100%;
-            margin-bottom: map-get($map: $spacers, $key: 2);
-
-            text-align: left;
+            margin-bottom: 10px;
         }
-        &__complect{
-            margin: 0 0 25px;
-        }
+        
         &__order{
             margin-bottom: map-get($map: $spacers, $key: 1);
         }
@@ -394,25 +495,6 @@
             }
         }
 
-        // Product Buttons
-        &__btns{
-            flex-wrap: wrap;
-        }
-        &__buy{
-            flex: 0 0 100%;
-            padding-right: 0;
-            padding-bottom: 10px;
-        }
-        &__quick-buy{
-            flex: 0 0 100%;
-            padding-left: 0;
-        }
-
-        // Blockquote
-        &__blockquote{
-            margin: map-get($map: $spacers, $key: 2) 0;
-        }
-
         // Links
         &__subinfo{
             margin: map-get($map: $spacers, $key: 2) 0;
@@ -420,11 +502,6 @@
         // Help INformation
         &__help{
             font-size: map-get($map: $font-size, $key: 'xs');
-        }
-
-        // Product Content Block
-        &__col{
-            padding: 0;
         }
     }
 }

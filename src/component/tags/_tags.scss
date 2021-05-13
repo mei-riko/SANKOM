@@ -1,7 +1,7 @@
 .tags{
     display: flex;
     flex-wrap: wrap;
-    margin: -4px;
+    margin: 0 -4px;
 
     &__link{
         font-size: map-get($map: $font-size, $key: xs);
@@ -36,5 +36,12 @@
                 border-color: $border-color;
             }
         }
+    }
+
+    &:first-child{
+        margin-top: -4px;
+    }
+    &:last-child{
+        margin-bottom: -4px;
     }
 }

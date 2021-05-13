@@ -1,38 +1,45 @@
 .sidebar.sidebar_cart#cart 
-    .sidebar__close Закрыть
+    .sidebar__close Продолжить покупки
     .sidebar__content
         p.sidebar__title Ваша корзина (3)
         .cart-sidebar.cart-sidebar_preview.mt-1
-            .cart-sidebar__content.cart-sidebar__content_preview
+            .sidebar_cart__content.cart-sidebar__content.cart-sidebar__content_preview
                 +productCart('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-1.jpg');")
                 +productCart('Shaper Classic Peach', '16 999 руб.', '', 'M', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-2.jpg');")
                 +productCart('Shaper Classic Peach', '6 999 руб.', '', 'L', 'белый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-3.jpg');")
                 +productCart('Shaper Classic Peach', '6 999 руб.', '', 'XXL', 'фиолетовый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-4.jpg');")
-            .cart-sidebar__prop.cart-sidebar__prop--first
-                span.cart-sidebar__prop-title Стоимость товаров
-                span.cart-sidebar__prop-value.text-bold 12 500 руб.
-                                
-    .sidebar__secondary.sidebar__promocode 
-        form.form(action="")
-            .form__line
-                +input('', 'Укажите промокод')(label="input__label_inside" class="input_label-inside form__line-input" field="form__line-field")
-                +btn('', 'Активировать')(class="form__line-btn")
-    .sidebar__btn
+            .sidebar_cart__prop
+                .cart-sidebar__prop.cart-sidebar__prop--first
+                    span.cart-sidebar__prop-title Стоимость товаров
+                    span.cart-sidebar__prop-value.text-bold 12 500 руб.
+    .sidebar__footer                          
         +btn('cart.html', 'Оформить заказ')(class="btn_action btn--full")
+        .text-center.mt-1
+            form.form.form_promocode.pt-1.pb-1(action="")
+                .form__line
+                    +input('', 'Введите его здесь')(label="input__label_inside" class="input_label-inside form__line-input" field="form__line-field")
+                    +btn('', 'Активировать')(class="btn_border form__line-btn")
+            a.btn.btn_link.open-promocode(href="") Есть промокод или подарочная карта?
 .sidebar#payment
     .sidebar__close Закрыть
     .sidebar__content
         p.sidebar__title Способы оплаты
         p Мы можем принять оплату различными способами, которые доступны на странице оформления заказа.
         p Если у Вас есть сомнения по составу заказа и Вы не готовы оплатить заказ сразу, Вы можете выбрать пункт "согласовать при подтверждении заказа". После согласования заказа, мы предложим различные способы оплаты и если потребуется, то подробно проконсультируем о каждом их них.
-        +btn('faq.html', 'Открыть FAQ')(class="btn_action")
+        +faq('Вопрос 1', '')(class="faq_toggle" classTitle="faq_toggle__title")
+            p Если Вам необходим товар другого размера, Вы можете запросить об этом при возврате. Для этого Вам следует указать в бланке возврата, какой товар Вы хотите обменять, а также указать новый размер. Если этого размера нет в наличии, мы вернем Вам стоимость товара.
+        +faq('Вопрос 2', '')(class="faq_toggle" classTitle="faq_toggle__title")
+            p Если Вам необходим товар другого размера, Вы можете запросить об этом при возврате. Для этого Вам следует указать в бланке возврата, какой товар Вы хотите обменять, а также указать новый размер. Если этого размера нет в наличии, мы вернем Вам стоимость товара.
 .sidebar#delivery
     .sidebar__close Закрыть
     .sidebar__content
         p.sidebar__title Способы доставки
         p Мы можем принять оплату различными способами, которые доступны на странице оформления заказа.
         p Если у Вас есть сомнения по составу заказа и Вы не готовы оплатить заказ сразу, Вы можете выбрать пункт "согласовать при подтверждении заказа". После согласования заказа, мы предложим различные способы оплаты и если потребуется, то подробно проконсультируем о каждом их них.
-        +btn('faq.html', 'Открыть FAQ')(class="btn_action")
+        +faq('Вопрос 1', '')(class="faq_toggle" classTitle="faq_toggle__title")
+            p Если Вам необходим товар другого размера, Вы можете запросить об этом при возврате. Для этого Вам следует указать в бланке возврата, какой товар Вы хотите обменять, а также указать новый размер. Если этого размера нет в наличии, мы вернем Вам стоимость товара.
+        +faq('Вопрос 2', '')(class="faq_toggle" classTitle="faq_toggle__title")
+            p Если Вам необходим товар другого размера, Вы можете запросить об этом при возврате. Для этого Вам следует указать в бланке возврата, какой товар Вы хотите обменять, а также указать новый размер. Если этого размера нет в наличии, мы вернем Вам стоимость товара.
 .sidebar#programm
     .sidebar__close Закрыть
     .sidebar__content
