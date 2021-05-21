@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    font-size: map-get($map: $font-size, $key: xs);
+    font-size: map-get($map: $font-size, $key: sm);
 
     &__item{
         &:after{

@@ -2,14 +2,13 @@
 
 // Banner With Background Image
 @import "banner/banner";
-@import "banner/banner_category";
 @import "banner/banner_sales";
-// Small Promo Banner
-@import "banner/banner-promo";
 // Banner With 1-4 Image
 @import "banner/banner-intro";
 // Banner Video
 @import "banner/banner-video";
+// Banner Subscribe
+@import "banner/banner-promo";
 // Tabs
 @import "tabs/tabs";
 // Networks Link
@@ -66,5 +65,7 @@
 @import "faq/faq_link";
 // Content
 @import "content/content-person";
+// Cabinet
+@import "cabinet/cabinet";
 // Display Style
 @import "framework/display";

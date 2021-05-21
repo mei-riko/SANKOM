@@ -1,0 +1,330 @@
+.cabinet{
+    margin-left: -($grid-gutter-width/2);
+    margin-right: -($grid-gutter-width/2);
+    
+    &__col{
+        padding-left: $grid-gutter-width/2;
+        padding-right: $grid-gutter-width/2;
+    }
+    // Sidebar
+    &__sidebar{
+        padding: $grid-gutter-width/2 0;
+        background-color: $light-bg;
+    }
+    &__account{
+        padding: 0 $grid-gutter-width/2;
+        margin-bottom: $grid-gutter-width/2;
+
+        &-avatar{
+            max-width: 100%;
+            width: 100px;
+            height: auto;
+
+            border-radius: 6px;
+            margin-bottom: $spacer-gutter;
+        }
+        &-name{
+            font-weight: $font-weight-bold;
+        }
+        &-contact{
+            font-size: map-get($map: $font-size, $key: 'xs');
+        }
+    }
+    &__navigation{
+        display: flex;
+        flex-direction: column;
+
+        &-item{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            font-size: map-get($map: $font-size, $key: 'sm');
+            color: $black;
+            padding: $spacer-gutter $grid-gutter-width/2;
+
+            &:hover{
+                color: $black;
+                background-color: rgba( 255,255,255,0.5 );
+                text-decoration: none;
+            }
+
+            &--here{
+                color: $black;
+                font-weight: $font-weight-bold;
+                background-color: $white;
+                border-right: 4px solid $action;
+
+                &:hover{
+                    cursor: default;
+                    color: $black;
+                    background-color: $white;
+                }
+            }
+        }
+        &-icon{
+            height: 20px;
+            width: 20px;
+            margin-right: 20px;
+        }
+        &-sep{
+            height: 1px;
+            width: 100%;
+            background-color: $white;
+        }
+    }
+    // Main
+    &__body{
+        padding: $grid-gutter-width/2 0;
+    }
+    &__item{
+        display: block;
+
+        padding: $grid-gutter-width/2;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+
+        // height: 100%;
+
+        // Modificate
+        &_link{
+            text-decoration: none;
+            color: $black;
+            transition: .4s;
+
+            &:hover{
+                text-decoration: none;
+                color: $black;
+                background-color: $lightest-bg;
+            }
+        }
+        &_info{
+            height: 200px;
+        }
+        &_setting{
+            position: relative;
+
+            &-icon{
+                position: absolute;
+                top: $spacer-gutter;
+                right: $spacer-gutter;
+
+                width: 16px;
+                height: 16px;
+                background: url('../icon/icon-settings.svg') no-repeat center / contain;
+
+                filter: opacity(.5);
+                transition: .4s;
+
+                &:hover{
+                    filter: opacity(1);
+                }
+            }
+        }
+        // Inside Elements
+        &-title{
+            font-size: 17px;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-heading;
+            margin-bottom: $spacer-gutter;
+        }
+        &-intro{
+            font-size: map-get($map: $font-size, $key: 'sm');
+        }
+        &-prop{
+            font-size: map-get($map: $font-size, $key: 'sm');
+
+            display: flex;
+            justify-content: space-between;
+
+            &-title{
+                padding-right: 10px;
+            }
+            &-value{
+                font-weight: $font-weight-bold;
+            }
+        }
+        &-footer{
+            margin-top: $spacer-gutter;
+        }
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        position: relative;
+        background: no-repeat center / cover;
+        min-height: 200px;
+
+        &-status{
+            position: absolute;
+            top: $grid-gutter-width/2;
+            left: $grid-gutter-width/2;
+
+            display: inline-block;
+            font-size: map-get($map: $font-size, $key: 'sm');
+            font-weight: $font-weight-bold;
+            line-height: 1;
+            text-align: center;
+
+            max-width: 100px;
+
+            padding: 4px 10px;
+            border-radius: 10px;
+            background-color: $light-bg;
+        }
+        &-intro{
+            font-size: map-get($map: $font-size, $key: 'sm');
+            line-height: $line-height-heading;
+            text-align: right;
+            color: $white;
+            padding-left: 110px;
+        }
+        &-title{
+            font-size: 44px;
+            line-height: $line-height-heading;
+            font-weight: $font-weight-bold;
+            color: $white;
+
+            padding-right: 30px;
+            padding-bottom: 4px;
+        }
+        &-subtitle{
+            font-size: map-get($map: $font-size, $key: 'sm');
+            line-height: $line-height-heading;
+            color: $white;
+            padding-right: 30px;
+        }
+        &-icon{
+            position: absolute;
+            bottom: $grid-gutter-width/2;
+            right: $grid-gutter-width/2;
+
+            cursor: pointer;
+        }
+    }
+    &__cashback{
+        // margin-top: $grid-gutter-width/2;
+
+        &-item{
+            display: flex;
+            flex-wrap: nowrap;
+
+            position: relative;
+            padding-left: 35px;
+
+            margin-bottom: $spacer-gutter;
+            
+            &:before{
+                content: '';
+                display: block;
+
+                width: 24px;
+                height: 24px;
+                border-radius: 12px;
+
+                background: $grey;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &_add{
+                &:before{
+                    background: #44C57F url('../icon/arrow-top-white.svg') no-repeat center / 10px;
+                }
+            }
+            &_remove{
+                &:before{
+                    background: $action url('../icon/arrow-bottom-white.svg') no-repeat center 10px / 10px;
+                }
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        &-add{
+            color: #44C57F;
+        }
+        &-remove{
+            color: $action;
+        }
+        &-type{
+            font-size: map-get($map: $font-size, $key: 'xs');
+            padding-right: 10px;
+
+            flex: 0 0 120px;
+            max-width: 120px;
+        }
+        &-info{
+            margin-top: -2px;
+
+            flex: 0 0 calc(100% - 120px);
+            max-width: calc(100% - 120px);
+        }
+        &-title{
+            // font-size: map-get($map: $font-size, $key: 'sm');
+            font-weight: $font-weight-bold;
+            margin-bottom: 5px;
+        }
+        &-subtitle{
+            font-weight: $font-weight-bold;
+            color: $grey;
+        }
+        &-intro{
+            font-size: map-get($map: $font-size, $key: 'xs');
+            font-weight: $font-weight-bolder;
+            line-height: $line-height-heading;
+            color: $grey;
+            margin-bottom: 5px;
+        }
+        &-content{
+            font-size: map-get($map: $font-size, $key: 'xs');
+            line-height: $line-height-heading;
+            color: $grey;
+        }
+    }
+    &__table{
+        width: 100%;
+        // margin-top: $grid-gutter-width/2;
+
+        &-head{
+            font-size: map-get($map: $font-size, $key: 'xs');
+            color: $grey;
+            padding-bottom: $spacer-gutter;
+        }
+        &-line{
+            vertical-align: baseline;
+        }
+        &-title{
+            padding: 2px 8px 15px 8px;
+            font-weight: $font-weight-base;
+        }
+        &-item{
+            font-size: map-get($map: $font-size, $key: 'sm');
+            padding: 10px 8px;
+            font-weight: $font-weight-base;
+        }
+    }
+    &__order{
+        width: 100%;
+        margin-top: 0;
+
+        &-status{
+            display: inline-block;
+            padding: 3px 8px 5px;
+
+            border-radius: 10px;
+            min-width: 24px;
+            min-height: 10px;
+
+            font-size: map-get($map: $font-size, $key: 'sm');
+            font-weight: $font-weight-bolder;
+            color: $white;
+            line-height: 1;
+        }
+    }
+}

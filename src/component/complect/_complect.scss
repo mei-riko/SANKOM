@@ -79,14 +79,56 @@
         }
     }
     &__label{
-        font-size: map-get($map: $font-size, $key: xs);
-        line-height: map-get($map: $font-size, $key: sm);
-        white-space: nowrap;
+        // font-size: map-get($map: $font-size, $key: xs);
+        // line-height: map-get($map: $font-size, $key: sm);
+        // white-space: nowrap;
 
-        padding: 4px 10px;
-        border: 1px solid $border-color;
-        border-radius: $spacer-gutter;
-        background-color: $light-bg;
+        // padding: 4px 10px;
+        // border: 1px solid $border-color;
+        // border-radius: $spacer-gutter;
+        // background-color: $light-bg;
+        position: relative;
+        display: inline-block;
+        padding: 3px 6px 3px 8px;
+        margin-left: 10px;
+        height: 20px;
+
+        background: $action;
+        color: $white;
+        border-radius: 0 4px 4px 0;
+
+        font-size: map-get($map: $font-size, $key: 'xs');
+        font-weight: $font-weight-bolder;
+        line-height: map-get($map: $font-size, $key: 'sm');
+
+        &:before{
+            content: '';
+            width: 4px; 
+            height: 4px;
+            border-radius: 2px;
+            background: $white;
+
+            position: absolute;
+            top: calc(50% - 2px);
+            left: -2px;
+
+            z-index: 2;
+        }
+        &:after{
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            
+            border-right: 10px solid $action;
+
+            position: absolute;
+            top: 0;
+            left: -10px;
+
+            z-index: 1;
+        }
     }
 
     &__btn{

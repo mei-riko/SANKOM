@@ -1,0 +1,140 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        title UI kit
+
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
+
+        link(href='./css/framework.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
+
+    body
+        script(src='./js/jquery.min.js')
+        include component/mixin.pug
+        main
+            section.content.container.mt-2
+                .content__inside
+                    .row 
+                        .col-3
+                            p.h4 Примеры кнопок
+                            .d-block.mb-1
+                                a.btn(href="#") Default Button
+                            .d-block.mb-1
+                                a.btn.btn_secondary(href="#") Secondary Button
+                            .d-block.mb-1
+                                a.btn.btn_border(href="#") Border Button
+                            .d-block.mb-1
+                                a.btn.btn_action(href="#") Action Button
+                            .d-block.mb-1
+                                a.btn.btn_inverse(href="#") Inverse Button
+                            .d-block.mb-1
+                                a.btn.btn_link(href="#") Link Button
+                            .d-block.mb-1
+                                a.btn.btn_border.btn--full(href="#") Full Button Any Style
+                            .d-block.mb-1
+                                a.btn.btn_border.btn--small(href="#") Small Button Any Style
+                        .col-3
+                            p.h4 Пагинация 
+                            .pagination.mt-2.mt-xs-0
+                                a.pagination__link.pagination__link_prev(href="#") &nbsp;
+                                a.pagination__link(href="#") 1
+                                a.pagination__link(href="#") 2
+                                a.pagination__link.pagination__link--active(href="#") 3
+                                a.pagination__link(href="#") 4
+                                a.pagination__link.pagination__link_next(href="#") &nbsp;
+                            p.h4 Элементы формы
+                            .d-block.mb-1
+                                +input('Placeholder', '')(class="input--full input_label" label="" field="input__field--full" )
+                            .d-block.mb-1
+                                +input('', 'Label')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                            .d-block.mb-1
+                                +textarea('', 'Label', 5)(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                            .d-block.mb-1
+                                +checkbox('demoCheckbox1', 'Выбранный чек-бокс', 'checked')
+                            .d-block.mb-1
+                                +checkbox('demoCheckbox2', 'Невыбранный чек-бокс')
+                            .d-block.mb-1
+                                +radio('demoRadio1', 'Выбранный радио-инпут', 'demo' ,'checked')
+                            .d-block.mb-1
+                                +radio('demoRadio2', 'Невыбранный радио-инпут', 'demo' )
+                        .col-6
+                            p.h4 Выделенные блоки
+                            .d-block.mb-1
+                                +faq('Стилизованная ссылка с заменяемой иконкой', '/icon/faq.svg', 'faq.html')
+                            .d-block.mb-1
+                                .blockquote
+                                    p «Lorem ipsum dolor sit amet. Amet, consectetur, adipisci velit, sed ut et voluptates. Laborum et accusamus et quasi. Doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo.»
+                                    p.text-grey — Meisha Johnson, Founder and Owner of Neema Fine Arts Gallery 
+                            .d-block.mb-1 
+                                +faq('Раскрывающийся блок с информацией', '')(class="faq_toggle" classTitle="faq_toggle__title")
+                                    p Ipsam voluptatem, quia non numquam eius modi tempora. Omnis iste natus error sit voluptatem sequi nesciunt neque. Reprehenderit, qui in ea voluptate velit esse quam. Hic tenetur a sapiente delectus, ut aliquid ex ea commodi autem. Aspernatur aut reiciendis voluptatibus maiores alias. Minima veniam, quis nostrum exercitationem ullam corporis suscipit. Impedit, quo voluptas assumenda est, omnis iste. Voluptas nulla vero eos et accusamus et quasi architecto.
+                        .col-6.mt-2
+                            h1 Заголовок H1
+                            h2 Заголовок H2
+                            h3 Заголовок H3
+                            h4 Заголовок H4
+                            h5 Заголовок H5
+                            h6 Заголовок H6 
+                            p.lead Omnis iste natus error sit voluptatem sequi neque. Reprehenderit, qui in ea voluptate velit esse quam. Hic tenetur a sapiente delectus, ut aliquid ex ea commodi autem. Aspernatur aut reiciendis voluptatibus maiores alias. Minima veniam, quis nostrum exercitationem ullam corporis suscipit.
+                        .col-6.mt-2 
+                            p Ipsam voluptatem, quia non numquam eius modi tempora. Omnis iste natus error sit voluptatem sequi nesciunt neque. Reprehenderit, qui in ea voluptate velit esse quam. Hic tenetur a sapiente delectus, ut aliquid ex ea commodi autem. Aspernatur aut reiciendis voluptatibus maiores alias. Minima veniam, quis nostrum exercitationem ullam corporis suscipit. Impedit, quo voluptas assumenda est, omnis iste. Voluptas nulla vero eos et accusamus et quasi architecto.
+                            ul 
+                                li маркированный список
+                                li маркированный список
+                                li маркированный список
+                                li маркированный список
+                            ol 
+                                li нумерованный список
+                                li нумерованный список
+                                li нумерованный список
+                                li нумерованный список
+                        .col-12.mt-2
+                            //- Banner Tech (On Mobile Photo Bottom) 
+                            .banner-intro
+                                .banner-intro__image-block.loading.order-lg-2
+                                    .banner-intro__video(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+                                        img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                    img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                    img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                    img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                .banner-intro__content.banner-intro__content_right.order-lg-1.pb-md-2.pb-lg-3
+                                    p.banner-intro__title Фотографии на мобильном снизу
+                                    p.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.
+                            
+                            //- Banner Tech (On Mobile Photo Top)
+                            .mt-2
+                                .banner-intro
+                                    .banner-intro__content.banner-intro__content_left.order-lg-2.pt-md-2.pt-lg-3
+                                        p.banner-intro__title Фотографии на мобильном вверху
+                                        p.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.
+                                    .banner-intro__image-block.loading.order-lg-1
+                                        img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                        img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                        img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                        img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            //- Banner Main (Text Center)
+                            .mt-2
+                                +banner('Habitant lectus quam', 'Sed dui habitant lectus quam pharetra id pretium amet, eget. Eget nibh eget mattis.', '', '')(class="banner_content-center banner_inside"  dataSrc="./img/banner-2.jpg" dataSrcSmall="./img/banner-2-mobile.jpg")
+                            //- Banner Main (Text Left)
+                            .mt-2
+                                +banner('Спорт и lifestyle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.', '', '')(class="banner_content-left banner_inside" classIntro="banner__intro_left" dataSrc="./img/banner-3.jpg" dataSrcSmall="./img/banner-3-mobile.jpg")
+                            //- Banner Main (Text Left)
+                            .mt-2
+                                +banner('Спорт и lifestyle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum amet sed ipsum. Congue lorem faucibus nisl a. Turpis volutpat volutpat malesuada quis velit ac. Tellus magna.', '', '')(class="banner_content-right banner_inside" classIntro="banner__intro_left" dataSrc="./img/banner-4.jpg" dataSrcSmall="./img/banner-3-mobile.jpg")
+
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/owl.carousel.min.css', rel='stylesheet')
+        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
+        script(src="./js/owl.carousel.min.js")
+        
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/app.min.js")

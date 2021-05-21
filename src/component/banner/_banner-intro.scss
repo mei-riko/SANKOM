@@ -36,7 +36,7 @@
         font-size: 21px;
         font-weight: $font-weight-bold;
         line-height: $line-height-heading;
-        margin-bottom: $grid-gutter-width/2;
+        margin-bottom: map-get($map: $spacers, $key: 1);
 
         text-transform: uppercase;
     }

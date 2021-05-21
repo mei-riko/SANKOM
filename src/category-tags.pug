@@ -49,23 +49,23 @@ html(lang="ru")
                             +categoryTags('Поддержка спины','category-tags.html')(dataSrc="./img/product-4.jpg")
                         .col-2.col-xl-3.col-lg-4.col-sm-6.mt-2
                             +categoryTags('На каждый день','category-tags.html')(dataSrc="./img/product-5.jpg")
-                    .row.mt-3.mt-sm-2
-                        .col-8.col-xl-10.col-lg-12
-                            p Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
-                                | pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
-                                | condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
-                                | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
-                                | fermentum id. Urna in pharetra sit vel, sagittis aliquet ut justo. Elit sed id felis elementum, 
-                                | consectetur condimentum hendrerit augue. Lacinia massa, eget viverra velit consequat adipiscing 
-                                | sed praesent. Justo, nec orci, lorem sociis. Morbi et purus lacinia enim id integer aliquam turpis 
-                                | arcu.
-                            p.d-none(data-content="moreInfo")
-                                | Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
-                                | pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
-                                | condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
-                                | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
-                            p 
-                                a.text-small.text-bolder.text-underline.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
+                    //- .row.mt-3.mt-sm-2
+                    //-     .col-8.col-xl-10.col-lg-12
+                    //-         p Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
+                    //-             | pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
+                    //-             | condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+                    //-             | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
+                    //-             | fermentum id. Urna in pharetra sit vel, sagittis aliquet ut justo. Elit sed id felis elementum, 
+                    //-             | consectetur condimentum hendrerit augue. Lacinia massa, eget viverra velit consequat adipiscing 
+                    //-             | sed praesent. Justo, nec orci, lorem sociis. Morbi et purus lacinia enim id integer aliquam turpis 
+                    //-             | arcu.
+                    //-         p.d-none(data-content="moreInfo")
+                    //-             | Viverra integer et condimentum elementum orci aliquet cursus. Phasellus nibh auctor integer viverra 
+                    //-             | pellentesque duis porta dignissim. Feugiat lorem cursus turpis placerat eget ultricies elit 
+                    //-             | condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
+                    //-             | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
+                    //-         p 
+                    //-             a.text-small.text-bolder.text-underline.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
                     //- Banner Tech
                     .banner-intro.mt-2
                         .banner-intro__image-block.loading.order-lg-2
@@ -87,10 +87,20 @@ html(lang="ru")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                             img.banner-intro__image.img-fluid.b-lazy(data-src="./img/advantage-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
-            
-            //- Category
+            //- Products
             aside.content.content_secondary.container
-                include component/preview/categoryPreview.pug
+                .content__inside
+                    .row.align-items-center.mb-2.mt-xs-3
+                        .col-10.col-lg-8.col-sm-6
+                            h4.content__block-title.text-uppercase Подходит для спорта
+                        .col-2.col-lg-4.col-sm-6.text-right
+                            +btn('category.html', 'Все товары')(class="btn_border")
+                    .product-grid.product-grid_lg.mb-2
+                        +product('Shaper Classic Peach', '6 999 руб.', '8 999 руб.', 'sale', '', 'product.html')(dataSrc='./img/product-1.jpg' dataSrcHover='./img/product-6.jpg')
+                        +product('Shaper Bamboo', '2 459 руб.', '', '', '', 'product.html')(dataSrc='./img/product-2.jpg' dataSrcHover='./img/product-6.jpg')
+                        +product('Hypoallergenic Compression Socks Grey', '1 119 руб.', '', 'new', '', 'product.html')(dataSrc='./img/product-3.jpg' dataSrcHover='./img/product-6.jpg')
+                        //- +product('Men Shaper Classic Black', '3 599 руб.', '', '', '', 'product.html')(dataSrc='./img/product-4.jpg' dataSrcHover='./img/product-6.jpg')
+                        +product('Shaper Classic Peach', '889 руб.', '', '', 'по предзаказу', 'product.html')(dataSrc='./img/product-5.jpg' dataSrcHover='./img/product-6.jpg')                
             //- Delivery
             include component/banner/delivery.pug
         include component/footer/footer.pug

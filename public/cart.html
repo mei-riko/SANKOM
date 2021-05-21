@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="header__secondary-nav">
-            <div class="navbar navbar_secondary"> <a class="navbar_secondary__item" href="#" data-sidebar="payment">Оплата</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="#" data-sidebar="delivery">Доставка</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="sales.html">Акции</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="blog.html">Блог</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="text.html">Контакты</a></div>
+            <div class="navbar navbar_secondary"> <a class="navbar_secondary__item" href="#" data-sidebar="payment">Оплата</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="#" data-sidebar="delivery">Доставка</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="sales.html">Акции</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="blog.html">Блог</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item" href="#" data-sidebar="contact">Контакты</a></div>
           </div>
           <div class="header__secondary-callback">
             <div class="navbar navbar_secondary"> <a class="navbar_secondary__item navbar_secondary__modal" href="#" data-dialog="questionDialog">Задать вопрос</a><span class="navbar_secondary__sep">|</span><a class="navbar_secondary__item navbar_secondary__modal" href="#" data-sidebar="callback" data-tab="tel">Заказать звонок</a></div>
@@ -307,10 +307,32 @@
 </svg>
                 </div>
               </div>
-              <p class="cart__alert text-smaller mt-2 mt-lg-0">Есть личный кабинет? <a class="text-underline" href="#">Войдите в него</a></p>
+              <p class="cart__alert text-smaller mt-2 mt-lg-0">Есть личный кабинет? <a class="text-underline open-block" data-id="#enterPersonalCabinet" href="#">Войдите в него</a>
+                <div class="cart__alert d-none" id="enterPersonalCabinet">
+                  <form class="form" action="">
+                    <div class="row form__row">
+                      <div class="form__col col-4 mt-1">
+                            <div class="input input_label-inside">
+                              <input class="input__field" placeholder=""/>
+                              <label class="input__label input__label_inside">Логин *</label>
+                            </div>
+                      </div>
+                      <div class="form__col col-4 mt-1">
+                            <div class="input input_label-inside">
+                              <input class="input__field" placeholder=""/>
+                              <label class="input__label input__label_inside">Пароль *</label>
+                            </div>
+                      </div>
+                      <div class="form__col col-4 mt-1"><a class="btn btn_inverse btn--full" href="">Войти</a>
+                      </div>
+                    </div>
+                  </form>
+                  <p class="mt-1 text-small">Не можете войти? <a class="text-underline" href="#">Прислать временный пароль на почту</a></p>
+                </div>
+              </p>
               <div class="cart__block mt-2 mt-sm-1">
                 <div class="cart__block-title order-sm-2">
-                  <p class="text-bold mb-1 d-sm-none">Кто будет получать заказ?</p>
+                  <p class="cart__title text-bold mb-1 d-sm-none">Кто будет получать заказ?</p>
                   <p class="text-small text-grey mt-sm-1 mb-2 mb-sm-1">Ваши персональные данные будут обработаны в соответствии с <a class="text-underline" href="#">политикой конфиденциальности</a></p>
                       <div class="checkbox text-grey text-smaller">
                         <input class="checkbox__input" type="checkbox" id="account" checked="checked"/>
@@ -442,6 +464,7 @@
                       </div>
                 </div>
                 <div class="cart-sidebar__prop cart-sidebar__prop--first"><span class="cart-sidebar__prop-title">Скидка</span><span class="cart-sidebar__prop-value">—</span></div>
+                <div class="cart-sidebar__prop"><span class="cart-sidebar__prop-title">Промокод</span><span class="cart-sidebar__prop-value"><span class="text-bold text-action">SANKOM_NEW_2021</span></span></div>
                 <div class="cart-sidebar__prop"><span class="cart-sidebar__prop-title">Доставка</span><span class="cart-sidebar__prop-value">не выбран способ доставки</span></div>
                 <div class="cart-sidebar__prop"><span class="cart-sidebar__prop-title">Всего</span><span class="cart-sidebar__prop-value text-bold">12 500 руб.</span></div><a class="btn btn_action btn--full mt-1" href="cart-delivery.html">Оформить заказ</a>
                 <div class="mt-1 text-center"><a class="btn btn_link open-promocode" href="">Есть промокод или подарочная карта?</a>
@@ -461,11 +484,11 @@
       </section>
       <aside class="content container content_secondary">
         <div class="content__inside"> 
-          <div class="row align-items-center justify-content-center">
+          <div class="row align-items-center justify-content-center pt-1 pb-1">
             <div class="col-2 col-lg-3 col-md-3 text-center"><img class="img-fluid" src="./img/delivery.svg" style="margin: 0 auto;"/></div>
             <div class="col-5 col-lg-7 col-md-9">
-              <p class="h4 text-uppercase text-bolder mb-1">Бесплатная доставка</p>
-              <p class="text-grey lead">При заказе от 15 000 рублей quis lacus commodo. Ullamcorper blandit orci euismod massa imperdiet. Faucibus elementum amet.</p>
+              <p class="h3 text-uppercase text-bolder mb-0">Бесплатная доставка</p>
+              <p class="text-grey lead">При заказе от 15 000 рублей quis lacus commodo. Ullamcorper blandit orci euismod massa imperdiet. Faucibus elementum amet.</p><a class="btn btn_action" href="catalog.html">Начать покупки</a>
             </div>
           </div>
         </div>
@@ -474,20 +497,17 @@
     <footer class="footer">
       <div class="container">
         <div class="row footer__row">
-          <div class="col-5 col-lg-12 footer__col-nav">
-            <div class="footer__nav"><a class="footer__nav-item" href="#" data-sidebar="payment">Способы оплаты</a><a class="footer__nav-item" href="#" data-sidebar="delivery">Доставка</a><a class="footer__nav-item" href="#" data-sidebar="programm">Программа лояльности</a><a class="footer__nav-item" href="#">Гарантия</a><a class="footer__nav-item" href="#">Возврат</a><a class="footer__nav-item" href="text.html">Контакты</a></div>
+          <div class="col-4 col-lg-12 footer__col-nav">
+            <div class="footer__nav"><a class="footer__nav-item" href="#" data-sidebar="payment">Оплата</a><a class="footer__nav-item" href="#" data-sidebar="delivery">Доставка</a><a class="footer__nav-item" href="#" data-sidebar="programm">Программа лояльности</a><a class="footer__nav-item" href="#" data-sidebar="contact">Контакты</a></div>
           </div>
-          <div class="col-2 col-lg-12 footer__col-network">
-            <div class="footer__network">
-              <div class="footer__network-title">Мы в соц.сетях:</div><a class="footer__network-item" href="#"><img class="img-fluid" src="./icon/vk.svg"/></a><a class="footer__network-item" href="#"><img class="img-fluid" src="./icon/fb.svg"/></a>
+          <div class="col-4 col-lg-12 footer__col-link">
+            <div class="footer__nav footer__nav_center"><a class="footer__link" href="#">Политика конфиденциальности</a>
+              <div class="footer__nav-sep">|</div><a class="footer__link" href="#">Условия продажи</a>
             </div>
           </div>
-          <div class="col-5 col-lg-12 footer__col-info">
+          <div class="col-4 col-lg-12 footer__col-info">
             <div class="footer__information"> 
               <div class="footer__copyright">© 2021 SANKOM Все права защищены </div>
-              <div class="footer__nav"><a class="footer__link" href="#">Политика конфиденциальности</a>
-                <div class="footer__nav-sep">|</div><a class="footer__link" href="#">Условия продажи</a>
-              </div>
             </div>
           </div>
         </div>
@@ -604,7 +624,7 @@
                     <label class="input__label input__label_inside">Введите его здесь</label>
                   </div><a class="btn btn_border form__line-btn" href="">Активировать</a>
             </div>
-          </form><a class="btn btn_link open-promocode" href="">Есть промокод или подарочная карта?</a>
+          </form><a class="btn btn_link open-promocode" href="" data-open="Есть промокод или подарочная карта?" data-close="Скрыть промокод">Есть промокод или подарочная карта?</a>
         </div>
       </div>
     </div>
@@ -653,6 +673,18 @@
         <p>NEW: В сезоне 2019/20 программа была еще более усовершенствована и теперь у каждого участника помимо привычных способов получения кэшкбэк появился еще один дополнительный. Отныне Вы можете получить два типа кэшбэка - статусный и бонусный.</p>
       </div>
     </div>
+    <div class="sidebar" id="contact">
+      <div class="sidebar__close">Закрыть</div>
+      <div class="sidebar__content">
+        <p class="sidebar__title">Контакты</p>
+        <p><a class="text-dashed h5 text-bold" href="tel:+7(499)553-07-17">+7 (499) 553-07-17</a></p>
+        <p> <span class="text-bold">Написать на почту <br/></span><a class="text-dashed" href="mailto:1st@motorfirst.ru">info@sankom.ru</a></p>
+        <div class="row mb-2">
+          <div class="col-6"><span class="text-bold">Адрес шоу-рума <br/></span><span class="text-grey">127521, г. Москва <br/></span><span class="text-grey">ул. Октябрьская, 69</span></div>
+          <div class="col-6"><span class="text-bold">Часы работы <br/></span><span class="text-grey">Пн-Пт: 10:00 – 20:00 <br/></span><span class="text-grey">Сб-Вс: 11:00 - 19:00</span></div>
+        </div><img class="img-fluid mb-2" src="./demo/demo-map.png" alt="" title=""/><a class="btn btn_inverse btn--full" href="#">Проложить маршрут в Яндекс</a>
+      </div>
+    </div>
     <div class="sidebar" id="callback">
       <div class="sidebar__close">Закрыть</div>
       <div class="sidebar__content">
@@ -687,7 +719,7 @@
                   <div class="radio">
                     <input class="radio__input" type="radio" id="radioTheme4" name="contactTheme"/>
                     <label class="radio__label" for="radioTheme4">Другое</label>
-                  </div><a class="btn mt-2 btn_action btn--full" href="">Жду звонка</a>
+                  </div><a class="btn mt-2 btn_inverse btn--full" href="">Жду звонка</a>
             </form>
           </div>
           <div class="tabs-content" id="mail">
@@ -701,25 +733,25 @@
                     <label class="input__label input__label_inside">Сообщение *</label>
                   </div>
               <div class="label">Как вам ответить?</div>
-              <div class="form__col" id="sidebarCallbackEmail">
+              <div class="form__col mb-1" id="sidebarCallbackEmail">
                     <div class="radio">
                       <input class="radio__input" type="radio" id="radioType1" name="contactType" checked="checked"/>
                       <label class="radio__label" for="radioType1">На e-mail</label>
                     </div>
               </div>
-              <div class="form__col" id="sidebarCallbackTel">
+              <div class="form__col mb-1" id="sidebarCallbackTel">
                     <div class="radio">
                       <input class="radio__input" type="radio" id="radioType2" name="contactType"/>
                       <label class="radio__label" for="radioType2">По телефону</label>
                     </div>
               </div>
-              <div class="form__col" id="sidebarCallbackWA">
+              <div class="form__col mb-1" id="sidebarCallbackWA">
                     <div class="radio">
                       <input class="radio__input" type="radio" id="radioType3" name="contactType"/>
                       <label class="radio__label" for="radioType3">WhatsApp</label>
                     </div>
               </div>
-              <div class="form__col" id="sidebarCallbackTelegram">
+              <div class="form__col mb-1" id="sidebarCallbackTelegram">
                     <div class="radio">
                       <input class="radio__input" type="radio" id="radioType4" name="contactType"/>
                       <label class="radio__label" for="radioType4">Telegram</label>
@@ -734,7 +766,7 @@
                       <input class="input__field input__field--full" placeholder=""/>
                       <label class="input__label input__label_inside">Телефон</label>
                     </div>
-              </div><a class="btn mt-2 btn_action btn--full" href="">Отправить сообщение</a>
+              </div><a class="btn mt-2 btn_inverse btn--full" href="">Отправить сообщение</a>
             </form>
           </div>
         </div>
@@ -772,7 +804,7 @@
           </select>
         </div>
       </div>
-      <div class="sidebar__btn"><a class="btn btn_action btn--full" href="#">Выбрать город</a>
+      <div class="sidebar__btn"><a class="btn btn_inverse btn--full" href="#">Выбрать город</a>
       </div>
     </div>
     <script src="./js/jquery.inputmask.min.js"></script>

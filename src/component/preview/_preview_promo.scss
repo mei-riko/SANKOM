@@ -6,7 +6,7 @@
         }
     }
     &__title{
-        font-size: map-get($map: $font-size, $key: md);
+        font-size: map-get($map: $font-size, $key: lg);
         font-weight: $font-weight-bolder;
         letter-spacing: $letter-spacing;
     }

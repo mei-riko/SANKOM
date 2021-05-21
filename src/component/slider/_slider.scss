@@ -1,4 +1,7 @@
 .slider{
+    &__title{
+        line-height: $line-height-heading;
+    }
     &:not(.owl-loaded){
         display: grid;
     }

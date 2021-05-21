@@ -28,8 +28,8 @@
         font-size: 24px;
     }
     &__block-link{
-        font-size: map-get($map: $font-size, $key: xs);
-        line-height: map-get($map: $font-size, $key: sm);
+        font-size: map-get($map: $font-size, $key: sm);
+        line-height: map-get($map: $font-size, $key: md);
         white-space: nowrap;
 
         padding: 4px 10px;

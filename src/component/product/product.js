@@ -1,10 +1,5 @@
 import $ from 'jquery';
 
-// Quick Buy Block
-$('#quickBuy').on('click', function(){ 
-  $('#quickBlock').slideToggle(); 
-});
-
 // Sliders Product Images
 if( $('.slider-main').length > 0 ){
   $('.slider-main').each(function(){

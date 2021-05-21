@@ -43,13 +43,13 @@ const categoryResponsive = new Responsive(
     {items: 4, loop: false, stagePadding: 25, margin: 10,},
 );
 // Video Slider
-const videoResponsive = new Responsive(
-    {items: 2, },
-    {items: 2, },
-    {items: 2, },
-    {items: 2, },
-    {items: 2, },
-);
+// const videoResponsive = new Responsive(
+//     {items: 2, },
+//     {items: 2, },
+//     {items: 2, },
+//     {items: 2, },
+//     {items: 2, },
+// );
 // Tags Slider
 const tagsResponsive = new Responsive(
     {items: 2, margin: 15, },
@@ -88,7 +88,7 @@ $(function() {
     // Category Slider
     sliderInitialized(1, '.slider.slider_category',             '.slider-container',    true, false, true, 15, 40, categoryResponsive);
     // Video Slider
-    sliderInitialized(2, '.slider.slider_video',                '.slider-container',    false, false, false, 10, 0, videoResponsive);
+    // sliderInitialized(2, '.slider.slider_video',                '.slider-container',    false, false, false, 10, 0, videoResponsive);
     // Tags Slider
     sliderInitialized(2, '.slider.slider_tags',                 '.slider-container',    false, true, true, 15, 40, tagsResponsive);
     // Promo Slider
@@ -100,7 +100,7 @@ $(window).on('resize', function(){
 
     sliderInitialized(2, '.slider.slider_recommendation',       '.slider-xs-container', false, true, true, 10, 30, recommendationResponsive);
     sliderInitialized(2, '.slider.slider_subcategory-index',    '.slider-container',    true, false, true, 15, 40, subcategoryIndexResponsive);
-    sliderInitialized(2, '.slider.slider_video',                '.slider-container',    false, true, false, 10, 0, videoResponsive);
+    // sliderInitialized(2, '.slider.slider_video',                '.slider-container',    false, true, false, 10, 0, videoResponsive);
     sliderInitialized(2, '.slider.slider_tags',                 '.slider-container',    false, true, false, 10, 0, tagsResponsive);
     sliderInitialized(1, '.slider.slider_promo',                '.slider-container',    true, false, true, 15, 50, promoResponsive);
 });

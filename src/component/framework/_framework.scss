@@ -50,6 +50,10 @@ h1, h2, h3, h4, h5, h6,
     font-size: 160px;
     line-height: $line-height-heading;
 }
+.heading-covered{
+    font-size: 46px;
+    font-weight: $font-weight-base;
+}
 
 p {
     font-size: 1rem;
@@ -100,14 +104,40 @@ a{
     }
 }
 
+.link-video{
+    position: relative;
+    transition: .3s;
+
+    &:before{
+        content: '';
+        display: block;
+        width: 36px;
+        height: 36px;
+
+        position: absolute;
+        top: calc(50% - 18px);
+        left: calc(50% - 18px);
+
+        background: no-repeat url('../icon/play.svg') center / contain;
+        cursor: pointer;
+    }
+    &:hover{
+        filter: brightness(0.75);
+    }
+}
+
 .table-size{
-    font-size: map-get($map: $font-size, $key: xs);
+    display: flex;
+    align-items: center;
+    
+    font-size: map-get($map: $font-size, $key: sm);
 
     &__icon{
         fill: $grey;
         margin-right: 4px;
     }
     &__link{
+        line-height: map-get($map: $font-size, $key: md);
         padding-bottom: 2px;
         border-bottom: 1px dashed $grey;
     }

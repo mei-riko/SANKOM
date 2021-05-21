@@ -29,7 +29,7 @@ html(lang="ru")
                             .blockquote.mt-3.mt-xs-2
                                 .row.align-items-center
                                     .col-2.col-lg-3.col-sm-12
-                                        img(src="./icon/icon.svg" alt="" title="")
+                                        img(src="./icon/icon-leaves.svg" alt="" title="")
                                     .col-10.col-lg-9.col-sm-12.mt-sm-2
                                         p «Белье SANKOM создает не только визуальный эффект, делая фигуру более стройной и привлекательной, но также создает отличный профилактический эффект.»
                                         p.text-grey — Meisha Johnson, Founder and Owner of Neema Fine Arts Gallery 
@@ -46,37 +46,59 @@ html(lang="ru")
                                 +category('For sensitive, delicate skin', 'Aloe Vera', 'Перейти в коллекцию', 'category.html')(dataSrc="./img/aloe-img.png")
                             .slider__item
                                 +category('For sensitive, delicate skin', 'Aloe Vera', 'Перейти в коллекцию', 'category.html')(dataSrc="./img/aloe-img.png")
+            //- Information
             aside.content.content_secondary.container
                 .content__inside
                     .row.mt-2.mb-2
-                        .col-6.col-xl-12
-                            .content-with-image
-                                .content-with-image__image
-                                    img.img-fluid(src="./img/FAQ.jpg" title="" alt="")
-                                .content-with-image__content
-                                    p.h1 FAQ: только<br/>полезное
-                                    p Founded in the heart of Switzerland, SANKOM strives to develop functional products that improve your health and beauty without compromising comfort.
-                                    .btn-group  
-                                        +btn('blog.html', 'Видео')()
-                                        +btn('blog.html', 'Отзывы')()
-                            .row
-                                .col-6.col-sm-12.mt-2
-                                    +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-1.jpg")
-                                .col-6.col-sm-12.mt-2
-                                    +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-2.jpg")
-                                .col-6.col-sm-12.mt-2
-                                    +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-3.jpg")
-                                .col-6.col-sm-12.mt-2
-                                    +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-4.jpg")
-                        .col-6.col-xl-12.mt-xl-2
-                            .row
-                                .col-12.col-xl-6.col-lg-12.d-sm-none.mb-2.mb-xl-0.mb-lg-2
-                                    include component/form/form-block.pug
-                                .col-12.col-xl-6.col-lg-12
-                                    +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg', 'faq.html')(class="bg-white mb-1")
-                                    +faq('Подробнее о программе лояльности', '/icon/faq.svg', 'faq.html')(class="bg-white mb-1")
-                                    +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg', 'faq.html')(class="bg-white")
-            include component/banner/delivery.pug
+                        .col-6.col-lg-12
+                            p.h1 FAQ: ответы на частые вопросы
+                            p.mb-3.mb-xl-2 Founded in the heart of Switzerland, SANKOM strives to develop functional products that improve your health and beauty without compromising comfort.
+                            +faq('О бренде SANKOM, материалах и технологиях производства', '/icon/faq.svg', 'faq.html')(class="bg-white mb-1")
+                            +faq('Подробнее о программе лояльности', '/icon/faq.svg', 'faq.html')(class="bg-white mb-1")
+                            +faq('Узнать о способах доставки, оплаты и возврата', '/icon/faq.svg', 'faq.html')(class="bg-white")
+                        .col-6.col-lg-12.mt-lg-2
+                            .banner-promo 
+                                p.banner-promo__title Хочешь быть в&nbsp;курсе скидок и&nbsp;предложений?
+                                p.banner-promo__content Заходите знакомиться в Instagram 
+                                    a.banner-promo__link.text-underline(href="#") @sankomrussia.
+                                    |  Узнавайте первыми о новых продуктах, акциях и эксклюзивных распродажах! 
+                                form.form.banner-promo__form(action="")
+                                    .form__line
+                                        +input('E-mail', '')(class="input_label form__line-input" field="form__line-field" )
+                                        .form__line-btn
+                                            +btn('', 'Подписаться')(class="btn_inverse btn--full")
+                                .banner-promo__network.mt-2
+                                    .banner-promo__network-title Мы в соц.сетях:
+                                    a.banner-promo__network-item(href="#")
+                                        <svg class="banner-promo__network-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.1069 9.73429C14.8321 9.38429 14.9107 9.22857 15.1069 8.91571C15.1105 8.91214 17.3794 5.75071 17.6131 4.67857L17.6145 4.67786C17.7307 4.28714 17.6145 4 17.0528 4H15.1941C14.7209 4 14.5027 4.24643 14.3858 4.52214C14.3858 4.52214 13.4395 6.80643 12.1007 8.28714C11.6686 8.715 11.4688 8.85214 11.2329 8.85214C11.1168 8.85214 10.9361 8.715 10.9361 8.32429V4.67786C10.9361 4.20929 10.8037 4 10.412 4H7.48927C7.19246 4 7.01608 4.21857 7.01608 4.42214C7.01608 4.86643 7.68548 4.96857 7.7549 6.21857V8.93071C7.7549 9.525 7.64794 9.63429 7.41064 9.63429C6.77878 9.63429 5.24519 7.34071 4.33637 4.71571C4.1529 4.20643 3.97369 4.00071 3.49696 4.00071H1.63752C1.10696 4.00071 1 4.24714 1 4.52286C1 5.01 1.63186 7.43214 3.93827 10.6321C5.4754 12.8164 7.64015 14 9.60938 14C10.793 14 10.9376 13.7371 10.9376 13.285C10.9376 11.1979 10.8306 11.0007 11.4235 11.0007C11.6983 11.0007 12.1715 11.1379 13.2765 12.1914C14.5396 13.4407 14.7471 14 15.454 14H17.3128C17.8426 14 18.1111 13.7371 17.9567 13.2186C17.6032 12.1279 15.2146 9.88429 15.1069 9.73429Z"/>
+                                        </svg>
+                                    a.banner-promo__network-item(href="#")
+                                        <svg class="banner-promo__network-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.5 15H9V10.875H7.5V9H9V7.5C9 6.257 10.007 5.25 11.25 5.25H12.75V7.125H12C11.586 7.125 11.25 7.086 11.25 7.5V9H13.125L12.375 10.875H11.25V15H13.5C14.327 15 15 14.327 15 13.5V4.5C15 3.6725 14.327 3 13.5 3H4.5C3.6725 3 3 3.6725 3 4.5V13.5C3 14.327 3.6725 15 4.5 15Z" />
+                                        </svg>
+                                    a.banner-promo__network-item(href="#")
+                                        <svg class="banner-promo__network-icon" width="18px" height="18px" viewBox="-21 -117 682.66672 682"  xmlns="http://www.w3.org/2000/svg">
+                                            <path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"/>
+                                        </svg>
+            aside.content.container
+                .content__inside
+                    //- Blog Pages 
+                    .row.align-items-center.mb-2
+                        .col-10.col-lg-8.col-sm-6
+                            h4.content__block-title.text-uppercase #BLOG_SANKOM
+                        .col-2.col-lg-4.col-sm-6.text-right
+                            +btn('blog.html', 'Перейти в блог')(class="btn_border")
+                    .row
+                        .col-3.col-xl-6.col-sm-12.mt-1.mb-1
+                            +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-1.jpg")
+                        .col-3.col-xl-6.col-sm-12.mt-1.mb-1
+                            +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-2.jpg")
+                        .col-3.col-xl-6.col-sm-12.mt-1.mb-1
+                            +blog('Статья', 'Amet velit egestas nulla', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-3.jpg")
+                        .col-3.col-xl-6.col-sm-12.mt-1.mb-1
+                            +blog('Обзор товара', 'Ut fermentum nunc at amet, sit', 'Aliquam, porttitor tortor neque diam quam nul...', 'text.html')(dataSrc="./img/image-4.jpg")
+            include component/banner/delivery-bg.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug
         

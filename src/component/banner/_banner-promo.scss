@@ -1,105 +1,72 @@
 .banner-promo{
-    position: relative;
+    padding: $spacer $spacer/2;
+    border-radius: $border-radius;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    // width: 800px;
-    width: max-content;
-    max-width: 100%;
-    padding: 10px 40px;
-    padding-right: 60px;
-    margin: 0 auto;
-
+    text-align: center;
     color: $white;
-    background: url('../icon/brush-bg.svg') no-repeat center / contain;
-
-    font-size: map-get($map: $font-size, $key: sm);
-    font-weight: $font-weight-bolder;
-    letter-spacing: $letter-spacing;
+    background: #ce002b url('../img/banner-inst.jpg') no-repeat top right/cover;
 
     &__title{
-        display: none;
-
+        font-size: 28px;
         font-weight: $font-weight-bold;
-        font-size: 21px;
         text-transform: uppercase;
-        line-height: $line-height-heading;
     }
     &__content{
-        text-transform: uppercase;
-        padding-left: $spacer/2;
-        padding-right: $spacer/2;
+        font-size: map-get($map: $font-size, $key: lg);
+        // width: 460px;
+        // max-width: 100%;
+        // margin-left: auto;
+        // margin-right: auto;
     }
     &__link{
-        text-transform: uppercase;
         color: $white;
-
-        &:hover, &:focus{
-            color: $light-grey;
+        &:hover{
+            color: $white;
         }
     }
-    &__btn{
-        padding: 4px 12px;
-        min-width: 120px;
-        border-radius: 2px;
+    &__form{
+        width: 460px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__network{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-title{
+            text-transform: uppercase;
+            font-size: map-get($map: $font-size, $key: sm);
+            font-weight: $font-weight-bolder;
+            color: $light-bg;
+
+            padding-right: $spacer-gutter;
+        }
+        &-item{
+            padding: 0 5px;
+
+            &:hover{
+                .banner-promo__network-icon{
+                    fill: $white;
+                }
+            }
+        }
+        &-icon{
+            fill: $light-bg;
+        }
     }
 }
+
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .banner-promo{
-        &__btn{
-            display: none;
-        }
+        padding: $spacer/2;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .banner-promo{
-        padding: $spacer $spacer/2;
-
-        margin-right: -($spacer/2);
-        margin-left: -($spacer/2);
-
-        width: calc( 100% + 50px );
-        max-width: calc( 100% + 50px );
-
-        // width: 100%;
-        // max-width: 100%;
-
-        display: block;
-        text-align: center;
-
-        background: $action url('../img/banner-inst.jpg') no-repeat top center / cover;
-
         &__title{
-            display: block;
-        }
-        &__content{
-            text-transform: unset;
-            padding: $spacer-gutter 0;
-        }
-        &__btn{
-            display: inline-block;
-        }
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .banner-promo{
-        padding: $spacer $spacer-gutter;
-        margin-right: -($spacer-gutter);
-        margin-left: -($spacer-gutter);
-
-        width: calc( 100% + 30px );
-        max-width: calc( 100% + 30px );
-
-        &__content{
-            font-size: 15px;
-        }
-
-        &__btn{
-            padding: 10px;
-            min-width: 160px;
-            border-radius: 4px;
+            font-size: 22px;
         }
     }
 }

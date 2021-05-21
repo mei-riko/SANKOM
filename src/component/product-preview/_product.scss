@@ -104,7 +104,7 @@
 
         font-size: map-get($map: $font-size, $key: 'sm');
         font-weight: $font-weight-bold;
-        line-height: map-get($map: $font-size, $key: 'sm');
+        line-height: 1;
 
         &:before{
             content: '';
@@ -141,10 +141,10 @@
         left: 0;
         bottom: 0;
     
-        font-size: map-get($map: $font-size, $key: xs);
-        line-height: map-get($map: $font-size, $key: sm);
-        font-weight: $font-weight-bold;
-        letter-spacing: 1px;
+        font-size: map-get($map: $font-size, $key: sm);
+        line-height: map-get($map: $font-size, $key: md);
+        font-weight: $font-weight-bolder;
+        letter-spacing: $letter-spacing;
         color: $action;
 
         // transform: translateY(50%);
@@ -160,6 +160,7 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product{
+        padding-bottom: map-get($map: $spacers, $key: 1);
         // Price
         &__price-new{
             order: 1;
@@ -171,6 +172,11 @@
             flex: 0 0 100%;
             font-size: map-get($map: $font-size, $key: 'xs');
             order: 3;
+        }
+        // Info Label
+        &__label{
+            position: unset;
+            margin-top: $spacer-gutter;
         }
     }
 }
@@ -184,11 +190,6 @@
         // Label (Sale, New)
         &__status{
             font-size: 18px;
-        }
-        // Info Label
-        &__label{
-            position: unset;
-            margin-top: $spacer-gutter;
         }
     }
 }

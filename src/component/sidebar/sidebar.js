@@ -80,7 +80,7 @@ function cartContentHeight(){
     // Height Cart Content
     // let sidebarCartContentHeight = Math.ceil( $('.sidebar.sidebar_cart#cart .sidebar_cart__content').height() );
 
-    let permissibleHeight = sidebarHeight - (sidebarCloseHeight + sidebarFooterHeight) - (sidebarTitleHeight + sidebarCartPropHeight);
+    let permissibleHeight = sidebarHeight - (sidebarCloseHeight + sidebarFooterHeight) - (sidebarTitleHeight + sidebarCartPropHeight) - 15;
 
     if( permissibleHeight != undefined && permissibleHeight > 100){
         $('.sidebar.sidebar_cart#cart .sidebar_cart__content').height( permissibleHeight );

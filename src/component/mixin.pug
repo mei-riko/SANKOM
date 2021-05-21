@@ -4,7 +4,8 @@ mixin btn(href, title)
 mixin input(placeholder, label)
     .input(class!=attributes.class)
         input.input__field(placeholder=placeholder type!=attributes.type class!=attributes.field)
-        label.input__label(class!=attributes.label)= label
+        if label!=''
+            label.input__label(class!=attributes.label)= label
 mixin textarea(placeholder, label, rows)
     .input.input_textarea(class!=attributes.class)
         textarea.input__field.input__field_textarea(placeholder=placeholder class!=attributes.field rows=rows)
@@ -15,7 +16,7 @@ mixin radio(id, title, name, checked)
         label.radio__label(for=id class!=attributes.label)!= title
 mixin checkbox(id, title, checked)
     .checkbox(class!=attributes.class)
-        input.checkbox__input(type="checkbox" id=id checked class!=attributes.field)
+        input.checkbox__input(type="checkbox" id=id checked=checked class!=attributes.field)
         label.checkbox__label(for=id)!= title
 //- Preview Items
 mixin category(title, intro, link, href)
@@ -58,6 +59,7 @@ mixin blogCol(title, intro, href)
         if block
             .tags.preview_blog-col__tags
                 block
+        a.btn.btn_link(href=href title=title) Читать дальше
 //- Items
 mixin faq(title, icon, href)
     .faq(class!=attributes.class)

@@ -42,8 +42,22 @@ $(function() {
   $(document).on('click', '.open-promocode', function(e){
     e.preventDefault();
     const form = $(this).siblings('.form.form_promocode');
+    const textOpen = $(this).data('open');
+    const textClose = $(this).data('close');
 
-    form.slideToggle();
+    if( !$(this).hasClass('open-promocode--active') ){
+      $(this).addClass('open-promocode--active');
+      $(this).text( textClose );
+      form.slideDown({
+        complete: function(){
+          $(this).get(0).scrollIntoView({behavior: "smooth"});
+        }
+    });
+    }else{
+      $(this).removeClass('open-promocode--active');
+      $(this).text( textOpen );
+      form.slideUp();
+    }
   });
   // Open More Content
   $('.open-content').on('click', function(){
@@ -59,6 +73,14 @@ $(function() {
     }
     
     $('[data-content=' + blockId + ']').slideToggle();
+  });
+  // Open Any Block
+  $('.open-block').on('click', function(e){
+    e.preventDefault(); 
+    let block = $(this);
+    let blockId = block.data( 'id' );
+
+    $(blockId).slideToggle();
   });
   // B-lazy
   if( $('.b-lazy').length > 0 ){

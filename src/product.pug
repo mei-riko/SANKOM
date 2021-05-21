@@ -71,6 +71,7 @@ html(lang="ru")
                                 .product-page__price
                                     span.product-page__price-old 6 660 руб.
                                     span.product-page__price-new 5 240 руб.
+                                    span.product-page__price-discount 20%
                                 .product-page__cashback
                                     span.text-bold кэшбэк&nbsp;до&nbsp;20% 
                                     span (до&nbsp;3529&nbsp;руб.)
@@ -104,15 +105,15 @@ html(lang="ru")
                                         .col-7.col-xs-6
                                             p.text-small.text-bolder.text-spacer.text-uppercase Размеры
                                         .col-5.col-xs-6
-                                            .text-right
-                                                a.table-size(href="javascript:;" data-fancybox data-src="./img/size-demo.jpg")
-                                                    svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                                        path(d="M2.76497 12.4904C8.94718 11.5197 15.1426 10.6406 21.3749 10.0831C21.5139 10.1219 21.6475 10.1013 21.7642 10.0388C22.2469 9.94521 22.3178 9.42411 22.1017 9.05037C22.0579 8.94812 21.9913 8.85084 21.8902 8.76784C21.0174 5.03273 21.4668 1.55764 19.9687 0.5C7.58745 2.31309 2.01669 2.48705 1.76721 2.61526C1.41376 2.5851 0.933384 2.90339 0.942407 3.37071C0.792612 5.1838 1.35822 9.78347 1.76718 11.9409C1.84337 12.3429 2.15672 12.5021 2.46404 12.4765C2.55469 12.501 2.65532 12.5076 2.76497 12.4904ZM2.46404 3.97509C5.4464 3.65101 14.4256 1.8598 19.0698 2.61526C19.3695 3.67291 19.7838 6.69473 19.7838 8.82058C18.7966 8.91573 17.8103 9.02141 16.8248 9.13083C16.8207 8.86013 16.5128 7.26753 16.4577 7C16.2735 6.10673 14.9208 6.40904 15.1057 7.30444C15.1515 7.52717 15.4481 9.06278 15.4442 9.28686C14.5941 9.38704 13.745 9.49459 12.8958 9.60292C12.8413 9.36041 12.4992 7.79475 12.4446 7.55198C12.2452 6.6626 10.8926 6.96335 11.0926 7.8561C11.1379 8.05802 11.4708 9.58186 11.5161 9.78347C10.8288 9.87519 10.1422 9.97558 9.45515 10.0716C9.40592 9.80267 9.05037 8.21592 8.95922 7.95442C8.83202 7.59117 8.5386 7.32364 8.13465 7.41458C7.80153 7.48943 7.47946 7.89457 7.60716 8.2589C7.68569 8.48371 8.03562 10.0333 8.08297 10.2637C7.33515 10.3713 6.58835 10.4877 5.84074 10.5987C5.79465 10.3267 5.44417 8.73568 5.35206 8.46919C5.22638 8.10542 4.93068 7.83892 4.52749 7.9294C4.19356 8.00419 3.87412 8.40882 4 8.77368C4.07878 9.00191 4.43124 10.5621 4.47889 10.8023C3.99054 10.8763 3.50194 10.9448 3.01389 11.021C2.76497 8.62686 2.46404 6.24145 2.46404 3.97509Z")
-                                                    span.table-size__link Таблица размеров
+                                            a.table-size.justify-content-end(href="javascript:;" data-fancybox data-src="./img/size-demo.jpg")
+                                                svg.table-size__icon(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    path(d="M2.76497 12.4904C8.94718 11.5197 15.1426 10.6406 21.3749 10.0831C21.5139 10.1219 21.6475 10.1013 21.7642 10.0388C22.2469 9.94521 22.3178 9.42411 22.1017 9.05037C22.0579 8.94812 21.9913 8.85084 21.8902 8.76784C21.0174 5.03273 21.4668 1.55764 19.9687 0.5C7.58745 2.31309 2.01669 2.48705 1.76721 2.61526C1.41376 2.5851 0.933384 2.90339 0.942407 3.37071C0.792612 5.1838 1.35822 9.78347 1.76718 11.9409C1.84337 12.3429 2.15672 12.5021 2.46404 12.4765C2.55469 12.501 2.65532 12.5076 2.76497 12.4904ZM2.46404 3.97509C5.4464 3.65101 14.4256 1.8598 19.0698 2.61526C19.3695 3.67291 19.7838 6.69473 19.7838 8.82058C18.7966 8.91573 17.8103 9.02141 16.8248 9.13083C16.8207 8.86013 16.5128 7.26753 16.4577 7C16.2735 6.10673 14.9208 6.40904 15.1057 7.30444C15.1515 7.52717 15.4481 9.06278 15.4442 9.28686C14.5941 9.38704 13.745 9.49459 12.8958 9.60292C12.8413 9.36041 12.4992 7.79475 12.4446 7.55198C12.2452 6.6626 10.8926 6.96335 11.0926 7.8561C11.1379 8.05802 11.4708 9.58186 11.5161 9.78347C10.8288 9.87519 10.1422 9.97558 9.45515 10.0716C9.40592 9.80267 9.05037 8.21592 8.95922 7.95442C8.83202 7.59117 8.5386 7.32364 8.13465 7.41458C7.80153 7.48943 7.47946 7.89457 7.60716 8.2589C7.68569 8.48371 8.03562 10.0333 8.08297 10.2637C7.33515 10.3713 6.58835 10.4877 5.84074 10.5987C5.79465 10.3267 5.44417 8.73568 5.35206 8.46919C5.22638 8.10542 4.93068 7.83892 4.52749 7.9294C4.19356 8.00419 3.87412 8.40882 4 8.77368C4.07878 9.00191 4.43124 10.5621 4.47889 10.8023C3.99054 10.8763 3.50194 10.9448 3.01389 11.021C2.76497 8.62686 2.46404 6.24145 2.46404 3.97509Z")
+                                                span.table-size__link Таблица размеров
                                     .product-page__size.product-page__size_has-default
                                         .product-page__size-item
                                             input.product-page__size-input(type="radio" id="size1" name="size" checked="checked")
-                                            label.product-page__size-label(for="size1" data-toggle="tooltip" title="Согласовать по телефону") Не знаю
+                                            label.product-page__size-label.product-page__size-label_has-icon(for="size1" data-toggle="tooltip" title="Согласовать по телефону") Не знаю
+                                                span.product-page__tooltip-info i
                                         .product-page__size-item
                                             input.product-page__size-input(type="radio" id="size2" name="size")
                                             label.product-page__size-label(for="size2") XXS
@@ -141,20 +142,20 @@ html(lang="ru")
                                             </svg>
                                             |  В корзину
                                     .product-page__quick-buy 
-                                        a.btn.btn_border.btn--full#quickBuy(href="#" data-trigger="click") Быстрая покупка
+                                        a.btn.btn_border.btn--full.open-block(href="#" data-id="#quickBlock" data-trigger="click") Быстрая покупка
                                 //- Быстрая покупка
                                 .product-page__quick#quickBlock
                                     p Условия доставки и оплаты будут согласованы при подтверждении заказа.
                                     form.form(action="")
                                         .form__group
-                                            .form__row
-                                                .form__col.form__col_gutters.mt-1
+                                            .form__row.row
+                                                .form__col.col-6.mt-1
                                                     +input('', 'Имя *')(label="input__label_inside" class="input_label-inside")
-                                                .form__col.form__col_gutters.mt-1
+                                                .form__col.col-6.mt-1
                                                     +input('', 'Телефон *')(label="input__label_inside" class="input_label-inside")
-                                                .form__col.form__col_gutters.mt-1
+                                                .form__col.col-6.mt-1
                                                     +input('', 'E-mail *')(label="input__label_inside" class="input_label-inside")
-                                                .form__col.form__col_gutters.mt-1
+                                                .form__col.col-6.mt-1
                                                     +btn('', 'Заказать')(class="btn_action btn--full")
                                     .mt-2.mt-sm-1
                                         +btn('', 'Demo Apple Pay')(class="btn_border btn--full")
@@ -168,9 +169,9 @@ html(lang="ru")
                                     .product-page__blockquote-title Размер не&nbsp;подошёл? Привезём другой!
                                     .product-page__blockquote-content Вы можете осуществить обмен неподошедшего по&nbsp;размеру 
                                         | товара в&nbsp;течение 60&nbsp;дней.
-                                .hr.d-sm-none
                                 //- Дополнительные ссылки
-                                .product-page__subinfo
+                                //- .hr.d-sm-none
+                                //- .product-page__subinfo
                                     //- .product-page__subinfo-item
                                     //-     <svg class="product-page__subinfo-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     //-         <path d="M8.09093 6.32394C8.19699 6.38209 8.2879 6.41116 8.42426 6.44024C8.45457 6.44024 8.48487 6.45478 8.51517 6.45478H8.57578H8.71214L8.93941 6.46931L9.39396 6.48385C9.69699 6.49839 10 6.51293 10.2879 6.51293C10.894 6.52746 11.4849 6.542 12.0909 6.542H12.4546H12.6364H12.7273C12.7727 6.542 12.8182 6.542 12.8637 6.52746C13.2424 6.48385 13.5909 6.26578 13.8031 5.96049C13.8485 5.8878 13.894 5.80058 13.9243 5.71335C13.9394 5.66974 13.9546 5.62612 13.9697 5.58251C13.9697 5.55343 13.9849 5.5389 13.9849 5.50982L14 5.43713V5.39352V5.37898V5.36444V5.32083V5.29175V5.26268V5.21906V5.04461L13.9849 4.3468L13.9243 1.58462L13.9394 1.4247C13.9394 1.39563 13.9394 1.38109 13.9394 1.33748C13.9394 1.29386 13.9394 1.26479 13.9394 1.22117C13.9243 1.06126 13.894 0.91588 13.8182 0.770503C13.6667 0.479747 13.4091 0.247142 13.0758 0.145378C13.0303 0.13084 13 0.116302 12.9394 0.116302L12.8637 0.101764L12.8031 0.0872267H12.7576H12.7424H12.7273H12.697H12.6212L12.3031 0.0726889L11.6515 0.0436134C10.7576 0.0145378 9.87881 0 9.00002 0H8.66669H8.62123H8.56063C8.51517 0 8.46972 0 8.42426 0.0145378C8.33335 0.0290756 8.24244 0.0436133 8.15154 0.0726889C7.80305 0.174453 7.50002 0.436133 7.33335 0.755965C7.2879 0.828654 7.2576 0.91588 7.22729 1.00311C7.21214 1.04672 7.19699 1.09033 7.19699 1.14848C7.18184 1.20664 7.18184 1.26479 7.18184 1.27932V1.32294V1.36655V1.38109V1.45378V1.62823V2.25336C7.18184 3.09655 7.18184 3.93974 7.16669 4.76839C7.16669 4.91377 7.27275 5.14638 7.33335 5.21906C7.48487 5.36444 7.60608 5.17545 7.69699 4.89923C8.00002 3.96881 8.13638 2.82033 8.16669 1.67185L8.18184 1.41016V1.38109V1.36655C8.18184 1.38109 8.18184 1.33748 8.18184 1.38109V1.36655V1.3084L8.19699 1.26479C8.22729 1.1921 8.27275 1.11941 8.34851 1.0758C8.42426 1.03218 8.50002 1.01764 8.59093 1.01764L9.13638 1.03218C9.86366 1.04672 10.5909 1.0758 11.3182 1.09033L12.4091 1.10487H12.6818C12.7576 1.10487 12.7273 1.10487 12.7727 1.11941C12.8334 1.13395 12.8788 1.17756 12.9091 1.22117C12.9243 1.25025 12.9394 1.26479 12.9394 1.29386C12.9394 1.3084 12.9394 1.32294 12.9546 1.33748C12.9546 1.35201 12.9546 1.35201 12.9546 1.36655C12.9546 1.38109 12.9546 1.41016 12.9546 1.4247V1.94806C12.9546 2.29697 12.9697 2.64588 12.9849 2.99478C12.9697 3.34369 12.9697 3.6926 12.9546 4.02697L12.9394 4.85562V5.26268V5.29175C12.9394 5.30629 12.9394 5.33537 12.9394 5.33537C12.9394 5.33537 12.9394 5.32083 12.9394 5.33537C12.9394 5.3499 12.9243 5.37898 12.9091 5.39352C12.8637 5.46621 12.7879 5.50982 12.7121 5.50982H11.8788C11.3031 5.50982 10.7273 5.52436 10.1667 5.5389L9.2879 5.55343L8.53032 5.58251C8.40911 5.58251 8.27275 5.50982 8.16669 5.43713C8.06063 5.36444 7.96972 5.26268 7.83335 5.27722C7.71214 5.29175 7.59093 5.43713 7.62123 5.69881C7.63638 5.82965 7.69699 5.98957 7.83335 6.12041C7.90911 6.20763 7.98487 6.28032 8.09093 6.32394Z"/>
@@ -213,33 +214,58 @@ html(lang="ru")
                                 //-     a.text-underline(href="#") Напишите нам
             section.content.content_secondary.container.product-page
                 .content__inside.product-page__content
-                    .row.product-page__row
-                        .col-7.col-md-12.mb-md-2.product-page__col
-                            p.text-smaller.text-spacer.text-bolder.text-uppercase Описание товара
+                    .row.product-page__row.justify-content-between
+                        .col-8.col-md-12.mb-md-2.product-page__col
+                            //- p.text-smaller.text-spacer.text-bolder.text-uppercase Описание товара
                             p 
                                 span.text-bold Эффективность: 
                                 | профилактика искривления позвоночника, предотвращает развитие сутулости, препятствует болям в спине, профилактика остеохондроза, не сковывает движения, микромассажный эффект
                             p Placerat nulla amet ullamcorper turpis sit. Facilisis duis montes, viverra lorem rhoncus blandit. Semper vitae imperdiet pretium, et proin commodo. Sed tellus sollicitudin sed sociis. 
-                            p.d-none(data-content="moreInfo") At odio neque vestibulum nec quisque. Mauris, rhoncus gravida et tincidunt amet, sem pharetra, lobortis. Imperdiet convallis ultricies leo sit. A varius curabitur lorem purus consequat, sapien diam. Viverra duis urna mauris sed nunc, neque nisi. Eget eleifend in magna diam ridiculus a proin. Enim orci quis justo, pulvinar risus. 
+                            p At odio neque vestibulum nec quisque. Mauris, rhoncus gravida et tincidunt amet, sem pharetra, lobortis. Imperdiet convallis ultricies leo sit. A varius curabitur lorem purus consequat, sapien diam. Viverra duis urna mauris sed nunc, neque nisi. Eget eleifend in magna diam ridiculus a proin. Enim orci quis justo, pulvinar risus. 
                                 | Condimentum eu. In commodo sagittis vestibulum, blandit gravida. Ut gravida id dis eget euismod. 
                                 | Sodales interdum vel integer magna. Sed facilisis eu ultrices purus congue est nibh. Eu orci non 
-                            p
-                                a.text-bolder.text-dashed.open-content(href="javascript;" data-id="moreInfo" data-trigger="click") Читать дальше >
+                            +faq('Фото «До» и «После»', '')(class="faq_toggle" classTitle="faq_toggle__title")
+                                .row 
+                                    .col-3.col-sm-6 
+                                        a.d-block(data-fancybox="photo" data-src="./img/before-after.jpg")
+                                            img.img-fluid(src="./img/before-after.jpg")
+                                    .col-3.col-sm-6 
+                                        a.d-block(data-fancybox="photo" data-src="./img/before-after-2.jpg")
+                                            img.img-fluid(src="./img/before-after-2.jpg")
+                            +faq('О материале', '')(class="faq_toggle" classTitle="faq_toggle__title")
+                                p.text-spacer.text-bolder.text-uppercase Бельё из алоэ
+                                p Целебные свойства этого растения известны с древнейших времен. Материал из натуральных волокон алоэ – это ежедневная забота и уход за вашей кожей. Волокна алоэ обладают уникальными свойствами:
+                                ul
+                                    li Ускорение регенерации кожи
+                                    li Повышение защитных свойств организма
+                                    li Ускорение восстановительных процессов
+                                    li Антибактериальное и бактерицидное воздействие
+                                    li Улучшение кровотока
+                                    li Оптимальная терморегуляция
+                                    li Хорошая воздухопроницаемость и гигроскопичность
+                                    li Износостойкость и цветоустойчивость при многократных стирках
+                                p.text-small Рекомендовано: для повседневного ношения в любое время года, для чувствительной кожи, для восстановления после родов и полостных операций.
+                        
                         .hr.d-none.d-sm-block.mb-sm-2
-                        .col-5.col-md-12.mb-sm-2.product-page__col
+                        .col-3.col-md-12.mb-sm-2.product-page__col
                             .hr.d-none.d-md-block.d-sm-none.mb-md-2
-                            p.text-smaller.text-spacer.text-bolder.text-uppercase Коллекция Sankom classic
-                            p Оригинальный бюстгальтер SANKOM продается только на нашем сайте.
-                            .slider.slider_video.owl-carousel.owl-theme
-                                .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
-                                        img.img-fluid(src="./img/prev-1.jpg")
-                                .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
-                                        img.img-fluid(src="./img/prev-2.jpg")
-                                .slider__item.slider_video__item
-                                    a(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
-                                        img.img-fluid(src="./img/prev-1.jpg")
+                            .product-page__video
+                                .product-page__video-item.mb-2
+                                    a.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/banner-video.jpg")
+                                    p.mt-1.text-bolder.slider__title Оригинальный бюстгальтер SANKOM                                    
+                                .product-page__video-item.mb-2
+                                    a.link-video(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/banner-video.jpg")
+                                    p.mt-1.text-bolder.slider__title Обзор материала
+                                .product-page__video-item.mb-2
+                                    a.link-video(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/banner-video.jpg")
+                                    p.mt-1.text-bolder.slider__title Презентация модели
+                                .product-page__video-item
+                                    a.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                        img.img-fluid(src="./img/banner-video.jpg")
+                                    p.mt-1.text-bolder.slider__title Long Shaper CLASSIC
                         <!--noindex-->
                         //- Информационный блок с иконкой
                         .hr.d-none.d-sm-block.mb-sm-2
@@ -359,30 +385,10 @@ html(lang="ru")
                 p Стaтусный кэшбэк за эту покупку: от 2%&nbsp;–&nbsp;20% (348₽&nbsp;–&nbsp;2&nbsp;609₽)
                 p.text-small Накапливайте и оплачивайте до 50% покупки Статусным Кэшбэком, а также повышайте им свой статус. 
                     a.text-underline.text-action(href="#") Подробнее.
-        .sidebar#materials
-            .sidebar__close Закрыть
-            .sidebar__content
-                p.sidebar__title Бельё из алоэ
-                p Целебные свойства этого растения известны с древнейших времен. Материал из натуральных волокон алоэ – это ежедневная забота и уход за вашей кожей. Волокна алоэ обладают уникальными свойствами:
-                ul
-                    li Ускорение регенерации кожи
-                    li Повышение защитных свойств организма
-                    li Ускорение восстановительных процессов
-                    li Антибактериальное и бактерицидное воздействие
-                    li Улучшение кровотока
-                    li Оптимальная терморегуляция
-                    li Хорошая воздухопроницаемость и гигроскопичность
-                    li Износостойкость и цветоустойчивость при многократных стирках
-                p.text-small Рекомендовано: для повседневного ношения в любое время года, для чувствительной кожи, для восстановления после родов и полостных операций.
-        //- Фото До и После
-        .modal#photo
-            a.d-block.mb-2(href="#" data-fancybox="photo" data-src="./img/before-after.jpg" data-caption="Пример описания первого фото")   
-                //- Лучше использовать миниатюру 
-                img.img-fluid(src="./img/before-after.jpg")
-            a.d-block(href="#" data-fancybox="photo" data-src="./img/before-after-2.jpg" data-caption="Пример описания второго фото")
-                //- Лучше использовать миниатюру 
-                img.img-fluid(src="./img/before-after-2.jpg")
-        
+
+        //- Быстрая покупка
+        .modal#quickOrderModal
+
         script(src="./js/jquery.inputmask.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

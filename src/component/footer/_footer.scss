@@ -1,5 +1,5 @@
 .footer{
-    font-size: map-get($map: $font-size, $key: "xs");
+    font-size: map-get($map: $font-size, $key: "sm");
     padding: $spacer/2 0;
 
     &__nav{
@@ -7,6 +7,7 @@
         flex-wrap: wrap;
 
         &-item{
+            color: $grey;
             margin-right: map-get($map: $spacers, $key: 1);
 
             &:last-child{
@@ -14,44 +15,55 @@
             }
         }
         &-sep{
+            color: $grey;
             margin: 0 4px;
         }
-    }
-    &__network{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
 
-        &-item{
-            margin-right: map-get($map: $spacers, $key: 1);
-            filter: opacity(.75);
-            cursor: pointer;
-            transition: .3s;
-
-            &:last-child{
-                margin-right: 0;
-            }
-
-            &:hover{
-                filter: opacity(1);
-            }
-        }
-        &-title{
-            display: none;
-
-            font-weight: $font-weight-bolder;
-            text-transform: uppercase;
-            margin-right: map-get($map: $spacers, $key: 1);
-            color: $grey;
+        &_center{
+            justify-content: center;
         }
     }
+    &__link{
+        color: $grey;
+        text-align: center;
+    }
+    // &__network{
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+
+    //     &-item{
+    //         margin-right: map-get($map: $spacers, $key: 1);
+    //         filter: opacity(.75);
+    //         cursor: pointer;
+    //         transition: .3s;
+
+    //         &:last-child{
+    //             margin-right: 0;
+    //         }
+
+    //         &:hover{
+    //             filter: opacity(1);
+    //         }
+    //     }
+    //     &-title{
+    //         display: none;
+
+    //         font-weight: $font-weight-bolder;
+    //         text-transform: uppercase;
+    //         margin-right: map-get($map: $spacers, $key: 1);
+    //         color: $grey;
+    //     }
+    // }
     &__information{
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
+        color: $grey;
     }
     &__copyright{
-        margin-right: map-get($map: $spacers, $key: 1);
+        text-align: right;
+        // margin-right: map-get($map: $spacers, $key: 1);
     }
 }
 
@@ -62,7 +74,7 @@
         &__col-nav{
             order: 1;
             margin-bottom: 0;
-            padding-bottom: map-get($map: $spacers, $key: 2);
+            padding-bottom: map-get($map: $spacers, $key: 1);
         }
         &__nav{
             justify-content: center;
@@ -74,19 +86,22 @@
                 margin: 2px 10px;
             }
         }
-        &__col-network{
+        &__col-link{
             order: 2;
-            padding: 0;
         }
-        &__network{
-            &-title{
-                display: inline-block;
-            }
-        }
+        // &__col-network{
+        //     order: 2;
+        //     padding: 0;
+        // }
+        // &__network{
+        //     &-title{
+        //         display: inline-block;
+        //     }
+        // }
         &__col-info{
             order: 3;
             margin-bottom: 0;
-            padding-top: map-get($map: $spacers, $key: 1);
+            padding-top: 10px;
         }
         &__information{
             justify-content: center;
@@ -106,28 +121,33 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .footer{
         padding: map-get($map: $spacers, $key: 2) 0 map-get($map: $spacers, $key: 4);
-        border-top: 1px solid $border-color;
 
         &__nav-item{
             text-decoration: underline;
             margin: 5px 10px;
-        }
-        &__col-info{
-            padding-top: map-get($map: $spacers, $key: 2);
-        }       
+
+            &:last-child{
+                margin: 5px 10px;
+            }
+        }  
     }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .footer{
+        border-top: 1px solid $border-color;
         &__row{
             margin-left: -($spacer-gutter);
             margin-right: -($spacer-gutter);
         }
-        &__col-network{
+        // &__col-network{
+        &__col-link{
             padding: $spacer-gutter 0;
             border-top: 1px solid $border-color;
             border-bottom: 1px solid $border-color;
+        }
+        &__col-info{
+            padding-top: map-get($map: $spacers, $key: 2);
         }
     }
 }

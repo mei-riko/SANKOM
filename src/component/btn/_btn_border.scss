@@ -1,10 +1,13 @@
 .btn_border{
+    background-color: transparent;
     border-color: $dark-grey;
     color: $dark-grey;
     text-align: center;
 
+    transition: 0s;
     &:hover {
-        border-color: $action;
-        color: $action;
+        border-color: $dark-grey;
+        background-color: $dark-grey;
+        color: $white;
     }
 }

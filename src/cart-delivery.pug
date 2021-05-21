@@ -54,8 +54,8 @@ html(lang="ru")
                                     +radio('radio3', 'Курьером по Москве','delivery')(class="cart__input-radio" field="cart__input-field" label="cart__input-label")
                                     .cart__input-info.mb-1
                                         +input('Укажите адрес доставки', '')(type="text" field="input__field--full")
-                                    +radio('radio4', 'Постаматы и пункты выдачи CDEK <a class="text-small text-grey text-underline" href="#">выбрать</a>','delivery')(class="cart__input-radio" field="cart__input-field" label="cart__input-label")
-                                    +radio('radio5', 'Постаматы и пункты выдачи PickPoint <a class="text-small text-grey text-underline" href="#">выбрать</a>','delivery')(class="cart__input-radio" field="cart__input-field" label="cart__input-label")
+                                    +radio('radio4', 'Постаматы и пункты выдачи CDEK <a class="cart__input-choose" href="#">выбрать</a>','delivery')(class="cart__input-radio" field="cart__input-field" label="cart__input-label")
+                                    +radio('radio5', 'Постаматы и пункты выдачи PickPoint <a class="cart__input-choose" href="#">выбрать</a>','delivery')(class="cart__input-radio" field="cart__input-field" label="cart__input-label")
                                     +radio('radio6', 'EMS или Почта России','delivery')(class="cart__input-radio" field="cart__input-field" label="cart__input-label")
                             .cart__block.mt-2 
                                 .cart__block-title
@@ -74,7 +74,8 @@ html(lang="ru")
                                     .mb-1
                                         +checkbox('different', 'Заказ будет получать другой человек')(class="cart__input-checkbox" field="cart__input-field" label="cart__input-label")
                                         .cart__input-info
-                                            +input('Кому передать заказ?', '')(type="text" field="input__field--full")
+                                            +input('Кому передать заказ?', '')(type="text" field="mb-1 input__field--full")
+                                            +input('Контактный телефон', '')(type="text" field="input__field--full")
                                     .mb-1
                                         +checkbox('callback', 'Звонок для подтверждения не требуется')
                                     //- Comment Area
@@ -103,6 +104,9 @@ html(lang="ru")
                                     +productOrder('Shaper Classic Peach', '6 999 руб.', '', 'XXL', 'фиолетовый', 'SAN-071CWH', 'product.html')(style="background-image:url('./img/product-4.jpg');")
                                 .cart-sidebar__prop.cart-sidebar__prop--first
                                     span.cart-sidebar__prop-title Скидка
+                                    span.cart-sidebar__prop-value 10 500 руб.
+                                .cart-sidebar__prop
+                                    span.cart-sidebar__prop-title Промокод
                                     span.cart-sidebar__prop-value —
                                 .cart-sidebar__prop
                                     span.cart-sidebar__prop-title Доставка
@@ -123,12 +127,12 @@ html(lang="ru")
                                         span.text-bold Статусный кэшбэк <br/>
                                         span.text-small.text-grey Можно оплатить до 50% от стоимости покупки.
                                     span.cart-sidebar__prop-value
-                                        a.text-small.text-bold.text-dashed.link-action(href="#") использовать
+                                        a.text-small.text-bold.text-dashed(href="#") отменить
                                 .cart-sidebar__prop.text-smaller.mt-1
                                     span.cart-sidebar__prop-title Ваш баланс: 
                                     span.cart-sidebar__prop-value 40 500 руб.
-                                .cart-sidebar__prop.text-smaller.text-bold
-                                    span.cart-sidebar__prop-title Можно потратить: 
+                                .cart-sidebar__prop.text-smaller.text-bold.text-action
+                                    span.cart-sidebar__prop-title Вы потратили: 
                                     span.cart-sidebar__prop-value 10 500 руб.
                             .cart-sidebar.cart-sidebar_cashback.mt-1
                                 .cart-sidebar__prop
@@ -144,7 +148,7 @@ html(lang="ru")
                                     span.cart-sidebar__prop-title Можно потратить: 
                                     span.cart-sidebar__prop-value 750 руб.
                             .cart-sidebar.mt-2
-                                p.text-bold.text-smaller Через 14 дней с этой покупки 
+                                p.text-bolder.text-smaller Через 14 дней с этой покупки 
                                     span.text-action будет начисленкешбек
                                 .cart-sidebar__prop.text-smaller
                                     span.cart-sidebar__prop-title Статусный кэшбэк

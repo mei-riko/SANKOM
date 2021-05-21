@@ -1,5 +1,5 @@
 .navbar_secondary{
-    font-size: map-get($map: $font-size, $key: "xs");
+    font-size: map-get($map: $font-size, $key: sm);
     line-height: $line-height-heading;
 
     &__sep{

@@ -48,14 +48,23 @@
             padding-left: $spacer;
         }
     }
+    &__title{
+        line-height: $line-height-heading;
+    }
     // Input's Style
     &__input-field{
         &:checked + .cart__input-label {
             background: $light-bg;
             border-radius: 6px;
+
+            .cart__input-choose{
+                filter: opacity(1);
+            }
         }
     }
     &__input-label{
+        position: relative;
+
         flex-grow: 1;
         padding-left: 30px;
         padding-top: 4px;
@@ -73,6 +82,21 @@
         padding-left: 24px;
         margin-top: 10px;
         display: none;
+    }
+    &__input-choose{
+        font-size: map-get($map: $font-size, $key: xs);
+        font-weight: $font-weight-bold;
+        color: $action;
+        text-decoration: underline;
+
+        filter: opacity(0);
+        transition: .3s;
+
+        position: absolute;
+        top: 50%;
+        right: 10px;
+
+        transform: translateY(-50%);
     }
     // Order
     &__order-details{

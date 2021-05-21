@@ -12,8 +12,8 @@
 
             text-align: center;
 
-            font-size: map-get($map: $font-size, $key: "xs" );
-            line-height: map-get($map: $font-size, $key: "sm" );
+            font-size: map-get($map: $font-size, $key: "sm" );
+            line-height: map-get($map: $font-size, $key: "md" );
 
             padding: 10px $spacer 11px;
         }
@@ -78,7 +78,7 @@
             }
         }
         &-place{
-            font-size: map-get($map: $font-size, $key: xs);
+            // font-size: map-get($map: $font-size, $key: xs);
             white-space: nowrap;
 
             color: $dark-grey;
@@ -114,7 +114,7 @@
         padding-left: $grid-gutter-width/2;
     }
     &__phone{
-        font-size: map-get($map: $font-size, $key: "sm");
+        // font-size: map-get($map: $font-size, $key: "sm");
         font-weight: $font-weight-bold;
         white-space: nowrap;
 
@@ -129,7 +129,7 @@
         align-items: center;
         justify-content: space-between;
 
-        font-size: map-get($map: $font-size, $key: "sm");
+        // font-size: map-get($map: $font-size, $key: "sm");
         line-height: $line-height-heading;
         padding: $grid-gutter-width/2 0;
     }

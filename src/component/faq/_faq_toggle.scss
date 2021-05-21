@@ -18,7 +18,7 @@
     }
     &--active{
         .faq_toggle__title{
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-bolder;
             &:after{
                 background: url('../icon/minus.svg') no-repeat center / contain;
             }
