@@ -65,6 +65,7 @@ export function closeNavbarOnClick(){
     $(".navbar-mobile .navbar-mobile__item").removeClass("navbar-mobile__item--active");
     
     if( $('body').hasClass('open-navbar') && !$('body').hasClass('open-sidebar') ){
+        
         $('body').removeClass('hidden');
         $('.overlay').addClass('overlay--disable');
         // Change z-index
@@ -190,23 +191,5 @@ $(window).on("resize", function(){
     }else{
         // Remove Class
         $('.navbar').removeClass("navbar--desktop").addClass("navbar--mobile");
-    }
-});
-
-// Cобытие клика по веб-документу
-$(document).on('mouseup', function (e){ 
-    let navbarActive = $(".navbar-sidebar.navbar-sidebar--active"); // элемент
-    let navbarItem = $(".navbar-mobile .navbar-mobile__item");
-
-
-    if (!navbarActive.is(e.target) // клик был не по блоку
-          && navbarActive.has(e.target).length === 0 // и не по его дочерним элементам
-          && !navbarItem.is(e.target)
-          && $('body').hasClass('open-navbar')
-    ) {
-        closeNavbarOnClick();
-        // navbarActive.removeClass('navbar-sidebar--active');
-        // $('.overlay').addClass('overlay--disable');
-        // $('body').removeClass('hidden')
     }
 });

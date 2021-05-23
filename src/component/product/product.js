@@ -156,3 +156,28 @@ if( $('.slider-main').length > 0 ){
     }
   });
 }
+
+$(function(){
+  // Show Fixed Product Bar
+  let $productContent = $('[data-product="show"]');
+  let heightContent = Math.ceil( $productContent.height() );
+  let offsetContent = Math.ceil( $productContent.offset().top );
+
+  let $productFixedBar = $('.product-page_fixed');
+  let offsetWindow = $(window).scrollTop();
+
+  // If Offset True Show Sticky Info
+  if ( offsetContent <= ( offsetWindow + heightContent )){
+    $productFixedBar.addClass('product-page_fixed--active');
+  }
+  // Show Sticky Info On Scroll
+  $( window ).on('scroll',function() {
+    offsetWindow = $(this).scrollTop();
+
+    if ( offsetContent > ( offsetWindow + heightContent )){
+      $productFixedBar.removeClass('product-page_fixed--active');
+    }else{
+        $productFixedBar.addClass('product-page_fixed--active');
+    }
+  });
+});

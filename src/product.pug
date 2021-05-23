@@ -132,7 +132,7 @@ html(lang="ru")
                                         .product-page__size-item
                                             input.product-page__size-input(type="radio" id="size7" name="size")
                                             label.product-page__size-label(for="size7") L-XL
-                                .product-page__btns
+                                .product-page__btns(data-product="show")
                                     .product-page__buy
                                         a.btn.btn_action.btn--full.btn--has-icon(href="#" data-sidebar="cart") 
                                             <svg class="btn__icon btn__icon_left" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +215,7 @@ html(lang="ru")
             section.content.content_secondary.container.product-page
                 .content__inside.product-page__content
                     .row.product-page__row.justify-content-between
-                        .col-8.col-md-12.mb-md-2.product-page__col
+                        .col-8.col-xl-7.col-md-12.mb-md-2.product-page__col
                             //- p.text-smaller.text-spacer.text-bolder.text-uppercase Описание товара
                             p 
                                 span.text-bold Эффективность: 
@@ -245,27 +245,26 @@ html(lang="ru")
                                     li Хорошая воздухопроницаемость и гигроскопичность
                                     li Износостойкость и цветоустойчивость при многократных стирках
                                 p.text-small Рекомендовано: для повседневного ношения в любое время года, для чувствительной кожи, для восстановления после родов и полостных операций.
-                        
                         .hr.d-none.d-sm-block.mb-sm-2
-                        .col-3.col-md-12.mb-sm-2.product-page__col
+                        .col-3.col-xl-5.col-md-12.mb-sm-2.product-page__col
                             .hr.d-none.d-md-block.d-sm-none.mb-md-2
                             .product-page__video
-                                .product-page__video-item.mb-2
+                                .product-page__video-item.mb-2.mb-md-0
                                     a.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
                                         img.img-fluid(src="./img/banner-video.jpg")
-                                    p.mt-1.text-bolder.slider__title Оригинальный бюстгальтер SANKOM                                    
-                                .product-page__video-item.mb-2
+                                    p.mt-1.text-bolder Оригинальный бюстгальтер SANKOM                                    
+                                .product-page__video-item.mb-2.mb-md-0
                                     a.link-video(data-fancybox="video" data-src="./img/image-2.jpg" href="javascript:;")
                                         img.img-fluid(src="./img/banner-video.jpg")
-                                    p.mt-1.text-bolder.slider__title Обзор материала
-                                .product-page__video-item.mb-2
+                                    p.mt-1.text-bolder Обзор материала
+                                .product-page__video-item.mb-2.mb-md-0
                                     a.link-video(data-fancybox="video" data-src="./img/image-3.jpg" href="javascript:;")
                                         img.img-fluid(src="./img/banner-video.jpg")
-                                    p.mt-1.text-bolder.slider__title Презентация модели
+                                    p.mt-1.text-bolder Презентация модели
                                 .product-page__video-item
                                     a.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
                                         img.img-fluid(src="./img/banner-video.jpg")
-                                    p.mt-1.text-bolder.slider__title Long Shaper CLASSIC
+                                    p.mt-1.text-bolder Long Shaper CLASSIC
                         <!--noindex-->
                         //- Информационный блок с иконкой
                         .hr.d-none.d-sm-block.mb-sm-2
@@ -375,6 +374,7 @@ html(lang="ru")
                                         <path d="M12.4293 14.6005H1.45166L2.30278 6.12402H11.5608L12.4293 14.6005Z" fill="white" stroke="#C9002E" stroke-miterlimit="10"/>
                                     </svg>
                                     | Купить комплект
+            include component/product/fixed.pug
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug
 

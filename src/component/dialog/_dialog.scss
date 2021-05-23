@@ -4,9 +4,11 @@
     position: absolute;
     z-index: 99;
 
-    padding: $spacer-gutter;
+    padding: 10px $spacer-gutter;
     background: $white;
     border: 1px solid $border-color;
+    border-radius: $border-radius;
+    transition: .4s;
 
     &__true{
         font-weight: $font-weight-bold;
@@ -46,29 +48,26 @@
         }
     }
 
+    &__content{
+        transition: .4s;
+    }
+    &__title{
+        font-size: map-get($map: $font-size, $key: lg);
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+
+        margin-bottom: $spacer-gutter;
+    }
+    &__close{
+        cursor: pointer;
+    }
     &--active{
         display: block;
     }
-}
-
-.dialog_networks{
-    width: 210px;
-    max-width: 100%;
-    padding: 0;
-
-    &__item{
-        padding: $spacer/5 $spacer-gutter;
-        background: $white;
-        transition: .3s;
-
-        border-bottom: 1px solid $border-color;
-
-        &:last-child{
-            border-bottom: none;
-        }
-
-        &:hover{
-            background: $light-bg;
-        }
+    &--toggle{
+        width: auto!important;
+    }
+    &--open-sidebar{
+        z-index: 81;
     }
 }

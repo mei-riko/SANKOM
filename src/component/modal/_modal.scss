@@ -2,10 +2,14 @@
     display: none;
     width: 720px;
     max-width: 100%;
+
+    &_small{
+        width: 420px;
+    }
 }
 
 .modal.fancybox-content{
-    padding: $spacer-gutter;
+    padding: map-get($map: $spacers, $key: 2);
     background: $body-bg;
 
     .fancybox-close-small{

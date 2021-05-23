@@ -1,7 +1,7 @@
 .footer{
     font-size: map-get($map: $font-size, $key: "sm");
     padding: $spacer/2 0;
-
+    
     &__nav{
         display: flex;
         flex-wrap: wrap;

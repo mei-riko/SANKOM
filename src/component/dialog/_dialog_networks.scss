@@ -1,0 +1,21 @@
+.dialog_networks{
+    width: 210px;
+    max-width: 100%;
+    padding: 0;
+
+    &__item{
+        padding: $spacer/5 $spacer-gutter;
+        background: $white;
+        transition: .3s;
+
+        border-bottom: 1px solid $border-color;
+
+        &:last-child{
+            border-bottom: none;
+        }
+
+        &:hover{
+            background: $light-bg;
+        }
+    }
+}

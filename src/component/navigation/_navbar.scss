@@ -27,11 +27,11 @@
 
         &_action{
             font-family: 'Covered By Your Grace', cursive; 
-            font-size: 15px;
+            font-size: 16px;
             font-weight: $font-weight-bold;
 
-            // color: $action;
-            color: #C9002E;
+            color: $action;
+            // color: #C9002E;
 
             &:hover{
                 color: darken($color: $action, $amount: 6);

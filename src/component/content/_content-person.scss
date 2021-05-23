@@ -27,16 +27,28 @@
         border-radius: 50%;
 
         background: no-repeat center / cover;
-        margin: 0 auto $spacer-gutter;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__title{
         font-weight: $font-weight-bolder;
-        text-align: center;
+        // text-align: center;
         margin-bottom: 5px;
     }
     &__subtitle{
-        font-size: map-get($map: $font-size, $key: 'xs');
-        text-align: center;
+        font-size: map-get($map: $font-size, $key: 'sm');
+
+        width: 420px;
+        max-width: 100%;
+        // text-align: center;
+    }
+
+    &_author{
+        display: grid;
+        grid-gap: $spacer-gutter;
+        grid-template-columns: 90px 1fr;
+
+        align-items: center;
     }
 }
 

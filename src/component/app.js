@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery';
 
 import '../component/slider/slider';
 import '../component/filters/filter';
@@ -15,7 +15,6 @@ import '../component/dialog/dialog';
 
 import '../component/product/product';
 import '../component/cart/cart';
-
 
 $(function() {
   // Animate Scroll
@@ -77,10 +76,34 @@ $(function() {
   // Open Any Block
   $('.open-block').on('click', function(e){
     e.preventDefault(); 
+
     let block = $(this);
     let blockId = block.data( 'id' );
+    let blockOpen = block.data( 'open' );
+    let blockClose = block.data( 'close' );
 
     $(blockId).slideToggle();
+
+    if( blockOpen.length > 0 && blockClose.length > 0) {
+      if ( !block.hasClass('active') ){
+        block.addClass('active');
+        block.text( blockClose )
+      }else{
+        block.removeClass('active');
+        block.text( blockOpen );
+      }
+    }
+  });
+  // Open Callback Fixed
+  $('.footer-callback .footer-callback__icon').on('click', function(){
+    let icon = $(this);
+    let list = icon.parent().find('.footer-callback__list');
+
+    if ( !list.hasClass('footer-callback__list--active') ){
+      list.addClass('footer-callback__list--active');
+    }else{
+      list.removeClass('footer-callback__list--active');
+    }
   });
   // B-lazy
   if( $('.b-lazy').length > 0 ){
@@ -97,3 +120,6 @@ $(function() {
     
   }
 });
+
+// Cобытие клика по веб-документу
+import '../component/framework/mouseup';

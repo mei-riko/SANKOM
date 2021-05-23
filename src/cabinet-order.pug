@@ -21,82 +21,83 @@ html(lang="ru")
             //- Cabinet
             section.container.content
                 .cabinet.row 
-                    .col-2.cabinet__col.cabinet__sidebar
+                    .col-2.col-sm-12.col-md-5.col-lg-4.col-xl-3.cabinet__col.cabinet__sidebar
                         include component/cabinet/sidebar.pug
-                    .col-10.cabinet__col
+                    .col-10.col-sm-12.col-md-7.col-lg-8.col-xl-9.cabinet__col
                         .cabinet__body
                             h1.h5.mb-2 Последние заказы
                             .cabinet__item
-                                table.cabinet__table.cabinet__order
-                                    tr.cabinet__table-head
-                                        th.cabinet__table-title &nbsp;
-                                        th.cabinet__table-title № заказа
-                                        th.cabinet__table-title Дата 
-                                        th.cabinet__table-title Сумма
-                                        th.cabinet__table-title Оплачено
-                                        th.cabinet__table-title Статустный кэшбек
-                                        th.cabinet__table-title Бонусный кэшбек
-                                        th.cabinet__table-title Перевозчик
-                                    tr.cabinet__table-line 
-                                        td.cabinet__table-item
-                                            span.cabinet__order-status(style="background-color: #44C57F") выполнено
-                                        td.cabinet__table-item 
-                                            a.text-underline(href="cabinet-order-details.html") Заказ №32839
-                                        td.cabinet__table-item 15.05.2020
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 533 руб.<br/>
-                                            span.text-grey получен 20.05.2020
-                                        td.cabinet__table-item -
-                                        td.cabinet__table-item самовывоз
-                                    tr.cabinet__table-line 
-                                        td.cabinet__table-item
-                                            span.cabinet__order-status(style="background-color: #F4D635") обработка
-                                        td.cabinet__table-item 
-                                            a.text-underline(href="cabinet-order-details.html") Заказ №32839
-                                        td.cabinet__table-item 15.05.2020
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 0 руб.
-                                        td.cabinet__table-item -
-                                        td.cabinet__table-item 500 руб.
-                                        td.cabinet__table-item 
-                                            span.text-bold СДЭК <br/>
-                                            | Трек номер: 2323742374289
-                                    tr.cabinet__table-line 
-                                        td.cabinet__table-item
-                                            span.cabinet__order-status(style="background-color: #666666") отменён
-                                        td.cabinet__table-item 
-                                            a.text-underline(href="cabinet-order-details.html") Заказ №32839
-                                        td.cabinet__table-item 15.05.2020
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 0 руб.
-                                        td.cabinet__table-item -
-                                        td.cabinet__table-item -
-                                        td.cabinet__table-item -
-                                    tr.cabinet__table-line 
-                                        td.cabinet__table-item
-                                            span.cabinet__order-status(style="background-color: #0068A3") получен
-                                        td.cabinet__table-item 
-                                            a.text-underline(href="cabinet-order-details.html") Заказ №32839
-                                        td.cabinet__table-item 15.05.2020
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 533 руб.<br/>
-                                            span.text-grey получен 20.05.2020
-                                        td.cabinet__table-item -
-                                        td.cabinet__table-item самовывоз
-                                    tr.cabinet__table-line 
-                                        td.cabinet__table-item
-                                            span.cabinet__order-status(style="background-color: #44C57F") выполнено
-                                        td.cabinet__table-item 
-                                            a.text-underline(href="cabinet-order-details.html") Заказ №32839
-                                        td.cabinet__table-item 15.05.2020
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 17 233 руб.
-                                        td.cabinet__table-item 533 руб.<br/>
-                                            span.text-grey получен 20.05.2020
-                                        td.cabinet__table-item -
-                                        td.cabinet__table-item самовывоз
+                                .cabinet__table-responsive
+                                    table.cabinet__table.cabinet__order
+                                        tr.cabinet__table-head
+                                            th.cabinet__table-title &nbsp;
+                                            th.cabinet__table-title № заказа
+                                            th.cabinet__table-title Дата 
+                                            th.cabinet__table-title Сумма
+                                            th.cabinet__table-title Оплачено
+                                            th.cabinet__table-title Статустный кэшбек
+                                            th.cabinet__table-title Бонусный кэшбек
+                                            th.cabinet__table-title Перевозчик
+                                        tr.cabinet__table-line 
+                                            td.cabinet__table-item
+                                                span.cabinet__order-status(style="background-color: #44C57F") выполнено
+                                            td.cabinet__table-item 
+                                                a.text-underline(href="cabinet-order-details.html") Заказ №32839
+                                            td.cabinet__table-item 15.05.2020
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 533 руб.<br/>
+                                                span.text-grey получен 20.05.2020
+                                            td.cabinet__table-item -
+                                            td.cabinet__table-item самовывоз
+                                        tr.cabinet__table-line 
+                                            td.cabinet__table-item
+                                                span.cabinet__order-status(style="background-color: #F4D635") обработка
+                                            td.cabinet__table-item 
+                                                a.text-underline(href="cabinet-order-details.html") Заказ №32839
+                                            td.cabinet__table-item 15.05.2020
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 0 руб.
+                                            td.cabinet__table-item -
+                                            td.cabinet__table-item 500 руб.
+                                            td.cabinet__table-item 
+                                                span.text-bold СДЭК <br/>
+                                                | Трек номер: 2323742374289
+                                        tr.cabinet__table-line 
+                                            td.cabinet__table-item
+                                                span.cabinet__order-status(style="background-color: #666666") отменён
+                                            td.cabinet__table-item 
+                                                a.text-underline(href="cabinet-order-details.html") Заказ №32839
+                                            td.cabinet__table-item 15.05.2020
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 0 руб.
+                                            td.cabinet__table-item -
+                                            td.cabinet__table-item -
+                                            td.cabinet__table-item -
+                                        tr.cabinet__table-line 
+                                            td.cabinet__table-item
+                                                span.cabinet__order-status(style="background-color: #0068A3") получен
+                                            td.cabinet__table-item 
+                                                a.text-underline(href="cabinet-order-details.html") Заказ №32839
+                                            td.cabinet__table-item 15.05.2020
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 533 руб.<br/>
+                                                span.text-grey получен 20.05.2020
+                                            td.cabinet__table-item -
+                                            td.cabinet__table-item самовывоз
+                                        tr.cabinet__table-line 
+                                            td.cabinet__table-item
+                                                span.cabinet__order-status(style="background-color: #44C57F") выполнено
+                                            td.cabinet__table-item 
+                                                a.text-underline(href="cabinet-order-details.html") Заказ №32839
+                                            td.cabinet__table-item 15.05.2020
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 17 233 руб.
+                                            td.cabinet__table-item 533 руб.<br/>
+                                                span.text-grey получен 20.05.2020
+                                            td.cabinet__table-item -
+                                            td.cabinet__table-item самовывоз
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug
         

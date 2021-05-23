@@ -70,6 +70,9 @@
             }
         }
     }
+    &--open-sidebar{
+        z-index: 81;
+    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
@@ -92,8 +95,6 @@
             padding: 0;
         }
 
-        &--open-sidebar{
-            z-index: 81;
-        }
+
     }
 }

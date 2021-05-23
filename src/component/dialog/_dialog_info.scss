@@ -1,0 +1,70 @@
+.dialog_info{
+    position: fixed;
+
+    // width: 310px;
+    max-width: 100%;
+
+    background-color: $light-bg;
+
+    left: map-get($map: $spacers, $key: 2);
+    bottom: map-get($map: $spacers, $key: 3);
+
+
+    &__close{
+        display: inline-flex;
+        padding-right: 16px;
+
+        @extend .text-small;
+        white-space: nowrap;
+
+        color: $grey;
+
+        position: absolute;
+        top: -6px;
+        right: 0;
+        transform: translateY(-100%);
+
+        cursor: pointer;
+        transition: .3s;
+
+        &:after{
+            content: '';
+            display: block;
+
+            width: 12px;
+            height: 12px;
+            background: url("../icon/icon-close.svg") no-repeat right center/8px;
+
+            position: absolute;
+            top: calc(50% - 6px);
+            right: 0;
+
+            transition: .3s;
+        }
+
+        &:hover{
+            filter: opacity(.5);
+
+            &:after{
+                filter: opacity(.5);
+            }
+        }
+    }
+    // &__close{
+    //     padding-left: 16px;
+    //     padding-right: 0;
+
+    //     right: auto;
+    //     left: 0;
+
+    //     &:after{
+    //         right: auto;
+    //         left: 0;
+    //     }
+    // }
+    &__toggle{
+        @extend .text-dashed;
+        @extend .text-small;
+        display: inline-block;
+    }
+}

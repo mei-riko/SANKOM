@@ -44,6 +44,7 @@
             font-size: 18px;
             font-weight: $font-weight-bolder;
             color: $action;
+            margin-right: 10px;
 
             display: inline-flex;
             white-space: nowrap;
@@ -52,7 +53,7 @@
             position: relative;
             display: inline-block;
             padding: 3px 6px 3px 8px;
-            margin-left: map-get($map: $spacers, $key: 2);
+            margin-left: 10px;
             height: 20px;
     
             background: $action;
@@ -496,6 +497,16 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product-page{
+        &__video{
+            // max-height: unset;
+            display: grid;
+            grid-gap: $spacer-gutter;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product-page{
         // Simple Product Information
@@ -582,6 +593,13 @@
         // Help INformation
         &__help{
             font-size: map-get($map: $font-size, $key: 'xs');
+        }
+
+        // Video
+        .product-page{
+            &__video{
+                grid-template-columns: 1fr;
+            }
         }
     }
 }

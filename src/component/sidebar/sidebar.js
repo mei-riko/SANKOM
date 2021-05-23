@@ -17,6 +17,7 @@ function openSidebarOnClick( elem ){
     // Change z-index
     $('.navbar-mobile').addClass('navbar-mobile--open-sidebar');
     $('.header.header_sticky').addClass('header_sticky--open-sidebar');
+    $('.dialog').addClass('dialog--open-sidebar');
 
 }
 $(document).on('click', '[data-sidebar]', function( event ){
@@ -38,23 +39,7 @@ $('.sidebar .sidebar__close').on('click', function(){
     // Change z-index
     $('.navbar-mobile').removeClass('navbar-mobile--open-sidebar');
     $('.header.header_sticky').removeClass('header_sticky--open-sidebar');
-});
-// Cобытие клика по веб-документу
-$(document).on('mouseup', function (e){ 
-    let sidebarActive = $(".sidebar.sidebar--active"); // элемент
-    if (!sidebarActive.is(e.target) // клик был не по блоку
-          && sidebarActive.has(e.target).length === 0 // и не по его дочерним элементам
-          && $('body').hasClass('open-sidebar')
-    ) { 
-        sidebarActive.removeClass('sidebar--active');
-        $('.overlay').addClass('overlay--disable');
-        $('body').removeClass('hidden');
-        $('body').removeClass('open-sidebar');
-        
-        // Change z-index
-        $('.navbar-mobile').removeClass('navbar-mobile--open-sidebar');
-        $('.header.header_sticky').removeClass('header_sticky--open-sidebar');
-    }
+    $('.dialog').removeClass('dialog--open-sidebar');
 });
 
 // Calculate Cart Sidebar Height

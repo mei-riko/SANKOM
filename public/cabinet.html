@@ -282,7 +282,7 @@
     <main>
       <section class="container content">
         <div class="cabinet row"> 
-          <div class="col-2 cabinet__col cabinet__sidebar">
+          <div class="col-2 col-sm-12 col-md-5 col-lg-4 col-xl-3 cabinet__col cabinet__sidebar">
             <div class="cabinet__account"><img class="cabinet__account-avatar" src="./demo/demo-card.svg"/>
               <div class="cabinet__account-name">Хайруллин Артем</div>
               <div class="cabinet__account-contact">+7 985 777-50-90</div>
@@ -291,10 +291,10 @@
               <div class="cabinet__navigation-sep"></div><a class="cabinet__navigation-item" href="#"><img class="cabinet__navigation-icon" src="./icon/icon-exit.svg"/><span class="cabinet__navigation-title">Выход</span></a>
             </div>
           </div>
-          <div class="col-10 cabinet__col">
+          <div class="col-10 col-sm-12 col-md-7 col-lg-8 col-xl-9 cabinet__col">
             <div class="cabinet__body">
               <div class="row">
-                <div class="mb-2 col-5">
+                <div class="mb-2 col-5 col-sm-12 col-md-12 col-lg-12 col-xl-5 order-lg-1 order-xl-1">
                   <div class="cabinet__item cabinet__item_info cabinet__item_setting"><a class="cabinet__item_setting-icon" href="cabinet-setting.html"></a>
                     <div class="cabinet__account-name cabinet__item-title"> Хайруллин Артем</div>
                     <div class="cabinet__account-contact">+7 985 777-50-90</div>
@@ -305,9 +305,70 @@
                     </div>
                   </div>
                 </div>
-                <div class="mb-2 col-7">
+                <div class="mb-2 col-7 col-sm-12 col-md-12 col-lg-12 col-xl-12 order-lg-2 order-xl-3"><a class="cabinet__item cabinet__item_link" href="cabinet-order.html">
+                    <div class="cabinet__table-responsive">
+                      <table class="cabinet__table">
+                        <tr class="cabinet__table-head">
+                          <th class="cabinet__table-title">&nbsp;</th>
+                          <th class="cabinet__table-title">№ заказа</th>
+                          <th class="cabinet__table-title">Дата </th>
+                          <th class="cabinet__table-title">Сумма</th>
+                          <th class="cabinet__table-title">Оплачено</th>
+                          <th class="cabinet__table-title">Перевозчик</th>
+                        </tr>
+                        <tr class="cabinet__table-line"> 
+                          <td class="cabinet__table-item"><span class="cabinet__order-status" style="background-color: #44C57F"></span></td>
+                          <td class="cabinet__table-item"> <a class="text-underline" href="cabinet-order-details.html">Заказ №32839</a></td>
+                          <td class="cabinet__table-item">15.05.2020</td>
+                          <td class="cabinet__table-item">17 233 руб.</td>
+                          <td class="cabinet__table-item">17 233 руб.</td>
+                          <td class="cabinet__table-item">самовывоз</td>
+                        </tr>
+                        <tr class="cabinet__table-line"> 
+                          <td class="cabinet__table-item"><span class="cabinet__order-status" style="background-color: #F4D635"></span></td>
+                          <td class="cabinet__table-item"> <a class="text-underline" href="cabinet-order-details.html">Заказ №32910</a></td>
+                          <td class="cabinet__table-item">15.05.2020</td>
+                          <td class="cabinet__table-item">17 233 руб.</td>
+                          <td class="cabinet__table-item">0 руб.</td>
+                          <td class="cabinet__table-item"> <span class="text-bold d-block">СДЭК</span><span class="d-block">Трек номер: 2323742374289</span></td>
+                        </tr>
+                        <tr class="cabinet__table-line"> 
+                          <td class="cabinet__table-item"><span class="cabinet__order-status" style="background-color: #666666"></span></td>
+                          <td class="cabinet__table-item"> <a class="text-underline" href="cabinet-order-details.html">Заказ №42110</a></td>
+                          <td class="cabinet__table-item">15.05.2020</td>
+                          <td class="cabinet__table-item">7 210 руб.</td>
+                          <td class="cabinet__table-item">0 руб.</td>
+                          <td class="cabinet__table-item"> <span class="text-bold d-block">—</span></td>
+                        </tr>
+                      </table>
+                    </div></a></div>
+                <div class="mb-xl-2 col-5 col-sm-12 col-md-12 col-lg-12 col-xl-7 order-lg-3 order-xl-2"><a class="cabinet__item cabinet__item_link" href="cabinet-cashback.html">
+                    <p class="cabinet__item-title">История кэшбека</p>
+                    <div class="cabinet__cashback mt-2">
+                      <div class="cabinet__cashback-item cabinet__cashback-item_add">
+                        <div class="cabinet__cashback-type"> 
+                          <div class="cabinet__cashback-subtitle">бонусный кэшбек</div>
+                          <div class="cabinet__cashback-data">02.02.2021</div>
+                        </div>
+                        <div class="cabinet__cashback-info">
+                          <p class="cabinet__cashback-title">Зачисление <span class="cabinet__cashback-add">+513 ₽</span></p>
+                          <p class="cabinet__cashback-intro">Заказ №24161 от 19.06.2019 (3 423₽)</p>
+                        </div>
+                      </div>
+                      <div class="cabinet__cashback-item cabinet__cashback-item_remove">
+                        <div class="cabinet__cashback-type">
+                          <div class="cabinet__cashback-subtitle">статусный кэшбек</div>
+                          <div class="cabinet__cashback-data">12.04.2021</div>
+                        </div>
+                        <div class="cabinet__cashback-info">
+                          <p class="cabinet__cashback-title">Списание  <span class="cabinet__cashback-remove">-1 210 ₽</span></p>
+                          <p class="cabinet__cashback-intro">Заказ №37072 от 29.01.2021 (7 830₽)</p>
+                        </div>
+                      </div>
+                    </div></a></div>
+                <div class="col-7 col-sm-12 col-md-12 col-lg-12 col-xl-12 order-lg-4 order-xl-4">
                   <div class="row">
-                    <div class="col-6">
+                    <div class="mb-lg-2 col-6 col-sm-12 col-md-12 col-lg-12">
                       <div class="cabinet__item cabinet__item_info cabinet__card" style="background-image: url('./img/bg-card-platinum.png');">
                         <div class="cabinet__card-status">платиновый</div>
                         <div class="cabinet__card-intro">999 р. до уровня «Extra»</div>
@@ -323,7 +384,7 @@
 </svg>
                       </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 col-sm-12 col-md-12 col-lg-12">
                       <div class="cabinet__item cabinet__item_info">
                         <p class="cabinet__item-title">Уровень "Стартовый"</p>
                         <div class="cabinet__item-prop">
@@ -343,67 +404,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-5"><a class="cabinet__item cabinet__item_link" href="cabinet-cashback.html">
-                    <p class="cabinet__item-title">История кэшбека</p>
-                    <div class="cabinet__cashback mt-2">
-                      <div class="cabinet__cashback-item cabinet__cashback-item_add">
-                        <div class="cabinet__cashback-type"> 
-                          <div class="cabinet__cashback-subtitle">бонусный кэшбек</div>
-                          <div class="cabinet__cashback-data">02.02.2021</div>
-                        </div>
-                        <div class="cabinet__cashback-info">
-                          <p class="cabinet__cashback-title">Зачисление <span class="cabinet__cashback-add">+513 ₽</span></p>
-                          <p class="cabinet__cashback-intro">Заказ №24161 от 19.06.2019 (3 423₽)</p>
-                          <div class="cabinet__cashback-content"><span class="d-block">Зачислен 19.06.2019</span><span class="d-block">Действует до 12.02.2022</span></div>
-                        </div>
-                      </div>
-                      <div class="cabinet__cashback-item cabinet__cashback-item_remove">
-                        <div class="cabinet__cashback-type">
-                          <div class="cabinet__cashback-subtitle">статусный кэшбек</div>
-                          <div class="cabinet__cashback-data">12.04.2021</div>
-                        </div>
-                        <div class="cabinet__cashback-info">
-                          <p class="cabinet__cashback-title">Списание  <span class="cabinet__cashback-remove">-1 210 ₽</span></p>
-                          <p class="cabinet__cashback-intro">Заказ №37072 от 29.01.2021 (7 830₽)</p>
-                        </div>
-                      </div>
-                    </div></a></div>
-                <div class="col-7"><a class="cabinet__item cabinet__item_link" href="cabinet-order.html">
-                    <p class="cabinet__item-title">Последние заказы</p>
-                    <table class="cabinet__table mt-2">
-                      <tr class="cabinet__table-head">
-                        <th class="cabinet__table-title">&nbsp;</th>
-                        <th class="cabinet__table-title">№ заказа</th>
-                        <th class="cabinet__table-title">Дата </th>
-                        <th class="cabinet__table-title">Сумма</th>
-                        <th class="cabinet__table-title">Оплачено</th>
-                        <th class="cabinet__table-title">Перевозчик</th>
-                      </tr>
-                      <tr class="cabinet__table-line"> 
-                        <td class="cabinet__table-item"><span class="cabinet__order-status" style="background-color: #44C57F"></span></td>
-                        <td class="cabinet__table-item"> <a class="text-underline" href="cabinet-order-details.html">Заказ №32839</a></td>
-                        <td class="cabinet__table-item">15.05.2020</td>
-                        <td class="cabinet__table-item">17 233 руб.</td>
-                        <td class="cabinet__table-item">17 233 руб.</td>
-                        <td class="cabinet__table-item">самовывоз</td>
-                      </tr>
-                      <tr class="cabinet__table-line"> 
-                        <td class="cabinet__table-item"><span class="cabinet__order-status" style="background-color: #F4D635"></span></td>
-                        <td class="cabinet__table-item"> <a class="text-underline" href="cabinet-order-details.html">Заказ №32910</a></td>
-                        <td class="cabinet__table-item">15.05.2020</td>
-                        <td class="cabinet__table-item">17 233 руб.</td>
-                        <td class="cabinet__table-item">0 руб.</td>
-                        <td class="cabinet__table-item"> <span class="text-bold d-block">СДЭК</span><span class="d-block">Трек номер: 2323742374289</span></td>
-                      </tr>
-                      <tr class="cabinet__table-line"> 
-                        <td class="cabinet__table-item"><span class="cabinet__order-status" style="background-color: #666666"></span></td>
-                        <td class="cabinet__table-item"> <a class="text-underline" href="cabinet-order-details.html">Заказ №42110</a></td>
-                        <td class="cabinet__table-item">15.05.2020</td>
-                        <td class="cabinet__table-item">7 210 руб.</td>
-                        <td class="cabinet__table-item">0 руб.</td>
-                        <td class="cabinet__table-item"> <span class="text-bold d-block">—</span></td>
-                      </tr>
-                    </table></a></div>
               </div>
             </div>
           </div>

@@ -1,0 +1,37 @@
+.product-page.product-page_fixed
+    .container
+        .row.align-items-center
+            .col-9.col-xl-7
+                .product-page_fixed__content
+                    img.img-fluid.product-page_fixed__image(src="./product/prod-1.jpg")
+                    p.product-page_fixed__title Шорты Long Shaper CLASSIC Чёрные
+                    .product-page_fixed__price
+                        span.product-page__price-old 6 660 руб.
+                        span.product-page__price-new 5 240 руб.
+                        span.product-page__price-discount 20%
+            .col-3.col-xl-5
+                .product-page__btns
+                    .product-page__buy
+                        a.btn.btn_action.btn--full.btn--has-icon(href="#" data-sidebar="cart") 
+                            <svg class="btn__icon btn__icon_left" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.0273 1C5.41191 1 4.10918 2.30273 4.10918 3.91811V5.7072H1.95534L1 15H12.8809L11.9256 5.7072H9.96278V3.91811C9.96278 2.30273 8.66005 1 7.04467 1C7.0273 1 7.0273 1 7.0273 1Z" fill="#C9002E"/>
+                                <path d="M4.50871 3.91807C4.50871 2.52849 5.63775 1.39945 7.02732 1.41682C8.4169 1.41682 9.52856 2.54586 9.52856 3.91807V5.70715H4.50871V3.91807Z" fill="#C9002E" stroke="white" stroke-miterlimit="10"/>
+                                <path d="M12.4294 14.6005H1.45169L2.30281 6.12402H11.5609L12.4294 14.6005Z" fill="#C9002E" stroke="white" stroke-miterlimit="10"/>
+                            </svg>
+                            |  В корзину
+                    .product-page__quick-buy 
+                        a.btn.btn_border.btn--full.open-block(href="#" data-fancybox="quickBuy" data-src="#quickBuy") Быстрая покупка
+.modal.modal_small#quickBuy
+    p.text-bold Шорты Long Shaper CLASSIC Чёрные
+    p Условия доставки и оплаты будут согласованы при подтверждении заказа.
+    form.form(action="")
+        .form__group
+            .mb-1
+                +input('', 'Имя *')(field="input__field--full " label="input__label_inside" class="input--full input_label-inside")
+            .mb-1
+                +input('', 'Телефон *')(field="input__field--full " label="input__label_inside" class="input--full input_label-inside")
+            .mb-1
+                +input('', 'E-mail *')(field="input__field--full " label="input__label_inside" class="input--full input_label-inside")
+            +btn('', 'Заказать')(class="btn_action btn--full")
+    .mt-1
+        +btn('', 'Demo Apple Pay')(class="btn_border btn--full")

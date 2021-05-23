@@ -4,12 +4,8 @@ function openDialogOnClick( elem ){
     const idDialog = elem.data('dialog');
     const target = $('.dialog#' + idDialog);
 
-    // console.log( target );
-
     if ( target.length > 0 ){
         target.toggleClass('dialog--active');
-        // $('.overlay').removeClass('overlay--disable');
-        // $('body').addClass('hidden');
     } else{
         return null;
     }
@@ -20,8 +16,27 @@ $('[data-dialog]').on('click', function( event ){
     openDialogOnClick( $(this) );
 });
 
-// Cобытие клика по веб-документу (включая диалоговое окно и его дочерние элементы)
-$(document).on('mouseup', function (e){ 
-    let dialogActive = $(".dialog.dialog--active"); // элемент
-    dialogActive.removeClass('dialog--active');
+$('.dialog .dialog__true').on('click', function(){
+    $(this).closest('.dialog').removeClass('dialog--active');
+});
+$('.dialog .dialog__false').on('click', function(){
+    $(this).closest('.dialog').removeClass('dialog--active');
+});
+$('.dialog .dialog__close').on('click', function(){
+    if( $(this).data('action') === 'close' ){
+        $(this).closest('.dialog').removeClass('dialog--active');
+    }
+    if( $(this).data('action') === 'toggle'){
+        if( !$(this).hasClass('dialog__close--toggle') ){
+            $(this).addClass('dialog__close--toggle');
+            $(this).closest('.dialog').addClass('dialog--toggle');
+            $(this).closest('.dialog').find('.dialog__content').addClass('dialog__content--toggle').hide();
+            $(this).text( $(this).data('close') );
+        }else{
+            $(this).removeClass('dialog__close--toggle');
+            $(this).closest('.dialog').removeClass('dialog--toggle');
+            $(this).closest('.dialog').find('.dialog__content').removeClass('dialog__content--toggle').show();
+            $(this).text( $(this).data('open') );
+        }
+    }
 });

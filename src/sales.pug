@@ -56,6 +56,11 @@ html(lang="ru")
                     //-     a.pagination__link.pagination__link--active(href="#") 3
                     //-     a.pagination__link(href="#") 4
                     //-     a.pagination__link.pagination__link_next(href="#") &nbsp;
+        .dialog.dialog_info.dialog--active
+            .dialog__content
+                p Назад в 
+                    a.link-action(href="category-tags.html") «Красота и коррекция?»
+            .dialog__close.dialog_info__toggle(data-action="toggle" data-open="Свернуть" data-close="Развернуть") Свернуть
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug
         

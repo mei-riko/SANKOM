@@ -16,7 +16,9 @@
         height: 50px;
     }
 
-
+    &--onload{
+        transition: 0s;
+    }
     &--active{
         transform: translateY(0);
     }

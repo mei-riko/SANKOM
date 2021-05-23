@@ -1,0 +1,75 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        title Cabinet Cashback
+
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet")
+
+        link(href='./css/framework.css', rel='stylesheet')
+        link(href='./css/styles.css', rel='stylesheet')
+
+    body
+        script(src="./js/jquery.min.js")
+        include component/mixin.pug
+        include component/header/header.pug
+        include component/navigation/navbar.pug
+        main
+            //- Cabinet
+            section.container.content
+                .cabinet.row 
+                    .col-2.col-sm-12.col-md-5.col-lg-4.col-xl-3.cabinet__col.cabinet__sidebar
+                        include component/cabinet/sidebar.pug
+                    .col-10.col-sm-12.col-md-7.col-lg-8.col-xl-9.cabinet__col
+                        .cabinet__body
+                            h1.h5.mb-2 Настройка профиля
+                            .cabinet__item.mb-2
+                                .row.align-items-center.mb-1
+                                    .col-10.col-xl-8.col-lg-6
+                                        p Персональная информация
+                                    .col-2.col-xl-4.col-lg-6.text-right
+                                        +btn('#', 'Сохранить')(class="btn_inverse btn--small")
+                                .row
+                                    .col-4.col-lg-6.col-md-12.mt-1
+                                        +input('', 'ФИО *')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                                    .col-4.col-lg-6.col-md-12.mt-1
+                                        +input('', 'Телефон *')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                                    .col-4.col-lg-6.col-md-12.mt-1
+                                        +input('', 'E-mail *')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                                    .col-4.col-lg-6.col-md-12.mt-1
+                                        +input('', 'Город доставки *')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                                    .col-4.col-lg-6.col-md-12.mt-1
+                                        +input('', 'Адрес доставки')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                            .cabinet__item
+                                .row.align-items-center.mb-1
+                                    .col-10.col-xl-8.col-lg-6
+                                        p Смена пароля
+                                    .col-2.col-xl-4.col-lg-6.text-right
+                                        +btn('#', 'Сохранить')(class="btn_inverse btn--small")
+                                .row
+                                    .col-6.col-md-12.mt-1
+                                        +input('', 'Старый пароль')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                                    .col-6.col-md-12.mt-1
+                                        +input('', 'Новый пароль')(class="input--full input_label-inside" label="input__label_inside" field="input__field--full")
+                                    
+        include component/footer/footer.pug
+        include component/sidebar/sidebar.pug
+        .sidebar#modalCashbackInfo
+            .sidebar__close Закрыть
+            .sidebar__content
+                p.sidebar__title Про кэшбек
+                p Стaтусный кэшбэк за эту покупку: от 2%&nbsp;–&nbsp;20% (348₽&nbsp;–&nbsp;2&nbsp;609₽)
+                p.text-small Накапливайте и оплачивайте до 50% покупки Статусным Кэшбэком, а также повышайте им свой статус. 
+                    a.text-underline.text-action(href="#") Подробнее.
+        
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+        
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/app.min.js")

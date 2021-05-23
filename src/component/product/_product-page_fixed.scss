@@ -1,0 +1,49 @@
+.product-page_fixed{
+    padding: 10px 0;
+    background: $white;
+    border-bottom: 1px solid $border-color;
+
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 81;
+
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+
+    &__content{
+        display: flex;
+        flex-wrap: nowrap;
+
+        align-items: center;
+    }
+    &__image{
+        height: 60px;
+        width: auto;
+    }
+    &__title{
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+        padding: 0 $spacer-gutter;
+        margin: 0;
+        // white-space: nowrap;
+    }
+
+    &--active{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .product-page_fixed{
+        display: none;
+
+        &--active{
+            display: none;
+        }
+    }
+}
