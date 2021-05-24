@@ -4030,6 +4030,10 @@ a.preview:hover .preview__title {
   vertical-align: baseline;
 }
 
+.cabinet__table-line_center {
+  vertical-align: middle;
+}
+
 .cabinet__table-title {
   padding: 2px 8px 15px 8px;
   font-weight: 400;
@@ -4057,6 +4061,11 @@ a.preview:hover .preview__title {
   font-weight: 500;
   color: #ffffff;
   line-height: 1;
+}
+
+.cabinet__order-img {
+  width: auto;
+  height: 50px;
 }
 
 .cabinet__alert {

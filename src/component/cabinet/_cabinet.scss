@@ -312,6 +312,9 @@
         }
         &-line{
             vertical-align: baseline;
+            &_center{
+                vertical-align: middle;
+            }
         }
         &-title{
             padding: 2px 8px 15px 8px;
@@ -341,6 +344,10 @@
             font-weight: $font-weight-bolder;
             color: $white;
             line-height: 1;
+        }
+        &-img{
+            width: auto;
+            height: 50px;
         }
     }
     &__alert{
