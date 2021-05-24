@@ -90,7 +90,7 @@ $(function(){
     // Desktop Navbar
     navbarDesktopInitialize( $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child') );
 
-    // Mobile Sidebar Nav
+    // Mobile Open Sidebar Nav
     $(document).on('click', "[data-navbar]", function( event ){
         event.preventDefault();
 
@@ -107,69 +107,67 @@ $(function(){
         }
     });
 
-    // Mobile Nav Slide
-    $('.navbar_mobile .navbar_mobile__category .navbar_mobile__category-title').on('click', function(e){
-        e.preventDefault();
+    // Open Mobile Nav Inside Level 1
+    $('.navbar_mobile .navbar_mobile__category .navbar_mobile__title').on('click', function(event){
+        event.preventDefault();
 
-        const parent = $(this).parent();
-        const title = $(this);
-        const children = parent.find('.navbar_mobile__category-children');
-
-        const parentActive = $('.navbar_mobile .navbar_mobile__category.navbar_mobile__category--active');
-
+        const $category = $(this).closest('.navbar_mobile__category');
+        const $categoryTitle = $(this);
+        const $categoryChildren = $category.find('.navbar_mobile__children');
         
-        if( !parent.hasClass('navbar_mobile__category--active') ){
-            parent.addClass('navbar_mobile__category--active');
-            title.addClass('navbar_mobile__category-title--active');
-            children.show();
-            
-            if( parentActive.length > 0 && parent !=  parentActive){
-                parentActive.removeClass('navbar_mobile__category--active');
-                parentActive.find('.navbar_mobile__category-title').removeClass('navbar_mobile__category-title--active');
-                parentActive.find('.navbar_mobile__category-children').hide();
+        const $categoryTabs = $(this).closest('.navbar_mobile__tabs-content');
+        const $categoryActive = $categoryTabs.find('.navbar_mobile__category--active');
+        
+        if( !$categoryTitle.hasClass('navbar_mobile__title--active') ){
+            $category.addClass('navbar_mobile__category--active');
+            $categoryTitle.addClass('navbar_mobile__title--active');
+            $categoryChildren.addClass('navbar_mobile__children--active').slideDown();
+
+            // Если есть активная категория и она не совпадает с той, по которой нажали
+            if( $categoryActive.length > 0 && $category != $categoryActive){
+                $categoryActive.removeClass('navbar_mobile__category--active');
+                $categoryActive.find('.navbar_mobile__title').removeClass('navbar_mobile__title--active');
+                $categoryActive.find('.navbar_mobile__children').removeClass('navbar_mobile__children--active').hide();
             }
         }else{
-            parent.removeClass('navbar_mobile__category--active');
-            title.removeClass('navbar_mobile__category-title--active');
-            children.hide();
+            $category.removeClass('navbar_mobile__category--active');
+            $categoryTitle.removeClass('navbar_mobile__title--active');
+            $categoryChildren.removeClass('navbar_mobile__children--active').slideUp();
+        }
+    });
+    // Open Mobile Nav Inside Level 2
+    $('.navbar_mobile .navbar_mobile__category .navbar_mobile__children-category').on('click', function(event){
+        event.preventDefault();
+
+        const $subcategoryTitle = $(this);
+        const $subcategory = $('.navbar_mobile__subcategory' + $subcategoryTitle.data('navcategory'));
+
+        if( $subcategory.length > 0 ){
+            $subcategory.addClass('navbar_mobile__subcategory--active');
         }
 
     });
-    $('.navbar_mobile .navbar_mobile__parent .navbar_mobile__parent-link').on('click', function(e){
-        e.preventDefault();
+    $('.navbar_mobile .navbar_mobile__subcategory .navbar_mobile__subcategory-back').on('click', function(event){
+        event.preventDefault();
+        $('.navbar_mobile__subcategory.navbar_mobile__subcategory--active').removeClass('navbar_mobile__subcategory--active');
+    });
+    // Open Mobile Nav Tabs
+    $('.navbar_mobile .navbar_mobile__tabs .navbar_mobile__tabs-item').on('click', function(event){
+        const $tabsItem = $(this);
+        const tabsContentId = $tabsItem.data('navtab');
 
-        const parent = $(this).parent();
-        const title = $(this);
-        const icon = $(this).find('.navbar_mobile__parent-icon');
-        const children = $('.navbar_mobile__children#' + icon.data('nav') );
+        const $tabsContainer = $tabsItem.closest('.navbar_mobile__tabs-container');
+        const $tabsItemActive = $tabsContainer.find('.navbar_mobile__tabs-item--active');
 
-        const parentActive = $('.navbar_mobile .navbar_mobile__parent.navbar_mobile__parent--active');
-        
-        if( !parent.hasClass('navbar_mobile__parent--active') ){
-            parent.addClass('navbar_mobile__parent--active');
-            icon.addClass('navbar_mobile__parent-icon--active');
-            title.addClass('navbar_mobile__parent-link--active');
-
-            children.show();
+        if( !$tabsItem.hasClass('navbar_mobile__tabs-item--active') ){
+            $tabsItem.addClass('navbar_mobile__tabs-item--active');
+            $( tabsContentId ).show() ;
             
-            if( parentActive.length > 0 && parent !=  parentActive){
-                parentActive.removeClass('navbar_mobile__parent--active');
-                parentActive.find('.navbar_mobile__parent-link').removeClass('navbar_mobile__parent-link--active');
-                parentActive.find('.navbar_mobile__parent-icon').removeClass('navbar_mobile__parent-icon--active');
-                
-                let childrenActiveId = parentActive.find('.navbar_mobile__parent-icon').data('nav');
-                parentActive.find('.navbar_mobile__children#' + childrenActiveId).hide();
+            if( $tabsItemActive.length > 0 && $tabsItem !=  $tabsItemActive){
+                $tabsItemActive.removeClass('navbar_mobile__tabs-item--active');
+                $( $tabsItemActive.data('navtab') ).hide() ;
             }
-        }else{
-            parent.removeClass('navbar_mobile__parent--active');
-            icon.removeClass('navbar_mobile__parent-icon--active');
-            title.removeClass('navbar_mobile__parent-link--active');
-
-            children.hide();
         }
-        // if( parent.offset().top > 75 || parent.offset().top < 0 ){
-        //     parent.get(0).scrollIntoView();
-        // }
     });
 });
 
