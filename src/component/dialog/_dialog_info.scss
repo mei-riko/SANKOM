@@ -2,7 +2,8 @@
     position: fixed;
 
     // width: 310px;
-    max-width: 100%;
+    // max-width: 100%;
+    max-width: calc(100% - 50px);
 
     background-color: $light-bg;
 
@@ -50,21 +51,15 @@
             }
         }
     }
-    // &__close{
-    //     padding-left: 16px;
-    //     padding-right: 0;
-
-    //     right: auto;
-    //     left: 0;
-
-    //     &:after{
-    //         right: auto;
-    //         left: 0;
-    //     }
-    // }
     &__toggle{
         @extend .text-dashed;
         @extend .text-small;
         display: inline-block;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .dialog_info{
+        bottom: map-get($map: $spacers, $key: 4);
     }
 }

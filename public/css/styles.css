@@ -3588,6 +3588,8 @@ a.preview:hover .preview__title {
   width: 12px;
   height: 12px;
   background: url("../icon/plus.svg") no-repeat center/contain;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .faq_toggle--active .faq_toggle__title {
@@ -3596,6 +3598,8 @@ a.preview:hover .preview__title {
 
 .faq_toggle--active .faq_toggle__title:after {
   background: url("../icon/minus.svg") no-repeat center/contain;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .faq_link:hover, .faq_link:focus {
