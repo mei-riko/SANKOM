@@ -46,7 +46,7 @@
     &_author{
         display: grid;
         grid-gap: $spacer-gutter;
-        grid-template-columns: 90px 1fr;
+        grid-template-columns: 90px calc(100% - 105px);
 
         align-items: center;
     }

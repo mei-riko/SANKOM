@@ -5073,6 +5073,7 @@ blockquote, .blockquote {
 
 .navbar_mobile {
   display: block;
+  font-size: 14px;
 }
 
 .navbar_mobile__padding, .navbar_mobile__tabs-item, .navbar_mobile__title, .navbar_mobile__subcategory-nav, .navbar_mobile__subcategory-title {
@@ -5423,6 +5424,9 @@ blockquote, .blockquote {
     flex-wrap: nowrap;
     padding: 0;
   }
+  .navbar-mobile--open-sidebar {
+    z-index: 81;
+  }
 }
 
 .navbar-sidebar {
@@ -5515,9 +5519,6 @@ blockquote, .blockquote {
   .navbar-sidebar__title {
     padding: 25px;
   }
-  .navbar-sidebar__content {
-    padding-left: 10px;
-  }
   .navbar-sidebar__networks {
     margin-top: 15px;
   }
@@ -5549,6 +5550,7 @@ blockquote, .blockquote {
     width: 100%;
   }
   .navbar-sidebar__content {
+    position: relative;
     padding-left: 0;
     max-width: 400px;
     margin: 10px auto 0;

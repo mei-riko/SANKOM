@@ -3650,7 +3650,7 @@ a.preview:hover .preview__title {
 .content-person_author {
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 90px calc(100% - 105px);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -4143,7 +4143,7 @@ a.preview:hover .preview__title {
   .cabinet__alert_status {
     grid-template-columns: 1fr 1fr;
   }
-  .cabinet__alert_status-content {
+  .cabinet__alert_status-full {
     grid-column: 1/3;
   }
 }
@@ -4151,7 +4151,7 @@ a.preview:hover .preview__title {
 @media all and (max-width: 576px) {
   .cabinet__sidebar {
     padding: 10px 25px;
-    overflow-y: auto;
+    overflow: hidden;
   }
   .cabinet__account {
     display: none;
@@ -4161,6 +4161,7 @@ a.preview:hover .preview__title {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    overflow: auto;
   }
   .cabinet__navigation-item {
     padding: 5px 10px;

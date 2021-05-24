@@ -48,11 +48,11 @@ html(lang="ru")
                                 .cart__alert.d-none#enterPersonalCabinet
                                     form.form(action="")
                                         .row.form__row
-                                            .form__col.col-4.mt-1
-                                                +input('', 'Логин *')(label="input__label_inside" class="input_label-inside")
-                                            .form__col.col-4.mt-1
-                                                +input('', 'Пароль *')(label="input__label_inside" class="input_label-inside")
-                                            .form__col.col-4.mt-1
+                                            .form__col.col-4.col-sm-12.mt-1
+                                                +input('', 'Логин *')(field="input__field--full" label="input__label_inside" class="input--full input_label-inside")
+                                            .form__col.col-4.col-sm-12.mt-1
+                                                +input('', 'Пароль *')(field="input__field--full" label="input__label_inside" class="input--full input_label-inside")
+                                            .form__col.col-4.col-sm-12.mt-1
                                                 +btn('', 'Войти')(class="btn_inverse btn--full")
                                     p.mt-1.text-small Не можете войти? 
                                         a.text-underline(href="#") Прислать временный пароль на почту

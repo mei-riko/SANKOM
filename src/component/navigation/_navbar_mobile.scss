@@ -1,5 +1,6 @@
 .navbar_mobile{
     display: block;
+    font-size: map-get($map: $font-size, $key: sm);
 
     &__padding{
         padding: 10px 20px;
