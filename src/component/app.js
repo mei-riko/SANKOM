@@ -17,6 +17,10 @@ import '../component/product/product';
 import '../component/cart/cart';
 
 $(function() {
+  // Minimal Height Main
+  let heightMain = Math.ceil($(window).height() - $('header').outerHeight(true) - $('footer').outerHeight(true) );
+  $('main').css('min-height', heightMain);
+
   // Animate Scroll
   $(".scroll").on('click', function(e) {
     e.preventDefault();
@@ -94,17 +98,41 @@ $(function() {
       }
     }
   });
-  // Open Callback Fixed
-  $('.footer-callback .footer-callback__icon').on('click', function(){
-    let icon = $(this);
-    let list = icon.parent().find('.footer-callback__list');
+  // Open Callback Fixed On Click
+  const $footerCallbackIcon = $('.footer-callback .footer-callback__icon');
+  const $footerCallback = $footerCallbackIcon.parent();
+  const $footerCallbackList = $footerCallback.find('.footer-callback__list');
 
-    if ( !list.hasClass('footer-callback__list--active') ){
-      list.addClass('footer-callback__list--active');
+  function callbackUnhover(){
+    if ( $footerCallbackList.hasClass('footer-callback__list--active') ){
+      $footerCallbackList.removeClass('footer-callback__list--active');
+    }
+  }
+
+  $footerCallbackIcon.on('click', function(){
+    if ( !$footerCallbackList.hasClass('footer-callback__list--active') ){
+      $footerCallbackList.addClass('footer-callback__list--active');
     }else{
-      list.removeClass('footer-callback__list--active');
+      $footerCallbackList.removeClass('footer-callback__list--active');
     }
   });
+  // 
+  // Open Callback Fixed On Hover
+  let timeoutCallback = null;
+  // Задержка скрытия 0.3сек
+  $footerCallback
+      .mouseenter(function(event){
+          clearTimeout(timeoutCallback);
+          timeoutCallback = setTimeout( function(){
+            if ( !$footerCallbackList.hasClass('footer-callback__list--active') ){
+              $footerCallbackList.addClass('footer-callback__list--active');
+            }
+          }, 100);
+      })
+      .mouseleave(function(event){
+          clearTimeout(timeoutCallback);
+          timeoutCallback = setTimeout( callbackUnhover, 300);
+      });
   // B-lazy
   if( $('.b-lazy').length > 0 ){
     let bLazy = new Blazy({
@@ -119,6 +147,13 @@ $(function() {
     $('.owl-carousel').on('changed.owl.carousel', bLazy.revalidate);
     
   }
+});
+
+// Resize
+$(window).on("resize", function(){
+  // Minimal Height Main
+  heightMain = Math.ceil($(window).height() - $('header').outerHeight(true) - $('footer').outerHeight(true) );
+  $('main').css('min-height', heightMain);
 });
 
 // Cобытие клика по веб-документу

@@ -16,6 +16,9 @@ $(function() {
     container.append( header );
     headerContainer.append( container );
 
+    // добавляем класс логотипу
+    document.querySelector('.header.header_sticky .header__logo').classList.add('header_sticky__logo');
+
     // Turn Off Transition 
     $(".header.header_sticky").addClass("header_sticky--onload");
     // If Onload Offset Top - Show Sticky

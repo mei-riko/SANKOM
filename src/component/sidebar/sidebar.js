@@ -4,10 +4,16 @@ import {closeNavbarOnClick} from '../navigation/nav';
 // Open Sidebar Function
 function openSidebarOnClick( elem ){
     const idSidebar = elem.data('sidebar');
-    const target = $('.sidebar#' + idSidebar);
+    const $target = $('.sidebar#' + idSidebar);
+    const $sidebarActive = $('.sidebar.sidebar--active');
 
-    if ( target.length > 0 ){
-        target.addClass('sidebar--active');
+    if ( $target.length > 0 ){
+        $target.addClass('sidebar--active');
+
+        if( $sidebarActive.length > 0 && $target !=  $sidebarActive){
+            $sidebarActive.removeClass('sidebar--active');
+        }
+
         $('.overlay').removeClass('overlay--disable');
         $('body').addClass('hidden');
         $('body').addClass('open-sidebar');

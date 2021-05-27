@@ -4,23 +4,40 @@
 
     text-align: center;
     color: $white;
-    background: #ce002b url('../img/banner-inst.jpg') no-repeat top right/cover;
+    background: $action url('../img/banner-inst.jpg') no-repeat top right/cover;
 
     &__title{
         font-size: 28px;
         font-weight: $font-weight-bold;
         text-transform: uppercase;
+
+        width: 540px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__content{
         font-size: map-get($map: $font-size, $key: lg);
-        // width: 460px;
-        // max-width: 100%;
-        // margin-left: auto;
-        // margin-right: auto;
+
+        width: 540px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__link{
         color: $white;
         &:hover{
+            color: $white;
+        }
+    }
+    &__btn-instagram{
+        border-color: #0095f6;
+        background-color: #0095f6;
+        color: $white;
+
+        &:hover, &:focus{
+            border-color: darken(#0095f6, 6);
+            background-color: darken(#0095f6, 6);
             color: $white;
         }
     }

@@ -5,9 +5,18 @@
     text-align: center;
 
     transition: 0s;
+
+    .btn__icon{
+        transition: 0s;
+    }
+
     &:hover {
         border-color: $dark-grey;
         background-color: $dark-grey;
         color: $white;
+
+        .btn__icon{
+            fill: $white;
+        }
     }
 }

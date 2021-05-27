@@ -29,6 +29,7 @@
             font-family: 'Covered By Your Grace', cursive; 
             font-size: 16px;
             font-weight: $font-weight-bold;
+            transform: translateY(2px);
 
             color: $action;
             // color: #C9002E;
@@ -81,7 +82,7 @@
 
         z-index: 999;
 
-        padding: 30px;
+        // padding: 30px;
         background: $white;
         border: 1px solid $border-color;
 
@@ -92,10 +93,15 @@
             display: flex;
             flex-direction: column;
 
-            padding-right: $spacer;
+            padding: 30px;
 
-            &:last-child{
-                padding-right: 0;
+            // &:last-child{
+            //     padding-right: 0;
+            // }
+
+            // Modification
+            &_secondary{
+                background-color: $lightest-bg;
             }
         }
         &-title{
@@ -138,9 +144,11 @@
             width: 140px;
         }
 
-        // Status
+        // JS Status
         &--active{
-            display: flex;
+            // display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         }
     }
 }

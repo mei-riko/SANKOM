@@ -40,6 +40,11 @@
             display: none;
         }
 
+        &_parent{
+            font-weight: $font-weight-bolder;
+            color: $action;
+        }
+
     }
     &__show{
         font-size: map-get($map: $font-size, $key: sm);
@@ -59,6 +64,12 @@
             background-color: darken($color: $action, $amount: 6);
             text-decoration: none;
         }
+    }
+
+    // Modification
+    &_products{
+        padding: 0;
+        background-color: inherit;
     }
 }
 .tags-row_inside-page{

@@ -25,6 +25,11 @@
     &--open-sidebar{
         z-index: 81;
     }
+
+    // Smaller logo
+    &__logo{
+        flex: 0 0 120px;
+    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){

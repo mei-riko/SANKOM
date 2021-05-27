@@ -106,6 +106,12 @@
         font-weight: $font-weight-bold;
         line-height: 1;
 
+        // Animation
+        animation-name: rotateLabel;
+        animation-duration: .6s;
+        animation-delay: .6s;
+        animation-timing-function: ease-in-out;
+        
         &:before{
             content: '';
             width: 4px; 

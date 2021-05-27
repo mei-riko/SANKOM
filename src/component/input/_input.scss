@@ -62,6 +62,9 @@
                 }
             }
         }
+        &--error{
+            background-color: #ffe2e2;
+        }
         // CSS state
         &--full{
             width: 100%;

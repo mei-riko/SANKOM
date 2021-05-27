@@ -78,11 +78,11 @@
             }
         }
         &-place{
-            // font-size: map-get($map: $font-size, $key: xs);
+            font-size: map-get($map: $font-size, $key: xs);
             white-space: nowrap;
 
             color: $dark-grey;
-            border-bottom: 1px dashed $dark-grey;
+            border-bottom: 1px dotted $dark-grey;
             
             transition: .3s;
 
@@ -149,6 +149,12 @@
         padding: 0 $spacer;
     }
 
+    // Additional
+    &__additional-link{
+        padding-right: $spacer/2;
+    }
+
+    // Btn Group
     &__btn-group{
         display: flex;
         flex-wrap: nowrap;
@@ -230,6 +236,11 @@
         &__nav{
             display: none;
         }
+        // Additional
+        &__additional-link{
+            display: none;
+        }
+        // Btn Group 
         &__btn-cabinet{
             margin-right: map-get($map: $spacers, $key: 1);
         }

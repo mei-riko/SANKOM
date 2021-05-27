@@ -119,7 +119,7 @@
             // font-size: map-get($map: $font-size, $key: xs);
             line-height: $line-height-heading;
 
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid $light-bg;
             padding: 10px 30px;
         }
         &-category{

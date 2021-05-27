@@ -1,5 +1,5 @@
 .footer{
-    font-size: map-get($map: $font-size, $key: "sm");
+    font-size: map-get($map: $font-size, $key: "xs");
     padding: $spacer/2 0;
     
     &__nav{
@@ -21,6 +21,9 @@
 
         &_center{
             justify-content: center;
+        }
+        &_end{
+            justify-content: flex-end;
         }
     }
     &__link{
@@ -58,11 +61,11 @@
     &__information{
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        justify-content: center;
         color: $grey;
     }
     &__copyright{
-        text-align: right;
+        text-align: center;
         // margin-right: map-get($map: $spacers, $key: 1);
     }
 }

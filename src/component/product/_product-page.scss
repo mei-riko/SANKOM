@@ -63,6 +63,14 @@
             font-size: map-get($map: $font-size, $key: 'sm');
             font-weight: $font-weight-bold;
             line-height: 1;
+
+            transition: .4s;
+
+            // Animation
+            animation-name: rotateLabel;
+            animation-duration: .6s;
+            animation-delay: .6s;
+            animation-timing-function: ease-in-out;
     
             &:before{
                 content: '';

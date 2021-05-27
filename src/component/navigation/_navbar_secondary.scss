@@ -1,16 +1,16 @@
 .navbar_secondary{
-    font-size: map-get($map: $font-size, $key: sm);
+    font-size: map-get($map: $font-size, $key: xs);
     line-height: $line-height-heading;
 
     &__sep{
         color: $border-color;
-        padding: 0 10px;
+        padding: 0 6px;
     }
     &__item{
         color: $grey;
     }
     &__modal{
-        border-bottom: 1px dashed $dark-grey;
+        border-bottom: 1px dotted $dark-grey;
 
         &:hover{
             text-decoration: none;
