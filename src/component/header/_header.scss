@@ -78,7 +78,7 @@
             }
         }
         &-place{
-            font-size: map-get($map: $font-size, $key: xs);
+            font-size: map-get($map: $font-size, $key: sm);
             white-space: nowrap;
 
             color: $dark-grey;
@@ -114,9 +114,10 @@
         padding-left: $grid-gutter-width/2;
     }
     &__phone{
-        // font-size: map-get($map: $font-size, $key: "sm");
+        font-size: map-get($map: $font-size, $key: "sm");
         font-weight: $font-weight-bold;
         white-space: nowrap;
+        color: $action;
 
         &:hover{
             text-decoration: none;
@@ -207,6 +208,10 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .header{
+        // Secondary Nav
+        &__secondary-callback{
+            display: none;
+        }
         // Main Nav
         &__main{
             position: relative;
@@ -223,11 +228,11 @@
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .header{
         // Secondary Nav
-        &__secondary{
-            padding: 8px 0;
-        }
-        &__secondary-callback{
+        &__location{
             display: none;
+        }
+        &__secondary-nav{
+            padding-left: 0px;
         }
         // Main Nav
         &__main{
@@ -249,17 +254,7 @@
         }
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
-    .header{
-        // Secondary Nav
-        &__location{
-            display: none;
-        }
-        &__secondary-nav{
-            padding-left: 0px;
-        }
-    }
-}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
         // Editional Banner

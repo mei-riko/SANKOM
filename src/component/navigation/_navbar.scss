@@ -38,6 +38,10 @@
                 color: darken($color: $action, $amount: 6);
             }
         }
+        &_has-icon{
+            display: flex;
+            align-items: center;
+        }
         // &_has-child{
         //     position: relative;
         // }

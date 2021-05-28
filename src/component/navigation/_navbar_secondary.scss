@@ -1,5 +1,5 @@
 .navbar_secondary{
-    font-size: map-get($map: $font-size, $key: xs);
+    font-size: map-get($map: $font-size, $key: sm);
     line-height: $line-height-heading;
 
     &__sep{
@@ -24,5 +24,10 @@
         &__sep{
             padding: 0 6px;
         }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .navbar_secondary{
+        font-size: map-get($map: $font-size, $key: xs);
     }
 }

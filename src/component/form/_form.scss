@@ -65,14 +65,14 @@
         display: none;
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .form{
-        &__col{
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
-}
+// @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+//     .form{
+//         &__col{
+//             flex: 0 0 100%;
+//             max-width: 100%;
+//         }
+//     }
+// }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .form{
         &__line{

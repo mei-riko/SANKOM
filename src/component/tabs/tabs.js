@@ -18,6 +18,11 @@ $(".tabs .tabs__item").on("click", function() {
         let bLazy = new Blazy();
         bLazy.revalidate;
     }
+
+    if( tabContent.find('.product-page__video').length > 0 ){
+        $('.product-page__video').slick('setPosition');
+        $(window).resize();
+    }
 });
 
 $(".tabs-content.tabs-content_has-slider .slider.slider_tags").on('changed.owl.carousel', function(event) {

@@ -90,10 +90,10 @@ a{
 }
 
 .link-inverse{
-    color: $link-hover-color;
+    color: $white;
 
     &:hover{
-        color: $link-color;
+        color: $light-grey;
     }
 }
 .link-action{

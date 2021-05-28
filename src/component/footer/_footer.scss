@@ -1,7 +1,7 @@
 .footer{
     font-size: map-get($map: $font-size, $key: "xs");
     padding: $spacer/2 0;
-    
+
     &__nav{
         display: flex;
         flex-wrap: wrap;
@@ -18,55 +18,37 @@
             color: $grey;
             margin: 0 4px;
         }
-
-        &_center{
-            justify-content: center;
-        }
-        &_end{
-            justify-content: flex-end;
-        }
     }
-    &__link{
-        color: $grey;
-        text-align: center;
-    }
-    // &__network{
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     justify-content: center;
-
-    //     &-item{
-    //         margin-right: map-get($map: $spacers, $key: 1);
-    //         filter: opacity(.75);
-    //         cursor: pointer;
-    //         transition: .3s;
-
-    //         &:last-child{
-    //             margin-right: 0;
-    //         }
-
-    //         &:hover{
-    //             filter: opacity(1);
-    //         }
-    //     }
-    //     &-title{
-    //         display: none;
-
-    //         font-weight: $font-weight-bolder;
-    //         text-transform: uppercase;
-    //         margin-right: map-get($map: $spacers, $key: 1);
-    //         color: $grey;
-    //     }
-    // }
     &__information{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         color: $grey;
+
+        &-link{
+
+        }
+        &-sep{
+            color: $grey;
+            margin: 0 4px;
+        }
     }
     &__copyright{
-        text-align: center;
-        // margin-right: map-get($map: $spacers, $key: 1);
+        text-align: right;
+    }
+    &__additional{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+
+        &-icon{
+            width: 26px;
+            max-width: 100%;
+            height: auto;
+            filter: contrast(0.25) opacity(0.75);
+            margin-left: 8px;
+        }
     }
 }
 
@@ -92,15 +74,6 @@
         &__col-link{
             order: 2;
         }
-        // &__col-network{
-        //     order: 2;
-        //     padding: 0;
-        // }
-        // &__network{
-        //     &-title{
-        //         display: inline-block;
-        //     }
-        // }
         &__col-info{
             order: 3;
             margin-bottom: 0;
@@ -109,6 +82,13 @@
         &__information{
             justify-content: center;
             filter: opacity(.5);
+
+            &-sep{
+                display: none;
+            }
+        }
+        &__additional{
+            justify-content: center;
         }
         &__copyright{
             width: 100%;

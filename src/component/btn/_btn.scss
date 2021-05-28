@@ -1,4 +1,6 @@
 .btn{
+    position: relative;
+
     border: none;
     outline: none;
     box-shadow: none;
@@ -31,6 +33,13 @@
         }
         &_right{
             margin-left: 10px;
+        }
+
+        &_network{
+            position: absolute;
+            top: 50%;
+            left: $spacer-gutter;
+            transform: translateY(-50%);
         }
     }
 

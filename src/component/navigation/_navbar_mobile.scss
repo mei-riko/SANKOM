@@ -73,6 +73,10 @@
 
         cursor: pointer;
 
+        &:hover, &:focus{
+            text-decoration: none;
+        }
+
         &_parent{
             position: relative;
             padding-right: 40px;
@@ -99,6 +103,7 @@
                 }
             }
         }
+        // JS Status
         &--active{
             background-color: $lightest-bg;
 
@@ -109,7 +114,9 @@
     }
     &__title-icon{
         margin-left: 10px;
-        width: 16px;
+        line-height: 1;
+        transform: translateY(1px);
+        // width: 16px;
     }
     &__children{
         display: none;
@@ -246,4 +253,8 @@
         line-height: 20px;
         color: #838383;
     }
+}
+
+.navbar_mobile-main{
+    flex-grow: 1;
 }

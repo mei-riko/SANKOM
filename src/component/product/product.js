@@ -183,4 +183,48 @@ $(function(){
       }
     });
   }
+  // Video In Content
+  let $productVideo = $('.product-page .product-page__video');
+  if( $productVideo.length > 0 ){
+    $productVideo.slick({
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      infinite: false,
+      // infinite: true,
+      // centerMode: true,
+      // centerPadding: 0, 
+      arrows: true, 
+      vertical: true,
+      verticalSwiping: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+            vertical: false,
+            verticalSwiping: false,
+            dots: false
+          }
+        },
+      ],
+    });
+  }
+
+  var $body = $('body');
+  $body.on('mousedown', function (evt) {
+    $body.on('mouseup mousemove', function handler(evt) {
+      if (evt.type === 'mouseup') {
+        // click
+        console.log('click');
+      } else {
+        // drag
+        $body.off('click', '.slick-slide');
+        console.log('drag');
+      }
+      $body.off('mouseup mousemove', handler);
+    });
+  });
+
 });

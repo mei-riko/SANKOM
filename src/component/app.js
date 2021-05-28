@@ -18,7 +18,7 @@ import '../component/cart/cart';
 
 $(function() {
   // Minimal Height Main
-  let heightMain = Math.ceil($(window).height() - $('header').outerHeight(true) - $('footer').outerHeight(true) );
+  let heightMain = Math.ceil($(window).outerHeight(true) - $('header').outerHeight(true) - $('footer').outerHeight(true) );
   $('main').css('min-height', heightMain);
 
   // Animate Scroll
@@ -152,7 +152,7 @@ $(function() {
 // Resize
 $(window).on("resize", function(){
   // Minimal Height Main
-  heightMain = Math.ceil($(window).height() - $('header').outerHeight(true) - $('footer').outerHeight(true) );
+  let heightMain = Math.ceil($(window).outerHeight(true) - $('header').outerHeight(true) - $('footer').outerHeight(true) );
   $('main').css('min-height', heightMain);
 });
 
