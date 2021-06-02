@@ -85,5 +85,10 @@
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .tags-row{
         padding: map-get($map: $spacers, $key: 1);
+
+        // Modification
+        &_products{
+            padding: 0;
+        }
     }
 }

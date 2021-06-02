@@ -147,6 +147,8 @@ $(function() {
     $('.owl-carousel').on('changed.owl.carousel', bLazy.revalidate);
     
   }
+  // Select 2
+  $('#chooseLocation select.input__field').select2();
 });
 
 // Resize

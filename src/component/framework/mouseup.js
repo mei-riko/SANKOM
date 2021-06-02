@@ -22,10 +22,14 @@ $(document).on('mouseup', function (e){
     ) {
         closeNavbarOnClick();
     }
-
     let sidebarActive = $(".sidebar.sidebar--active"); // элемент
+
     if (!sidebarActive.is(e.target) // клик был не по блоку
           && sidebarActive.has(e.target).length === 0 // и не по его дочерним элементам
+          && !$('.select2-container').is(e.target)
+          && $('.select2-container').has(e.target).length === 0
+          && !$('.select2-container').hasClass('select2-container--open')
+          && !$('.select2-container').hasClass('select2-container--focus')
           && $('body').hasClass('open-sidebar')
     ) { 
         sidebarActive.removeClass('sidebar--active');

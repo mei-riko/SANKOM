@@ -10,9 +10,13 @@
         height: auto;
         height: intrinsic;
 
+        max-height: 700px;
+
         &_complect-lg{
             flex: 0 0 80px;
             max-width: 80px;
+
+            max-height: 300px;
         }
     }
     &__main{
@@ -24,13 +28,30 @@
 
         padding-left: map-get($map: $spacers, $key: 1);
 
+        &.swiper-container{
+            height: auto;
+            height: intrinsic;
+    
+            padding-left: map-get($map: $spacers, $key: 1);
+        }
+
         &_complect-lg{
             flex: 0 0 calc(100% - 80px);
             max-width: calc(100% - 80px);
     
-            padding: 0 0 0 10px; 
+            padding: 0 0 0 10px;
+
+            &.swiper-container{
+                padding: 0 0 0 10px;
+                // margin-left: 10px;
+            }
         }
     }
+
+    &__swiper{
+        height: fit-content;
+    }
+
     // Complect Two Products
     &_complect-sm{
         display: block;
@@ -50,9 +71,13 @@
             flex: 0 0 100px;
             max-width: 100px;
 
+            max-height: 480px;
+
             &_complect-lg{
                 flex: 0 0 50px;
                 max-width: 50px;
+
+                max-height: 220px;
             }
         }
         &__main{
@@ -85,9 +110,13 @@
             flex: 0 0 120px;
             max-width: 120px;
 
+            max-height: 580px;
+
             &_complect-lg{
                 flex: 0 0 70px;
                 max-width: 70px;
+
+                max-height: 280px;
             }
         }
         &__main{
@@ -115,9 +144,13 @@
             flex: 0 0 100px;
             max-width: 100px;
 
+            max-height: 500px;
+
             &_complect-lg{
                 flex: 0 0 50px;
                 max-width: 50px;
+
+                max-height: 240px;
             }
         }
         &__main{
@@ -147,6 +180,17 @@
             max-width: 100%;
 
             order: 1;
+
+            &.swiper-container{
+                padding-left: 0;
+            }
+
+
+            &_complect-lg{
+                &.swiper-container{
+                    margin-left: 0px;
+                }
+            }
         }
 
         &_odd{

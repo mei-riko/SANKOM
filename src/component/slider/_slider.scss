@@ -133,6 +133,10 @@
     }
 }
 
+.swiper-container{
+    height: fit-content;
+}
+
 // < 440px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .slider-container{

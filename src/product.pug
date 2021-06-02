@@ -38,28 +38,28 @@ html(lang="ru")
                     .row.no-gutters.mt-2.mt-sm-1
                         .col-7.col-lg-12
                             .product-slider
-                                .product-slider__nav
-                                    .slider-nav.product-nav.product-nav_single#productMain
-                                        .product-nav__item
+                                .swiper-container.product-slider__nav#productMain
+                                    .swiper-wrapper.slider-nav.product-nav.product-nav_single
+                                        .swiper-slide.product-nav__item
                                             img.img-fluid(src="./product/prod-1.jpg")
-                                        .product-nav__item
+                                        .swiper-slide.product-nav__item
                                             img.img-fluid(src="./product/prod-0.jpg")
-                                        .product-nav__item
+                                        .swiper-slide.product-nav__item
                                             img.img-fluid(src="./product/prod-2.jpg")
-                                        .product-nav__item
+                                        .swiper-slide.product-nav__item
                                             img.img-fluid(src="./product/prod-3.jpg")
-                                .product-slider__main
-                                    .slider-main.product-image.product-image_single(data-nav="#productMain")
-                                        .product-image__item
+                                .swiper-container.product-slider__main.product-slider__swiper
+                                    .swiper-wrapper.slider-main.product-image.product-image_single(data-nav="#productMain")
+                                        .swiper-slide.product-image__item
                                             a.product-image__link(data-fancybox="gallery" data-src="./product/prod-1.jpg")
                                                 img.img-fluid(src="./product/prod-1.jpg")
-                                        .product-image__item
+                                        .swiper-slide.product-image__item
                                             a.product-image__link(data-fancybox="gallery" data-src="./product/prod-0.jpg")
                                                 img.img-fluid(src="./product/prod-0.jpg")
-                                        .product-image__item
+                                        .swiper-slide.product-image__item
                                             a.product-image__link(data-fancybox="gallery" data-src="./product/prod-2.jpg")
                                                 img.img-fluid(src="./product/prod-2.jpg")
-                                        .product-image__item
+                                        .swiper-slide.product-image__item
                                             a.product-image__link(data-fancybox="gallery" data-src="./product/prod-3.jpg")
                                                 img.img-fluid(src="./product/prod-3.jpg")
                         .col-5.col-lg-12
@@ -248,27 +248,30 @@ html(lang="ru")
                         .hr.d-none.d-sm-block.mb-sm-2
                         .col-3.col-xl-5.col-md-12.mb-sm-2.product-page__col
                             .hr.d-none.d-md-block.d-sm-none.mb-md-2
-                            .product-page__video
-                                .product-page__video-item.mb-2.mb-md-0
-                                    a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
-                                        .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
-                                    p.mt-1.text-bolder Оригинальные леггинсы SANKOM    
-                                .product-page__video-item.mb-2.mb-md-0
-                                    a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
-                                        .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
-                                    p.mt-1.text-bolder Оригинальный бюстгальтер SANKOM                                    
-                                .product-page__video-item.mb-2.mb-md-0
-                                    a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
-                                        .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
-                                    p.mt-1.text-bolder Обзор материала
-                                .product-page__video-item.mb-2.mb-md-0
-                                    a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
-                                        .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
-                                    p.mt-1.text-bolder Презентация модели
-                                .product-page__video-item
-                                    a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
-                                        .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
-                                    p.mt-1.text-bolder Long Shaper CLASSIC
+                            //- Swiper Slider Container
+                            .swiper-container.product-page__video
+                                .swiper-wrapper.product-page__video-wrapper
+                                    .swiper-slide.product-page__video-item
+                                        a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                            .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
+                                        p.mt-1.text-bolder Оригинальные леггинсы SANKOM    
+                                    .swiper-slide.product-page__video-item
+                                        a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                            .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
+                                        p.mt-1.text-bolder Оригинальный бюстгальтер SANKOM                                    
+                                    .swiper-slide.product-page__video-item
+                                        a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                            .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
+                                        p.mt-1.text-bolder Обзор материала
+                                    .swiper-slide.product-page__video-item
+                                        a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                            .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
+                                        p.mt-1.text-bolder Презентация модели
+                                    .swiper-slide.product-page__video-item
+                                        a.d-block.link-video(data-fancybox="video" data-src="./img/image-1.jpg" href="javascript:;")
+                                            .product-page__video-img(style="background-image: url('./img/banner-video.jpg');")
+                                        p.mt-1.text-bolder Long Shaper CLASSIC
+                                .swiper-pagination.product-page__video-pagination
                         <!--noindex-->
                         //- Информационный блок с иконкой
                         .hr.d-none.d-sm-block.mb-sm-2
@@ -397,9 +400,10 @@ html(lang="ru")
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
 
-        link(href='./css/slick.css', rel='stylesheet')
-        link(href='./css/slick-theme.css', rel='stylesheet')
-        script(src="./js/slick.min.js")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        script(src="https://unpkg.com/swiper/swiper-bundle.js")
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
 
         link(href='./css/owl.carousel.min.css', rel='stylesheet')
         link(href='./css/owl.theme.default.min.css', rel='stylesheet')

@@ -6,8 +6,6 @@ $(".tabs .tabs__item").on("click", function() {
     let tabContentId = $(this).data("content");
     let tabContent = $(".tabs-content" + tabContentId);
 
-    // console.log('');
-
     tabParent.find(".tabs__item").removeClass("tabs__item--active").eq($(this).index()).addClass("tabs__item--active");
     tabContainer.find(".tabs-content").removeClass("tabs-content--show").removeClass("tabs-content--active");
     
@@ -17,11 +15,6 @@ $(".tabs .tabs__item").on("click", function() {
         tabContent.addClass("tabs-content--show");
         let bLazy = new Blazy();
         bLazy.revalidate;
-    }
-
-    if( tabContent.find('.product-page__video').length > 0 ){
-        $('.product-page__video').slick('setPosition');
-        $(window).resize();
     }
 });
 

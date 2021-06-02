@@ -3,7 +3,7 @@
     height: intrinsic;
 
     &__item{
-        padding: $spacer-gutter/2 0;
+        // padding: $spacer-gutter/2 0;
         outline: none;
         
         overflow: hidden;
@@ -14,19 +14,12 @@
         &:hover, &:focus{
             outline: none;
         }
-        // Slick
-        &.slick-slide{
-            height: auto;
-        }
-        &.slick-active{
-            filter: opacity(.7);
-        }
-        &.slick-current{
+        // Swiper
+        &.swiper-slide-thumb-active{
             filter: opacity(1);
         }
     }
     &__item-complect-sm{
-        padding: 0 5px;
         outline: none;
         overflow: hidden;
 
@@ -36,64 +29,36 @@
         &:hover, &:focus{
             outline: none;
         }
-        // Slick
-        &.slick-slide{
-            height: auto;
-        }
-        &.slick-active{
-            filter: opacity(.5);
-        }
-        &.slick-current{
+
+        // Swiper
+        &.swiper-slide-thumb-active{
             filter: opacity(1);
         }
     }
 
     // Complect Two Products
     &_complect-sm{
-        height: fit-content;
-        height: auto;
-    
-        margin-top: $spacer/2;
-    
-        // Slick
-        .slick-list{
-            margin-left: -5px;
-            margin-right: -5px;
-        }
+        height: fit-content;    
+        padding-top: $spacer/2;
     }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .product-nav{
-        &_complect-sm{
-            margin-top: $spacer-gutter;
-    
-            margin-left: 0;
-            margin-right: 0;
+        padding-top: $spacer-gutter;
+
+        &_complect-lg{
+            padding-top: 0;
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product-nav{
+        padding-top: $spacer-gutter;
         height: fit-content;
         height: auto;
 
         margin-left: 0;
         margin-right: 0;
-
-        &__item{
-            padding: $spacer-gutter 0 0;
-            margin: 0 6px;
-        }
-
-        &_complect-sm{
-            margin-top: 10px;
-    
-            // Slick
-            .slick-list{
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
     }
 }

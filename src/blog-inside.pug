@@ -64,7 +64,7 @@ html(lang="ru")
                                 .content-person__content
                                         p.content-person__title Муравина Елена Львовна
                                         p.content-person__subtitle.mb-0 Врач высшей категории, кандидат медицинских наук, заместитель главного врача по акушерству и гинекологии ГКБ 72 и роддома №20  
-                                        a.text-bolder.text-underline(href="#") Источник публикации
+                                        a.text-small.text-underline(href="#") Источник публикации
                     //- Product
                     .row.mt-2
                         .col-3.col-lg-4.col-md-6.mt-2
@@ -92,6 +92,9 @@ html(lang="ru")
         include component/sidebar/sidebar.pug
 
         script(src="./js/jquery.inputmask.min.js")
+
+        link(href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet")
+        script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
