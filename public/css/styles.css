@@ -2542,6 +2542,12 @@ a.preview:hover .preview__title {
   display: inline-block;
   width: 14px;
   height: 14px;
+  -webkit-filter: opacity(0.6);
+  filter: opacity(0.6);
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
   font-size: 10px;
   font-weight: 500;
   line-height: 14px;
@@ -2552,6 +2558,11 @@ a.preview:hover .preview__title {
   position: absolute;
   top: calc( 50% - 7px);
   right: 10px;
+}
+
+.product-page__tooltip-info:hover {
+  -webkit-filter: opacity(1);
+  filter: opacity(1);
 }
 
 .product-page__btns {

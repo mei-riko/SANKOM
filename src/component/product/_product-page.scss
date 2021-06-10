@@ -296,6 +296,10 @@
         width: 14px;
         height: 14px;
 
+        filter: opacity(.6);
+        transition: .4s;
+        cursor: pointer;
+
         font-size: 10px;
         font-weight: $font-weight-bolder;
         line-height: 14px;
@@ -308,6 +312,10 @@
         position: absolute;
         top: calc( 50% - 7px);
         right: 10px;
+
+        &:hover{
+            filter: opacity(1);
+        }
     }
     
     // Product Buttons

@@ -113,8 +113,8 @@ html(lang="ru")
                                     .product-page__size.product-page__size_complect.product-page__size_has-default
                                         .product-page__size-item
                                             input.product-page__size-input(type="radio" id="size1" name="size" checked="checked")
-                                            label.product-page__size-label.product-page__size-label_has-icon(for="size1" data-toggle="tooltip" title="Согласовать по телефону") Не знаю
-                                                span.product-page__tooltip-info i
+                                            label.product-page__size-label.product-page__size-label_has-icon(for="size1") Не знаю
+                                                span.product-page__tooltip-info(data-toggle="tooltip" title="Согласовать по телефону") i
                                         .product-page__size-item
                                             input.product-page__size-input(type="radio" id="size2" name="size")
                                             label.product-page__size-label(for="size2") XXS
@@ -148,8 +148,8 @@ html(lang="ru")
                                     .product-page__size.product-page__size_complect.product-page__size_has-default
                                         .product-page__size-item
                                             input.product-page__size-input(type="radio" id="size21" name="sizeSecond" checked="checked")
-                                            label.product-page__size-label.product-page__size-label_has-icon(for="size21" data-toggle="tooltip" title="Согласовать по телефону") Не знаю
-                                                span.product-page__tooltip-info i
+                                            label.product-page__size-label.product-page__size-label_has-icon(for="size21") Не знаю
+                                                span.product-page__tooltip-info(data-toggle="tooltip" title="Согласовать по телефону") i
                                         .product-page__size-item
                                             input.product-page__size-input(type="radio" id="size22" name="sizeSecond")
                                             label.product-page__size-label(for="size22") XXS
@@ -186,8 +186,9 @@ html(lang="ru")
                                                 +input('', 'E-mail *')(label="input__label_inside" class="input_label-inside")
                                             .form__col.col-6.mt-1
                                                 +btn('', 'Заказать')(class="btn_action btn--full")
-                                    .mt-2 
-                                        +btn('', 'Demo Apple Pay')(class="btn_border btn--full")
+                                    .hr.mt-2.mt-sm-1.mb-1
+                                    p.text-grey Или оплатите сразу через  Apple Pay
+                                    +btn('', 'Demo Apple Pay')(class="btn_border btn--full")
                                 //- Информационный блок с иконкой
                                 .product-page__blockquote.d-sm-none
                                     .product-page__blockquote-icon
