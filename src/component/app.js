@@ -19,6 +19,7 @@ import '../component/cart/cart';
 $(function() {
   // Minimal Height Main
   let heightMain = Math.ceil($(window).outerHeight(true) - $('header').outerHeight(true) - $('footer').outerHeight(true) );
+  // console.log( heightMain );
   $('main').css('min-height', heightMain);
 
   // Animate Scroll
@@ -148,7 +149,9 @@ $(function() {
     
   }
   // Select 2
-  $('#chooseLocation select.input__field').select2();
+  if( $('#chooseLocation select.input__field').lenght > 0 ){
+    $('#chooseLocation select.input__field').select2();
+  }
 });
 
 // Resize
