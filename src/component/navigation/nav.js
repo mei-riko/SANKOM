@@ -59,6 +59,8 @@ function openNavbarOnClick( elem ){
 
     // Change z-index
     $('.header.header_sticky').addClass('header_sticky--open-sidebar');
+
+    // console.log( elem.hasClass("navbar-mobile__item--active") );
 }
 export function closeNavbarOnClick(){
     $(".navbar-sidebar").removeClass("navbar-sidebar--active");
@@ -93,6 +95,8 @@ $(function(){
     // Mobile Open Sidebar Nav
     $(document).on('click', "[data-navbar]", function( event ){
         event.preventDefault();
+        // console.log(event.target);
+        // console.log(event.target.parentNode);
 
         if( !$(this).hasClass('navbar-mobile__item--active') ){
             if( $('body').hasClass('open-sidebar') ){

@@ -509,6 +509,22 @@
             }
         }
     }
+
+    // Before & After
+    &__resutls{
+        display: grid;
+        grid-gap: 2*$spacer-gutter;
+
+        grid-template-columns: repeat(auto-fill, minmax(210px, auto));
+        justify-content: flex-start;
+        
+        &-item{
+            display: grid;
+            grid-gap: 10px;
+    
+            grid-template-columns: repeat(2, 100px);
+        }
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .product-page{

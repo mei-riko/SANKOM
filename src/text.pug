@@ -77,13 +77,13 @@ html(lang="ru")
                                     +productSmall('Elementum amet morbi morbi aliquam', '1 119 руб.', '', 'new', '', 'product.html')(style="background-image:url('./img/product-3.jpg');")
                                 .slider__item
                                     +productSmall('Men Shaper Classic Black', '3 599 руб.', '', '', 'product.html')(style="background-image:url('./img/product-4.jpg');")
-        .dialog.dialog_info.dialog--active
-            .dialog__content 
-                .dialog__title Dolor sit amet, consecte tur lorem?
-                form.form.dialog__form(action="")
-                    +input('', 'Label')(class="input--full input_label-inside mb-1" label="input__label_inside" field="input__field--full")
-                    +btn('','Перезвоните мне')(class="btn_action btn--full")
-            .dialog__close.dialog_info__close(data-action="close") Закрыть
+        .dialog.dialog_info
+            .dialog_info__image
+                img.img-fluid(src="./img/bg-women.jpg")
+            .dialog_info__content 
+                .dialog_info__title Dolor amet, consecte tur?
+                .dialog_info__intro(data-close="Lorem ipsum dolor sit amet, consectetur adipisci..." data-open="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis arcu dignissim in mauris aliquet sit risus. Scelerisque sem orci, in eu tempus, placerat id facilisis. Cursus neque in felis eget amet id.") Lorem ipsum dolor sit amet, consectetur adipisci...
+            .dialog__close.dialog_info__toggle
         include component/footer/footer.pug
         include component/sidebar/sidebar.pug
         

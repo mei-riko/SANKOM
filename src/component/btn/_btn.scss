@@ -58,6 +58,7 @@
         width: 100%;
     }
     &--small{
+        font-size: map-get($map: $font-size, $key: xs);
         padding: 4px 12px;
         min-width: 120px;
         border-radius: 2px;

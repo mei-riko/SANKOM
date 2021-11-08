@@ -2777,21 +2777,6 @@ a.preview:hover .preview__title {
   background: #ce002b;
 }
 
-.product-page__resutls {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(210px, auto));
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.product-page__resutls-item {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 100px);
-}
-
 @media all and (max-width: 1280px) {
   .product-page__price {
     -webkit-box-flex: 0;
@@ -4079,9 +4064,6 @@ a.preview:hover .preview__title {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   position: relative;
   background: no-repeat center / cover;
   min-height: 200px;

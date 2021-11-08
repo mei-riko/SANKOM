@@ -180,7 +180,13 @@ header.header
                 .navbar.navbar_additional
                     a.navbar__item.navbar__item_action(href="sales.html") SALE %
             .header__btn-group 
-                a.header__btn-icon.header__btn-cabinet(href="cabinet.html" title="Личный кабинет")
+                .header__btn-icon.header__btn-cabinet(data-href="cabinet.html")
+                    .header__cabinet-list
+                        a.header__cabinet-item(href="cabinet.html" title="Личный кабинет") Мой профиль
+                        a.header__cabinet-item(href="cabinet-order.html" title="История заказов") История заказов
+                        a.header__cabinet-item(href="cabinet-cashback.html" title="История кэшбека") История кэшбека
+                        a.header__cabinet-item(href="cabinet-setting.html" title="Настройка профиля") Настройка профиля
+                        a.header__cabinet-item.header__cabinet-item_exit(href="#" title="Выйти") Выйти
                 a.header__logo.header__logo_secondary(href="index.html")
                     img.header__logo-img(src="./img/logo.png")
                 a.header__btn-icon.header__cart(href="#" data-sidebar="cart" title="Ваша корзина")

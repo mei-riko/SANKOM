@@ -171,8 +171,10 @@
         transition: .3s;
     }
     &__btn-cabinet{
+        position: relative;
         background: url('../icon/icon-cabinet.svg') no-repeat center / 18px;
         margin-right: 8px;
+
         &:hover{
             background-color: $light-grey;
         }
@@ -203,6 +205,43 @@
 
         &--empty{
             background-color: $light-grey;
+        }
+    }
+    &__cabinet-list{
+        position: absolute;
+        top: 34px;
+        right: 0;
+        z-index: 99;
+
+        // display: flex;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        border: 1px solid $border-color;
+
+        &--active{
+            display: flex;
+        }
+    }
+    &__cabinet-item{
+        white-space: nowrap;
+        padding: 10px 15px;
+        border-bottom: 1px solid $border-color;
+        background: $white;
+        transition: .3s;
+
+        &:last-child{
+            border-bottom: none;
+        }
+
+        &:hover{
+            background-color: $light-bg;
+            text-decoration: none;
+        }
+
+        &_exit{
+            font-size: map-get($map: $font-size, $key: xs);
         }
     }
 }
