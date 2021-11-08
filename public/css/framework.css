@@ -4651,7 +4651,7 @@ blockquote, .blockquote {
 }
 
 .header__cabinet-item_exit {
-  font-size: 13px;
+  color: #777777;
 }
 
 @media all and (max-width: 1280px) {
