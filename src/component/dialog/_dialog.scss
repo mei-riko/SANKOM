@@ -52,13 +52,13 @@
         max-width: 300px;
         transition: .4s;
     }
-    &__title{
-        font-size: map-get($map: $font-size, $key: lg);
-        font-weight: $font-weight-bold;
-        line-height: $line-height-heading;
+    // &__title{
+    //     font-size: map-get($map: $font-size, $key: lg);
+    //     font-weight: $font-weight-bold;
+    //     line-height: $line-height-heading;
 
-        margin-bottom: $spacer-gutter;
-    }
+    //     margin-bottom: $spacer-gutter;
+    // }
     &__form{
         max-width: 100%;
     }
@@ -68,9 +68,9 @@
     &--active{
         display: block;
     }
-    &--toggle{
-        width: auto!important;
-    }
+    // &--toggle{
+    //     width: auto!important;
+    // }
     &--open-sidebar{
         z-index: 81;
     }

@@ -208,7 +208,7 @@ table{
 
 .text-small,small,.small{font-size: map-get($map: $font-size, $key: 'xs');}
 .text-smaller{font-size: map-get($map: $font-size, $key: 'sm');}
-.text-lead,.lead{font-size: map-get($map: $font-size, $key: 'lg');}
+.text-lead,.lead{font-size: map-get($map: $font-size, $key: 'lg');line-height: $line-height-base;}
 
 .text-spacing{letter-spacing: $letter-spacing;}
 

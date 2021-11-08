@@ -2218,6 +2218,7 @@ table td {
 
 .text-lead, .lead {
   font-size: 19px;
+  line-height: 1.4;
 }
 
 .text-spacing {
@@ -3183,6 +3184,7 @@ blockquote, .blockquote {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  font-size: 15px;
   font-weight: 500;
   line-height: 20px;
   text-align: center;
@@ -4061,13 +4063,6 @@ blockquote, .blockquote {
   transition: .4s;
 }
 
-.dialog__title {
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-
 .dialog__form {
   max-width: 100%;
 }
@@ -4078,10 +4073,6 @@ blockquote, .blockquote {
 
 .dialog--active {
   display: block;
-}
-
-.dialog--toggle {
-  width: auto !important;
 }
 
 .dialog--open-sidebar {
